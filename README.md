@@ -1,6 +1,6 @@
 # Using TA65 Thermostat with ThingsBoard
 
-* [Read document](./docs/build/html/index.html)
+* [Read document](https://avantec-thingsboard.readthedocs.org)
 * [Install tools](#install-tools)
 * [Build document](#generate-web-pages)
 
@@ -10,10 +10,11 @@ This technical document is in the format of [reStructuredText](https://docutils.
 
 ### Prerequisites
 
-1. Install Python 3.5+ (for Sphinx).
-2. Install Java 8 or later (for sphinxcontrib-plantuml).
+* Install Python 3.5+ (for Sphinx).
 
-### Step 1. Install Graphviz on Windows (for plantuml)
+<!-- * Install Java 8 or later (for sphinxcontrib-plantuml). -->
+
+<!-- ### Step 1. Install Graphviz on Windows (for plantuml)
 
 1. Download **Graphviz 2.38 Stable Release** from this [link](https://graphviz.org/_pages/Download/Download_windows.html).
 
@@ -31,9 +32,9 @@ This technical document is in the format of [reStructuredText](https://docutils.
     Using layout: dot:dot_layout
     Activated plugin library: gvplugin_core.dll
     ...
-    ```
+    ``` -->
 
-### Step 2. Install Sphinx
+### Step 1. Install Sphinx
 
 Sphinx is a tool that makes it easy to create documentation.
 
@@ -65,7 +66,7 @@ Sphinx_intl is a useful tool for internationalization and localization.
     * `_static` : image, script, etc.
     * `_build` : This is the directory where the output of any builder is stored when a `make <builder>` is called.
 
-### Step 3. Install recommonmark
+### Step 2. Install recommonmark
 
 You can use **Markdown** and reStructuredText in the same Sphinx project.
 
@@ -86,7 +87,7 @@ You can use **Markdown** and reStructuredText in the same Sphinx project.
 
 **warning**: Markdown doesn’t support a lot of the features of Sphinx, like inline markup and directives. However, it works for basic prose content. reStructuredText is the preferred format for technical documentation
 
-### Step 4. Install sphinx_rtd_theme
+### Step 3. Install sphinx_rtd_theme
 
 Sphinx_rtd_theme is a html theme.
 
@@ -113,7 +114,25 @@ Sphinx_rtd_theme is a html theme.
 
     **Note**: You should skip this step(2). The above code is already in you `conf.py`.
 
-### Step 5. Install sphinxcontrib-plantuml
+### Step 5. Install PlantUML
+
+Plantuml is a library for generating UML diagrams from a simple text markup language.
+
+1. On Windows, run the following command (using Command Prompt):
+
+    ```sh
+    pip install plantweb
+    ```
+
+2. Add this *UML* extension modules in ```conf.py```:
+
+    ```python
+    extensions = ['plantweb.directive']
+    ```
+
+    **Note**: You may skip this step(2). The above code is already in you `conf.py`.
+
+<!-- ### Step 5. Install sphinxcontrib-plantuml
 
 Plantuml is a library for generating UML diagrams from a simple text markup language.
 
@@ -121,7 +140,7 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
 
     ```sh
     pip install sphinxcontrib-plantuml
-	# pip install plantweb
+    # pip install plantweb
     ```
 
     **note**: When you install **sphinxcontrib-plantuml**, you may get a error: *attributeerror '_namespacepath' object has no attribute 'sort'*. Please execute command `python -m pip install --upgrade pip setuptools wheel` to fixed it.
@@ -157,7 +176,7 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
     plantuml = 'java -jar ' + os.path.join(os.path.abspath(os.getcwd()), plantuml_relative_path_)
     ```
 
-    **Note**: You may skip this step(4). The above code is already in you `conf.py`.
+    **Note**: You may skip this step(4). The above code is already in you `conf.py`. -->
 
 ## Generate web pages
 

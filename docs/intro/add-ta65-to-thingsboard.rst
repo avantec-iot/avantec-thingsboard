@@ -40,7 +40,6 @@ Step 2. Add device
 
 .. table::
    :widths: auto
-   :width: 100%
 
    ============  =========================     ==========
    Field         Device A                      Device B
@@ -82,7 +81,6 @@ The following Shared attributes of the two devices, TA65-FC-TB and TA65-FH-TB, a
 
 .. table:: Add shared attributes of new device
    :widths: 15, 10, 15, 50
-   :width: 100%
 
    ============= ===========  ================ =========================================
    Key*          Value Type*  Value*                     Memo
@@ -143,7 +141,6 @@ Add two devices to the Building X: **Assets** --> **Building X** --> **Relations
 
 .. table::
    :widths: auto
-   :width: 100%
 
    ========== ============== ============== ========
    Direction* Relation Type* To entityType* Device*

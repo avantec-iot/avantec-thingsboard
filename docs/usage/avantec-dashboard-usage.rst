@@ -46,7 +46,6 @@ TA65-FC_Control State
 * Widgets:
     .. table:: 
         :widths: 20, 80
-        :width: 100%
 
         ======================= ========================================================
         Widget                  Description
@@ -81,7 +80,6 @@ TA65-FC_Program State
 
     .. table:: 
         :widths: 20, 80
-        :width: 100%
 
         ======================= ===================================================
         Program Mode            Description
@@ -96,7 +94,6 @@ TA65-FC_Program State
 
     .. table:: 
         :widths: 20, 80
-        :width: 100%
 
         =========================== ======================================================
         Widget                      Description
@@ -116,7 +113,6 @@ TA65-FC_Settings State
 * Widgets:
     .. table:: 
         :widths: 30, 70
-        :width: 100%
 
         ============================ ===========================================================
         Widget                       Description
@@ -152,7 +148,6 @@ TA65-FC_Admin State
 * Widgets:
     .. table:: 
         :widths: 30, 70
-        :width: 100%
 
         =================== ===========================================================
         Widget                       Description
