@@ -76,8 +76,8 @@ Using TA65 Thermostat with ThingsBoard
    :maxdepth: 4
    :caption: Protocol
 
-    </protocol/thingsboard-mqtt-api>
-    </protocol/ta65-mqtt-api>
+   ThingsBoard MQTT API </protocol/thingsboard-mqtt-api>
+   TA65-TBMQTT API </protocol/ta65-mqtt-api>
 
 
 .. toctree::

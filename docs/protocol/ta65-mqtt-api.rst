@@ -1,11 +1,11 @@
-TA65-MQTT API reference
-#######################
+TA65-TBMQTT API reference
+##########################
 
 
 Overview
 ========
 
-TA65-MQTT is an implementation of MQTT protocol client (MQTT is a lightweight publish/subscribe messaging protocol).
+TA65-TBMQTT is an implementation of ThingsBoard MQTT protocol client (MQTT is a lightweight publish/subscribe messaging protocol).
 
 .. uml::
 
@@ -18,7 +18,7 @@ TA65-MQTT is an implementation of MQTT protocol client (MQTT is a lightweight pu
    node "\nServer-side Application\n" as TBApp {
    }
 
-   TBSrv <-down-> TBDev : <color:#FF0000> **TA65-MQTT API** </color>
+   TBSrv <-down-> TBDev : <color:#FF0000> **TA65-TBMQTT API** </color>
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 

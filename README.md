@@ -121,6 +121,7 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
 
     ```sh
     pip install sphinxcontrib-plantuml
+	# pip install plantweb
     ```
 
     **note**: When you install **sphinxcontrib-plantuml**, you may get a error: *attributeerror '_namespacepath' object has no attribute 'sort'*. Please execute command `python -m pip install --upgrade pip setuptools wheel` to fixed it.

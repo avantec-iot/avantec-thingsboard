@@ -32,12 +32,13 @@ release = '3.0.1'
 # ones.
 extensions = ['recommonmark']
 extensions = ['sphinx.ext.autodoc']
-extensions = ['sphinxcontrib.plantuml']
+extensions = ['plantweb.directive']
+# extensions = ['sphinxcontrib.plantuml']
 
 #plantuml = 'java -jar plantuml.1.2020.15.jar'
-import os
-plantuml_relative_path_ = r'tool\plantuml.1.2020.15.jar'
-plantuml = 'java -jar ' + os.path.join(os.path.abspath(os.getcwd()), plantuml_relative_path_)
+## import os
+## plantuml_relative_path_ = r'tool\plantuml.1.2020.15.jar'
+## plantuml = 'java -jar ' + os.path.join(os.path.abspath(os.getcwd()), plantuml_relative_path_)
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
