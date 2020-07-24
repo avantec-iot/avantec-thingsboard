@@ -5,7 +5,7 @@ Avantec Dashboard Usage
 Default State
 -------------
 
-.. image:: /_static/usage/avantec_usage/default_state.png
+.. image:: ../_static/usage/avantec_usage/default_state.png
 
 *  Dashboard bar:
     * |Dashboard name| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
