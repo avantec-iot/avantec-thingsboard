@@ -84,6 +84,7 @@ Using TA65 Thermostat with ThingsBoard
    :maxdepth: 2
    :caption: About
 
+   copyright
    avantec
 
 
