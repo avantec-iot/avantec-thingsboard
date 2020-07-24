@@ -12,9 +12,9 @@ Default State
     * |Dashboard expand to fullscreen| : Click the two ICONS in the upper left corner to display the page in full screen.
     * |Dashboard edit timewindow| : Edit timewindow.
 
-.. |Dashboard name| image:: /_static/usage/avantec_usage/dashboard_name_icon.png
-.. |Dashboard expand to fullscreen| image:: /_static/usage/avantec_usage/dashboard_fullname_icon.png
-.. |Dashboard edit timewindow| image:: /_static/usage/avantec_usage/dashboard_timewindow_icon.png
+.. |Dashboard name| image:: ../_static/usage/avantec_usage/dashboard_name_icon.png
+.. |Dashboard expand to fullscreen| image:: ../_static/usage/avantec_usage/dashboard_fullname_icon.png
+.. |Dashboard edit timewindow| image:: ../_static/usage/avantec_usage/dashboard_timewindow_icon.png
 
 *  Thermostats widget:
     * Field: 
@@ -26,10 +26,10 @@ Default State
         * |default_settings| : skip to `TA65-FC_Settings State`_。
         * |default_admin| : skip to `TA65-FC_Admin State`_。
 
-.. |default_control| image:: /_static/usage/avantec_usage/default_control_icon.png
-.. |default_program| image:: /_static/usage/avantec_usage/default_program_icon.png
-.. |default_settings| image:: /_static/usage/avantec_usage/default_settings_icon.png
-.. |default_admin| image:: /_static/usage/avantec_usage/default_admin_icon.png
+.. |default_control| image:: ../_static/usage/avantec_usage/default_control_icon.png
+.. |default_program| image:: ../_static/usage/avantec_usage/default_program_icon.png
+.. |default_settings| image:: ../_static/usage/avantec_usage/default_settings_icon.png
+.. |default_admin| image:: ../_static/usage/avantec_usage/default_admin_icon.png
 
 
 TA65-FC States
@@ -38,7 +38,7 @@ TA65-FC States
 TA65-FC_Control State
 >>>>>>>>>>>>>>>>>>>>>
 
-.. image:: /_static/usage/avantec_usage/ta65_fc_control_state.png
+.. image:: ../_static/usage/avantec_usage/ta65_fc_control_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -70,7 +70,7 @@ TA65-FC_Control State
 TA65-FC_Program State
 >>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: /_static/usage/avantec_usage/ta65_fc_program_state.png
+.. image:: ../_static/usage/avantec_usage/ta65_fc_program_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -105,7 +105,7 @@ TA65-FC_Program State
 TA65-FC_Settings State
 >>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: /_static/usage/avantec_usage/ta65_fc_settings_state.png
+.. image:: ../_static/usage/avantec_usage/ta65_fc_settings_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -140,7 +140,7 @@ TA65-FC_Settings State
 TA65-FC_Admin State
 >>>>>>>>>>>>>>>>>>>>
 
-.. image:: /_static/usage/avantec_usage/ta65_fc_admin_state.png
+.. image:: ../_static/usage/avantec_usage/ta65_fc_admin_state.png
 
 *  Dashboard bar:
     See `Default State`_.

@@ -61,23 +61,23 @@ Recommend adding fuse or protective device in the live circuit.
 ===========================================
 
 
-.. image:: /_static/usage/ta65-fh/wiring-1.png
+.. image:: ../_static/usage/ta65-fh/wiring-1.png
     :width: 54%
 
-.. image:: /_static/usage/ta65-fh/wiring-2.png
+.. image:: ../_static/usage/ta65-fh/wiring-2.png
     :width: 19%
 
 
 Mounting
 ========
 
-.. image:: /_static/usage/ta65-fh/mounting-1.png
+.. image:: ../_static/usage/ta65-fh/mounting-1.png
     :width: 32%
 
-.. image:: /_static/usage/ta65-fh/mounting-2.png
+.. image:: ../_static/usage/ta65-fh/mounting-2.png
     :width: 32%
 
-.. image:: /_static/usage/ta65-fh/mounting-3.png
+.. image:: ../_static/usage/ta65-fh/mounting-3.png
     :width: 32%
 
 1. Wiring the terminals.
@@ -90,10 +90,10 @@ Mounting
 Dimension in mm:
 ================
 
-.. image:: /_static/usage/ta65-fh/dimension-1.png
+.. image:: ../_static/usage/ta65-fh/dimension-1.png
     :width: 50%
 
-.. image:: /_static/usage/ta65-fh/dimension-2.png
+.. image:: ../_static/usage/ta65-fh/dimension-2.png
     :width: 30%
 
 
@@ -103,7 +103,7 @@ LCD Interface
 LCD Indication
 ---------------
 
-.. image:: /_static/usage/ta65-fh/lcd_indication.png
+.. image:: ../_static/usage/ta65-fh/lcd_indication.png
     :width: 40%
 
 .. table::
@@ -128,19 +128,19 @@ LCD Indication
     === ===============================================================================
 
 
-.. |icon_mode| image:: /_static/usage/ta65-fh/icon_mode.png
+.. |icon_mode| image:: ../_static/usage/ta65-fh/icon_mode.png
     :scale: 50%
 
-.. |icon_clock| image:: /_static/usage/ta65-fh/icon_clock.png
+.. |icon_clock| image:: ../_static/usage/ta65-fh/icon_clock.png
     :scale: 50%
 
-.. |icon_onoff| image:: /_static/usage/ta65-fh/icon_onoff.png
+.. |icon_onoff| image:: ../_static/usage/ta65-fh/icon_onoff.png
     :scale: 50%
 
-.. |icon_up| image:: /_static/usage/ta65-fh/icon_up.png
+.. |icon_up| image:: ../_static/usage/ta65-fh/icon_up.png
     :scale: 50%
 
-.. |icon_down| image:: /_static/usage/ta65-fh/icon_down.png
+.. |icon_down| image:: ../_static/usage/ta65-fh/icon_down.png
     :scale: 50%
 
 .. |icon_blank| replace:: **[blank]**
@@ -250,10 +250,10 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
 * Switching Differential:
     The difference between switching the heating or controller on and off
 
-    .. image:: /_static/usage/ta65-fh/switching-differential-1.png
+    .. image:: ../_static/usage/ta65-fh/switching-differential-1.png
         :width: 49%
 
-    .. image:: /_static/usage/ta65-fh/switching-differential-2.png
+    .. image:: ../_static/usage/ta65-fh/switching-differential-2.png
         :width: 49%
 
 * Program Mode:

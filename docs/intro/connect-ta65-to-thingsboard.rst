@@ -13,17 +13,17 @@ Prerequisites. Clear Wi-Fi Configuration
 
 - 在 TA65 上同时长按 Mode、Power 两个按键 10 秒钟。
 
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_a.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_a.png
       :width: 60 %
 
 - 进入 Wi-Fi 参数清除模式 P19。
    
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_b.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_b.png
       :width: 60 %
 
 - 按 Up 或 Down, 选择 Yes。
 
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_c.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_c.png
       :width: 60 %
 
 - 按 Mode 返回至正常界面，则 Wi-Fi 参数清除。
@@ -50,13 +50,13 @@ Step 3. Configure
 
 - Connect to TA65's Wi-Fi hotspot on your computer or phone.
 
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/connect_ta65_ap.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/connect_ta65_ap.png
       :width: 50 %
 
 - Open your browser, type ``http://192.168.4.1`` .
 - Input your configuration, then ``Apply``.
 
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/configure_ta65.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/configure_ta65.png
 
    .. table::
       :widths: auto
@@ -76,7 +76,7 @@ Step 3. Configure
 
 - If saved successfully, the following will be displayed.
 
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/configure_ta65_result.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/configure_ta65_result.png
 
 
 Step 4. Check
@@ -85,7 +85,7 @@ Step 4. Check
 检查 TA65 是否正确连上 ThingsBoard。若正确连上，Thermostat右上角会有 Wi-Fi 图标，时间也不再是 **00:00**。
 如果你没有在 ThingsBoard 上正确设置时区 Tonezone 的关系，TA65 显示的时间可能有些偏差。
  
-   .. image:: /_static/intro/connect_ta65_to_thingsboard/check_connection.png
+   .. image:: ../_static/intro/connect_ta65_to_thingsboard/check_connection.png
       :width: 60%
 
 

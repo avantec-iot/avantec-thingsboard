@@ -29,7 +29,7 @@ Using TA65 Thermostat with ThingsBoard
 * TA65
    The latest series of Thermostat produced by Avantec. The Wi-Fi models include ``TA65-FC`` and ``TA65-FH`` (Their firmware ID are ``TA65-FC-TB`` and ``TA65-FH-TB``).
 
-.. image:: /_static/usage/ta65.png
+.. image:: _static/usage/ta65.png
    :width: 30%
    :align: center
 
