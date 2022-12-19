@@ -1,32 +1,49 @@
 Connect TA65 to ThingsBoard
 ===========================
 
-本节描述 TA65 通过 Wi-Fi 连接 ThingsBoard 的过程。适用于本系列的所有型号恒温器。
+This section describes the process of connecting TA65 to ThingsBoard via Wi-Fi. This process applies to all models of thermostats in this series.
+
+.. |icon_mode| image:: ../_static/usage/ta65-fc/icon_mode.png
+    :scale: 50%
+
+.. |icon_clock| image:: ../_static/usage/ta65-fc/icon_clock.png
+    :scale: 50%
+
+.. |icon_onoff| image:: ../_static/usage/ta65-fc/icon_onoff.png
+    :scale: 50%
+
+.. |icon_up| image:: ../_static/usage/ta65-fc/icon_up.png
+    :scale: 50%
+
+.. |icon_down| image:: ../_static/usage/ta65-fc/icon_down.png
+    :scale: 50%
+
+.. |icon_blank| replace:: **[blank]**
 
 Prerequisites. Clear Wi-Fi Configuration
 ----------------------------------------
 
 .. tip::
-    如果您的 TA65 是第一次使用，或者您的 TA65 从来没有连接上任何 Wi-Fi 路由器， 可以跳过这一步。
+    If your TA65 is used for the first time, or your TA65 has never been connected to any Wi-Fi router, you can skip this step.
 
-如果您的 TA65 连接上 Wi-Fi 路由器使用过，当您需要连接新的 Wi-Fi 路由器时，需要首先清除 TA65 的 Wi-Fi 配置。
+If your TA65 has been connected to a Wi-Fi router before, when you need to connect to a new Wi-Fi router, you need to clear the Wi-Fi configuration of the TA65 first.
 
-- 在 TA65 上同时长按 Mode、Power 两个按键 10 秒钟。
+- Press and hold |icon_mode| and |icon_onoff| simultaneously for 10 seconds on the TA65.
 
    .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_a.png
       :width: 60 %
 
-- 进入 Wi-Fi 参数清除模式 P19。
+- Enter Wi-Fi parameter clearing mode P19.
    
    .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_b.png
       :width: 60 %
 
-- 按 Up 或 Down, 选择 Yes。
+- Press |icon_up| or |icon_down| to select `YES`.
 
    .. image:: ../_static/intro/connect_ta65_to_thingsboard/clear_wifi_config_c.png
       :width: 60 %
 
-- 按 Mode 返回至正常界面，则 Wi-Fi 参数清除。
+- Press |icon_mode| to return to the normal interface, and the Wi-Fi parameters are cleared.
 
 
 Step 1. Get Access-Token
@@ -82,8 +99,7 @@ Step 3. Configure
 Step 4. Check
 -------------
 
-检查 TA65 是否正确连上 ThingsBoard。若正确连上，Thermostat右上角会有 Wi-Fi 图标，时间也不再是 **00:00**。
-如果你没有在 ThingsBoard 上正确设置时区 Tonezone 的关系，TA65 显示的时间可能有些偏差。
+Check if TA65 is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the Tonezone relationship on ThingsBoard correctly, the time displayed by TA65 may be slightly off.
  
    .. image:: ../_static/intro/connect_ta65_to_thingsboard/check_connection.png
       :width: 60%
@@ -92,20 +108,16 @@ Step 4. Check
 Troubleshooting
 ---------------
 
-Thermostat TA65 连不上 Wi-Fi:
+Thermostat TA65 cann't connect to Wi-Fi:
 
-- 如果 Thermostat 出厂后从来没有连上任何的 Wi-Fi 路由器，那它会进入 Soft-AP 模式。\
-  你能通过手机或电脑，搜索到类似 “Thermostat-xxxx”的Wi-Fi信号。
-- 确认 Wi-Fi 路由器支持且开启了 2.4G 信号。目前有部分双频（2.4G&5G）Wi-Fi 路由器\
-  可以关闭 2.4G 信号。请在路由器设置中打开它。
-- 确认你的 Wi-Fi SSID、Password 正确，而且是 2.4G Wi-Fi 信号的相关参数。
-- 确认 Token 正常。
+- If the Thermostat has never been connected to any Wi-Fi router since leaving the factory, it will enter Soft-AP mode. You can search for Wi-Fi SSID similar to "EasyStat-xxxx" through your mobile phone or computer.
+- Make sure the Wi-Fi router supports and turns on the 2.4G signal. Currently, some dual-band (2.4G & 5G) Wi-Fi routers can turn off the 2.4G signal. Please turn it on in your router settings.
+- Make sure your Wi-Fi SSID and Password are correct, and they are related parameters of 2.4G Wi-Fi signal.
+- Confirm that the Token is normal.
 
-   - 确认 Token 与实物的型号对应正确（TA65-FH-TB 的 Token 只能连 TA65-FH-TB 的 \
-     Thermostat. TA65-FC-TB 也是如此）。
-   - 确认 Token 没有在复制过程出错。
-   - 确认 Token 没有特殊字符。Token 只能包含 A-Z、a~z、0~9。在积端情况下会出现 “-” \
-     等非法字符。你可以在 `Step 1. Get Access-Token`_ 编辑获取一个新的 Token。
+   - Confirm that the Token corresponds to the actual model (the Token of TA65-FH-TB can only be connected to the Thermostat of TA65-FH-TB. The same is true for TA65-FC-TB).
+   - Confirm that the Token did not fail during the copying process.
+   - Confirm that the Token has no special characters. Token can only contain A-Z, a~z, 0~9. Illegal characters such as "-" will appear in the case of product end. You can edit and get a new Token in `Step 1. Get Access-Token`_.
 
-- 确认 Host 参数正确。Host必须是以"mqtt://"开头，后面带上 Thingsboard 的 IP 地址或域名。
-- 若以上参数确认无误，你可以从 `Step 2. Power On`_ 开始，多次尝试。
+- Confirm that the `Host` parameter is correct. Host must start with "mqtt://", followed by IP address or domain name of Thingsboard.
+- If the above parameters are confirmed to be correct, you can start from `Step 2. Power On`_ and try several times.

@@ -40,7 +40,7 @@ ThingsBoard service is running on Java 8. Follow this instructions to install Op
 
    sudo yum install java-1.8.0-openjdk
 
-Please don’t forget to configure your operating system to use OpenJDK 8 by default. You can configure which version is the default using the following command::
+Please don't forget to configure your operating system to use OpenJDK 8 by default. You can configure which version is the default using the following command::
 
    sudo update-alternatives --config java
 
@@ -166,7 +166,7 @@ Edit ThingsBoard configuration file::
 
    sudo nano /etc/thingsboard/conf/thingsboard.conf
 
-Add the following lines to the configuration file. Don’t forget **to replace** 
+Add the following lines to the configuration file. Don't forget **to replace** 
 “PUT_YOUR_POSTGRESQL_PASSWORD_HERE” with **your real postgres user password**::
 
    # DB Configuration
@@ -189,7 +189,7 @@ ThingsBoard is able to use various messaging systems/brokers for storing the mes
 
 - **In Memory** queue implementation is built-in and default. It is useful for development(PoC) environments and is not suitable for production deployments or any sort of cluster deployments.
 - **Kafka** is recommended for production deployments. This queue is used on the most of ThingsBoard production environments now. It is useful for both on-prem and private cloud deployments. It is also useful if you like to stay independent from your cloud provider. However, some providers also have managed services for Kafka. See AWS `MSK`__ for example.
-- **RabbitMQ** is recommended if you don’t have much load and you already have experience with this messaging system.
+- **RabbitMQ** is recommended if you don't have much load and you already have experience with this messaging system.
 - **AWS SQS** is a fully managed message queuing service from AWS. Useful if you plan to deploy ThingsBoard on AWS.
 - **Google Pub/Sub** is a fully managed message queuing service from Google. Useful if you plan to deploy ThingsBoard on Google Cloud.
 - **Azure Service Bus** is a fully managed message queuing service from Azure. Useful if you plan to deploy ThingsBoard on Azure.
@@ -248,7 +248,7 @@ Once started, you will be able to open Web UI using the following link::
 
    http://localhost:8080/
 
-The following default credentials are available if you have specified –loadDemo during execution of the installation script:
+The following default credentials are available if you have specified - loadDemo during execution of the installation script:
 
 - **Systen Administrator**: sysadmin@thingsboard.org / sysadmin
 - **Tenant Administrator**: tenant@thingsboard.org / tenant
@@ -275,7 +275,7 @@ ThingsBoard MQTT is accessible on 1883 port by default. Make sure that your 1883
 Configure HAProxy to enable HTTPS
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-You may want to configure HTTPS access using HAProxy. This is possible in case you are hosting ThingsBoard in the cloud and have a valid DNS name assigned to your instance. Please follow this `guide`__ to install HAProxy and generate valid SSL certificate using Let’s Encrypt.
+You may want to configure HTTPS access using HAProxy. This is possible in case you are hosting ThingsBoard in the cloud and have a valid DNS name assigned to your instance. Please follow this `guide`__ to install HAProxy and generate valid SSL certificate using Let's Encrypt.
 
 .. __: https://thingsboard.io/docs/user-guide/install/pe/add-haproxy-rhel
 

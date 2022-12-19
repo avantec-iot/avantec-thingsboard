@@ -182,7 +182,7 @@ In case your device is able to get the client-side timestamp, you can use follow
 
    {"ts":1451649600512, "values":{"key1":"value1", "key2":"value2"}}
 
-In the example above, we assume that “1451649600512” is a `unix timestamp`__ with milliseconds precision. For example, the value ‘1451649600512’ corresponds to ‘Fri, 01 Jan 2016 12:00:00.512 GMT’
+In the example above, we assume that “1451649600512” is a `unix timestamp`__ with milliseconds precision. For example, the value "1451649600512" corresponds to "Fri, 01 Jan 2016 12:00:00.512 GMT"
 
 .. __: https://en.wikipedia.org/wiki/Unix_time
 

@@ -23,9 +23,9 @@ Changeover sensor is required to install when auto changeover is used.
 Feature List
 =============
 
-* Voltage supply: 230Vac
-* Temperature display in oC or oF
-* Temperature measurable range : 0 – 50 C
+* Voltage supply: 230V AC
+* Temperature display in °C or °F
+* Temperature measurable range : 0 - 50 °C
 * 2-pipe system
 * Manual changeover or Autochangeover can be selected 
 * Selection of Heat/Cool
@@ -306,7 +306,7 @@ Relay Contact Voltage:		230Vac Max. 50/60 Hz
 Relay Contact Current:		2A Max. for each
 Sensing Element:			103AT
 Terminals:				    2 sq. mm Cable 
-Operating Temperature:		32 – 122 °F / 0 – 50 °C
-Storage Temperature:		23 – 122 °F / -5 – 50 °C
+Operating Temperature:		32 - 122 °F / 0 - 50 °C
+Storage Temperature:		23 - 122 °F / -5 - 50 °C
 Operating Humidity:		    5-95%RHnon-condensing
 =========================   ==========================

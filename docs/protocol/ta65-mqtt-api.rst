@@ -68,7 +68,7 @@ Flow Chart
 
   The range of values for message fields is referred to in the following sections, see  `Telemetry (Timeseries data)`_, `Shared attributes`_, `Client-side attributes`_ and `Server-side RPC`_.
 
-TELE.01 Timeseries Data Upload
+TELE.01 Timeseries Data Upload
 +++++++++++++++++++++++++++++++++
 
 Chart:

@@ -18,7 +18,7 @@ Default State
 
 *  Thermostats widget:
     * Field: 
-        * Entity name，Entity type: device name, type.
+        * Entity name, Entity type: device name, type.
         * Model, Room temp, Unit: see `TA65-FC_Control State`_.
     *  State Operate:
         * |default_control| : skip to `TA65-FC_Control State`_。

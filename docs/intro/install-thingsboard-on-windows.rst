@@ -75,7 +75,7 @@ Download the installation file (PostgreSQL 11.7 or newer releases) `here`__ and 
 
 .. __: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows
 
-During PostgreSQL installation, you will be prompted for superuser (postgres) password. Don’t forget this password. It will be used later. For simplicity, we will substitute it with “postgres”.
+During PostgreSQL installation, you will be prompted for superuser (postgres) password. Don't forget this password. It will be used later. For simplicity, we will substitute it with “postgres”.
 
 
 Create ThingsBoard Database
@@ -94,7 +94,7 @@ Open the following file for editing (select “All Files” instead of “Text D
 
    C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
 
-and locate “**# SQL DAO Configuration**” block. Don’t forget to replace “**postgres**” with your real postgres user password:
+and locate “**# SQL DAO Configuration**” block. Don't forget to replace “**postgres**” with your real postgres user password:
 
 .. code:: YAML
 
@@ -134,7 +134,7 @@ ThingsBoard is able to use various messaging systems/brokers for storing the mes
 
 - **In Memory** queue implementation is built-in and default. It is useful for development(PoC) environments and is not suitable for production deployments or any sort of cluster deployments.
 - **Kafka** is recommended for production deployments. This queue is used on the most of ThingsBoard production environments now. It is useful for both on-prem and private cloud deployments. It is also useful if you like to stay independent from your cloud provider. However, some providers also have managed services for Kafka. See AWS `MSK`__ for example.
-- **RabbitMQ** is recommended if you don’t have much load and you already have experience with this messaging system.
+- **RabbitMQ** is recommended if you don't have much load and you already have experience with this messaging system.
 - **AWS SQS** is a fully managed message queuing service from AWS. Useful if you plan to deploy ThingsBoard on AWS.
 - **Google Pub/Sub** is a fully managed message queuing service from Google. Useful if you plan to deploy ThingsBoard on Google Cloud.
 - **Azure Service Bus** is a fully managed message queuing service from Azure. Useful if you plan to deploy ThingsBoard on Azure.
@@ -179,7 +179,7 @@ Step 6. Run installation script
 
 Launch windows shell (Command Prompt) as Administrator. Change directory to your ThingsBoard installation directory.
 
-Execute **install.bat** script to install ThingsBoard as a Windows service (or run “**install.bat –loadDemo**” to install and add demo data). This means it will be automatically started on system startup. Similar, **uninstall.bat** will remove ThingsBoard from Windows services. The output should be similar to this one::
+Execute **install.bat** script to install ThingsBoard as a Windows service (or run “**install.bat - loadDemo**” to install and add demo data). This means it will be automatically started on system startup. Similar, **uninstall.bat** will remove ThingsBoard from Windows services. The output should be similar to this one::
 
    C:\Program Files (x86)\thingsboard>install.bat --loadDemo
    Detecting Java version installed.
@@ -193,7 +193,7 @@ Execute **install.bat** script to install ThingsBoard as a Windows service (or r
 Step 7. Start ThingsBoard service
 ---------------------------------
 
-Now let’s start the ThingsBoard service! Open the command prompt as an Administrator and execute the following command::
+Now let's start the ThingsBoard service! Open the command prompt as an Administrator and execute the following command::
 
    net start thingsboard
 
@@ -211,7 +211,7 @@ Once started, you will be able to open Web UI using the following link::
 
    http://localhost:8080/
 
-The following default credentials are available if you have specified –loadDemo during execution of the installation script:
+The following default credentials are available if you have specified - loadDemo during execution of the installation script:
 
 - **Systen Administrator**: sysadmin@thingsboard.org / sysadmin
 - **Tenant Administrator**: tenant@thingsboard.org / tenant

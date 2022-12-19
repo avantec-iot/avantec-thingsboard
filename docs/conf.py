@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Using-TA65-with-ThingsBoard'
-copyright = '2020, Avantec Manufacturing Limited'
+copyright = '2022, Avantec Manufacturing Limited'
 author = 'Avantec Manufacturing Limited'
 
 # The full version, including alpha/beta/rc tags

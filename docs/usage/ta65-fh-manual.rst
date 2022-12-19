@@ -27,7 +27,7 @@ Feature List
 
 * Voltage supply: 230Vac
 * Temperature display in oC or oF
-* Temperature measurable range : 0 – 50 C 
+* Temperature measurable range : 0 - 50 C 
 * Selection of Heat/Cool
 * Adaptive control
 * 7days / 5+1+1days, 1day program, no program.
@@ -323,7 +323,7 @@ Relay Contact Voltage:		230Vac Max. 50/60 Hz
 Relay Contact Current:		16A Max.
 Sensing Element:			103AT
 Terminals:				    2 sq. mm Cable 
-Operating Temperature:		32 – 122 °F / 0 – 50 °C
-Storage Temperature:		23 – 122 °F / -5 – 50 °C
+Operating Temperature:		32 - 122 °F / 0 - 50 °C
+Storage Temperature:		23 - 122 °F / -5 - 50 °C
 Operating Humidity:		    5-95%RHnon-condensing
 =========================   ==========================
