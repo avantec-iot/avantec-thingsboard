@@ -4,6 +4,7 @@
 * [Install tools](#install-tools)
 * [Build document](#generate-web-pages)
 
+
 This technical document is in the format of [reStructuredText](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html) and Markdown/[CommonMark](https://commonmark.org/). It's generated using [Sphinx](https://www.sphinx-doc.org/).
 
 ## Install tools
