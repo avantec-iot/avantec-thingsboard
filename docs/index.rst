@@ -55,11 +55,12 @@ Are you new to Avantec Thermostats or ThingsBoard IoT platform?
 Learn about them to help you create fantastic project.
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 3
    :caption: First steps
 
    /intro/get-started
+
+..   :hidden:
 
 
 ThingsBoard
@@ -68,14 +69,15 @@ ThingsBoard
 Here is an overview about ThingsBoard.
 
 .. toctree::
-   :maxdepth: 4
-   :hidden:
+   :maxdepth: 5
    :caption: ThingsBoard
 
    Overview </thingsboard/thingsboard-overview>
    Installation </thingsboard/thingsboard-install>
    Customize </thingsboard/thingsboard-customization>
    MQTT Device API </thingsboard/thingsboard-mqtt-device-api>
+
+..   :hidden:
 
 
 TA652FC-W Wi-Fi Thermostat
@@ -84,8 +86,7 @@ TA652FC-W Wi-Fi Thermostat
 These references will help you learn more about TA652FC-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
 
 .. toctree::
-   :maxdepth: 4
-   :hidden:
+   :maxdepth: 5
    :caption: TA652FC-W Wi-Fi Thermostat
 
    Specifications </device/ta652fc-w/ta652fc-w-specifications>
@@ -94,6 +95,7 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
    Demo Dashboard </device/ta652fc-w/ta652fc-w-demo-dashboard-usage>
    MQTT API </device/ta652fc-w/ta652fc-w-mqtt-api>
 
+..   :hidden:
 
 TA652FH-W Wi-Fi Thermostat
 ============================
@@ -101,12 +103,12 @@ TA652FH-W Wi-Fi Thermostat
 These references will help you learn more about TA652FH-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
 
 .. toctree::
-   :maxdepth: 4
-   :hidden:
+   :maxdepth: 5
    :caption: TA652FH-W Wi-Fi Thermostat
 
    Specifications </device/ta652fh-w/ta652fh-w-specifications>
 
+..   :hidden:
 
 Avantec and the project
 =============================
@@ -114,13 +116,13 @@ Avantec and the project
 Learn about the project and the company.
 
 .. toctree::
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 3
    :caption: About Avantec
 
    avantec
    copyright
 
+..   :hidden:
 
 .. Indices and tables
 .. ==================
