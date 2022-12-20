@@ -5,7 +5,7 @@ Copyrights and Licenses
 Copyrights
 ===========
 
-All original source code & document in this repository is Copyright (C) 2020 Avantec Manufacturing Limited. This source code is licensed under the Apache License 2.0 as described in the file `LICENSE`__.
+All original source code & document in this repository is Copyright (C) 2022 Avantec Manufacturing Limited. This source code is licensed under the Apache License 2.0 as described in the file `LICENSE`__.
 
 Additional third party copyrighted code & document is included under the following licenses.
 

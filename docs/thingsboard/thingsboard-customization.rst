@@ -43,5 +43,5 @@ How to customize
 
 * Create new widget
 
-* Create your service, like ThingsBoard. See :doc:`/protocol/ta65-mqtt-api`.
+* Create your service, like ThingsBoard. See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
 

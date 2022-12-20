@@ -107,44 +107,44 @@
             "rowClick": [
               {
                 "id": "97ffc67a-c052-636b-17a8-0ee8c1f2ddb2",
-                "name": "to_ta65-fc-tb_control_row_click",
+                "name": "to_ta652fc-w-tb_control_row_click",
                 "icon": "ac_unit",
                 "type": "openDashboardState",
-                "targetDashboardStateId": "TA65-FC_Control",
+                "targetDashboardStateId": "TA652FC-W_Control",
                 "setEntityId": true
               }
             ],
             "actionCellButton": [
               {
                 "id": "9e84cefb-c668-2325-061a-ede583d15fbf",
-                "name": "to_ta65-fc-tb_control_button_click",
+                "name": "to_ta652fc-w-tb_control_button_click",
                 "icon": "ac_unit",
                 "type": "openDashboardState",
-                "targetDashboardStateId": "TA65-FC_Control",
+                "targetDashboardStateId": "TA652FC-W_Control",
                 "setEntityId": true
               },
               {
                 "id": "1951650d-6abf-7496-aeaa-99a70cf34485",
-                "name": "to_ta65-fc-tb_program",
+                "name": "to_ta652fc-w-tb_program",
                 "icon": "timer",
                 "type": "openDashboardState",
-                "targetDashboardStateId": "TA65-FC_Program",
+                "targetDashboardStateId": "TA652FC-W_Program",
                 "setEntityId": true
               },
               {
                 "id": "7166ca5c-7057-7d15-965c-9028f0ab8438",
-                "name": "to_ta65-fc-tb_settings",
+                "name": "to_ta652fc-w-tb_settings",
                 "icon": "settings",
                 "type": "openDashboardState",
-                "targetDashboardStateId": "TA65-FC_Settings",
+                "targetDashboardStateId": "TA652FC-W_Settings",
                 "setEntityId": true
               },
               {
                 "id": "ab0f8589-71cb-3251-9491-41aa219bd5d8",
-                "name": "to_ta65-fc-tb_admin",
+                "name": "to_ta652fc-w-tb_admin",
                 "icon": "build",
                 "type": "openDashboardState",
-                "targetDashboardStateId": "TA65-FC_Admin",
+                "targetDashboardStateId": "TA652FC-W_Admin",
                 "setEntityId": true
               }
             ]
@@ -5700,7 +5700,7 @@
           }
         }
       },
-      "TA65-FC_Control": {
+      "TA652FC-W_Control": {
         "name": "${entityName} Control",
         "root": false,
         "layouts": {
@@ -5766,7 +5766,7 @@
           }
         }
       },
-      "TA65-FC_Settings": {
+      "TA652FC-W_Settings": {
         "name": "${entityName} Settings",
         "root": false,
         "layouts": {
@@ -5862,7 +5862,7 @@
           }
         }
       },
-      "TA65-FC_Program": {
+      "TA652FC-W_Program": {
         "name": "${entityName} Program",
         "root": false,
         "layouts": {
@@ -6293,7 +6293,7 @@
           }
         }
       },
-      "TA65-FC_Admin": {
+      "TA652FC-W_Admin": {
         "name": "${entityName} Admin",
         "root": false,
         "layouts": {
@@ -6371,7 +6371,7 @@
           }
         }
       },
-      "TA65-FC_Test": {
+      "TA652FC-W_Test": {
         "name": "${entityName} Test",
         "root": false,
         "layouts": {
@@ -6420,8 +6420,8 @@
           "fetchLastLevelOnly": false,
           "relationType": "Contains",
           "deviceTypes": [
-            "TA65-FC-TB",
-            "TA65-FH-TB"
+            "TA652FC-W-TB",
+            "TA652FH-W-TB"
           ]
         }
       },

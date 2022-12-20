@@ -1,44 +1,44 @@
 Avantec Dashboard Usage
-=======================
+=========================
 
 
 Default State
--------------
+---------------
 
-.. image:: ../_static/usage/avantec_usage/default_state.png
+.. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_state.png
 
 *  Dashboard bar:
     * |Dashboard name| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
     * |Dashboard expand to fullscreen| : Click the two ICONS in the upper left corner to display the page in full screen.
     * |Dashboard edit timewindow| : Edit timewindow.
 
-.. |Dashboard name| image:: ../_static/usage/avantec_usage/dashboard_name_icon.png
-.. |Dashboard expand to fullscreen| image:: ../_static/usage/avantec_usage/dashboard_fullname_icon.png
-.. |Dashboard edit timewindow| image:: ../_static/usage/avantec_usage/dashboard_timewindow_icon.png
+.. |Dashboard name| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/dashboard_name_icon.png
+.. |Dashboard expand to fullscreen| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/dashboard_fullname_icon.png
+.. |Dashboard edit timewindow| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/dashboard_timewindow_icon.png
 
 *  Thermostats widget:
     * Field: 
         * Entity name, Entity type: device name, type.
-        * Model, Room temp, Unit: see `TA65-FC_Control State`_.
+        * Model, Room temp, Unit: see `TA652FC-W_Control State`_.
     *  State Operate:
-        * |default_control| : skip to `TA65-FC_Control State`_。
-        * |default_program| : skip to `TA65-FC_Program State`_。
-        * |default_settings| : skip to `TA65-FC_Settings State`_。
-        * |default_admin| : skip to `TA65-FC_Admin State`_。
+        * |default_control| : skip to `TA652FC-W_Control State`_。
+        * |default_program| : skip to `TA652FC-W_Program State`_。
+        * |default_settings| : skip to `TA652FC-W_Settings State`_。
+        * |default_admin| : skip to `TA652FC-W_Admin State`_。
 
-.. |default_control| image:: ../_static/usage/avantec_usage/default_control_icon.png
-.. |default_program| image:: ../_static/usage/avantec_usage/default_program_icon.png
-.. |default_settings| image:: ../_static/usage/avantec_usage/default_settings_icon.png
-.. |default_admin| image:: ../_static/usage/avantec_usage/default_admin_icon.png
+.. |default_control| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_control_icon.png
+.. |default_program| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_program_icon.png
+.. |default_settings| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_settings_icon.png
+.. |default_admin| image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_admin_icon.png
 
 
-TA65-FC States
---------------
+TA652FC-W States
+------------------------
 
-TA65-FC_Control State
->>>>>>>>>>>>>>>>>>>>>
+TA652FC-W_Control State
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../_static/usage/avantec_usage/ta65_fc_control_state.png
+.. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_control_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -67,10 +67,10 @@ TA65-FC_Control State
         ======================= ========================================================
 
 
-TA65-FC_Program State
->>>>>>>>>>>>>>>>>>>>>>
+TA652FC-W_Program State
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../_static/usage/avantec_usage/ta65_fc_program_state.png
+.. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_program_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -102,10 +102,10 @@ TA65-FC_Program State
         prgSpValue00 ~ prgSpValue27 set point value, temperature
         =========================== ======================================================
 
-TA65-FC_Settings State
->>>>>>>>>>>>>>>>>>>>>>>
+TA652FC-W_Settings State
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../_static/usage/avantec_usage/ta65_fc_settings_state.png
+.. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_settings_state.png
 
 *  Dashboard bar:
     See `Default State`_.
@@ -137,10 +137,10 @@ TA65-FC_Settings State
         ============================ ===========================================================
 
 
-TA65-FC_Admin State
->>>>>>>>>>>>>>>>>>>>
+TA652FC-W_Admin State
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.. image:: ../_static/usage/avantec_usage/ta65_fc_admin_state.png
+.. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_admin_state.png
 
 *  Dashboard bar:
     See `Default State`_.

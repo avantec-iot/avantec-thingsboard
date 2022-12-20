@@ -1,4 +1,4 @@
-# Using TA65 Thermostat with ThingsBoard
+# Using Avantec Thermostats with ThingsBoard
 
 * [Read document](https://avantec-thingsboard.readthedocs.org)
 * [Install tools](#install-tools)

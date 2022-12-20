@@ -1,15 +1,14 @@
-TA65-FH --- Floor Heating Wi-Fi Thermostat
+TA652FH-W --- Floor Heating Wi-Fi Thermostat
 ##############################################
 
-CAUTION:
-=========
+.. warning::
 
-1. Turn off all electrical devices (e.g. heater, cooler) that are connected to the unit before installation and maintenance.
-2. The installer must be a trained service personnel
-3. Disconnect the power supply before maintenance.
-4. It must be mounted on a dry clean indoor place.
-5. Do not expose this unit to moisture.
-6. Do not expose this unit to dipping or splashing.
+    1. Turn off all electrical devices (e.g. heater, cooler) that are connected to the unit before installation and maintenance.
+    2. The installer must be a trained service personnel
+    3. Disconnect the power supply before maintenance.
+    4. It must be mounted on a dry clean indoor place.
+    5. Do not expose this unit to moisture.
+    6. Do not expose this unit to dipping or splashing.
 
 
 Introduction
@@ -39,7 +38,7 @@ Feature List
 Wiring
 =======
 
-**NOTE:** Power supply of TA65 is 230Vac.
+**NOTE:** Power supply of TA652FH-W is 230Vac.
 
 .. table::
     :widths: auto
@@ -61,23 +60,23 @@ Recommend adding fuse or protective device in the live circuit.
 ===========================================
 
 
-.. image:: ../_static/usage/ta65-fh/wiring-1.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/wiring-1.png
     :width: 54%
 
-.. image:: ../_static/usage/ta65-fh/wiring-2.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/wiring-2.png
     :width: 19%
 
 
 Mounting
 ========
 
-.. image:: ../_static/usage/ta65-fh/mounting-1.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/mounting-1.png
     :width: 32%
 
-.. image:: ../_static/usage/ta65-fh/mounting-2.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/mounting-2.png
     :width: 32%
 
-.. image:: ../_static/usage/ta65-fh/mounting-3.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/mounting-3.png
     :width: 32%
 
 1. Wiring the terminals.
@@ -90,10 +89,10 @@ Mounting
 Dimension in mm:
 ================
 
-.. image:: ../_static/usage/ta65-fh/dimension-1.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/dimension-1.png
     :width: 50%
 
-.. image:: ../_static/usage/ta65-fh/dimension-2.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/dimension-2.png
     :width: 30%
 
 
@@ -103,7 +102,7 @@ LCD Interface
 LCD Indication
 ---------------
 
-.. image:: ../_static/usage/ta65-fh/lcd_indication.png
+.. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/lcd_indication.png
     :width: 40%
 
 .. table::
@@ -128,19 +127,19 @@ LCD Indication
     === ===============================================================================
 
 
-.. |icon_mode| image:: ../_static/usage/ta65-fh/icon_mode.png
+.. |icon_mode| image:: /_static/device/ta652fh-w/ta652fh-w-specifications/icon_mode.png
     :scale: 50%
 
-.. |icon_clock| image:: ../_static/usage/ta65-fh/icon_clock.png
+.. |icon_clock| image:: /_static/device/ta652fh-w/ta652fh-w-specifications/icon_clock.png
     :scale: 50%
 
-.. |icon_onoff| image:: ../_static/usage/ta65-fh/icon_onoff.png
+.. |icon_onoff| image:: /_static/device/ta652fh-w/ta652fh-w-specifications/icon_onoff.png
     :scale: 50%
 
-.. |icon_up| image:: ../_static/usage/ta65-fh/icon_up.png
+.. |icon_up| image:: /_static/device/ta652fh-w/ta652fh-w-specifications/icon_up.png
     :scale: 50%
 
-.. |icon_down| image:: ../_static/usage/ta65-fh/icon_down.png
+.. |icon_down| image:: /_static/device/ta652fh-w/ta652fh-w-specifications/icon_down.png
     :scale: 50%
 
 .. |icon_blank| replace:: **[blank]**
@@ -155,7 +154,7 @@ Hold |icon_onoff| to turn On / Off the thermostat. When the thermostat is Off. N
 Clock setting
 -------------
 
-** **Nomally the clock is automatically set once wifi is connected and synchronize for each day. So manual set is not ncecssary when it is online.**
+**Nomally the clock is automatically set once wifi is connected and synchronize for each day. So manual set is not ncecssary when it is online.**
 
 * Press |icon_clock| to start the setting
 * Press |icon_up| / |icon_down| to change the day of week
@@ -197,7 +196,7 @@ When it is in program mode, The set point will be overrided until the next time 
 |icon_clock| can be pressed to release the override status.
 
 
-Internal parameter setting 1.
+Internal parameter setting 1
 -----------------------------
 
 * Operation:
@@ -250,10 +249,10 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
 * Switching Differential:
     The difference between switching the heating or controller on and off
 
-    .. image:: ../_static/usage/ta65-fh/switching-differential-1.png
+    .. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/switching-differential-1.png
         :width: 49%
 
-    .. image:: ../_static/usage/ta65-fh/switching-differential-2.png
+    .. image:: /_static/device/ta652fh-w/ta652fh-w-specifications/switching-differential-2.png
         :width: 49%
 
 * Program Mode:
@@ -285,7 +284,7 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
     It is the temperature limited for floor sensor. When the **Heat Mode** and **Combined Sensor** are selected. The output will turn off when floor sensor sense the temperature to be higher than **floor temperature limited**.
 
 
-Internal parameter setting 2.
+Internal parameter setting 2
 -----------------------------
 
 * Operation:

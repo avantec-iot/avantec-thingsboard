@@ -1,5 +1,5 @@
-ThingsBoard MQTT API reference
-##############################
+ThingsBoard MQTT Device API reference
+########################################
 
 
 Introduction

@@ -1,11 +1,14 @@
-TA65-TBMQTT API reference
-##########################
+TA652FC-W MQTT API reference
+##############################
 
+.. tip::
+
+  This section applies to both ``TA652FC-W`` and ``TA652FH-W``.
 
 Overview
 ========
 
-TA65-TBMQTT is an implementation of ThingsBoard MQTT protocol client (MQTT is a lightweight publish/subscribe messaging protocol).
+``TA652FC-W MQTT API`` is an implementation of :doc:`/thingsboard/thingsboard-mqtt-device-api` (MQTT is a lightweight publish/subscribe messaging protocol).
 
 .. uml::
 
@@ -18,7 +21,7 @@ TA65-TBMQTT is an implementation of ThingsBoard MQTT protocol client (MQTT is a 
    node "\nServer-side Application\n" as TBApp {
    }
 
-   TBSrv <-down-> TBDev : <color:#FF0000> **TA65-TBMQTT API** </color>
+   TBSrv <-down-> TBDev : <color:#FF0000> **TA652FC-W MQTT API** </color>
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 
@@ -33,7 +36,7 @@ Features
   * Multiple instances (Multiple clients in one application)
   * Support subscribing, publishing, authentication, last will messages, keep alive pings and all 3 QoS levels (it should be a fully functional client)
 
-* Base on :doc:`thingsboard-mqtt-api`:
+* Base on :doc:`/thingsboard/thingsboard-mqtt-device-api`:
 
   * Support telemetry upload API
   * Support client-side & shared attributes, and attributes API:
@@ -92,7 +95,7 @@ Message:
     {"roomTemp":26.2,"changeOverTemp":26.3,"floorTemp":26.3,
     "wifiRssi":220,"iram":161868,"spiram":4194252}
 
-See `roomTemp`_, `changeOverTemp`_ (only for TA65-FC), `floorTemp`_ (only for TA65-FH), `wifiRssi`_, `iram`_ and `spiram`_. 
+See `roomTemp`_, `changeOverTemp`_ (only for TA652FC-W), `floorTemp`_ (only for TA652FH-W), `wifiRssi`_, `iram`_ and `spiram`_. 
 
 See `uploadFreq`_.
 
@@ -180,7 +183,7 @@ Message 3:
     // Payload: 
     {"method":"remoteSetFanMode","params":"Med"}
 
-See `fanMode`_ (only for TA65-FC), `fanStatus`_ (only for TA65-FC) and `remoteSetFanMode`_ (only for TA65-FC). 
+See `fanMode`_ (only for TA652FC-W), `fanStatus`_ (only for TA652FC-W) and `remoteSetFanMode`_ (only for TA652FC-W). 
 
 
 CTRL.03 Set Point & Override Status
@@ -390,7 +393,7 @@ Chart:
     [-> TBDev : power on
 
     == Upload  Device Fixed attributes ==
-    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"model":"TA65-FC-TB","mac":"24:0A:C4:2C:EB:C8",\n"wifiFWVersion":"1.5.4.0","mcuFWVersion":"1.4.4.1",\n"wifiRSSIMin":0,"wifiRssiMax":255,"wifiRssiResolution":1,\n"uploadFreqMin":2,"uploadFreqMax":2592000,"uploadFreqStep":1,\n"syncTimeFreqMin":1800,"syncTimeFreqMax":2592000,"syncTimeFreqStep":1}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"model":"TA652FC-W-TB","mac":"24:0A:C4:2C:EB:C8",\n"wifiFWVersion":"1.5.4.0","mcuFWVersion":"1.4.4.1",\n"wifiRSSIMin":0,"wifiRssiMax":255,"wifiRssiResolution":1,\n"uploadFreqMin":2,"uploadFreqMax":2592000,"uploadFreqStep":1,\n"syncTimeFreqMin":1800,"syncTimeFreqMax":2592000,"syncTimeFreqStep":1}
 
     note over TBDev, TBSrv
     send these attributes only once when the device is started
@@ -410,7 +413,7 @@ Message 1:
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"model":"TA65-FC-TB","mac":"24:0A:C4:2C:EB:C8",
+    {"model":"TA652FC-W-TB","mac":"24:0A:C4:2C:EB:C8",
     "wifiFWVersion":"1.5.4.0","mcuFWVersion":"1.4.4.1",
     "wifiRSSIMin":0,"wifiRssiMax":255,"wifiRssiStep":1,
     "uploadFreqMin":2,"uploadFreqMax":2592000,"uploadFreqStep":1,
@@ -450,11 +453,11 @@ See `currentTempUnit`_,
 `spValueMin`_, `spValueMax`_, `spValueStep`_, 
 `internalOffsetMin`_, `internalOffsetMax`_ and `internalOffsetStep`_.
 
-See `floorTempLimitedMin`_ (only for TA65-FH), `floorTempLimitedMax`_ (only for TA65-FH), `floorTempLimitedStep`_ (only for TA65-FH),
+See `floorTempLimitedMin`_ (only for TA652FH-W), `floorTempLimitedMax`_ (only for TA652FH-W), `floorTempLimitedStep`_ (only for TA652FH-W),
 `switchingDiffHeatingMin`_, `switchingDiffHeatingMax`_, `switchingDiffHeatingStep`_,
 `switchingDiffCoolingMin`_, `switchingDiffCoolingMax`_, `switchingDiffCoolingStep`_,
-`changeOverTempHeatingMin`_ (only for TA65-FC), `changeOverTempHeatingMax`_ (only for TA65-FC), `changeOverTempHeatingStep`_ (only for TA65-FC),
-`changeOverTempCoolingMin`_ (only for TA65-FC), `changeOverTempCoolingMax`_ (only for TA65-FC) and `changeOverTempCoolingStep`_ (only for TA65-FC).
+`changeOverTempHeatingMin`_ (only for TA652FC-W), `changeOverTempHeatingMax`_ (only for TA652FC-W), `changeOverTempHeatingStep`_ (only for TA652FC-W),
+`changeOverTempCoolingMin`_ (only for TA652FC-W), `changeOverTempCoolingMax`_ (only for TA652FC-W) and `changeOverTempCoolingStep`_ (only for TA652FC-W).
 
 
 SET.02 Settings
@@ -497,15 +500,15 @@ Chart:
     switchingDiffHeating, remoteSetSwitchingDiffHeating
     switchingDiffCooling, remoteSetSwitchingDiffCooling
 
-    systemMode, remoteSetSystemMode (only for TA65-FH)
-    sensorMode, remoteSetSensorMode (only for TA65-FH)
-    floorTempLimited, remoteSetFloorTempLimited (only for TA65-FH)
-    adaptiveControl, remoteSetAdaptiveControl (only for TA65-FH)
+    systemMode, remoteSetSystemMode (only for TA652FH-W)
+    sensorMode, remoteSetSensorMode (only for TA652FH-W)
+    floorTempLimited, remoteSetFloorTempLimited (only for TA652FH-W)
+    adaptiveControl, remoteSetAdaptiveControl (only for TA652FH-W)
 
-    forceVent, remoteSetForceVent (only for TA65-FC)
-    changeOverMode, remoteSetChangeOverMode (only for TA65-FC)
-    changeOverTempHeating, remoteSetChangeOverTempHeating (only for TA65-FC)
-    changeOverTempCooling, remoteSetChangeOverTempCooling (only for TA65-FC)
+    forceVent, remoteSetForceVent (only for TA652FC-W)
+    changeOverMode, remoteSetChangeOverMode (only for TA652FC-W)
+    changeOverTempHeating, remoteSetChangeOverTempHeating (only for TA652FC-W)
+    changeOverTempCooling, remoteSetChangeOverTempCooling (only for TA652FC-W)
     end note
 
 Message 1a:
@@ -722,10 +725,10 @@ See `tempUnit`_ and `remoteSetTempUnit`_, `timeFormat`_ and `remoteSetTimeFormat
 `switchingDiffCooling`_ and `remoteSetSwitchingDiffCooling`_. 
 
 See `systemMode`_ and `remoteSetSystemMode`_, `sensorMode`_ and `remoteSetSensorMode`_,
-`floorTempLimited`_ and `remoteSetFloorTempLimited`_, `adaptiveControl`_ and `remoteSetAdaptiveControl`_.(only for TA65-FH)
+`floorTempLimited`_ and `remoteSetFloorTempLimited`_, `adaptiveControl`_ and `remoteSetAdaptiveControl`_.(only for TA652FH-W)
 
 See `forceVent`_ and `remoteSetForceVent`_, `changeOverMode`_ and `remoteSetChangeOverMode`_,
-`changeOverTempHeating`_ and `remoteSetChangeOverTempHeating`_, `changeOverTempCooling`_ and `remoteSetChangeOverTempCooling`_.(only for TA65-FC)
+`changeOverTempHeating`_ and `remoteSetChangeOverTempHeating`_, `changeOverTempCooling`_ and `remoteSetChangeOverTempCooling`_.(only for TA652FC-W)
 
 
 ADM.01 Request all remote parameters when the device is started
@@ -870,7 +873,7 @@ Chart:
     participant "HTTP Server"  as HTTPSrv order 30 
 
     == Wi-Fi FUOTA ==
-    TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteWiFiFUOTA","params":\n"http://192.168.1.106/TA65-FC_WiFi.ino.bin"}
+    TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteWiFiFUOTA","params":\n"http://192.168.1.106/TA652FC-W_WiFi.ino.bin"}
     TBDev -->  TBSrv: send response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/response/$request_id** \nPayload: {"method":"remoteWiFiFUOTA","results":{"result":"success"}}
     TBDev  --> HTTPSrv: (get Wi-Fi module firmware)
     TBDev  ->  TBDev: reboot
@@ -888,7 +891,7 @@ Message 1a:
     // Topic:         v1/devices/me/rpc/request/$request_id
     // Payload: 
     {"method":"remoteWiFiFUOTA",
-    "params":"http://192.168.1.106/TA65-FC_WiFi.ino.bin"}
+    "params":"http://192.168.1.106/TA652FC-W_WiFi.ino.bin"}
 
 Message 1b:
   .. code:: javascript
@@ -905,7 +908,7 @@ Message 2a:
     // Topic:         v1/devices/me/rpc/request/$request_id
     // Payload: 
      {"method":"remoteMcuFUOTA",
-     "params":"http://192.168.1.106/TA65-FC_MCU.bin"}
+     "params":"http://192.168.1.106/TA652FC-W_MCU.bin"}
 
 Message 2b:
   .. code:: javascript
@@ -1038,8 +1041,8 @@ spiram
      - Max
      - Step/Precision
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - roomTemp
@@ -1147,8 +1150,8 @@ timeNTPServer
      - Max
      - Step/Precision
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - cloudHost
@@ -1234,14 +1237,14 @@ mcuFWVersion
      - Type
      - Unit
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - model
      - string
      - 
-     - "TA65-FC-TB", |br| "TA65-FH-TB"
+     - "TA652FC-W-TB", |br| "TA652FH-W-TB"
      - ●
      - ●
      - Product Model
@@ -1309,8 +1312,8 @@ syncTimeFreqStep
      - Type
      - Unit
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - wifiRssiMin
@@ -1469,8 +1472,8 @@ changeOverTempCoolingStep
      - Type
      - Unit
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - currentTempUnit
@@ -1685,8 +1688,8 @@ prgNextSetpoint
      - Type
      - Unit
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - fanStatus
@@ -1783,8 +1786,8 @@ changeOverTempCooling
      - Max
      - Step/ |br| Precision
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - tempUnit
@@ -1966,8 +1969,8 @@ prgSpValueXX
      - Max
      - Step/ |br| Precision
      - Value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - controlMode
@@ -2117,8 +2120,8 @@ remoteSetPrgSpValueXX
    * - Server-side RPC |br| (remote change |br| client-side attribute)
      - params |br| value |br| type
      - params |br| value
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - remoteSetTempUnit
@@ -2281,8 +2284,8 @@ remoteGetMemoryUsage
      - one-way | |br| two-way
      - Request
      - Response
-     - TA65 |br| -FC
-     - TA65 |br| -FH
+     - TA652 |br| FC-W
+     - TA652 |br| FH-W
      - Memo
 
    * - remoteSetOverrideStatus
