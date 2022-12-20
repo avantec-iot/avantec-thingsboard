@@ -42,20 +42,42 @@ Sphinx is a tool that makes it easy to create documentation.
 Sphinx_intl is a useful tool for internationalization and localization.
 
 1. On Windows, you should open Command Prompt (⊞Win-r and type **cmd**) and run the same command.
+    
+    It is a good moment to create a Python virtual environment and install the required tools. For that, open a command line terminal, `cd` into the directory you just created, and run the following commands <https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment>:
+
+    * Windows:
+
+    ```cmd
+    > cd /path/to/project
+    > python -m venv .venv                               # Creating a virtual environment
+    > .\.venv\Scripts\activate                           # Activating a virtual environment
+    (.venv) > where python                               # ...\.venv\Scripts\python.exe
+    (.venv) > python -m pip install sphinx sphinx_intl   # Installing packages
+    (.venv) > ...
+    (.venv) > deactivate                                 # Leaving the virtual environment
+    ```
+    * Linux:
 
     ```sh
-    pip install sphinx sphinx_intl
+    $ cd /path/to/project
+    $ python -m venv .venv                               # Creating a virtual environment
+    $ source .venv/bin/activate                          # Activating a virtual environment
+    (.venv) $ which python                               # .../env/bin/python
+    (.venv) $ python -m pip install sphinx sphinx_intl   # Installing packages
+    (.venv) $ ...
+    (.venv) $ deactivate                                 # Leaving the virtual environment
     ```
 
-2. After installation, type `phinx-build --version` on the command prompt. If everything worked fine, you will see the version number for the Sphinx package you just installed.
+    ***Note: venv will create a virtual Python installation in the `.venv` folder. You should exclude your virtual environment directory from your version control system using `.gitignore` or similar.***
+
+2. After installation, type `sphinx-build --version` on the command prompt. If everything worked fine, you will see the version number for the Sphinx package you just installed.
 
 3. Sphinx comes with a script called **sphinx-quickstart** that sets up a source directory and creates a default **conf.py** with the most useful configuration values from a few questions it asks you. To use this, run:
 
     ```sh
     cd /path/to/project
-    mkdir docs
+    (.venv) $ sphinx-quickstart docs
     cd docs
-    sphinx-quickstart
     ```
 
     We will be presented with a series of questions, the answer to which can depend from project to project.
@@ -74,14 +96,14 @@ You can use **Markdown** and reStructuredText in the same Sphinx project.
 1. Run the following command (using Command Prompt):
 
     ```sh
-    pip install recommonmark
+    (.venv) $ pip install recommonmark
     ```
 
 2. Then in your `conf.py`:
 
     ```python
-    #extensions = ['sphinx.ext.autodoc']
     extensions = ['recommonmark']
+    extensions = ['sphinx.ext.autodoc']
     ```
 
     **Note**: You should skip this step(2). The above code is already in you `conf.py`.
@@ -95,7 +117,7 @@ Sphinx_rtd_theme is a html theme.
 1. Run the following command (using Command Prompt):
 
     ```sh
-    pip install sphinx_rtd_theme
+    (.venv) $ pip install sphinx_rtd_theme
     ```
 
 2. Add this theme extension module in ```conf.py```
@@ -122,9 +144,9 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
 1. On Windows, run the following command (using Command Prompt):
 
     ```sh
-    pip install plantweb
+    (.venv) $ pip install plantweb
     ```
-
+<!--
 2. Add this *UML* extension modules in ```conf.py```:
 
     ```python
@@ -132,6 +154,7 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
     ```
 
     **Note**: You may skip this step(2). The above code is already in you `conf.py`.
+-->
 
 <!-- ### Step 5. Install sphinxcontrib-plantuml
 

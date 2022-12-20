@@ -1,5 +1,5 @@
-.. TA65-with-ThingsBoard documentation master file, created by
-   sphinx-quickstart on Fri Jul  3 16:52:56 2020.
+.. Using-Avantec-Thermostat-with-ThingsBoard documentation master file, created by
+   sphinx-quickstart on Tue Dec 20 10:31:29 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 

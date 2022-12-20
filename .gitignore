@@ -1,1 +1,5 @@
+#python
+.venv
+
+#sphinx
 docs/_build/*
