@@ -1,4 +1,4 @@
-.. Using-Avantec-Thermostats-with-ThingsBoard documentation master file, created by
+.. Using Avantec Thermostats with ThingsBoard documentation master file, created by
    sphinx-quickstart on Tue Dec 20 10:31:29 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -40,20 +40,36 @@ Using Avantec Thermostats with ThingsBoard
 
    ThingsBoard includes ``ThingsBoard CE (Community Edition)`` and ``ThingsBoard PE (Professional Edition)``. **ThingsBoard CE is 100% Open source and IT'S FREE**. 
    
-   *When we developed ``TA652FC-W`` and ``TA652FH-W`` Thermostat, we used ThingsBoard CE.*
+.. note::
+   When we developed ``TA652FC-W`` and ``TA652FH-W`` Thermostats, we used ThingsBoard CE.
 
 .. __: https://thingsboard.io/
 
 .. You can find out more about our all the :doc:`/features` in these pages.
 
+
+First steps
+============
+
+Are you new to Avantec Thermostats or ThingsBoard IoT platform?
+Learn about them to help you create fantastic project.
+
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: First steps
 
    /intro/get-started
 
+
+ThingsBoard
+=============
+
+Here is an overview about ThingsBoard.
+
 .. toctree::
    :maxdepth: 4
+   :hidden:
    :caption: ThingsBoard
 
    Overview </thingsboard/thingsboard-overview>
@@ -61,8 +77,15 @@ Using Avantec Thermostats with ThingsBoard
    Customize </thingsboard/thingsboard-customization>
    MQTT Device API </thingsboard/thingsboard-mqtt-device-api>
 
+
+TA652FC-W Wi-Fi Thermostat
+==============================
+
+These references will help you learn more about TA652FC-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
+
 .. toctree::
    :maxdepth: 4
+   :hidden:
    :caption: TA652FC-W Wi-Fi Thermostat
 
    Specifications </device/ta652fc-w/ta652fc-w-specifications>
@@ -71,24 +94,38 @@ Using Avantec Thermostats with ThingsBoard
    Demo Dashboard </device/ta652fc-w/ta652fc-w-demo-dashboard-usage>
    MQTT API </device/ta652fc-w/ta652fc-w-mqtt-api>
 
+
+TA652FH-W Wi-Fi Thermostat
+============================
+
+These references will help you learn more about TA652FH-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
+
 .. toctree::
    :maxdepth: 4
+   :hidden:
    :caption: TA652FH-W Wi-Fi Thermostat
 
    Specifications </device/ta652fh-w/ta652fh-w-specifications>
 
+
+Avantec and the project
+=============================
+
+Learn about the project and the company.
+
 .. toctree::
    :maxdepth: 2
-   :caption: About
+   :hidden:
+   :caption: About Avantec
 
-   copyright
    avantec
+   copyright
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`search`
 
 .. * :ref:`modindex`
