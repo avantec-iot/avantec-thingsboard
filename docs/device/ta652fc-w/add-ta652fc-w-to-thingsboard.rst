@@ -1,14 +1,15 @@
-Add TA65 to ThingsBoard
-==========================
+************************************
+Add TA652FC-W to ThingsBoard
+************************************
 
-Add devices (TA65 thermostat) to ThingsBoard.
+Add devices (TA652FC-W thermostat) to ThingsBoard.
 
 .. tip:: 
    Two devices are added in this section, TA652FC-W-TB and TA652FH-W-TB. You may add only one device, such as TA652FC-W-TB.
 
 
 Step 1. Login
--------------
+==============
 
 - Open your ThingsBoard website in your browser.
 - Tenant Administrator login ThingsBoard: tenant@thingsboard.org / tenant.
@@ -30,7 +31,7 @@ The default user name and password are shown in the following table:
 
 
 Step 2. Add device
-------------------
+===================
 
 **Devices** --> **+** --> **Add new deivce** --> **Popup  Dialog** --> **Input** --> **Add**.
 
@@ -56,7 +57,7 @@ Step 2. Add device
 .. _copy-credentials-of-new-device:
 
 Step 3. Copy credentials of new device
---------------------------------------
+==========================================
 
 **Devices** --> **Manage credentials (icon)** --> **Popup Dialog** --> **Copy Access Token** --> **Select Access Token** --> Ctrl + C.
 
@@ -67,7 +68,7 @@ Step 3. Copy credentials of new device
 
 
 Step 4. Add shared attributes of new device
--------------------------------------------
+==============================================
 
 **Devices** --> **New device(TA652FC-W-TB or TA652FH-W-TB)** --> **Attributes** --> **Shared attributes** --> **+** --> **Popup Dialog** --> **Inpug Key, Value type & value** --> **Add**。
 
@@ -106,7 +107,7 @@ The following Shared attributes of the two devices, TA652FC-W-TB and TA652FH-W-T
 
 
 Step 5. Add asset
------------------
+===================
 
 **Note**: You can skip this step if your asset already in ThingsBoard.
 
@@ -131,7 +132,7 @@ Step 5. Add asset
 
 
 Step 6. Add device to asset
----------------------------
+============================
 
 Add two devices to the Building X: **Assets** --> **Building X** --> **Relations** --> **Direction: From** --> **+** --> **Popup dialog** --> **Input relation type, to entity type & entity list** --> **Add**.
 
@@ -154,7 +155,7 @@ Add two devices to the Building X: **Assets** --> **Building X** --> **Relations
 
 
 Step 7. Import Avantec Widgets
-------------------------------
+===============================
 
 .. tip:: 
    Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
@@ -172,10 +173,10 @@ See :download:`avantec_widgets.json </_static/thingsboard/thingsboard_extension/
 
 
 Step 8. Avantec Dashboard
--------------------------
+============================
 
 Step 8.1. Import Avantec Dashboard (Option)
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-----------------------------------------------
 
 .. tip:: 
    Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
@@ -208,7 +209,7 @@ See :download:`avantec_dashboard.json </_static/thingsboard/thingsboard_extensio
    ============================== =====================
 
 Step 8.2. Edit Avantec Dashboard
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+----------------------------------
 
 .. tip:: 
    Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
@@ -229,7 +230,7 @@ Step 8.2. Edit Avantec Dashboard
 
 
 Step 9. Open Avantec Dashboard
-------------------------------
+================================
 
 **Dashboards** --> **Open dashboard(icon) in the line of  Avantec Dashboard** --> **New Dashboard: Avantec Dashboard** --> **Click this line of TA652FC-W-TB**.
 

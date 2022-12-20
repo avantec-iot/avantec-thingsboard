@@ -1,5 +1,6 @@
-ThingsBoard MQTT Device API reference
-########################################
+*****************************
+ThingsBoard MQTT Device API
+*****************************
 
 
 Introduction
@@ -99,7 +100,7 @@ Getting started
 ---------------
 
 MQTT basics
-***********
+^^^^^^^^^^^^
 
 `MQTT`__ is a lightweight publish-subscribe messaging protocol which probably makes it the most suitable for various IoT devices. You can find more information about MQTT `here`__.
 
@@ -110,14 +111,14 @@ ThingsBoard server nodes act as an MQTT Broker that supports QoS levels 0 (at mo
 
 
 Client libraries setup
-**********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 You can find a large number of MQTT client libraries on the web. Examples in this article will be based on Mosquitto and MQTT.js. In order to setup one of those tools, you can use instructions in our `Hello World`__ guide.
 
 .. __: https://thingsboard.io/docs/getting-started-guides/helloworld/
 
 MQTT Connect
-************
+^^^^^^^^^^^^^
 
 We will use access token device credentials in this article and they will be referred to later as **$ACCESS_TOKEN**. The application needs to send MQTT CONNECT message with username that contains **$ACCESS_TOKEN**. Possible return codes and their reasons during connect sequence:
 
@@ -188,7 +189,7 @@ In the example above, we assume that “1451649600512” is a `unix timestamp`__
 
 
 Example
-*******
+^^^^^^^^^^
 
 +----------------+----------------------------+------------------------------------+
 | Client library | Shell file                 | JSON file                          |
@@ -199,7 +200,7 @@ Example
 +----------------+----------------------------+------------------------------------+
 
 mosquitto-telemetry.sh
-++++++++++++++++++++++
+""""""""""""""""""""""""""""""""""""
 
 .. code:: bash
 
@@ -212,7 +213,7 @@ mosquitto-telemetry.sh
 
 
 mqtt-js-telemetry.sh
-++++++++++++++++++++
+""""""""""""""""""""""""
 
 .. code:: bash
 
@@ -225,7 +226,7 @@ mqtt-js-telemetry.sh
 
 
 telemetry-data-as-object.json
-+++++++++++++++++++++++++++++
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code:: json
    
@@ -243,7 +244,7 @@ telemetry-data-as-object.json
 
 
 telemetry-data-as-array.json
-++++++++++++++++++++++++++++
+"""""""""""""""""""""""""""""""""""
 
 .. code:: json
    
@@ -251,7 +252,7 @@ telemetry-data-as-array.json
 
 
 telemetry-data-with-ts.json
-+++++++++++++++++++++++++++
+""""""""""""""""""""""""""""""""""""
 
 .. code:: json
    
@@ -289,7 +290,7 @@ ThingsBoard attributes API allows devices to
 
 
 Request attribute values from the server
-****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -322,7 +323,7 @@ The client should receive the response to the following topic::
 
 
 Example
-+++++++
+""""""""""""
 
 The following example is written in javascript and is based on mqtt.js. Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 
@@ -365,7 +366,7 @@ mqtt-js-attributes-request.js
 
 
 attributes-response.json
-::::::::::::::::::::::::
+::::::::::::::::::::::::::::
 
 .. code:: json
 
@@ -376,7 +377,7 @@ attributes-response.json
 
 
 Publish attribute update to the server
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -393,7 +394,7 @@ In order to publish client-side device attributes to ThingsBoard server node, se
    v1/devices/me/attributes
 
 Example
-+++++++
+""""""""""""
 
 +----------------+-------------------------------------+------------------------------------+
 | Client library | Shell file                          | JSON file                          |
@@ -404,7 +405,7 @@ Example
 +----------------+-------------------------------------+------------------------------------+
 
 mosquitto-attributes-publish.sh
-:::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::
 
 .. code:: bash
 
@@ -413,7 +414,7 @@ mosquitto-attributes-publish.sh
 
 
 mqtt-js-attributes-publish.sh
-:::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::
 
 .. code:: bash
    
@@ -422,7 +423,7 @@ mqtt-js-attributes-publish.sh
 
 
 new-attributes-values.json
-::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::
 
 .. code:: json
    
@@ -440,7 +441,7 @@ new-attributes-values.json
 
 
 Subscribe to attribute updates from the server
-**********************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -468,7 +469,7 @@ When a shared attribute is changed by one of the server-side components (such as
 
 
 Example
-+++++++
+""""""""""""
 
 +----------------+---------------------------------------+
 | Client library | Shell file                            |
@@ -499,7 +500,7 @@ PRC API
 -------
 
 Server-side RPC
-***************
+^^^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -536,7 +537,7 @@ The client should publish the response to the following topic::
 
 
 Example
-+++++++
+""""""""""""
 
 The following example is written in javascript and is based on mqtt.js. Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 
@@ -579,7 +580,7 @@ mqtt-js-rpc-from-server.js
 
 
 Client-side RPC
-***************
+^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -611,7 +612,7 @@ where **$request_id** is an integer request identifier. The response from server
 
 
 Example
-+++++++
+""""""""""""
 
 The following example is written in javascript and is based on mqtt.js. Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 

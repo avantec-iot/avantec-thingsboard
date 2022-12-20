@@ -1,7 +1,8 @@
-Connect TA65 to ThingsBoard
-===========================
+*********************************
+Connect TA652FC-W to ThingsBoard
+*********************************
 
-This section describes the process of connecting TA65 to ThingsBoard via Wi-Fi. This process applies to all models of thermostats in this series.
+This section describes the process of connecting TA652FC-W to ThingsBoard via Wi-Fi. This process applies to all models of thermostats in this series.
 
 .. |icon_mode| image:: /_static/device/ta652fc-w/ta652fc-w-specifications/icon_mode.png
     :scale: 50%
@@ -20,15 +21,16 @@ This section describes the process of connecting TA65 to ThingsBoard via Wi-Fi. 
 
 .. |icon_blank| replace:: **[blank]**
 
+
 Prerequisites. Clear Wi-Fi Configuration
-----------------------------------------
+=========================================
 
 .. tip::
-    If your TA65 is used for the first time, or your TA65 has never been connected to any Wi-Fi router, you can skip this step.
+    If your TA652FC-W is used for the first time, or your TA652FC-W has never been connected to any Wi-Fi router, you can skip this step.
 
-If your TA65 has been connected to a Wi-Fi router before, when you need to connect to a new Wi-Fi router, you need to clear the Wi-Fi configuration of the TA65 first.
+If your TA652FC-W has been connected to a Wi-Fi router before, when you need to connect to a new Wi-Fi router, you need to clear the Wi-Fi configuration of the TA652FC-W first.
 
-- Press and hold |icon_mode| and |icon_onoff| simultaneously for 10 seconds on the TA65.
+- Press and hold |icon_mode| and |icon_onoff| simultaneously for 10 seconds on the TA652FC-W.
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/clear_wifi_config_a.png
       :width: 60 %
@@ -47,25 +49,25 @@ If your TA65 has been connected to a Wi-Fi router before, when you need to conne
 
 
 Step 1. Get Access-Token
-------------------------
+==========================
 
-Get a access-token of TA65 from ThingsBoard. 
+Get a access-token of TA652FC-W from ThingsBoard. 
 See :ref:`copy-credentials-of-new-device`.
 
 
 Step 2. Power On
-------------------
+==================
 
-When you first power up, TA65 will enter Wi-Fi AP mode without any Wi-Fi parameters. At this point, you can configure the parameters through the web page.
+When you first power up, TA652FC-W will enter Wi-Fi AP mode without any Wi-Fi parameters. At this point, you can configure the parameters through the web page.
 
 .. tip::
-   TA65 has a different Wi-Fi Hotspot name every time it's powered on.
+   TA652FC-W has a different Wi-Fi Hotspot name every time it's powered on.
 
 
 Step 3. Configure
------------------
+===================
 
-- Connect to TA65's Wi-Fi hotspot on your computer or phone.
+- Connect to TA652FC-W's Wi-Fi hotspot on your computer or phone.
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/connect_ta65_ap.png
       :width: 50 %
@@ -83,7 +85,7 @@ Step 3. Configure
       ============  =====================================================================
       Wi-Fi SSID    SSID of your Wi-Fi router
       Password      password of your Wi-Fi router
-      Auth Token    Access Token of your TA65. See `Step 1. Get Access-Token`_
+      Auth Token    Access Token of your TA652FC-W. See `Step 1. Get Access-Token`_
       Host          | This ThingsBoard Server's MQTT URL.
                     | It must begin with "MQTT ://", such as
                     | mqtt://192.168.21.222
@@ -97,18 +99,18 @@ Step 3. Configure
 
 
 Step 4. Check
--------------
+================
 
-Check if TA65 is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the Tonezone relationship on ThingsBoard correctly, the time displayed by TA65 may be slightly off.
+Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the Tonezone relationship on ThingsBoard correctly, the time displayed by TA652FC-W may be slightly off.
  
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/check_connection.png
       :width: 60%
 
 
 Troubleshooting
----------------
+================
 
-Thermostat TA65 cann't connect to Wi-Fi:
+Thermostat TA652FC-W cann't connect to Wi-Fi:
 
 - If the Thermostat has never been connected to any Wi-Fi router since leaving the factory, it will enter Soft-AP mode. You can search for Wi-Fi SSID similar to "EasyStat-xxxx" through your mobile phone or computer.
 - Make sure the Wi-Fi router supports and turns on the 2.4G signal. Currently, some dual-band (2.4G & 5G) Wi-Fi routers can turn off the 2.4G signal. Please turn it on in your router settings.

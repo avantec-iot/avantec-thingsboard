@@ -1,11 +1,11 @@
 
-
+******************
 Customization
-=============
+******************
 
 
 Prerequisites 
--------------
+==============
 
 Reprinted articles:  https://thingsboard.io/docs/
 
@@ -33,7 +33,7 @@ Reprinted articles:  https://thingsboard.io/docs/
 
 
 How to customize
-----------------
+=================
 
 * In Avantec Dashboard:
     * Change widget title, background, colors, fonts, shadows, etc

@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+************************************************
 Using Avantec Thermostats with ThingsBoard
-================================================
+************************************************
 
 `Avantec`__ provides the latest ``TA65`` Thermostat networking solution. This solution needs to be used with the ``ThingsBoard`` software platform.
 
@@ -37,9 +38,9 @@ Using Avantec Thermostats with ThingsBoard
 * ThingsBoard
    `ThingsBoard`__ is an open-source IoT platform that enables rapid development, management and scaling of IoT projects. Their goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications. 
 
-   ThingsBoard includes ``ThingsBoard CE (Community Edition)`` and ``ThingsBoard PE (Professional Edition)``。**ThingsBoard CE is 100% Open source and IT'S FREE**. 
+   ThingsBoard includes ``ThingsBoard CE (Community Edition)`` and ``ThingsBoard PE (Professional Edition)``. **ThingsBoard CE is 100% Open source and IT'S FREE**. 
    
-   *When we developed TA65 Thermostat, we used ThingsBoard CE.*
+   *When we developed ``TA652FC-W`` and ``TA652FH-W`` Thermostat, we used ThingsBoard CE.*
 
 .. __: https://thingsboard.io/
 

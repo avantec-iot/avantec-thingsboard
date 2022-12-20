@@ -1,7 +1,8 @@
-TA652FC-W --- 2 pipe Fan Coil Wi-Fi Thermostat
-#################################################
+*************************************************
+TA652FC-W -- 2 pipe Fan Coil Wi-Fi Thermostat
+*************************************************
 
-.. warning::
+.. CAUTION::
 
     1. Turn off all electrical devices (e.g. heater, cooler) that are connected to the unit before installation and maintenance.
     2. The installer must be a trained service personnel.
@@ -21,7 +22,7 @@ Changeover sensor is required to install when auto changeover is used.
 Feature List
 =============
 
-* Voltage supply: 230V AC
+* Voltage supply: 230Vac
 * Temperature display in °C or °F
 * Temperature measurable range : 0 - 50 °C
 * 2-pipe system
@@ -163,7 +164,7 @@ Clock setting
 * Press |icon_blank| to confirm or leave the clock setting. Or return after no key pressed for 20 seconds.
 
 Clock synchronization
-**********************
+^^^^^^^^^^^^^^^^^^^^^^
 
 when Wi-Fi is connected and time synronize is need. Plesae use the App for time synchronization.
 

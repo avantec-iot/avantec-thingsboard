@@ -1,5 +1,6 @@
-TA652FC-W MQTT API reference
-##############################
+**********************
+TA652FC-W MQTT API 
+**********************
 
 .. tip::
 
@@ -72,14 +73,14 @@ Flow Chart
   The range of values for message fields is referred to in the following sections, see  `Telemetry (Timeseries data)`_, `Shared attributes`_, `Client-side attributes`_ and `Server-side RPC`_.
 
 TELE.01 Timeseries Data Upload
-+++++++++++++++++++++++++++++++++
+-------------------------------
 
 Chart:
   .. uml::
 
     caption  Timeseries Data Upload
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
 
@@ -101,14 +102,14 @@ See `uploadFreq`_.
 
 
 CTRL.01 Control Mode
-+++++++++++++++++++++++
+-----------------------
 
 Chart:
   .. uml::
 
     caption  Control Mode
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -139,14 +140,14 @@ See `controlMode`_ and `remoteSetControlMode`_.
 
 
 CTRL.02 Fan Mode & Fan Status
-++++++++++++++++++++++++++++++++
+------------------------------
 
 Chart:
   .. uml::
 
     caption  Fan Mode & Fan Status
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -187,14 +188,14 @@ See `fanMode`_ (only for TA652FC-W), `fanStatus`_ (only for TA652FC-W) and `remo
 
 
 CTRL.03 Set Point & Override Status
-++++++++++++++++++++++++++++++++++++++
+--------------------------------------
 
 Chart:
   .. uml::
 
     caption  Setpoint & Override Status
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local adjust setpoint ==
@@ -248,14 +249,14 @@ See `spValue`_, `overrideStatus`_, `remoteSetSpValue`_ and `remoteSetOverrideSta
 
 
 PRG.01 Program Mode & Program Status
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------
 
 Chart:
   .. uml::
 
     caption  Program Mode & Program Status
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -316,14 +317,14 @@ See `prgMode`_, `prgNextEnable`_, `prgNextSetpoint`_, `prgNextDaysTime`_ and `re
 
 
 PRG.02 Program Setpoint & Time
-+++++++++++++++++++++++++++++++++
+---------------------------------
 
 Chart:
   .. uml::
 
     caption  Program Setpoint & Time
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -380,14 +381,14 @@ See `prgSpTimeXX`_, `prgSpValueXX`_, `remoteSetPrgSpTimeXX`_ and `remoteSetPrgSp
 
 
 SET.01 Upload Device Attributes when the device is started
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------------------
 
 Chart:
   .. uml::
 
     caption  Upload Device Attributes when the device is started
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     [-> TBDev : power on
@@ -461,14 +462,14 @@ See `floorTempLimitedMin`_ (only for TA652FH-W), `floorTempLimitedMax`_ (only fo
 
 
 SET.02 Settings
-+++++++++++++++
+--------------------
 
 Chart:
   .. uml::
 
     caption  Settings
 
-    participant "TA65-XX" as TBDev order 10
+    participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate temperature unit ==
@@ -732,7 +733,7 @@ See `forceVent`_ and `remoteSetForceVent`_, `changeOverMode`_ and `remoteSetChan
 
 
 ADM.01 Request all remote parameters when the device is started
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------------------------
 
 Chart:
   .. uml::
@@ -768,7 +769,7 @@ See `cloudHost`_, `uploadFreq`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer
 
 
 ADM.02 Network Parameters & Timer Parameters
-++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------
 
 Chart:
   .. uml::
@@ -813,7 +814,7 @@ See `cloudHost`_, `uploadFreq`_  and `syncTimeFreq`_.
 
 
 ADM.03 Remote Sync Time
-+++++++++++++++++++++++
+----------------------------
 
 Chart:
   .. uml::
@@ -861,7 +862,7 @@ See `timezone`_, `timeNTPServer`_  and `remoteSyncTimeRequest`_.
 
 
 ADM.04 FUOTA (firmware update over the air) 
-+++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------
 
 Chart:
   .. uml::
@@ -879,7 +880,7 @@ Chart:
     TBDev  ->  TBDev: reboot
 
     == MCU FUOTA ==
-    TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteMcuFUOTA","params":\n"http://192.168.1.106/TA65-MCU.bin"}
+    TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteMcuFUOTA","params":\n"http://192.168.1.106/TA652FC-W-MCU.bin"}
     TBDev -->  TBSrv: send response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/response/$request_id** \nPayload: {"method":"remoteMcuFUOTA","results":{"result":"success"}}
     TBDev  --> HTTPSrv: (get MCU firmware)
     TBDev  ->  TBDev: reboot
@@ -922,7 +923,7 @@ See `remoteWiFiFUOTA`_ and `remoteMcuFUOTA`_.
 
 
 ADM.05 Remote Get Memeory Usage
-+++++++++++++++++++++++++++++++
+------------------------------------
 
 Chart:
   .. uml::
@@ -955,7 +956,7 @@ See `remoteGetMemoryUsage`_.
 
 
 ADM.06 Remote Reboot Device
-+++++++++++++++++++++++++++
+------------------------------
 
 Chart:
   .. uml::
@@ -980,7 +981,7 @@ See `remoteRebootDevice`_.
 
 
 ADM.07 Remote Clear Wi-Fi Config
-++++++++++++++++++++++++++++++++
+------------------------------------
 
 Chart:
   .. uml::
@@ -1013,22 +1014,22 @@ Telemetry (Timeseries data)
     uploaded every `uploadFreq`_ seconds.
 
 roomTemp
-++++++++
+----------
 
 changeOverTemp
-++++++++++++++
+-----------------
 
 floorTemp
-+++++++++
+-----------
 
 wifiRssi
-++++++++
+----------
 
 iram
-++++
+------
 
 spiram
-++++++
+---------
 
 .. list-table:: Telemetry (Timeseries data)
    :widths: auto
@@ -1125,19 +1126,19 @@ Shared attributes
     from `cloudHost`_ (your ThingsBoard server).
 
 cloudHost
-+++++++++
+-----------
 
 uploadFreq
-++++++++++
+------------
 
 syncTimeFreq
-++++++++++++
+---------------
 
 timezone
-++++++++
+---------
 
 timeNTPServer
-+++++++++++++
+----------------
 
 .. list-table:: Shared attributes
    :widths: auto
@@ -1215,19 +1216,19 @@ Client-side attributes
 ======================
 
 Client-side attribute (static/fixed)
-++++++++++++++++++++++++++++++++++++
+--------------------------------------
 
 model
-:::::
+^^^^^
 
 mac
-:::
+^^^^^
 
 wifiFWVersion
-:::::::::::::
+^^^^^^^^^^^^^^^
 
 mcuFWVersion
-::::::::::::
+^^^^^^^^^^^^^^^
 
 .. list-table:: Client-side attribute (static/fixed)
    :widths: auto
@@ -1275,34 +1276,34 @@ mcuFWVersion
 
 
 Client-side attribute (static/fixed, metadata)
-++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------
 
 wifiRssiMin
-:::::::::::
+^^^^^^^^^^^^^
 
 wifiRssiMax
-:::::::::::
+^^^^^^^^^^^^^
 
 wifiRssiStep
-::::::::::::
+^^^^^^^^^^^^^
 
 uploadFreqMin
-:::::::::::::
+^^^^^^^^^^^^^^^
 
 uploadFreqMax
-:::::::::::::
+^^^^^^^^^^^^^
 
 uploadFreqStep
-::::::::::::::
+^^^^^^^^^^^^^^
 
 syncTimeFreqMin
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 syncTimeFreqMax
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 syncTimeFreqStep
-::::::::::::::::
+^^^^^^^^^^^^^^^^^
 
 .. list-table:: Client-side attribute (static/fixed, metadata)
    :widths: auto
@@ -1384,85 +1385,85 @@ syncTimeFreqStep
 
 
 Client-side attribute (semi-static)
-+++++++++++++++++++++++++++++++++++
+---------------------------------------
 
 currentTempUnit
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 tempResolution
-::::::::::::::
+^^^^^^^^^^^^^^^^
 
 envirTempMin
-::::::::::::
+^^^^^^^^^^^^
 
 envirTempMax
-::::::::::::
+^^^^^^^^^^^^^
 
 envirTempStep
-:::::::::::::
+^^^^^^^^^^^^^^
 
 spValueMin
-::::::::::
+^^^^^^^^^^
 
 spValueMax
-::::::::::
+^^^^^^^^^^
 
 spValueStep
-:::::::::::
+^^^^^^^^^^^^
 
 internalOffsetMin
-:::::::::::::::::
+^^^^^^^^^^^^^^^^^
 
 internalOffsetMax
-:::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 internalOffsetStep
-::::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 floorTempLimitedMin
-:::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^
 
 floorTempLimitedMax
-:::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^
 
 floorTempLimitedStep
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffHeatingMin
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffHeatingMax
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffHeatingStep
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffCoolingMin
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffCoolingMax
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffCoolingStep
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempHeatingMin
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempHeatingMax
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempHeatingStep
-:::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempCoolingMin
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempCoolingMax
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempCoolingStep
-:::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table:: Client-side attribute (semi-static)
    :widths: auto
@@ -1662,22 +1663,22 @@ changeOverTempCoolingStep
 
 
 Client-side attribute (application state)
-+++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------
 
 fanStatus
-:::::::::
+^^^^^^^^^^
 
 overrideStatus
-::::::::::::::
+^^^^^^^^^^^^^^^
 
 prgNextEnable
-:::::::::::::
+^^^^^^^^^^^^^^^
 
 prgNextDaysTime
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 prgNextSetpoint
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 
 .. list-table:: Client-side attribute (application state)
@@ -1734,46 +1735,46 @@ prgNextSetpoint
 
 
 Client-side attribute (change by server-side RPC, settings)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------
 
 tempUnit
-::::::::
+^^^^^^^^^^
 
 timeFormat
-::::::::::
+^^^^^^^^^^
 
 systemMode
-::::::::::
+^^^^^^^^^^
 
 sensorMode
-::::::::::
+^^^^^^^^^^
 
 internalOffset
-::::::::::::::
+^^^^^^^^^^^^^^^
 
 floorTempLimited
-::::::::::::::::
+^^^^^^^^^^^^^^^^^
 
 switchingDiffHeating
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 switchingDiffCooling
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 adaptiveControl
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 forceVent
-:::::::::
+^^^^^^^^^^
 
 changeOverMode
-::::::::::::::
+^^^^^^^^^^^^^^^
 
 changeOverTempHeating
-:::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^
 
 changeOverTempCooling
-:::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table:: Client-side attribute (change by server-side RPC, settings)
    :widths: auto
@@ -1934,27 +1935,27 @@ changeOverTempCooling
 
 
 Client-side attribute (change by server-side RPC, control & program)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------------------
 
 controlMode
-:::::::::::
+^^^^^^^^^^^^
 
 fanMode
-:::::::
+^^^^^^^^^
 
 spValue
-:::::::
+^^^^^^^^
 
 prgMode
-:::::::
+^^^^^^^^^
 
 prgSpTimeXX 
-:::::::::::
+^^^^^^^^^^^^
 
 0 <= XX <= 27, prgSpTime00 ~ prgSpTime27
 
 prgSpValueXX
-::::::::::::
+^^^^^^^^^^^^^
 
 0 <= XX <= 27,  prgSpValue00 ~ prgSpValue27
 
@@ -2044,7 +2045,7 @@ Server-side RPC
 ===============
 
 Server-side RPC (remote change client-side attribute)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------------------------
 
 .. tip::
     * All of these server-side RPC are **one-way**, no response
@@ -2052,63 +2053,63 @@ Server-side RPC (remote change client-side attribute)
     * **params** value see `Client-side attribute (change by server-side RPC, settings)`_ & `Client-side attribute (change by server-side RPC, control & program)`_
 
 remoteSetTempUnit
-:::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 remoteSetTimeFormat
-:::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 remoteSetSystemMode
-:::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^
 
 remoteSetSensorMode
-:::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^
 
 remoteSetInternalOffset
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetFloorTempLimited
-:::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetSwitchingDiffHeating
-:::::::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetSwitchingDiffCooling
-:::::::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetAdaptiveControl
-::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetForceVent
-::::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 remoteSetChangeOverMode
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetChangeOverTempHeating
-::::::::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetChangeOverTempCooling
-::::::::::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSetControlMode
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 remoteSetFanMode
-::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 remoteSetSpValue
-::::::::::::::::
+^^^^^^^^^^^^^^^^^
 
 remoteSetPrgMode
-::::::::::::::::
+^^^^^^^^^^^^^^^^^^
 
 remoteSetPrgSpTimeXX
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
  0 <= XX <= 27, remoteSetPrgSpTime00 ~ remoteSetPrgSpTime27
 
 remoteSetPrgSpValueXX
-:::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^
 
  0 <= XX <= 27, remoteSetPrgSpValue00 ~ remoteSetPrgSpValue27
 
@@ -2253,28 +2254,28 @@ remoteSetPrgSpValueXX
 
 
 Server-side RPC (remote control)
-++++++++++++++++++++++++++++++++
+-------------------------------------------
 
 remoteSetOverrideStatus
-:::::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteSyncTimeRequest
-:::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^^
 
 remoteClearWiFiConfig
-:::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^^^
 
 remoteRebootDevice
-::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^
 
 remoteWiFiFUOTA
-:::::::::::::::
+^^^^^^^^^^^^^^^
 
 remoteMcuFUOTA
-::::::::::::::
+^^^^^^^^^^^^^^
 
 remoteGetMemoryUsage
-::::::::::::::::::::
+^^^^^^^^^^^^^^^^^^^^
 
 .. list-table:: Server-side RPC (remote control)
    :widths: auto

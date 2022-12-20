@@ -1,9 +1,10 @@
-Avantec Dashboard Usage
-=========================
+*******************************
+TA652FC-W Demo Dashboard Usage
+*******************************
 
 
 Default State
----------------
+==============
 
 .. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/default_state.png
 
@@ -33,10 +34,10 @@ Default State
 
 
 TA652FC-W States
-------------------------
+=================
 
 TA652FC-W_Control State
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------
 
 .. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_control_state.png
 
@@ -68,7 +69,7 @@ TA652FC-W_Control State
 
 
 TA652FC-W_Program State
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------
 
 .. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_program_state.png
 
@@ -103,7 +104,7 @@ TA652FC-W_Program State
         =========================== ======================================================
 
 TA652FC-W_Settings State
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------
 
 .. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_settings_state.png
 
@@ -138,7 +139,7 @@ TA652FC-W_Settings State
 
 
 TA652FC-W_Admin State
->>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------
 
 .. image:: /_static//device/ta652fc-w/ta652fc-w-demo-dashboard-usage/ta65_fc_admin_state.png
 

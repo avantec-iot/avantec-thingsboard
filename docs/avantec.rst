@@ -1,5 +1,6 @@
+************
 About us
-########
+************
 
 .. image:: http://www.avantec.com.hk/sites/default/files/avantec%20logo%201.jpg
     :width: 30%

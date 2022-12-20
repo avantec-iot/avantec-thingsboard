@@ -1,5 +1,6 @@
+*************************
 ThingsBoard Overview
-######################
+*************************
 
 Reprinted articles:  https://thingsboard.io/docs/
 
@@ -124,7 +125,7 @@ See `Using RPC capabilities`__.
 Thinsboard RPC feature can be divided into two types based on originator: device-originated and server-originated RPC calls. In order to use more familiar names, we will name device-originated RPC calls as a **client-side RPC** calls and server-originated RPC calls as **server-side RPC** calls.
 
 Client-side RPC
-***************
+^^^^^^^^^^^^^^^^
 
 .. uml::
 
@@ -142,7 +143,7 @@ Client-side RPC
 
 
 Server-side RPC
-***************
+^^^^^^^^^^^^^^^^
 
 Server-side RPC calls can be divided into one-way and two-way:
 

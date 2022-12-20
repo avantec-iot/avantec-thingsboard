@@ -1,7 +1,8 @@
+**********************************************
 TA652FH-W --- Floor Heating Wi-Fi Thermostat
-##############################################
+**********************************************
 
-.. warning::
+.. CAUTION::
 
     1. Turn off all electrical devices (e.g. heater, cooler) that are connected to the unit before installation and maintenance.
     2. The installer must be a trained service personnel
@@ -166,7 +167,7 @@ Clock setting
 * Press |icon_blank| to confirm or leave the clock setting. Or return after no key pressed for 20 seconds.
 
 Clock synchronization
-**********************
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 when Wi-Fi is connected and time synronize is need. Plesae use the App for time synchronization.
 
