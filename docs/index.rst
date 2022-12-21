@@ -1,49 +1,37 @@
-.. Using Avantec Thermostats with ThingsBoard documentation master file, created by
+.. Using Avantec HVAC device with ThingsBoard documentation master file, created by
    sphinx-quickstart on Tue Dec 20 10:31:29 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 ************************************************
-Using Avantec Thermostats with ThingsBoard
+Using Avantec HVAC device with ThingsBoard
 ************************************************
 
-`Avantec`__ provides the latest ``TA65`` Thermostat networking solution. This solution needs to be used with the ``ThingsBoard`` software platform.
+`Avantec`_ provides some HVAC networking solutions.  A series of HVAC networked devices in these solutions are connected to `ThingsBoard`_ IoT platform through `MQTT`_ protocol.
 
-.. __: http://www.avantec.com.hk/
+.. _Avantec: http://www.avantec.com.hk/
+.. _ThingsBoard: https://thingsboard.io/
+.. _MQTT: https://mqtt.org/
 
 .. uml::
    :align: center
 
-   node "\nThingsBoard Server\n" as TBSrv {
+   node "\nThingsBoard IoT platform\n" as TBSrv {
    }
 
-   node "\nTA65\n" as TBDev {
+   node "\nAvantec HVAC devices\n" as TBDev {
    }
 
-   node "\nBrowser\n" as TBApp {
+   node "\nWeb UI\n" as TBWebUI {
    }
 
-   TBSrv <-down-> TBDev
+   node "\nMobile Application\n" as TBApp {
+   }
+
+   TBSrv <-down-> TBDev : MQTT
+   TBSrv <-down-> TBWebUI
    TBSrv <-down-> TBApp
 
-
-* TA65
-   The latest series of Thermostat produced by Avantec. The Wi-Fi models include ``TA652FC-W`` and ``TA652FH-W`` (Their firmware ID are ``TA652FC-W-TB`` and ``TA652FH-W-TB``).
-
-.. image:: _static/device/ta65.png
-   :width: 30%
-   :align: center
-
-
-* ThingsBoard
-   `ThingsBoard`__ is an open-source IoT platform that enables rapid development, management and scaling of IoT projects. Their goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications. 
-
-   ThingsBoard includes ``ThingsBoard CE (Community Edition)`` and ``ThingsBoard PE (Professional Edition)``. **ThingsBoard CE is 100% Open source and IT'S FREE**. 
-   
-.. note::
-   When we developed ``TA652FC-W`` and ``TA652FH-W`` Thermostats, we used ThingsBoard CE.
-
-.. __: https://thingsboard.io/
 
 .. You can find out more about our all the :doc:`/features` in these pages.
 
@@ -58,7 +46,11 @@ Learn about them to help you create fantastic project.
    :maxdepth: 3
    :caption: First steps
 
-   /intro/get-started
+   Why ThingsBoard? </intro/why-thingsboard>
+   Why Avantec? </intro/why-avantec>
+   What is Avantec + ThingsBoard? </intro/what-is-avantec-thingsboard>
+   Get Started </intro/get-started>
+   
 
 ..   :hidden:
 
@@ -79,6 +71,18 @@ Here is an overview about ThingsBoard.
 
 ..   :hidden:
 
+Avantec Extension
+==================
+
+Here is an overview about Avantec Customization.
+
+.. toctree::
+   :maxdepth: 5
+   :caption: Avantec Extension
+
+   Avantec Widgets </avantec/avantec-widgets.rst>
+   Avantec Dashboards </avantec/avantec-dashboards.rst>
+
 
 TA652FC-W Wi-Fi Thermostat
 ==============================
@@ -89,11 +93,11 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
    :maxdepth: 5
    :caption: TA652FC-W Wi-Fi Thermostat
 
-   Specifications </device/ta652fc-w/ta652fc-w-specifications>
+   Specification </device/ta652fc-w/ta652fc-w-specification>
    Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>
    Connect to ThingsBoard </device/ta652fc-w/connect-ta652fc-w-to-thingsboard>
    Demo Dashboard </device/ta652fc-w/ta652fc-w-demo-dashboard-usage>
-   MQTT API </device/ta652fc-w/ta652fc-w-mqtt-api>
+   MQTT Device API </device/ta652fc-w/ta652fc-w-mqtt-api>
 
 ..   :hidden:
 
@@ -106,7 +110,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    :maxdepth: 5
    :caption: TA652FH-W Wi-Fi Thermostat
 
-   Specifications </device/ta652fh-w/ta652fh-w-specifications>
+   Specification </device/ta652fh-w/ta652fh-w-specification>
 
 ..   :hidden:
 

@@ -22,7 +22,7 @@ See `What is ThingsBoard?`__
    node "\nServer-side Application\n" as TBApp {
    }
 
-   TBSrv <-down-> TBDev : Device API
+   TBSrv <-down-> TBDev : MQTT Device API
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 

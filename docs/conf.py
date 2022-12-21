@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Using Avantec Thermostats with ThingsBoard'
+project = 'Using Avantec HVAC device with ThingsBoard'
 copyright = '2022, Avantec Manufacturing Limited'
 author = 'Avantec Manufacturing Limited'
 
