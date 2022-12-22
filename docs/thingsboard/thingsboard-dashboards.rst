@@ -1,13 +1,43 @@
+*******************************
+Working with IoT Dashboards
+*******************************
 
-******************
-Customization
-******************
+Reprinted articles: https://thingsboard.io/docs/user-guide/dashboards/
 
 
-Prerequisites 
-==============
+ThingsBoard allows you to configure customizable IoT dashboards. Each IoT Dashboard may contain multiple dashboard widgets that visualize data from multiple IoT devices. Once IoT Dashboard is created, you may assign it to one of the customers of you IoT project.
 
-Reprinted articles:  https://thingsboard.io/docs/
+IoT Dashboards are light-weight and you may have millions of dashboards. For example, you may automatically create a dashboard for each new customer based on data from registered customer IoT devices. Or you may modify dashboard via script when a new device is assigned to a customer. All these actions may be done manually or automated via REST API.
+
+You can find useful links to get started below:
+
+* `Dashboards`__
+* `Widgets Library`__
+    * **Digital** and **analog** gauges for latest real-time values visualization
+    * Highly customizable Bar and Line **charts** for visualization of historical and sliding-window data points
+    * **Map** widgets for tracking movement and latest positions of IoT devices on Google or OpenStreet maps.
+    * **GPIO** control widgets that allow sending GPIO toggle commands to devices.
+    * **Card** widgets to enhance your dashboards with flexible HTML labels based on static content or latest telemetry values from IoT devices.
+
+.. __: https://thingsboard.io/docs/user-guide/ui/dashboards/
+.. __: https://thingsboard.io/docs/user-guide/ui/widget-library/
+
+How to customize
+=================
+
+* In Avantec Dashboard:
+    * Change widget title, background, colors, fonts, shadows, etc
+    * Add or remove widget
+    * Modify dashboard states, aliases and widget actions
+    * Visualizing assets data using Maps and Tables
+
+* Create new widget
+
+* Create your service, like ThingsBoard. See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
+
+
+Next step
+==================
 
 * ThingsBoard Data visualization
     * `Visualizing assets data using Maps and Tables`__ : Learn how to: create assets and devices and define their relationships; add the server attributes and create a new dashboard; visualize data from the asset attributes using “Entities Table” and “Map” widgets.
@@ -30,18 +60,3 @@ Reprinted articles:  https://thingsboard.io/docs/
     * `Widgets Development Guide`__ : Learn how to customize and create custom widgets
 
 .. __: https://thingsboard.io/docs/user-guide/contribution/widgets-development/
-
-
-How to customize
-=================
-
-* In Avantec Dashboard:
-    * Change widget title, background, colors, fonts, shadows, etc
-    * Add or remove widget
-    * Modify dashboard states, aliases and widget actions
-    * Visualizing assets data using Maps and Tables
-
-* Create new widget
-
-* Create your service, like ThingsBoard. See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
-

@@ -11,49 +11,47 @@ See `ThingsBoard API reference`__.
 .. __: https://thingsboard.io/docs/api/
 
 
-ThingsBoard API consists of two main parts: **device API** and **server-side API**.
+ThingsBoard API consists of two main parts: **Device API** and **Server-side API**.
 
 
 .. uml::
 
-   interface "MQTT API" as MQTTAPI
-   interface "CoAP API" as CoAPAPI
-   interface "HTTP API" as HTTPAPI
+   interface "MQTT Device API" as MQTTAPI
+   interface "CoAP Device API" as CoAPAPI
+   interface "HTTP Device API" as HTTPAPI
 
-   /'interface "Device API" as DeviceAPI'/
    interface "Websocket API" as WebsocketAPI
    interface "REST API" as RestAPI
    
-   node "\nThingsBoard Server\n" as TBSrv {
+   node "\nThingsBoard IoT platform\n" as TBSrv {
    }
 
-   node "Device" as TBDev {
+   node "\nDevice\n" as TBDev {
    }
-
-   node "Server-side Application" as TBApp {
-      node "Web UI" as WebUI {
-      }
-   }
-
-   /'TBSrv -left- DeviceAPI'/
-   TBSrv -down-  MQTTAPI
-   TBSrv -down-  CoAPAPI
-   TBSrv -down-  HTTPAPI
-   TBSrv -down- RestAPI
-   TBSrv -down-  WebsocketAPI
-
-   /'TBDev .up.> DeviceAPI'/
-   TBDev .up.> MQTTAPI : **Device API**
-   TBDev .up.> CoAPAPI : **Device API**
-   TBDev .up.> HTTPAPI : **Device API**
-
-   TBApp -up-> RestAPI : **Server-side API**
-   WebUI -up-> WebsocketAPI : **Server-side API**
-
    note bottom of TBDev
       Switch one in MQTT API, 
       CoAP API and HTTP API
    end note
+
+   node "Server-side Application" as TBApp {
+      node "\nWeb UI\n" as WebUI {
+      }
+      node "\nMobile Application\n" as TBMobileApp {
+      }
+   }
+
+   TBSrv -down-  MQTTAPI
+   TBSrv -down-  CoAPAPI
+   TBSrv -down-  HTTPAPI
+   TBSrv -down-  RestAPI
+   TBSrv -down-  WebsocketAPI
+
+   TBDev .up.> MQTTAPI
+   TBDev .up.> CoAPAPI : **Device API**
+   TBDev .up.> HTTPAPI
+
+   TBApp -up-> RestAPI
+   TBApp -up-> WebsocketAPI : **Server-side API**
 
 
 * **Server-side API** is available as *REST API* and *Websocket API*:
@@ -79,17 +77,17 @@ ThingsBoard API consists of two main parts: **device API** and **server-side API
 
 
 * **Device API** is grouped by supported communication protocols:
-   * `MQTT API`__
-   * `CoAP API`__
-   * `HTTP API`__
+   * `MQTT Device API`__
+   * `CoAP Device API`__
+   * `HTTP Device API`__
 
 .. __: https://thingsboard.io/docs/reference/mqtt-api
 .. __: https://thingsboard.io/docs/reference/coap-api
 .. __: https://thingsboard.io/docs/reference/http-api
 
 
-MQTT API 
-========
+MQTT Device API 
+=====================
 
 See `MQTT Device API Reference`__.
 
@@ -97,7 +95,7 @@ See `MQTT Device API Reference`__.
 
 
 Getting started
----------------
+-----------------
 
 MQTT basics
 ^^^^^^^^^^^^
@@ -129,7 +127,7 @@ We will use access token device credentials in this article and they will be ref
 Key-value format
 ----------------
 
-By default, ThingsBoard supports key-value content in **JSON**. Key is always a string, while value can be either string, boolean, double, long or JSON. Using custom binary format or some serialization framework is also possible. See `Protocol customization`_ for more details. For example:
+By default, ThingsBoard supports key-value content in **JSON**. Key is always a string, while value can be either string, boolean, double, long or JSON. For example:
 
 .. code:: json
 
@@ -679,13 +677,35 @@ The supported data format is:
 **Please note** that the above fields are optional. In case the **secretKey** is not specified, the empty string as a default value is used. In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml** ).
 
 
-Protocol customization
-----------------------
+Firmware API
+--------------
 
-MQTT transport can be fully customized for specific use-case by changing the corresponding `module`__.
+When ThingsBoard initiates an MQTT device firmware update, it sets the ``fw_title``, ``fw_version``, ``fw_checksum``, ``fw_checksum_algorithm`` shared attributes. To receive the shared attribute updates, the device has to subscribe to::
 
-.. __: https://github.com/thingsboard/thingsboard/tree/master/transport/mqtt
+   v1/devices/me/attributes/response/+
 
+Where
+
+**+** is the Wildcard character.
+
+When the MQTT device receives updates for fw_title and fw_version shared attributes, it has to send PUBLISH message to::
+
+   v2/fw/request/${requestId}/chunk/${chunkIndex} 
+
+Where
+
+**${requestId}** - number corresponding to the number of firmware updates. The ${requestId} has to be different for each firmware update.
+
+**${chunkIndex}** - number corresponding to the index of firmware chunks. The ${chunkID} are counted from 0. The device must increment the chunk index for each request until the received chunk size is zero.
+And the MQTT payload should be the size of the firmware chunk in bytes.
+
+For each new firmware update, you need to change the request ID and subscribe to::
+
+   v2/fw/response/+/chunk/+
+
+Where
+
+**+** is the Wildcard character.
 
 
 Device MQTT Topic 
@@ -714,8 +734,8 @@ Device MQTT Topic
      - 
    * - Request attributes
      - ① v1/devices/me/attributes/response/+
-     - ② v1/devices/me/attributes/request/$request_id
-     - ③ v1/devices/me/attributes/response/$request_id
+     - ② v1/devices/me/attributes/request/${requestId}
+     - ③ v1/devices/me/attributes/response/${requestId}
    * - Publish attributes
      - 
      - ① v1/devices/me/attributes
@@ -731,12 +751,12 @@ Device MQTT Topic
      - 
    * - Server-Side RPC
      - ① v1/devices/me/rpc/request/+
-     - ③ v1/devices/me/rpc/response/$request_id
-     - ② v1/devices/me/rpc/request/$request_id
+     - ③ v1/devices/me/rpc/response/${requestId}
+     - ② v1/devices/me/rpc/request/${requestId}
    * - Client-Side RPC
      - ① v1/devices/me/rpc/response/+
-     - ② v1/devices/me/rpc/request/$request_id
-     - ③ v1/devices/me/rpc/response/$request_id
+     - ② v1/devices/me/rpc/request/${requestId}
+     - ③ v1/devices/me/rpc/response/${requestId}
 
    * - 
      - 
@@ -747,5 +767,15 @@ Device MQTT Topic
      - :strike:`① v1/devices/me/claim`
      - 
 
+   * - 
+     - 
+     - 
+     - 
+   * - Firmware updates*
+     - ① v2/fw/response/+/chunk/+
+     - ② v2/fw/request/${requestId}/chunk/${chunkIndex}
+     - ③ v2/fw/response/${requestId}/chunk/${chunkIndex}
 
 **Note**: ①②③ The order in which topics are performed.
+
+**Note**: **Firmware updates*** needs the support of *Telemetry*, *Request attributes* and *Subscribe attributes update*.

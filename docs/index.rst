@@ -24,14 +24,12 @@ Using Avantec HVAC device with ThingsBoard
 
    node "\nWeb UI\n" as TBWebUI {
    }
-
-   node "\nMobile Application\n" as TBApp {
+   node "\nMobile Application\n" as TBMobileApp {
    }
 
    TBSrv <-down-> TBDev : MQTT
-   TBSrv <-down-> TBWebUI
-   TBSrv <-down-> TBApp
-
+   TBSrv <-down-> TBWebUI 
+   TBSrv <-down-> TBMobileApp 
 
 .. You can find out more about our all the :doc:`/features` in these pages.
 
@@ -61,9 +59,11 @@ Here is an overview about ThingsBoard.
    :maxdepth: 5
    :caption: ThingsBoard
 
-   Overview </thingsboard/thingsboard-overview>
-   Installation </thingsboard/thingsboard-install>
-   Customize </thingsboard/thingsboard-customization>
+   Key concepts </thingsboard/thingsboard-key-concepts>
+   Installation options </thingsboard/thingsboard-installation-options>
+   Dashboards </thingsboard/thingsboard-dashboards>
+   Rule engine </thingsboard/thingsboard-rule-engine>
+   White labeling <thingsboard/thingsboard-white-labeling>
    MQTT Device API </thingsboard/thingsboard-mqtt-device-api>
 
 ..   :hidden:

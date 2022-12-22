@@ -1,6 +1,6 @@
-*************************
-ThingsBoard Overview
-*************************
+***********
+Overview
+***********
 
 Reprinted articles:  https://thingsboard.io/docs/
 
@@ -14,16 +14,20 @@ See `What is ThingsBoard?`__
 
 .. uml::
 
-   node "\nThingsBoard Server\n" as TBSrv {
+   node "\nThingsBoard IoT platform\n" as TBSrv {
    }
 
    node "\nDevice\n" as TBDev {
    }
 
    node "\nServer-side Application\n" as TBApp {
+      node "\nWeb UI\n" as TBWebUI {
+      }
+      node "\nMobile Application\n" as TBMobileApp {
+      }
    }
 
-   TBSrv <-down-> TBDev : MQTT Device API
+   TBSrv <-down-> TBDev : Device API
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 
@@ -186,30 +190,17 @@ See `Claiming devices`__.
 
 .. __: https://thingsboard.io/docs/user-guide/claiming-devices/
 
-**TODO**: Claiming devices.
+*TODO...*
 
 
+Over-the-air firmware and software updates
+----------------------------------------------
 
-Data Visualization
-==================
+See `Over-the-air firmware and software updates`__.
 
-ThingsBoard allows you to configure customizable IoT dashboards. Each IoT Dashboard may contain multiple dashboard widgets that visualize data from multiple IoT devices. Once IoT Dashboard is created, you may assign it to one of the customers of you IoT project.
+.. __: https://thingsboard.io/docs/user-guide/ota-updates/
 
-IoT Dashboards are light-weight and you may have millions of dashboards. For example, you may automatically create a dashboard for each new customer based on data from registered customer IoT devices. Or you may modify dashboard via script when a new device is assigned to a customer. All these actions may be done manually or automated via REST API.
-
-You can find useful links to get started below:
-
-* `Dashboards`__
-* `Widgets Library`__
-    * **Digital** and **analog** gauges for latest real-time values visualization
-    * Highly customizable Bar and Line **charts** for visualization of historical and sliding-window data points
-    * **Map** widgets for tracking movement and latest positions of IoT devices on Google or OpenStreet maps.
-    * **GPIO** control widgets that allow sending GPIO toggle commands to devices.
-    * **Card** widgets to enhance your dashboards with flexible HTML labels based on static content or latest telemetry values from IoT devices.
-
-.. __: https://thingsboard.io/docs/user-guide/ui/dashboards/
-.. __: https://thingsboard.io/docs/user-guide/ui/widget-library/
-
+*TODO...*
 
 Getting Started Guides
 ======================
