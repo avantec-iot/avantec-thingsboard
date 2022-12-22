@@ -7,7 +7,7 @@
 Using Avantec HVAC device with ThingsBoard
 ************************************************
 
-`Avantec`_ provides some HVAC networking solutions.  A series of HVAC networked devices in these solutions are connected to `ThingsBoard`_ IoT platform through `MQTT`_ protocol.
+`Avantec`_ provides some networking HVAC solutions.  A series of networked HVAC devices in these solutions are connected to `ThingsBoard`_ IoT platform through `MQTT`_ protocol.
 
 .. _Avantec: http://www.avantec.com.hk/
 .. _ThingsBoard: https://thingsboard.io/
@@ -46,11 +46,8 @@ Learn about them to help you create fantastic project.
    :maxdepth: 3
    :caption: First steps
 
-   Why ThingsBoard? </intro/why-thingsboard>
-   Why Avantec? </intro/why-avantec>
-   What is Avantec + ThingsBoard? </intro/what-is-avantec-thingsboard>
+   Why Avantec + ThingsBoard? </intro/why-avantec-thingsboard>
    Get Started </intro/get-started>
-   
 
 ..   :hidden:
 
