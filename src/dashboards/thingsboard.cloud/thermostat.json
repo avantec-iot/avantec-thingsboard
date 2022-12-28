@@ -1,0 +1,267 @@
+{
+  "title": "Thermostat",
+  "image": "data:image/png;base64,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",
+  "mobileHide": false,
+  "mobileOrder": 10,
+  "configuration": {
+    "description": "Avantec Thermostat",
+    "widgets": {
+      "e8684176-e3b7-bd75-a920-ad1812dd5bec": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "markdown_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 5,
+        "sizeY": 3.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "cd88aeb6-b3b6-53a0-26bb-85d19dce9658",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temprateure",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.8062238658322483,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "changeOverTemp",
+                  "type": "timeseries",
+                  "label": "Change over temperatue",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.07467626464404598,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "tempUnit",
+                  "type": "attribute",
+                  "label": "Temperature unit",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.1769767247928078,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "12e904d5-8dbc-f1d3-8817-8faa4accb6b7",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperature",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.6604700486333055,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "floorTemp",
+                  "type": "timeseries",
+                  "label": "Floor temperatue",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.8930757022535136,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "tempUnit",
+                  "type": "attribute",
+                  "label": "Temperature unit",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.31675881480098655,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "useMarkdownTextFunction": true,
+            "markdownTextFunction": "//console.log(\"TC in Markdown/HTML card\", data);\n\n/*\nAdd: New Model:\n1. New device profile;\n2. New dashboard of new device profile;\n3. Modify Thermostat/Humidistat/Therma plug/Hygro plug/Air Quality Sensor/... for new device profile:\n\ta. Alias: add new alias of device profile;\n\tb. Markdown/HTML card:\n\t\ti: Data: add new datasource of new alias;\n\t\tii: Advanced: Add new HTML sub-template for new device profile;\n\t\tiii: Actions: Add new action for new device profile;\n*/\n\n\nlet isDeviceTypeDisplayed = false;\nlet isDeviceNameDisplayed = false;\nlet isDeviceLabelDisplayed = true;\nlet isPrimaryValueDisplayed = true;\nlet isSecondaryValueDisplayed = true;\n\nlet html_text = '<div class=\"card\">\\n';\ndata.forEach(display_device);\nhtml_text += '</div>'\nreturn html_text;\n\n// ==============================display_device =======================================================\nfunction display_device(device)\n{\n    //console.log(device);\n    \n    let deviceType = device.$datasource.entityFilter.deviceType;\n    //console.log(deviceType);\n    switch (deviceType) {\n        case 'TA652FC-W Thermostat':\n            display_TA652FC_W_Thermostat(device);\n            break;\n        case 'TA652FH-W Thermostat':\n            display_TA652FH_W_Thermostat(device);\n            break;\n        default:\n            display_Unkown_Device(device);\n            break;\n    }\n}\n\nfunction display_TA652FC_W_Thermostat(device)\n{\n    let entityId    = device.entityId;   //\"74bd5180-b553-11ec-86ef-3bc24470b208\"\n    let entityType  = device.entityType; //\"DEVICE\"\n                    //device.$datasource.entityFilter.type; // \"deviceType\"\n    let deviceType  = device.$datasource.entityFilter.deviceType; //\"TA652FC-W Thermostat\"\n    let deviceName  = device.entityName; //\"Headquaters Fan Coil\"\n    let deviceLabel = device.$datasource.entityLabel; //\"AVANTEC Headquaters\"\n\n    let primaryValue = device.$datasource.dataKeys.find(check_key_name, {keyName:\"roomTemp\"});\n    /*{\n        \"name\": \"roomTemp\",\n        \"type\": \"timeseries\",\n        \"label\": \"Room temprateure\",\n        \"color\": \"#2196f3\",\n        \"settings\": {},\n        \"_hash\": 0.8062238658322483,\n        \"units\": null,\n        \"decimals\": 1,\n        \"funcBody\": null,\n        \"usePostProcessing\": null,\n        \"postFuncBody\": null,\n        \"hidden\": false,\n        \"inLegend\": true,\n        \"pattern\": \"Room temprateure\"\n    }*/\n    let secondaryValue = device.$datasource.dataKeys.find(check_key_name, {keyName:\"changeOverTemp\"});\n    /*{\n        \"name\": \"changeOverTemp\",\n        \"type\": \"timeseries\",\n        \"label\": \"Change over temperatue\",\n        \"color\": \"#4caf50\",\n        \"settings\": {},\n        \"_hash\": 0.07467626464404598,\n        \"units\": null,\n        \"decimals\": 1,\n        \"funcBody\": null,\n        \"usePostProcessing\": null,\n        \"postFuncBody\": null,\n        \"hidden\": false,\n        \"inLegend\": true,\n        \"pattern\": \"Change over temperatue\"\n    }*/\n    let unit = device.$datasource.dataKeys.find(check_key_name, {keyName:\"tempUnit\"});\n    /*{\n        \"name\": \"tempUnit\",\n        \"type\": \"attribute\",\n        \"label\": \"Temperature unit\",\n        \"color\": \"#607d8b\",\n        \"settings\": {},\n        \"_hash\": 0.1769767247928078,\n        \"units\": null,\n        \"decimals\": null,\n        \"funcBody\": null,\n        \"usePostProcessing\": null,\n        \"postFuncBody\": null,\n        \"hidden\": false,\n        \"inLegend\": true,\n        \"pattern\": \"Temperature unit\"\n    }*/\n    \n    let data_entity = \"{entityId:'\"   + device.entityId + \"',\"    //\"74bd5180-b553-11ec-86ef-3bc24470b208\"\n                     + \"entityName:'\" + device.entityName + \"',\"\n                     + \"entityType:'\" + device.entityType + \"'}\";  //\"DEVICE\"\n    // let data_entity = {};\n    // data_entity.entityId   = device.entityId;    //\"74bd5180-b553-11ec-86ef-3bc24470b208\"\n    // data_entity.entityName = device.entityName;\n    // data_entity.entityType = device.entityType;  //\"DEVICE\"\n    // console.log(data_entity);\n\n    //console.log('<div class=\"dev\" id=\"goto-TA652FC-W\" entity=\"' + data_entity + '\">\\n')\n    let temp = '<div class=\"dev\" id=\"goto-TA652FC-W\" '\n                    + 'entityType=\"' + device.entityType + '\" '  //\"DEVICE\"\n                    + 'entityId=\"'   + device.entityId   + '\" '  //\"74bd5180-b553-11ec-86ef-3bc24470b208\"\n                    + 'entityName=\"' + device.entityName + '\" '  //\"Headquaters Fan Coil\"\n                    + 'entityLabel=\"'+ device.$datasource.entityLabel + '\" ' //\"AVANTEC Headquaters\"\n                    + ' >\\n'\n                +   append_device_name(deviceName)  //'<div class=\"dev-name\">Device name:' + deviceName + '</div>\\n'\n                +   append_device_type(deviceType)  //'<div class=\"dev-type\">Device type:' + deviceType + '</div>\\n'\n                +   append_device_label(deviceLabel?deviceLabel:deviceName)//'<div class=\"dev-label\">Device label:' + deviceLabel + '</div>\\n'\n                +   append_primary_value_with_unit(primaryValue.label, device[primaryValue.label], primaryValue.decimals, device[unit.label]) //'<div class=\"primary-label\">' + label + '</div>\\n' +'<div class=\"primary-value\">' + value + (unit?unit:'') +'</div>\\n';\n                +   append_secondary_value_with_unit(secondaryValue.label, device[secondaryValue.label], secondaryValue.decimals, device[unit.label]) //'<div class=\"secondary-label\">' + label + '</div>\\n'+'<div class=\"secondary-value\">' + value + (unit?unit:'') +'</div>\\n'\n                +'</div>\\n';\n    //console.log(temp);\n    html_text += temp;\n}\n\nfunction display_TA652FH_W_Thermostat(device)\n{\n    let entityId   = device.entityId;   //\"74bd5180-b553-11ec-86ef-3bc24470b208\"\n    \n    let entityType = device.entityType; //\"DEVICE\"\n                   //device.$datasource.entityFilter.type; // \"deviceType\"\n    let deviceType = device.$datasource.entityFilter.deviceType; //\"TA652FH-W Thermostat\"\n    let deviceLabel = device.$datasource.entityLabel; //\"AVANTEC Headquaters\"\n    let deviceName = device.entityName; //\"Headquaters Fan Coil\"\n    \n    let primaryValue = device.$datasource.dataKeys.find(check_key_name, {keyName:\"roomTemp\"});\n    let secondaryValue = device.$datasource.dataKeys.find(check_key_name, {keyName:\"floorTemp\"});\n    let unit = device.$datasource.dataKeys.find(check_key_name, {keyName:\"tempUnit\"});\n    \n    // TODO: new html template\n    html_text += '<div class=\"dev\" id=\"' + entityId + '\">\\n'\n                +   append_device_name(deviceName)  //'<div class=\"dev-name\">Device name:' + deviceName + '</div>\\n'\n                +   append_device_type(deviceType)  //'<div class=\"dev-type\">Device type:' + deviceType + '</div>\\n'\n                +   append_device_label(deviceLabel?deviceLabel:deviceName)//'<div class=\"dev-label\">Device label:' + deviceLabel + '</div>\\n'\n                +   append_primary_value_with_unit(primaryValue.label, device[primaryValue.label], primaryValue.decimals, device[unit.label]) //'<div class=\"primary-label\">' + label + '</div>\\n' +'<div class=\"primary-value\">' + value + (unit?unit:'') +'</div>\\n';\n                +   append_secondary_value_with_unit(secondaryValue.label, device[secondaryValue.label], secondaryValue.decimals, device[unit.label]) //'<div class=\"secondary-label\">' + label + '</div>\\n'+'<div class=\"secondary-value\">' + value + (unit?unit:'') +'</div>\\n'\n                +'</div>\\n';\n}\n\n\n//TODO: insert source code at here for new device profiles! //TC 20221110\n\n\nfunction display_Unkown_Device(device)\n{\n    let deviceType = device.$datasource.entityFilter.deviceType;\n    \n    // TODO: new html template\n    html_text += '<div class=\"dev\" id=\"' + device.entityId + '\">\\n'\n                +   '<div class=\"dev-name\">Device name:' + device.entityName + '</div>\\n'\n                +   '<div class=\"dev-type\">Device type:' + deviceType + '</div>\\n'\n                +'</div>\\n';\n}\n\n// ==============================utils function =======================================================\nfunction check_key_name(dataKey)\n{\n    //console.log(dataKey, dataKey.name, this.keyName);\n    return dataKey.name === this.keyName;\n}\n\nfunction append_device_type(deviceType)\n{\n    if (isDeviceTypeDisplayed===true && deviceType) {\n        return '<div class=\"dev-type\">' //+ 'Device type:'\n                + deviceType + '</div>\\n';\n    } else {\n        return '';\n    }\n}\nfunction append_device_name(deviceName)\n{\n    if (isDeviceNameDisplayed===true && deviceName) {\n        return '<div class=\"dev-name\">' //+ 'Device name:'\n                + deviceName + '</div>\\n';\n    } else {\n        return '';\n    }\n}\nfunction append_device_label(deviceLabel)\n{\n    if (isDeviceLabelDisplayed===true && deviceLabel) {\n        return '<div class=\"dev-label\">' //+ 'Device label:'\n                + deviceLabel + '</div>\\n';\n    } else {\n        return '';\n    }\n}\nfunction append_primary_value_with_unit(label, value, decimals, unit)\n{\n    if (isPrimaryValueDisplayed===true && label) {\n        return '<div class=\"primary-label\">' + label + '</div>\\n' + \n               '<p><span class=\"primary-value\">' + convert_value_to_string(value,decimals) + '</span>' +\n               '<span class=\"primary-unit\">' + (unit?unit:'°C') + '</span>' +'</p>\\n';\n    } else {\n        return '';\n    }\n}\nfunction append_secondary_value_with_unit(label, value, decimals, unit)\n{\n    if (isSecondaryValueDisplayed===true && label) {\n        return '<div class=\"secondary-label\">' + label + '</div>\\n' +\n               '<p><span class=\"primary-value\">' + convert_value_to_string(value,decimals) + '</span>' +\n               '<span class=\"secondary-unit\">' + (unit?unit:'°C') + '</span>' +'</p>\\n';\n    } else {\n        return '';\n    }\n}\n\nfunction convert_value_to_string(value, decimals)\n{\n    if (!value) {\n        return '';\n    }\n    if (value==='') {\n        return '';\n    }\n    let my_decimals = decimals ? decimals : 1;\n    return Number.parseFloat(value).toFixed(decimals);\n}",
+            "markdownCss": ".card {\n    width: 100%;\n    height: 100%;\n    \n    padding-left: inherit;\n    padding-right: inherit;\n    \n    /*box-sizing: border-box;*/\n    /*border: #696969 1px solid;*/\n    \n\t/* 要创建一个 flex 容器，只需要将一个 display: flex 属性添加到一个元素上。\n\t默认情况下，所有的直接子元素都被认为是 flex 项，并从左到右依次排列在一行中。\n\t如果 flex 项的宽度总和大于容器，那么 flex 项将按比例缩小，直到它们适应 flex 容器宽度 */\n\tdisplay: flex;\n\t/* flex-direction 决定主轴的方向 row(默认)|row-reverse|column|column-reverse*/\n\tflex-direction: row;\n\t/* flex-wrap决定当排列不下时是否换行以及换行的方式,nowrap(默认)|wrap|wrap-reverse */\n\tflex-wrap:wrap;\n\t/* flex-flow是lex-direction和flex-wrap的简写形式，如：row wrap|column wrap-reverse等。默认值为row nowrap，即横向排列 不换行 */\n\tflex-flow:row wrap;\n\t/* !当主轴沿水平方向时!justify-content,决定item在主轴上的对齐方式，可能的值有flex-start（默认），flex-end，center，space-between，space-around */\n\tjustify-content: space-around;\n\t/* !主轴水平时!决定了item在交叉轴上的对齐方式，可能的值有flex-start|flex-end|center|baseline|stretch */\n\talign-items: flex-start;\n}\n\n.card .dev {\n    margin: .3em;\n    \n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    /*height: 100%;*/\n    box-sizing: border-box;\n    transition: background-color 0.5s;\n    \n    width: 160px;\n    height: 10em;\n    background: #2db36a;\n}\n\n.card .dev-name {\n    color: #ffffff;\n    text-align: center;\n    opacity: 0.9;\n}\n.card .dev-type {\n    color: #ffffff;\n    text-align: center;\n    opacity: 0.9;\n}\n.card .dev-label {\n    color: #ffffff;\n    padding-bottom: 1em;\n    text-align: center;\n    opacity: 0.9;\n}\n\n.card .primary-label{\n    color: #ffffff;\n    font-size: 0.8em;\n    opacity: 0.7;\n    text-align: center;\n}\n.card .primary-value {\n    color: #ffffff;\n    font-size: 1.8em;\n}\n.card .primary-unit {\n    color: #ffffff;\n    font-size: .6em;\n}\n\n.card .secondary-label {\n    color: #ffffff;\n    font-size: 0.8em;\n    opacity: 0.7;\n    text-align: center;\n}\n.card .secondary-value {\n    color: #ffffff;\n    font-size: 1.8em;\n}\n.card .secondary-unit {\n    color: #ffffff;\n    font-size: .6em;\n}\n\n\n.card p {\n    text-align: center;\n}\n"
+          },
+          "title": "New Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "goto-TA652FC-W",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "custom",
+                "customFunction": "const targetDashboardTitle = \"TA652FC-W Thermostat (For Mobile App)\";\nconst targetDashboardStateId = null;\nlet devDiv = $event.path.find(element => element.id === \"goto-TA652FC-W\");\n\n// console.log(\"$event:\", $event);\nconsole.log(\"devDiv:\", devDiv);\n// console.log(\"entityId:\", entityId);\n// console.log(\"entityName:\", entityName);\n// console.log(\"entityLabel:\", entityLabel);\n// console.log(\"additionalParams:\", additionalParams);\n// console.log(\"stateParams:\", widgetContext.stateController.getStateParams());\n// console.log(\"currentUser:\", widgetContext.currentUser);\n\nif (devDiv) {\n    // let newParams = {};\n    // newParams.entityType = devDiv.attributes.entityType.value;\n    // newParams.entityId = devDiv.attributes.entityId.value;\n    // newParams.entityName = devDiv.attributes.entityName.value;\n    // newParams.entityLabel = devDiv.attributes.entityLabel.value;\n    // console.log(\"newParams:\", newParams);\n\n    if (widgetContext.isMobile) {\n        const targetDashboardId = \"b2d13460-4f7b-11ed-88cf-3bc720ab387f\"; //https://thingsboard.cloud/dashboards/b2d13460-4f7b-11ed-88cf-3bc720ab387f?state=...\n        let my_entityId = {};\n        my_entityId.id = devDiv.attributes.entityId.value; // \"74bd5180-b553-11ec-86ef-3bc24470b208\"\n        my_entityId.entityType = devDiv.attributes.entityType.value; // \"DEVICE\"\n    \n        my_handleWidgetAction(targetDashboardId, targetDashboardStateId,\n            $event/*: Event*/, /*descriptor: WidgetActionDescriptor,*/\n            my_entityId/*?: EntityId*/,\n            devDiv.attributes.entityName.value/*?: string*/,\n            additionalParams/*?: any*/,\n            devDiv.attributes.entityLabel.value/*?: string*/);\n    } else {\n        let dashboardsObservable = getDashboardsObservable();\n        // 訂閱這個 observable\t\n        if (dashboardsObservable) {\n            dashboardsObservable.subscribe(function(pageData) {\n            \t//console.log(\"pageData\", pageData);\n            \tif (pageData && pageData.data) {\n            \t    let dashboardInfo = pageData.data.find(element => element.title === targetDashboardTitle);\n            \t    if (dashboardInfo) {\n            \t        //console.log(\"title\", dashboardInfo.title);\n            \t        //console.log(\"dashId\", dashboardInfo.id.id);\n    \n                        const targetDashboardId = dashboardInfo.id.id; //\"aa7fffa0-60d1-11ed-8059-338c973e3e4e\";\n                        let my_entityId = {};\n                        my_entityId.id = devDiv.attributes.entityId.value; // \"74bd5180-b553-11ec-86ef-3bc24470b208\"\n                        my_entityId.entityType = devDiv.attributes.entityType.value; // \"DEVICE\"\n                    \n                        my_handleWidgetAction(targetDashboardId, targetDashboardStateId,\n                            $event/*: Event*/, /*descriptor: WidgetActionDescriptor,*/\n                            my_entityId/*?: EntityId*/,\n                            devDiv.attributes.entityName.value/*?: string*/,\n                            additionalParams/*?: any*/,\n                            devDiv.attributes.entityLabel.value/*?: string*/);\n            \t    }\n            \t}\n            });\n        }\n    }\n} else {\n    console.log(\"devDiv not found!\");\n}\n\n/* ui-ngx/src/app/shared/components/dashboard-select.components.ts/DashboardSelectComponent/getDashboards() */\nfunction getDashboardsObservable() /*: Observable<PageData<DashboardInfo>>*/\n{\n    let dashboardService = widgetContext.$scope.$injector.get(widgetContext.servicesMap.get('dashboardService'));\n    \n    let pageLink = {}; /*: PageLink;*/\n    pageLink.textSearch = null; //: string;\n    pageLink.pageSize = 1000; //: number;\n    pageLink.page = 0; //: number;\n    pageLink.sortOrder = null; //: SortOrder;\n    pageLink.toQuery = function() {\n        let query = `?pageSize=${this.pageSize}&page=${this.page}`;\n        if (this.textSearch && this.textSearch.length) {\n          const textSearch = encodeURIComponent(this.textSearch);\n          query += `&textSearch=${textSearch}`;\n        }\n        if (this.sortOrder) {\n          query += `&sortProperty=${this.sortOrder.property}&sortOrder=${this.sortOrder.direction}`;\n        }\n        return query;\n    }\n\n    let dashboardsObservable; /*: Observable<PageData<DashboardInfo>>;*/\n    const authUser = widgetContext.currentUser;\n\n    if (authUser.authority === 'CUSTOMER_USER'/*Authority.CUSTOMER_USER*/) {\n        if (authUser.customerId /*&& authUser.customerId !== NULL_UUID*/) {\n            dashboardsObservable = dashboardService.getCustomerDashboards(authUser.customerId, pageLink, {ignoreLoading: true});\n        } else {\n            dashboardsObservable = null; //of(emptyPageData());\n        }\n    } else if (authUser.authority === 'SYS_ADMIN' /*Authority.SYS_ADMIN*/) {\n        if (authUser.tenantId) {\n            dashboardsObservable = dashboardService.getTenantDashboardsByTenantId(authUser.tenantId, pageLink, {ignoreLoading: true});\n        } else {\n          dashboardsObservable = null; //of(emptyPageData());\n        }\n    } else /* 'TENANT_ADMIN' */ {\n        dashboardsObservable = dashboardService.getTenantDashboards(pageLink,\n          {ignoreLoading: true});\n    }\n\n    //console.log(\"dashboardsObservable\", dashboardsObservable);\n    return dashboardsObservable;\n}\n\n/* ui-ngx/src/app/modules/home/components/widget/widget.compnent.ts/WidgetComponet/handleWidgetAction()/case WidgetActionType.openDashboard: */\nfunction my_handleWidgetAction(targetDashboardId, targetDashboardStateId,\n                       $event/*: Event*/, /*descriptor: WidgetActionDescriptor,*/\n                       entityId/*?: EntityId*/, entityName/*?: string*/,\n                       additionalParams/*?: any*/, entityLabel/*?: string*/)\n{\n    let descriptor = {}; /* : WidgetActionDescriptor */\n    descriptor.type = 'openDashboard';\n    descriptor.stateEntityParamName = null; /* special entity param name */\n    descriptor.setEntityId = true;  /* set entityId for new dashboard */\n    descriptor.targetDashboardId = targetDashboardId;\n    descriptor.targetDashboardStateId = targetDashboardStateId;\n    descriptor.openNewBrowserTab = false;\n\n    // console.log(\"my_entityId:\", entityId);\n    // console.log(\"my_entityName:\", entityName);\n    // console.log(\"my_entityLabel:\", entityLabel);\n    // console.log(\"descriptor:\", descriptor);\n\n    widgetContext.actionsApi.handleWidgetAction($event, descriptor,\n                       entityId, entityName, additionalParams, entityLabel) \n}\n",
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "cfeac0a6-4d82-274e-3500-518f801849f8"
+              }
+            ]
+          },
+          "widgetCss": ".widget-type-sys-cards-markdown_card #container tb-markdown-widget .tb-markdown-view {\n    height: fit-content;\n}\n",
+          "noDataDisplayMessage": "",
+          "enableDataExport": false,
+          "pageSize": 1024,
+          "decimals": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e8684176-e3b7-bd75-a920-ad1812dd5bec"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Thermostat",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "e8684176-e3b7-bd75-a920-ad1812dd5bec": {
+                "sizeX": 9,
+                "sizeY": 25,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "cd88aeb6-b3b6-53a0-26bb-85d19dce9658": {
+        "id": "cd88aeb6-b3b6-53a0-26bb-85d19dce9658",
+        "alias": "All TA652FC-W Thermostat",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FC-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      },
+      "12e904d5-8dbc-f1d3-8817-8faa4accb6b7": {
+        "id": "12e904d5-8dbc-f1d3-8817-8faa4accb6b7",
+        "alias": "All TA652FH-W Thermostat",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FH-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1667959021032,
+          "endTimeMs": 1668045421032
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": true,
+      "showUpdateDashboardImage": true,
+      "dashboardCss": ""
+    }
+  },
+  "externalId": null,
+  "name": "Thermostat"
+}

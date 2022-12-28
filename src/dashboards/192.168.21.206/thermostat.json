@@ -1,0 +1,241 @@
+{
+  "title": "Thermostat",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "Avantec \tThermostat",
+    "widgets": {
+      "5b1b2904-98fd-acd5-afdc-caca40bb665a": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "html_card_list",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 6.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "8ff49ac5-be6a-a504-46a7-4b51c31df027",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temprateure",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.776288114857566,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "changeOverTemp",
+                  "type": "timeseries",
+                  "label": "Change over temperatue",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.6744147137712202,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "tempUnit",
+                  "type": "attribute",
+                  "label": "Temperature unit",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.4773188904746859,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "6ac93734-b23f-7b93-cb2c-c650d2a8eabe",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperature",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.8267956996558763,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "floorTemp",
+                  "type": "timeseries",
+                  "label": "Floor temperatue",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.14990431814116634,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "tempUnit",
+                  "type": "attribute",
+                  "label": "tempUnit",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.8817851638670349
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardListCss": ".dev {\n background: #2db36a; \n}",
+            "defaultHtmlValueFunc": "return '<div class=\"dev\">abc</div>';",
+            "keyPathForGrouping": "entityFilter.deviceType",
+            "groupList": [
+              {
+                "valueForGrouping": "TA652FC-W Thermostat",
+                "htmlValueFunc": "var id = \"goto-TA652FC-W\";\n\nconsole.log(\"dataSource\", dataSource);\n//console.log(\"data\", data);\n\nvar html = '';\nappendDataSource(dataSource);\n\n//tempUnit\nvar tempUnitItem;\nfor (var i=0; i<data.length-1; i++) {\n    var item = data[i];\n    if (item.dataKey.name == \"tempUnit\") {\n        tempUnitItem = item;\n    }\n}\nvar units;\nif (tempUnitItem) {\n    var tvPair = tempUnitItem.data[tempUnitItem.data.length - 1];\n    if (tvPair) {\n        units = tvPair[1];\n    }\n}\n\n//append data item\nfor (var i=0; i<data.length-1; i++) {\n    var item = data[i];\n    if (item.dataKey.name != \"tempUnit\") {\n        appendOneDataItem(item);\n    }\n}\n\nappendContailer(dataSource);\n\n//console.log(html);\nreturn html;\n\n//// ========================================================================================\n\nfunction appendContailer(dataSource)\n{\n    html = \"<div id='\" + id + \"' class='card'>\" + html + \"</div>\"; //dataSource.entityId\n}\n\nfunction appendDataSource(dataSource)\n{\n    if (dataSource.entityLabel) {\n        html += '<div class=\"card-label \">' + dataSource.entityLabel + '</div>';\n    } else if (dataSource.entityName) {\n        html += '<div class=\"card-name\">' + dataSource.entityName + '</div>';\n    }\n}\n\nfunction appendOneDataItem(dataItem)\n{\n    var tvPair = dataItem.data[dataItem.data.length - 1];\n    if (!tvPair) {\n        return;\n    }\n    var value = tvPair[1];\n    //toDo -> + IsNumber\n    //console.log(\"dataItem\", dataItem);\n    //console.log(\"tvPair\", typeof tvPair, tvPair);\n    //var value = dataItem.data[dataItem.data.length - 1][1];\n    //console.log(\"value\", value);\n\n    txtLabel = dataItem.dataKey.label;\n    html +=  '<div class=\"card-data-label\">' + txtLabel + '</div>';\n\n    //var units;\n    if (isNumber(value)) {\n        var decimals = widgetContext.decimals;\n        if (dataItem.dataKey.decimals || dataItem.dataKey.decimals === 0) {\n            decimals = dataItem.dataKey.decimals;\n        }\n        if (widgetContext.units) {\n            units = widgetContext.units;\n        }\n        if (dataItem.dataKey.units) {\n            units = dataItem.dataKey.units;\n        }\n        txtValue = widgetContext.utils.formatValue(value, decimals, null, true);\n    } else {\n        txtValue = value;\n    }\n    html += '<div class=\"card-data-value\"><span class=\"card-data-pure-value\">' + txtValue + '</span>' +\n               '<span class=\"card-data-unit\">' + (units?units:'°C') + '</span>' +'</div>\\n';\n}\n\nfunction isNumber(n) {\n    return !isNaN(parseFloat(n)) && isFinite(n);\n}\n"
+              },
+              {
+                "valueForGrouping": "TA652FH-W Thermostat",
+                "htmlValueFunc": "var id = \"goto-TA652FH-W\";\nconsole.log(\"dataSource\", dataSource);\n//console.log(\"data\", data);\n\nvar html = '';\nappendDataSource(dataSource);\n\n//tempUnit\nvar tempUnitItem;\nfor (var i=0; i<data.length-1; i++) {\n    var item = data[i];\n    if (item.dataKey.name == \"tempUnit\") {\n        tempUnitItem = item;\n    }\n}\nvar units;\nif (tempUnitItem) {\n    var tvPair = tempUnitItem.data[tempUnitItem.data.length - 1];\n    if (tvPair) {\n        units = tvPair[1];\n    }\n}\n\n//append data item\nfor (var i=0; i<data.length-1; i++) {\n    var item = data[i];\n    if (item.dataKey.name != \"tempUnit\") {\n        appendOneDataItem(item);\n    }\n}\n\nappendContailer(dataSource);\n\n//console.log(html);\nreturn html;\n\n////////////////////////////////////////////////////////////////////////////////\n\nfunction appendContailer(dataSource)\n{\n    html = \"<div id='\" + id + \"' class='card'>\" + html + \"</div>\"; //dataSource.entityId\n}\n\nfunction appendDataSource(dataSource)\n{\n    if (dataSource.entityLabel) {\n        html += '<div class=\"card-label \">' + dataSource.entityLabel + '</div>';\n    } else if (dataSource.entityName) {\n        html += '<div class=\"card-name\">' + dataSource.entityName + '</div>';\n    }\n}\n\nfunction appendOneDataItem(dataItem)\n{\n    var tvPair = dataItem.data[dataItem.data.length - 1];\n    if (!tvPair) {\n        return;\n    }\n    var value = tvPair[1];\n    //toDo -> + IsNumber\n    //console.log(\"dataItem\", dataItem);\n    //console.log(\"tvPair\", typeof tvPair, tvPair);\n    //var value = dataItem.data[dataItem.data.length - 1][1];\n    //console.log(\"value\", value);\n\n    txtLabel = dataItem.dataKey.label;\n    html +=  '<div class=\"card-data-label\">' + txtLabel + '</div>';\n\n    //var units;\n    if (isNumber(value)) {\n        var decimals = widgetContext.decimals;\n        if (dataItem.dataKey.decimals || dataItem.dataKey.decimals === 0) {\n            decimals = dataItem.dataKey.decimals;\n        }\n        if (widgetContext.units) {\n            units = widgetContext.units;\n        }\n        if (dataItem.dataKey.units) {\n            units = dataItem.dataKey.units;\n        }\n        txtValue = widgetContext.utils.formatValue(value, decimals, null, true);\n    } else {\n        txtValue = value;\n    }\n    html += '<div class=\"card-data-value\"><span class=\"card-data-pure-value\">' + txtValue + '</span>' +\n               '<span class=\"card-data-unit\">' + (units?units:'°C') + '</span>' +'</div>\\n';\n}\n\nfunction isNumber(n) {\n    return !isNaN(parseFloat(n)) && isFinite(n);\n}\n"
+              }
+            ]
+          },
+          "title": "New HTML Card List",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "decimals": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5b1b2904-98fd-acd5-afdc-caca40bb665a"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Thermostat",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "5b1b2904-98fd-acd5-afdc-caca40bb665a": {
+                "sizeX": 18,
+                "sizeY": 15,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "8ff49ac5-be6a-a504-46a7-4b51c31df027": {
+        "id": "8ff49ac5-be6a-a504-46a7-4b51c31df027",
+        "alias": "All TA652FC-W Thermostat",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FC-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      },
+      "6ac93734-b23f-7b93-cb2c-c650d2a8eabe": {
+        "id": "6ac93734-b23f-7b93-cb2c-c650d2a8eabe",
+        "alias": "All TA652FH-W Thermostat",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FH-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1668494937274,
+          "endTimeMs": 1668581337274
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "name": "Thermostat"
+}
