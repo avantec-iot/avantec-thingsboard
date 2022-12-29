@@ -67,7 +67,7 @@ When you first power up, TA652FC-W will enter Wi-Fi AP mode without any Wi-Fi pa
 Step 3. Configure
 ===================
 
-- Connect to TA652FC-W's Wi-Fi hotspot on your computer or phone.
+- Connect to TA652FC-W's Wi-Fi hotspot on your computer or phone. It's like ``EasyStat-XXXXX``.
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/connect_ta65_ap.png
       :width: 50 %
@@ -76,6 +76,7 @@ Step 3. Configure
 - Input your configuration, then ``Apply``.
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/configure_ta65.png
+
 
    .. table::
       :widths: auto
@@ -87,13 +88,15 @@ Step 3. Configure
       Password      password of your Wi-Fi router
       Auth Token    Access Token of your TA652FC-W. See `Step 1. Get Access-Token`_
       Host          | This ThingsBoard Server's MQTT URL.
-                    | It must begin with "MQTT ://", such as
-                    | mqtt://192.168.21.222
-                    | **Please replace 192.168.21.222 with your Thingsboard IP Address**.
+                    | It must begin with "MQTT ://", such as mqtt://192.168.21.206
+                    | **Please replace 192.168.21.206 with your Thingsboard IP Address**.
                     | See :ref:`add-shared-attributes-of-new-device-cloudhost`
+      Port          This ThingsBoard Server's MQTT Port. Default is 1883.
       ============  =====================================================================
 
-- If saved successfully, the following will be displayed.
+   .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/configure_ta65_connting.png
+
+- If the configuration is successful, the following screen *may be* displayed. 
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/configure_ta65_result.png
 

@@ -186,17 +186,16 @@ Server-side RPC calls can be divided into one-way and two-way:
 Claiming devices
 ----------------
 
-See `Claiming devices`__.
+Refer `Claiming devices`__.
 
 .. __: https://thingsboard.io/docs/user-guide/claiming-devices/
 
 *TODO...*
 
-
 Over-the-air firmware and software updates
 ----------------------------------------------
 
-See `Over-the-air firmware and software updates`__.
+Refer `Over-the-air firmware and software updates`__.
 
 .. __: https://thingsboard.io/docs/user-guide/ota-updates/
 

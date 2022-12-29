@@ -5,14 +5,23 @@ Avantec Dashboards
 
 *TODO:...*
 
-aaa
-=======
+TA652FC-W
+==============
 
-bbb
-=======
+* aaa
+* bbb
 
-ccc
-=======
+TA652FH-W
+==============
 
-ddd
-=======
+* ccc
+* ddd
+
+Manage device claiming
+========================
+
+Claiming
+--------------
+
+Firmware
+------------

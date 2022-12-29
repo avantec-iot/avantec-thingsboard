@@ -2,9 +2,8 @@
 ThingsBoard MQTT Device API
 *****************************
 
-
 Introduction
-============
+-----------------
 
 See `ThingsBoard API reference`__.
 
@@ -86,16 +85,12 @@ ThingsBoard API consists of two main parts: **Device API** and **Server-side API
 .. __: https://thingsboard.io/docs/reference/http-api
 
 
-MQTT Device API 
-=====================
+Getting started
+-----------------
 
 See `MQTT Device API Reference`__.
 
 .. __: https://thingsboard.io/docs/reference/mqtt-api/
-
-
-Getting started
------------------
 
 MQTT basics
 ^^^^^^^^^^^^
@@ -658,11 +653,21 @@ mqtt-js-rpc-from-client.js
 
 
 Claiming API
-------------
+--------------
 
 Please see the corresponding article to get more information about the `Claiming devices`__ feature.
 
 .. __: https://thingsboard.io/docs/user-guide/claiming-devices
+
+.. uml::
+
+   title  Claiming API
+
+   participant "Device" as TBDev order 10
+   participant "ThingsBoard Server"  as TBSrv order 20 
+
+   TBDev  ->  TBSrv: Initiate claiming device (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/claim** \nPayload: {"secretKey":"value", "durationMs":60000}
+
 
 In order to initiate claiming device, send PUBLISH message to the following topic::
 
@@ -679,6 +684,67 @@ The supported data format is:
 
 Firmware API
 --------------
+
+.. uml::
+
+   title  Firmware API - A(1)
+
+   participant "Device" as TBDev order 10
+   participant "ThingsBoard Server"  as TBSrv order 20 
+
+   == Send to current firmware status to the server ==
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB","current_fw_version":"1.6.6"}
+
+   == Subscribe to shared attribute response from the server ==
+   TBDev  ->  TBSrv: subscribe to attribute response (**MQTT, SUBSCRIBE**) \nTopic: **v1/devices/me/attributes/response/+**
+
+   == Request shared attributes from the server ==
+   TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"fw_title,fw_version,fw_size,\nfw_checksum,fw_checksum_algorithm"}
+   
+   TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"fw_title":"TA652FC-W-TB",\n"fw_version":"1.6.8","fw_size":1315392,\n"fw_checksum_algorithm":"MD5",\n"fw_checksum":"9cd4197f260254ac7b6e761b89c7cb66"}}
+
+
+.. uml::
+
+   title  Firmware API - A(2)
+
+   participant "Device" as TBDev order 10
+   participant "ThingsBoard Server"  as TBSrv order 20 
+
+   == Subscribe to attribute updates from the server ==
+   TBDev  ->  TBSrv: subscribe to attribute response (**MQTT, SUBSCRIBE**) \nTopic: **v1/devices/me/attributes**
+
+   == Receive the attribute update from the server ==
+   TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"fw_title":"TA652FC-W-TB","fw_version":"1.6.8",\n"fw_tag":"TA652FC-W-TB 1.6.8","fw_size":1315392,\n"fw_checksum_algorithm":"MD5",\n"fw_checksum":"9cd4197f260254ac7b6e761b89c7cb66"}
+
+
+.. uml::
+
+   title  Firmware API - B
+
+   participant "Device" as TBDev order 10
+   participant "ThingsBoard Server"  as TBSrv order 20 
+
+   == Send to current firmware status (DOWNLOADING) to the server ==
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB",\n"current_fw_version":"1.6.6","fw_state":"DOWNLOADING"}
+
+   == Subscribe to firmware chunk response from the server ==
+   TBDev  ->  TBSrv: subscribe to firmware chunk response (**MQTT, SUBSCRIBE**) \nTopic: **v2/fw/response/+/chunk/+**
+
+   == Request firmware chunk from the server ==
+   TBDev  ->  TBSrv: request firmware chunk from the server (**MQTT, PUBLISH**) \nTopic: **v2/fw/request/${requestId}/chunk/${chunkIndex}** \nPayload: **8192**
+   
+   TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v2/fw/response/${requestId}/chunk/${chunkIndex}** \nPayload: *firmware binary data*
+
+   TBDev <-->  TBSrv: ...
+
+   == Send to current firmware status to the server ==
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB",\n"current_fw_version":"1.6.6","fw_state":"DOWNLOADED"}
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB",\n"current_fw_version":"1.6.6","fw_state":"VERIFIED"}
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB",\n"current_fw_version":"1.6.6","fw_state":"UPDATING"}
+   TBDev  ->  TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"current_fw_title":"TA652FC-W-TB",\n"current_fw_version":"1.6.6","fw_state":"UPDATED"}
+
+*Replace 8192 with your chunk size.*
 
 When ThingsBoard initiates an MQTT device firmware update, it sets the ``fw_title``, ``fw_version``, ``fw_checksum``, ``fw_checksum_algorithm`` shared attributes. To receive the shared attribute updates, the device has to subscribe to::
 
@@ -776,6 +842,7 @@ Device MQTT Topic
      - ② v2/fw/request/${requestId}/chunk/${chunkIndex}
      - ③ v2/fw/response/${requestId}/chunk/${chunkIndex}
 
-**Note**: ①②③ The order in which topics are performed.
-
-**Note**: **Firmware updates*** needs the support of *Telemetry*, *Request attributes* and *Subscribe attributes update*.
+.. Note::
+   
+   - ①②③ The order in which topics are performed.
+   - **Firmware updates** needs the support of *Telemetry*, *Request attributes* and *Subscribe attributes update*.

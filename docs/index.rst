@@ -77,8 +77,8 @@ Here is an overview about Avantec Customization.
    :maxdepth: 5
    :caption: Avantec Extension
 
-   Avantec Widgets </avantec/avantec-widgets.rst>
    Avantec Dashboards </avantec/avantec-dashboards.rst>
+   Avantec Widgets </avantec/avantec-widgets.rst>
 
 
 TA652FC-W Wi-Fi Thermostat
@@ -93,7 +93,7 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
    Specification </device/ta652fc-w/ta652fc-w-specification>
    Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>
    Connect to ThingsBoard </device/ta652fc-w/connect-ta652fc-w-to-thingsboard>
-   Demo Dashboard </device/ta652fc-w/ta652fc-w-demo-dashboard-usage>
+   Demo Dashboards </device/ta652fc-w/ta652fc-w-demo-dashboards-usage>
    MQTT Device API </device/ta652fc-w/ta652fc-w-mqtt-api>
 
 ..   :hidden:
@@ -108,6 +108,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    :caption: TA652FH-W Wi-Fi Thermostat
 
    Specification </device/ta652fh-w/ta652fh-w-specification>
+   Demo Dashboard</device/ta652fh-w/ta652fh-w-demo-dashboard-usage>
 
 ..   :hidden:
 
