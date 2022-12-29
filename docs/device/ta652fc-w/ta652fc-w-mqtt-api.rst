@@ -1,15 +1,17 @@
-**********************
-TA652FC-W MQTT API 
-**********************
+*********************************
+TA652FC-W / TA652FH-W MQTT API \
+*********************************
 
 .. tip::
 
-  This section applies to both ``TA652FC-W`` and ``TA652FH-W``.
+  - This section applies to both ``TA652FC-W`` and ``TA652FH-W``.
+  - Unless otherwise specified, all specifications applicable to TA652FC-W are also applicable to TA652FH-W.
+
 
 Overview
 ========
 
-``TA652FC-W MQTT API`` is an implementation of :doc:`/thingsboard/thingsboard-mqtt-device-api` (MQTT is a lightweight publish/subscribe messaging protocol).
+``TA652FC-W / TA652FH-W MQTT API`` is an implementation of :doc:`/thingsboard/thingsboard-mqtt-device-api` (MQTT is a lightweight publish/subscribe messaging protocol).
 
 .. uml::
 
@@ -22,7 +24,7 @@ Overview
    node "\nServer-side Application\n" as TBApp {
    }
 
-   TBSrv <-down-> TBDev : <color:#FF0000> **TA652FC-W MQTT API** </color>
+   TBSrv <-down-> TBDev : <color:#FF0000> **TA652FC-W / TA652FH-W MQTT API** </color>
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 
@@ -33,9 +35,6 @@ Features
 
   * Support MQTT over TCP
   * **NOT support MQTT over SSL with mbedtls, MQTT over Websocket, MQTT over Websocket Secure**
-  * Easy to setup with URI
-  * Multiple instances (Multiple clients in one application)
-  * Support subscribing, publishing, authentication, last will messages, keep alive pings and all 3 QoS levels (it should be a fully functional client)
 
 * Base on :doc:`/thingsboard/thingsboard-mqtt-device-api`:
 
@@ -49,16 +48,19 @@ Features
   * Support PRC API:
 
     * Server-side RPC: one-way and two-way
-    * Client-side RPC
+    * Client-side RPC: one-way and two-way
 
-  * **Not support Claiming API**
+  * Support Claiming devices API
+  * Support Firmware API
+
+  * **NOT support Device provisioning API**
  
 
 MQTT Special
 ============
 
-* Curently support ``mqtt`` schemes
-* Curently **NOT** support ``mqtts``, ``ws``, ``wss`` schemes
+* Currently support ``mqtt`` schemes
+* Currently **NOT** support ``mqtts``, ``ws``, ``wss`` schemes
 * MQTT over TCP samples:
 
   * ``mqtt://mqtt.eclipse.org`` : MQTT over TCP, default port 1883:
@@ -81,22 +83,34 @@ Chart:
     caption  Timeseries Data Upload
 
     participant "TA652FC-W" as TBDev order 10
+    participant "ThingsBoard Server"  as TBSrv order 20
+
+
+    [-> TBDev: Timer(telemetry, period: uploadFreq)
+    TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"changeOverTemp":26.3}
+
+  .. uml::
+
+    caption  Timeseries Data Upload
+
+    participant "TA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
 
     [-> TBDev: Timer(telemetry, period: uploadFreq)
-    TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"changeOverTemp":26.3,\n"floorTemp":26.3,"wifiRssi":220,\n"iram":161868,"spiram":4194252}
+    TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"floorTemp":26.3}
 
 Message:
   .. code:: javascript
 
     // Message Type:  Telemetry upload (MQTT, PUBLISH) 
     // Topic:         v1/devices/me/telemetry
-    // Payload: 
-    {"roomTemp":26.2,"changeOverTemp":26.3,"floorTemp":26.3,
-    "wifiRssi":220,"iram":161868,"spiram":4194252}
+    // Payload - TA652FC-W:
+    {"roomTemp":26.2,"changeOverTemp":26.3}
+    // Payload - TA652FH-W:
+    {"roomTemp":26.2,"floorTemp":26.3}
 
-See `roomTemp`_, `changeOverTemp`_ (only for TA652FC-W), `floorTemp`_ (only for TA652FH-W), `wifiRssi`_, `iram`_ and `spiram`_. 
+See `roomTemp`_, `changeOverTemp`_ (only for TA652FC-W), `floorTemp`_ (only for TA652FH-W).
 
 See `uploadFreq`_.
 
@@ -139,8 +153,8 @@ Message 2:
 See `controlMode`_ and `remoteSetControlMode`_. 
 
 
-CTRL.02 Fan Mode & Fan Status
-------------------------------
+CTRL.02 Fan Mode & Fan Status (only for TA652FC-W)
+----------------------------------------------------
 
 Chart:
   .. uml::
@@ -165,7 +179,7 @@ Message 1:
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"fanMode":"Auto"}
 
 Message 2:
@@ -173,7 +187,7 @@ Message 2:
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"fanStatus":"Low"}
 
 Message 3:
@@ -181,14 +195,14 @@ Message 3:
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FC-W:
     {"method":"remoteSetFanMode","params":"Med"}
 
 See `fanMode`_ (only for TA652FC-W), `fanStatus`_ (only for TA652FC-W) and `remoteSetFanMode`_ (only for TA652FC-W). 
 
 
 CTRL.03 Set Point & Override Status
---------------------------------------
+-------------------------------------
 
 Chart:
   .. uml::
@@ -431,7 +445,18 @@ Message 2:
     "spValueMin":5,"spValueMax":40,"spValueStep":0.5,
     "internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5}
 
-Message 3:
+Message 3 - TA652FC-W:
+  .. code:: javascript
+
+    // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/attributes
+    // Payload:
+    {"switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,
+    "switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5,
+    "changeOverTempHeatingMin":27,"changeOverTempHeatingMax":40,"changeOverTempHeatingStep":0.5,
+    "changeOverTempCoolingMin":10,"changeOverTempCoolingMax":25,"changeOverTempCoolingStep":0.5}
+
+Message 3 - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
@@ -439,9 +464,7 @@ Message 3:
     // Payload:
     {"floorTempLimitedMin":20,"floorTempLimitedMax":40,"floorTempLimitedStep":0.5,
     "switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,
-    "switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5,
-    "changeOverTempHeatingMin":27,"changeOverTempHeatingMax":40,"changeOverTempHeatingStep":0.5,
-    "changeOverTempCoolingMin":10,"changeOverTempCoolingMax":25,"changeOverTempCoolingStep":0.5}
+    "switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5}
 
 See `model`_, `mac`_, 
 `wifiFWVersion`_, `mcuFWVersion`_, 
@@ -592,132 +615,132 @@ Message 5b:
     // Payload: 
     {"method":"remoteSetSwitchingDiffCooling","params":2.5}
 
-Message 6a:
+Message 6a - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FH-W:
     {"systemMode":"Cool"}
 
-Message 6b:
+Message 6b - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FH-W:
     {"method":"remoteSetSystemMode","params":"Heat"}
 
-Message 7a:
+Message 7a - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FH-W:
     {"sensorMode":"Internal"}
 
-Message 7b:
+Message 7b - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FH-W:
     {"method":"remoteSetSensorMode","params":"External"}
 
-Message 8a:
+Message 8a - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FH-W:
     {"floorTempLimited":29.5}
 
-Message 8b:
+Message 8b - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FH-W: 
     {"method":"remoteSetFloorTempLimited","params":29.5}
 
-Message 9a:
+Message 9a - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FH-W:
     {"adaptiveControl":false}
 
-Message 9b:
+Message 9b - TA652FH-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FH-W:
     {"method":"remoteSetAdaptiveControl","params":true}
 
-Message 10a:
+Message 10a - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"forceVent":true}
 
-Message 10b:
+Message 10b - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FC-W:
     {"method":"remoteSetForceVent","params":false}
 
-Message 11a:
+Message 11a - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"changeOverMode":"Heat"}
 
-Message 11b:
+Message 11b - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FC-W:
     {"method":"remoteSetChangeOverMode","params":"Auto"}
 
-Message 12a:
+Message 12a - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"changeOverTempHeating":27}
 
-Message 12b:
+Message 12b - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FC-W:
     {"method":"remoteSetChangeOverTempHeating","params":27}
 
-Message 13a:
+Message 13a - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload - TA652FC-W:
     {"changeOverTempCooling":11.5}
 
-Message 13b:
+Message 13b - TA652FC-W:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
-    // Payload: 
+    // Payload - TA652FC-W:
     {"method":"remoteSetChangeOverTempCooling","params":10}
 
 See `tempUnit`_ and `remoteSetTempUnit`_, `timeFormat`_ and `remoteSetTimeFormat`_,
@@ -743,9 +766,9 @@ Chart:
     participant "Device" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
-    TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"cloudHost,\nuploadFreq,syncTimeFreq,timezone,timeNTPServer"}
+    TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"uploadFreq,\nsyncTimeFreq,timezone,timeNTPServer"}
     
-    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"cloudHost":"mqtt://192.168.21.222",\n"uploadFreq":120,"syncTimeFreq":3600,\n"timezone":120,"timeNTPServer":"pool.ntp.org"}}
+    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"uploadFreq":120,\n"syncTimeFreq":3600,timezone":120,\n""timeNTPServer":"pool.ntp.org"}}
 
 Message 1:
   .. code:: javascript
@@ -753,7 +776,7 @@ Message 1:
     // Message Type:  request attribute values from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes/request/$request_id
     // Payload: 
-    {"sharedKeys":"cloudHost,uploadFreq,syncTimeFreq,timezone,timeNTPServer"}
+    {"sharedKeys":"uploadFreq,syncTimeFreq,timezone,timeNTPServer"}
 
 Message 2:
   .. code:: javascript
@@ -761,26 +784,22 @@ Message 2:
     // Message Type:  receive response (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes/response/$request_id
     // Payload: 
-    {"shared":{"cloudHost":"mqtt://192.168.21.222",
-    "uploadFreq":120,"syncTimeFreq":3600,
+    {"shared":{"uploadFreq":120,"syncTimeFreq":3600,
     "timezone":120,"timeNTPServer":"pool.ntp.org"}}
 
-See `cloudHost`_, `uploadFreq`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer`_. 
+See `uploadFreq`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer`_. 
 
 
-ADM.02 Network Parameters & Timer Parameters
+ADM.02 Timer Parameters
 -----------------------------------------------
 
 Chart:
   .. uml::
 
-    caption  Network Parameters & Timer Parameters
+    caption  Timer Parameters
 
     participant "Device" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
-
-    == Modify Network Parameters ==
-    TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"cloudHost":"mqtt://192.168.21.222"}
 
     == Modify Timer Parameters ==
     TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"uploadFreq":120}
@@ -792,7 +811,7 @@ Message 1:
     // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"cloudHost":"mqtt://192.168.21.222"}
+    {"uploadFreq":120}
 
 Message 2:
   .. code:: javascript
@@ -800,17 +819,9 @@ Message 2:
     // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"uploadFreq":120}
-
-Message 3:
-  .. code:: javascript
-
-    // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
-    // Topic:         v1/devices/me/attributes
-    // Payload: 
     {"syncTimeFreq":3600}
 
-See `cloudHost`_, `uploadFreq`_  and `syncTimeFreq`_. 
+See `uploadFreq`_  and `syncTimeFreq`_. 
 
 
 ADM.03 Remote Sync Time
@@ -863,6 +874,8 @@ See `timezone`_, `timeNTPServer`_  and `remoteSyncTimeRequest`_.
 
 ADM.04 FUOTA (firmware update over the air) 
 --------------------------------------------------
+
+The flow is to download the firmware from your HTTP server. For the flow of downloading firmware from Thingsboard server, please refer to :doc:`/thingsboard/thingsboard-mqtt-device-api`.
 
 Chart:
   .. uml::
@@ -1025,13 +1038,7 @@ floorTemp
 wifiRssi
 ----------
 
-iram
-------
-
-spiram
----------
-
-.. list-table:: Telemetry (Timeseries data)
+.. list-table:: Telemetry (Time-series data)
    :widths: auto
    :header-rows: 1
 
@@ -1079,9 +1086,9 @@ spiram
      - ●
      - Floor Temperatue
 
-   * - wifiRssi
+   * - wifiRssi*
      - int
-     - `currentTempUnit`_
+     - 
      - `wifiRssiMin`_
      - `wifiRssiMax`_
      - `wifiRssiStep`_
@@ -1090,43 +1097,20 @@ spiram
      - ●
      - Received Signal |br| Strength Indicator
 
-   * - iram
-     - int
-     - byte
-     - 
-     - 
-     - 
-     - 
-     - ●
-     - ●
-     - Memory Usage, |br| Only for Debug
-
-   * - spiram
-     - int
-     - byte
-     - 
-     - 
-     - 
-     - 
-     - ●
-     - ●
-     - Memory Usage, |br| Only for Debug
-
 .. # define a hard line break for HTML
 .. |br| raw:: html
 
    <br/>
 
+.. tip::
+    In order to reduce the load on Thingsboard server, `wifiRssi` is no longer sent.
 
 Shared attributes
 =================
 
 .. tip::
     All of these shared attributes may be obtained 
-    from `cloudHost`_ (your ThingsBoard server).
-
-cloudHost
------------
+    from your ThingsBoard server.
 
 uploadFreq
 ------------
@@ -1154,17 +1138,6 @@ timeNTPServer
      - TA652 |br| FC-W
      - TA652 |br| FH-W
      - Memo
-
-   * - cloudHost
-     - string
-     - 
-     - 
-     - 
-     - 
-     - (127 char+'\0')
-     - ●
-     - ●
-     - MQTT server, eg: |br| mqtt://192.168.21.222 . see |br| :ref:`add-shared-attributes-of-new-device-cloudhost`.
 
    * - uploadFreq
      - int
