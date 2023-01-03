@@ -138,6 +138,7 @@ By default, ThingsBoard supports key-value content in **JSON**. Key is always a 
       }
    }
 
+.. _Telemetry_upload_API:
 
 Telemetry upload API
 --------------------
@@ -266,6 +267,7 @@ telemetry-data-with-ts.json
       }
    }
 
+.. _Attributes_API:
 
 Attributes API
 --------------
@@ -488,6 +490,7 @@ mqtt-js-attributes-subscribe.sh
    # Subscribes to attribute updates
    mqtt sub -v "127.0.0.1" -t "v1/devices/me/attributes" -u '$ACCESS_TOKEN'
 
+.. _PRC_API:
 
 PRC API
 -------
@@ -651,6 +654,7 @@ mqtt-js-rpc-from-client.js
       console.log('response.body: ' + message.toString());
    });
 
+.. _Claiming_API:
 
 Claiming API
 --------------
@@ -681,6 +685,8 @@ The supported data format is:
 
 **Please note** that the above fields are optional. In case the **secretKey** is not specified, the empty string as a default value is used. In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml** ).
 
+
+.. _Firmware_API:
 
 Firmware API
 --------------

@@ -34,6 +34,7 @@ There are two dashboards related to TA652FC-W, namely ``TA652FC-W Thermostat Lis
     - If *Entry* is *Yes*, then directly enter the Dashboard and there will be data displayed.
     - If *Entry* is *No*, there will be no data display when entering this Dashboard directly, and you need to jump to this Dashboard from other Dashboards.
 
+.. _TA652FC-W Thermostat List:
 
 TA652FC-W Thermostat List
 ==========================
@@ -62,6 +63,9 @@ Default State
         * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_。
 
 .. |detail_dashboard| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-5.png
+
+
+.. _TA652FC-W Thermostat (For Mobile App):
 
 TA652FC-W Thermostat (For Mobile App)
 ======================================

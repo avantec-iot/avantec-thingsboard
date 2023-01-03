@@ -8,8 +8,8 @@ Avantec Dashboards
 TA652FC-W
 ==============
 
-* aaa
-* bbb
+* :ref:`TA652FC-W Thermostat List` : device list.
+* :ref:`TA652FC-W Thermostat (For Mobile App)`: device detail.
 
 TA652FH-W
 ==============

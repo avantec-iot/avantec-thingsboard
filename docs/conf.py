@@ -18,7 +18,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Using Avantec HVAC device with ThingsBoard'
-copyright = '2022, Avantec Manufacturing Limited'
+copyright = '2023, Avantec Manufacturing Limited'
 author = 'Avantec Manufacturing Limited'
 
 # The full version, including alpha/beta/rc tags

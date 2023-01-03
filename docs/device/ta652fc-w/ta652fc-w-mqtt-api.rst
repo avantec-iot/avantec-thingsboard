@@ -1,5 +1,5 @@
 *********************************
-TA652FC-W / TA652FH-W MQTT API \
+TA652FC-W & TA652FH-W MQTT API
 *********************************
 
 .. tip::
@@ -11,7 +11,7 @@ TA652FC-W / TA652FH-W MQTT API \
 Overview
 ========
 
-``TA652FC-W / TA652FH-W MQTT API`` is an implementation of :doc:`/thingsboard/thingsboard-mqtt-device-api` (MQTT is a lightweight publish/subscribe messaging protocol).
+``TA652FC-W & TA652FH-W MQTT API`` is an implementation of :doc:`/thingsboard/thingsboard-mqtt-device-api` (MQTT is a lightweight publish/subscribe messaging protocol).
 
 .. uml::
 
@@ -123,7 +123,7 @@ Chart:
 
     caption  Control Mode
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -209,7 +209,7 @@ Chart:
 
     caption  Setpoint & Override Status
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local adjust setpoint ==
@@ -270,7 +270,7 @@ Chart:
 
     caption  Program Mode & Program Status
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -338,7 +338,7 @@ Chart:
 
     caption  Program Setpoint & Time
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate ==
@@ -402,7 +402,7 @@ Chart:
 
     caption  Upload Device Attributes when the device is started
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     [-> TBDev : power on
@@ -450,7 +450,7 @@ Message 3 - TA652FC-W:
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload:
+    // Payload - TA652FC-W:
     {"switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,
     "switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5,
     "changeOverTempHeatingMin":27,"changeOverTempHeatingMax":40,"changeOverTempHeatingStep":0.5,
@@ -461,7 +461,7 @@ Message 3 - TA652FH-W:
 
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload:
+    // Payload - TA652FH-W:
     {"floorTempLimitedMin":20,"floorTempLimitedMax":40,"floorTempLimitedStep":0.5,
     "switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,
     "switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5}
@@ -492,7 +492,7 @@ Chart:
 
     caption  Settings
 
-    participant "TA652FC-W" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == local operate temperature unit ==
@@ -763,7 +763,7 @@ Chart:
 
     caption  Request all remote parameters when the device is started
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"uploadFreq,\nsyncTimeFreq,timezone,timeNTPServer"}
@@ -798,7 +798,7 @@ Chart:
 
     caption  Timer Parameters
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
     == Modify Timer Parameters ==
@@ -832,7 +832,7 @@ Chart:
 
     caption  Remote Sync Time
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
     participant "SNTP Server"  as SNTPSrv order 30 
 
@@ -875,14 +875,14 @@ See `timezone`_, `timeNTPServer`_  and `remoteSyncTimeRequest`_.
 ADM.04 FUOTA (firmware update over the air) 
 --------------------------------------------------
 
-The flow is to download the firmware from your HTTP server. For the flow of downloading firmware from Thingsboard server, please refer to :doc:`/thingsboard/thingsboard-mqtt-device-api`.
+The flow is to download the firmware from your HTTP server. For the flow of downloading firmware from Thingsboard server, please refer to :ref:`Firmware_API`.
 
 Chart:
   .. uml::
 
     caption  FUOTA (firmware update over the air)
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
     participant "HTTP Server"  as HTTPSrv order 30 
 
@@ -892,7 +892,7 @@ Chart:
     TBDev  --> HTTPSrv: (get Wi-Fi module firmware)
     TBDev  ->  TBDev: reboot
 
-    == MCU FUOTA ==
+    == MCU FUOTA (NOT implemented) ==
     TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteMcuFUOTA","params":\n"http://192.168.1.106/TA652FC-W-MCU.bin"}
     TBDev -->  TBSrv: send response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/response/$request_id** \nPayload: {"method":"remoteMcuFUOTA","results":{"result":"success"}}
     TBDev  --> HTTPSrv: (get MCU firmware)
@@ -915,7 +915,7 @@ Message 1b:
     // Payload: 
     {"method":"remoteWiFiFUOTA","results":{"result":"success"}}
 
-Message 2a:
+Message 2a (NOT implemented):
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
@@ -924,7 +924,7 @@ Message 2a:
      {"method":"remoteMcuFUOTA",
      "params":"http://192.168.1.106/TA652FC-W_MCU.bin"}
 
-Message 2b:
+Message 2b (NOT implemented):
   .. code:: javascript
 
     // Message Type:  send response (MQTT, PUBLISH)
@@ -943,7 +943,7 @@ Chart:
 
     caption  Remote Get Memeory Usage
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20
 
     TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteGetMemoryUsage"}
@@ -976,7 +976,7 @@ Chart:
 
     caption  Remote Reboot Device
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20
 
     TBDev <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteRebootDevice","params":{}}
@@ -1001,7 +1001,7 @@ Chart:
 
     caption  Remote Clear Wi-Fi Config
 
-    participant "Device" as TBDev order 10
+    participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20
 
     TBDev <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteClearWiFiConfig","params":{}}
@@ -1017,6 +1017,17 @@ Message 1:
     {"method":"remoteClearWiFiConfig","params":{}}
 
 See `remoteClearWiFiConfig`_. 
+
+Claiming 
+--------------
+
+Refer :ref:`Claiming_API`.
+
+Firmware update with ThingsBoard Server
+------------------------------------------
+
+Refer :ref:`Firmware_API`.
+
 
 
 Telemetry (Timeseries data)
@@ -1086,7 +1097,7 @@ wifiRssi
      - ●
      - Floor Temperatue
 
-   * - wifiRssi*
+   * - wifiRssi (deprecated)*
      - int
      - 
      - `wifiRssiMin`_
@@ -2302,7 +2313,7 @@ remoteGetMemoryUsage
      - ●
      -		
 
-   * - remoteMcuFUOTA
+   * - remoteMcuFUOTA |br| *(NOT implemented)*
      - two-way
      - {"method":"remoteMcuFUOTA", |br| "params":"http://192.168.1.1/y.img"}
      - {"method":"remoteMcuFUOTA", |br| "results":{"result":"success"}}, or |br| {"method":"remoteMcuFUOTA", |br| "results":{"result":"failure", "description":"xxx"}}

@@ -108,7 +108,9 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    :caption: TA652FH-W Wi-Fi Thermostat
 
    Specification </device/ta652fh-w/ta652fh-w-specification>
+   Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>
    Demo Dashboard</device/ta652fh-w/ta652fh-w-demo-dashboard-usage>
+   MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>
 
 ..   :hidden:
 

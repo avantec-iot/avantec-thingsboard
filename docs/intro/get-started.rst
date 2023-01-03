@@ -30,7 +30,7 @@ Prerequisites
 You will need to have ThingsBoard server up and running. 
 
 * The easiest way is to use `Live Demo server`_.
-* The alternative option is to install ThingsBoard using `Installation Guide`_. 
+* The alternative option is to install ThingsBoard using :doc:`/thingsboard/thingsboard-installation-options`. 
 * **Windows** users should follow this `guide`_. 
 * **Linux** users that have docker installed should execute the following commands:
 
@@ -46,7 +46,6 @@ These commands install ThingsBoard and load demo data and accounts.
 ThingsBoard UI will be available using the URL: http://localhost:8080 . You may use username **tenant@thingsboard.org** and password **tenant**. More info about `demo accounts`_ is available.
 
 .. _Live Demo server: https://demo.thingsboard.io/signup
-.. _Installation Guide: https://thingsboard.io/docs/user-guide/install/installation-options/
 .. _guide: https://thingsboard.io/docs/user-guide/install/docker-windows/
 .. _demo accounts: https://thingsboard.io/docs/samples/demo-account/
 
