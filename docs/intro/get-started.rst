@@ -100,7 +100,7 @@ Step 1. Tenant Login
 - Open ThingsBoard Web UI in browser, e.g. http://localhost:8080
 - Tenant Administrator login ThingsBoard.
 
-.. image:: /_static/intro/get-started/get-started-step-1-item-1.png
+.. image:: /_static/intro/get-started/tenant-login-1.png
 
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
@@ -168,15 +168,15 @@ Let's create a customer with title "My New Customer". Please see instruction bel
 
 * Navigate to the Customers page.
 
-.. image:: /_static/intro/get-started/get-started-step-6-1-item-1.png
+.. image:: /_static/intro/get-started/create-customers-1.png
 
 * Click the "+" sign to add a customer.
 
-.. image:: /_static/intro/get-started/get-started-step-6-1-item-2.png
+.. image:: /_static/intro/get-started/create-customers-2.png
 
 * Add customer title and click "Add".
 
-.. image:: /_static/intro/get-started/get-started-step-6-1-item-3.png
+.. image:: /_static/intro/get-started/create-customers-3.png
 
 Step 7.2 Assign dashboards to Customer
 --------------------------------------
@@ -204,31 +204,31 @@ You may optionally configure the dashboard to appear just after user login to th
 
 * Navigate back to the "Customers" page and click the "manage customer users" icon.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-1.png
+.. image:: /_static/intro/get-started/create-customer-user-1.png
 
 * Click the "Add user" icon.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-2.png
+.. image:: /_static/intro/get-started/create-customer-user-2.png
 
 * Specify email that you will use to login as a customer user and click "Add".
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-3.png
+.. image:: /_static/intro/get-started/create-customer-user-3.png
 
 * Copy the activation link and save it to a safe place. You will use it later to set the password.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-4.png
+.. image:: /_static/intro/get-started/create-customer-user-4.png
 
 * Open user details.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-5.png
+.. image:: /_static/intro/get-started/create-customer-user-5.png
 
 * (Option) Toggle edit mode.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-6.png
+.. image:: /_static/intro/get-started/create-customer-user-6.png
 
 * (Option) Select default dashboard and check "Always fullscreen". Apply changes.
 
-.. image:: /_static/intro/get-started/get-started-step-6-4-item-7.png
+.. image:: /_static/intro/get-started/create-customer-user-7.png
 
 .. _Step 7.5 Activate customer user:
 
@@ -237,11 +237,11 @@ Step 7.5 Activate customer user
 
 * Use the activation link to set the password. Click "Create Password". You will automatically login as a customer user.
 
-.. image:: /_static/intro/get-started/get-started-step-6-5-item-1.png
+.. image:: /_static/intro/get-started/activate-customer-user-1.png
 
 * You have logged in as a Customer User. You may browse the data and acknowledge/clear alarms.
 
-.. image:: /_static/intro/get-started/get-started-step-6-5-item-1.png
+.. image:: /_static/intro/get-started/activate-customer-user-2.png
 
 
 Step 8. Open Dashboards
