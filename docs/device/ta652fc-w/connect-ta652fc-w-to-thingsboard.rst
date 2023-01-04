@@ -2,6 +2,11 @@
 Connect TA652FC-W to ThingsBoard
 *********************************
 
+.. tip::
+
+  - This section applies to both ``TA652FC-W`` and ``TA652FH-W``.
+  - Unless otherwise specified, all specifications applicable to TA652FC-W are also applicable to TA652FH-W.
+
 This section describes the process of connecting TA652FC-W to ThingsBoard via Wi-Fi. This process applies to all models of thermostats in this series.
 
 .. |icon_mode| image:: /_static/device/ta652fc-w/ta652fc-w-specifications/icon_mode.png
@@ -90,8 +95,7 @@ Step 3. Configure
       Host          | This ThingsBoard Server's MQTT URL.
                     | It must begin with "MQTT ://", such as mqtt://192.168.21.206
                     | **Please replace 192.168.21.206 with your Thingsboard IP Address**.
-                    | See :ref:`add-shared-attributes-of-new-device-cloudhost`
-      Port          This ThingsBoard Server's MQTT Port. Default is 1883.
+                    | See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
       ============  =====================================================================
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/configure_ta65_connting.png

@@ -14,9 +14,22 @@ Avantec's strength lies in delivering high-quality engineering solutions. We pro
 HVAC 
 ---------
 
-* Thermostat, Humidistat, Sensor for smart city, DDC (Direct Digital Controller) / VAV (Variable Air Volume) Controller, ...
+* Device Type:
+   * Thermostat
+   * Humidistat
+   * Sensor for smart city
+   * DDC (Direct Digital Controller)
+   * VAV (Variable Air Volume) Controller
+   * ...
 
-* Classic, Modbus, BAcnet, RF 433/868/915, Wi-Fi, LoRaWan, ...
+* Networking:
+   * Classic
+   * Modbus
+   * BACnet
+   * RF 433/868/915
+   * Wi-Fi
+   * LoRaWAN
+   * ...
 
 Why ThingsBoard?
 ====================

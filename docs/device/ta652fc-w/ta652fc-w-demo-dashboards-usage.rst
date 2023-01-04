@@ -222,14 +222,14 @@ Admin State
         Widget                       Description
         =================== ===========================================================
         Time Format         "12 Hours" or "24 Hours"
-        Timezone            See :ref:`add-shared-attributes-of-new-device-cloudhost`
+        Timezone            See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
         NTP Server          | SNTP protocol server URL, eg: pool.ntp.org, 
                             | 0.pool.ntp.org, 1.pool.ntp.org, 
                             | time.nist.gov, …
-                            | see :ref:`add-shared-attributes-of-new-device-cloudhost`
+                            | see :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
         Sync Time           | Sync time per syncTimeFreq seconds.
                             | If you change *Timezone* or *NTP Server*, you have to do it.
-                            | See :ref:`add-shared-attributes-of-new-device-cloudhost`
+                            | See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
 
         Device attributes   | Device name, device profile (type), device label, 
                             | model, MAC, device Wi-Fi Module F/W version,

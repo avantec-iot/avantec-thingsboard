@@ -2,6 +2,11 @@
 Get Started 
 **************
 
+.. tip:: 
+   
+   - This section applies to situations where there is no running instance of ThingBoard Server, or no Avantec HVAC device has been added to ThingBoard Server.
+   - If you add some Avantec HVAC devies to ThingsBoard Server again, please refer to the instructions of each devies.
+
 Reprinted this article from `Getting Started with ThingsBoard`_, slightly modified.
 
 .. _Getting Started with ThingsBoard: https://thingsboard.io/docs/getting-started-guides/helloworld/
@@ -30,38 +35,74 @@ Prerequisites
 You will need to have ThingsBoard server up and running. 
 
 * The easiest way is to use `Live Demo server`_.
+* Or `Thingsboard Cloud`_ for thingsboard cloud.
 * The alternative option is to install ThingsBoard using :doc:`/thingsboard/thingsboard-installation-options`. 
 * **Windows** users should follow this `guide`_. 
 * **Linux** users that have docker installed should execute the following commands:
 
-.. code:: bash
+   .. code:: bash
 
-    mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
-    mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
-    docker run -it -p 9090:9090 -p 7070:7070 -p 1883:1883 -p 5683-5688:5683-5688/udp -v ~/.mytb-data:/data \
-    -v ~/.mytb-logs:/var/log/thingsboard --name mytb --restart always thingsboard/tb-postgres
+      mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
+      mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
+      docker run -it -p 9090:9090 -p 7070:7070 -p 1883:1883 -p 5683-5688:5683-5688/udp -v ~/.mytb-data:/data \
+      -v ~/.mytb-logs:/var/log/thingsboard --name mytb --restart always thingsboard/tb-postgres
 
-These commands install ThingsBoard and load demo data and accounts.
+   These commands install ThingsBoard and load demo data and accounts.
+   ThingsBoard UI will be available using the URL: http://localhost:8080 . You may use username **tenant@thingsboard.org** and password **tenant**. More info about `demo accounts`_ is available.
 
-ThingsBoard UI will be available using the URL: http://localhost:8080 . You may use username **tenant@thingsboard.org** and password **tenant**. More info about `demo accounts`_ is available.
+   .. _Live Demo server: https://demo.thingsboard.io/signup
+   .. _guide: https://thingsboard.io/docs/user-guide/install/docker-windows/
+   .. _demo accounts: https://thingsboard.io/docs/samples/demo-account/
 
-.. _Live Demo server: https://demo.thingsboard.io/signup
-.. _guide: https://thingsboard.io/docs/user-guide/install/docker-windows/
-.. _demo accounts: https://thingsboard.io/docs/samples/demo-account/
+.. _Thingsboard Cloud: https://thingsboard.io/pricing/?section=thingsboard-pe-options&product=thingsboard-cloud
+
+
+.. _Some important parameters:
+
+Please remember the following important parameters, which will be used frequently in the following work:
+
+.. list-table:: Some important parameters
+   :widths: auto
+   :header-rows: 1
+
+   * - ThingsBoard server
+     - Web URI
+     - MQTT URI / Cloud Host
+     - Default tenant account
+
+   * - Live Demo server
+     - https://demo.thingsboard.io/
+     - mqtt://demo.thingsboard.io
+     -
+
+   * -  ThingsBoard Cloud |br| (Subscription plans)
+     - https://thingsboard.cloud/
+     - mqtt://mqtt.thingsboard.cloud
+     -
+
+   * - Installation
+     - local: http://localhost:8080 |br| remote: http://your_server_ip:8080
+     - mqtt://your_server_ip
+     - username: tenant@thingsboard.org |br| password: tenant |br| See `demo accounts`_
+
+.. # define a hard line break for HTML
+.. |br| raw:: html
+
+   <br/>
 
 
 Step 1. Tenant Login
 =====================
 
 - Open your ThingsBoard Web UI in your browser.
-- Tenant Administrator login ThingsBoard: tenant@thingsboard.org / tenant.
+- Tenant Administrator login ThingsBoard.
 
 .. image:: /_static/intro/get-started/get-started-step-1-item-1.png
 
 The default user name and password are shown in the following table:
 
 .. table::
-   :widths: 45 50
+   :widths: auto
 
    ==========  =======================
    Field       Value
@@ -71,8 +112,94 @@ The default user name and password are shown in the following table:
    ==========  =======================
 
 
-Step 2. Provison device
+Step 2. Import Avantec Widgets
+==============================
+
+.. tip:: 
+   Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
+
+   If you have already imported it, you can skip this step.
+
+
+**Widgets Library** --> **+** --> **Popup dialog** --> **Select File: avantec_widgets.json** --> **Import**.
+
+See :download:`avantec_widgets.json </_static/thingsboard/thingsboard_extension/avantec_widgets.json>`.
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_widgets_bundle.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/avantec_widgets.png
+
+See :doc:`/avantec/avantec-widgets`.
+
+
+Step 3. Create device profile
+==============================
+
+
+Step 4. Import Dashboards
+=========================
+
+Step 4.1 Import Dashboards
+---------------------------
+
+.. tip:: 
+   Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
+
+   If you have already imported it, you can skip this step.
+
+**Dashboards** --> **+** --> **Popup dialog: Import dashboard** --> **Select File: avantec_dashboard.json** --> **Import** --> **Popup dialog: Configure aliases used by imported dashboard** --> **Edit alias(icon)** --> **Popup dialog: Edit alias** --> **Input Fileds : ...** --> **Save**.
+
+See :download:`avantec_dashboard.json </_static/thingsboard/thingsboard_extension/avantec_dashboard.json>`.
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_a.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_b.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_c.png
+
+.. table::
+   :widths: auto
+
+   ============================== =====================
+   Field                          Value
+   ============================== =====================
+   Alias name*:                   Thermostats
+   Resolve as multiple entities*  TRUE
+   Filter type*                   Device search query
+   Type*                          Asset
+   Asset*                         Building X
+   Relation type*                 Contains
+   Device types*                  TA652FC-W-TB, TA652FH-W-TB
+   ============================== =====================
+
+Step 4.2 Edit Dashboards
+--------------------------
+
+.. tip:: 
+   Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
+
+   If you have already imported avantec_dashboard.json, you may skip this step.
+
+   We can modify it, for example we can modify alias to add a new device.
+
+**Dashboards** --> **Open dashboard(icon)** --> **New Dashboard: Avantec Dashboard** --> **Edit (red icon on the bottom and right)** --> **Edit Dashboard Mode** --> **Entity aliases(icon on the top and right)** --> **Popup dialog: Entity aliases** --> **Edit alias(icon)** --> **Popup dialog: Edit alias** --> **Modify Fileds : ...** --> **Save**.
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_a.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_b.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_c.png
+
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_d.png
+
+See :doc:`/avantec/avantec-dashboards`.
+
+
+Step 5. Provision device
 ========================
+
+Step 5.1 Add device
+---------------------
 
 For simplicity, we will provision the device manually using the UI.
 
@@ -121,12 +248,8 @@ You may also use:
 .. _Device provisioning: https://thingsboard.io/docs/user-guide/device-provisioning
 .. _REST API: https://thingsboard.io/docs/api
 
-
-Step 3. Connect device
-=======================
-
-Step 3.1 Add shared attributes of new device
------------------------------------------------
+Step 5.2 Add shared attributes of new device
+----------------------------------------------
 
 **Devices** --> **New device(TA652FC-W-TB or TA652FH-W-TB)** --> **Attributes** --> **Shared attributes** --> **+** --> **Popup Dialog** --> **Inpug Key, Value type & value** --> **Add**。
 
@@ -163,10 +286,14 @@ The following Shared attributes of the two devices, TA652FC-W-TB and TA652FH-W-T
 .. note:: 
    The field with * must be filled in.
 
-.. .. _copy-credentials-of-new-device:
 
-Step 3.2 Copy credentials of new device
---------------------------------------------
+Step 6. Connect device
+=======================
+
+.. _copy-credentials-of-new-device:
+
+Step 6.1 Copy credentials of new device
+-----------------------------------------
 
 To connect the device you need to get the device credentials first. ThingsBoard supports various device credentials. We recommend using default auto-generated credentials which is access token for this guide.
 
@@ -182,13 +309,14 @@ To connect the device you need to get the device credentials first. ThingsBoard 
 .. tip:: 
    The Credentials (Access Token), which you need to use when you're configuring your hardware, for example, *j9JiCkID9E7uE1WhKxnc*, *lMTQLZ7VSRQSD7ls*.
 
-Step 3.3 Connect device to ThingsBoard
+
+Step 6.2 Connect device to ThingsBoard
 ---------------------------------------
 
 Refer to :doc:`/device/ta652fc-w/connect-ta652fc-w-to-thingsboard`.
 
 
-Step 3.4 publish data to ThingsBoard 
+Step 6.3 publish data to ThingsBoard 
 ---------------------------------------
 
 Now your device has already published telemetry data to thingsboard. You should immediately see them in the Device Telemetry Tab:
@@ -202,92 +330,14 @@ Now your device has already published telemetry data to thingsboard. You should 
 .. image:: /_static/intro/get-started/get-started-step-3-4-item-2.png
 
 
-Step 4. Import Avantec Widgets
-==============================
-
-.. tip:: 
-   Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported it, you can skip this step.
-
-
-**Widgets Library** --> **+** --> **Popup dialog** --> **Select File: avantec_widgets.json** --> **Import**.
-
-See :download:`avantec_widgets.json </_static/thingsboard/thingsboard_extension/avantec_widgets.json>`.
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_widgets_bundle.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/avantec_widgets.png
-
-See :doc:`/avantec/avantec-widgets`.
-
-
-Step 5. Import Avantec Dashboards
-=================================
-
-Step 5.1. Import Avantec Dashboards
-------------------------------------
-
-.. tip:: 
-   Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported it, you can skip this step.
-
-**Dashboards** --> **+** --> **Popup dialog: Import dashboard** --> **Select File: avantec_dashboard.json** --> **Import** --> **Popup dialog: Configure aliases used by imported dashboard** --> **Edit alias(icon)** --> **Popup dialog: Edit alias** --> **Input Fileds : ...** --> **Save**.
-
-See :download:`avantec_dashboard.json </_static/thingsboard/thingsboard_extension/avantec_dashboard.json>`.
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_a.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_b.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import_dashboard_c.png
-
-.. table::
-   :widths: auto
-
-   ============================== =====================
-   Field                          Value
-   ============================== =====================
-   Alias name*:                   Thermostats
-   Resolve as multiple entities*  TRUE
-   Filter type*                   Device search query
-   Type*                          Asset
-   Asset*                         Building X
-   Relation type*                 Contains
-   Device types*                  TA652FC-W-TB, TA652FH-W-TB
-   ============================== =====================
-
-Step 5.2 Edit Avantec Dashboard - Modify entity alias
------------------------------------------------------------
-
-.. tip:: 
-   Avantec_dashboard.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported avantec_dashboard.json, you may skip this step.
-
-   We can modify it, for example we can modify alias to add a new device.
-
-**Dashboards** --> **Open dashboard(icon)** --> **New Dashboard: Avantec Dashboard** --> **Edit (red icon on the bottom and right)** --> **Edit Dashboard Mode** --> **Entity aliases(icon on the top and right)** --> **Popup dialog: Entity aliases** --> **Edit alias(icon)** --> **Popup dialog: Edit alias** --> **Modify Fileds : ...** --> **Save**.
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_a.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_b.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_c.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/edit_dashboard_d.png
-
-See :doc:`/avantec/avantec-dashboards`.
-
-Step 6. Assign Device and Dashboard to Customer
+Step 7. Assign Device and Dashboards to Customer
 ================================================
 
 One of the most important ThingsBoard features is the ability to assign Dashboards to Customers. 
 You may assign different devices to different customers. Then, you may create a Dashboard(s) and assign it to multiple customers.
 Each customer user will see his own devices and will not be able to see devices or any other data that belongs to a different customer.
 
-Step 6.1 Create customers
+Step 7.1 Create customers
 --------------------------
 
 Let's create a customer with title "My New Customer". Please see instruction below:
@@ -304,20 +354,7 @@ Let's create a customer with title "My New Customer". Please see instruction bel
 
 .. image:: /_static/intro/get-started/get-started-step-6-1-item-3.png
 
-Step 6.2 Assign device to Customer
------------------------------------
-
-Let's assign device to the Customer. The Customer users will have ability to read and write telemetry and send commands to devices. 
-
-* Open Devices page. Click "Assign to customer" for *"My New Device"*.
-
-.. image:: /_static/intro/get-started/get-started-step-6-2-item-1.png
-
-* Select *"My New Customer"* and click "Assign".
-
-.. image:: /_static/intro/get-started/get-started-step-6-2-item-2.png
-
-Step 6.3 Assign dashboard to Customer
+Step 7.2 Assign dashboards to Customer
 --------------------------------------
 
 Let's share our dashboard with the Customer. The Customer users will have read-only access to the Dashboard. 
@@ -330,7 +367,20 @@ Let's share our dashboard with the Customer. The Customer users will have read-o
 
 .. image:: /_static/intro/get-started/get-started-step-6-3-item-2.png
 
-Step 6.4 Create customer user
+Step 7.3 Assign device to Customer
+-----------------------------------
+
+Let's assign device to the Customer. The Customer users will have ability to read and write telemetry and send commands to devices. 
+
+* Open Devices page. Click "Assign to customer" for *"My New Device"*.
+
+.. image:: /_static/intro/get-started/get-started-step-6-2-item-1.png
+
+* Select *"My New Customer"* and click "Assign".
+
+.. image:: /_static/intro/get-started/get-started-step-6-2-item-2.png
+
+Step 7.4 Create customer user
 ------------------------------
 
 Finally, let's create a user that will belong to the customer and will have read-only access to the dashboard and the device.
@@ -365,9 +415,7 @@ You may optionally configure the dashboard to appear just after user login to th
 .. image:: /_static/intro/get-started/get-started-step-6-4-item-7.png
 
 
-
-
-Step 6.5 Activate customer user
+Step 7.5 Activate customer user
 --------------------------------
 
 * Use the activation link to set the password. Click "Create Password". You will automatically login as a customer user.
@@ -378,8 +426,10 @@ Step 6.5 Activate customer user
 
 .. image:: /_static/intro/get-started/get-started-step-6-5-item-1.png
 
-Step 7. Open Avantec Dashboards
-================================
+
+
+Step 8. Open Dashboards
+=========================
 
 **Dashboards** --> **Open dashboard(icon) in the line of  Avantec Dashboard** --> **New Dashboard: Avantec Dashboard** --> **Click this line of TA652FC-W-TB**.
 

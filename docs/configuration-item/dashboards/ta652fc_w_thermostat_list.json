@@ -31,8 +31,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1672134803627,
-                "endTimeMs": 1672221203627
+                "startTimeMs": 1672195188306,
+                "endTimeMs": 1672281588306
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -232,7 +232,6 @@
     },
     "filters": {},
     "timewindow": {
-      "displayValue": "",
       "hideInterval": false,
       "hideLastInterval": false,
       "hideQuickInterval": false,
@@ -242,19 +241,9 @@
       "selectedTab": 0,
       "realtime": {
         "realtimeType": 0,
-        "interval": 1000,
-        "timewindowMs": 60000,
-        "quickInterval": "CURRENT_DAY"
-      },
-      "history": {
-        "historyType": 0,
-        "interval": 1000,
-        "timewindowMs": 60000,
-        "fixedTimewindow": {
-          "startTimeMs": 1672133310791,
-          "endTimeMs": 1672219710791
-        },
-        "quickInterval": "CURRENT_DAY"
+        "timewindowMs": 300000,
+        "quickInterval": "CURRENT_DAY",
+        "interval": 1000
       },
       "aggregation": {
         "type": "AVG",

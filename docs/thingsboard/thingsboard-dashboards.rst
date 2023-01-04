@@ -25,13 +25,19 @@ You can find useful links to get started below:
 How to customize
 =================
 
-* In Avantec Dashboard:
+* In Avantec Widgets & Avantec Dashboard:
     * Change widget title, background, colors, fonts, shadows, etc
     * Add or remove widget
     * Modify dashboard states, aliases and widget actions
     * Visualizing assets data using Maps and Tables
 
-* Create new widget
+* Create new Widgets
+
+* Create your Dashboards
+
+* Customize your White labeling
+
+* Customize your Mobile Application
 
 * Create your service, like ThingsBoard. See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
 

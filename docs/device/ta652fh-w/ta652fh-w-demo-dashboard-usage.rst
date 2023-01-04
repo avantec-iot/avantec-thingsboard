@@ -119,11 +119,11 @@ TA652FH-W_Settings State
         Widget                       Description
         ============================ ===========================================================
         Time Format                  "12 Hours" or "24 Hours"
-        Timezone                     See :ref:`add-shared-attributes-of-new-device-cloudhost`
+        Timezone                     See :ref:`add-shared-attributes-of-ta652fh-w-cloudhost`
         NTP Server                   | SNTP protocol server URL, eg: pool.ntp.org, 
                                      | 0.pool.ntp.org, 1.pool.ntp.org, 
                                      | time.nist.gov, …
-                                     | see :ref:`add-shared-attributes-of-new-device-cloudhost`
+                                     | see :ref:`add-shared-attributes-of-ta652fh-w-cloudhost`
 
         Sync Time                    If you change *Timezone* or *NTP Server*, you have to do it
         Temp Unit                    "°C" or "°F". **Reboot the device to take effect**
@@ -157,13 +157,13 @@ TA652FH-W_Admin State
                             | It must begin with “MQTT ://”, such as
                             | mqtt://192.168.21.222
                             | **Please replace 192.168.21.222 with your value.**
-                            | See :ref:`add-shared-attributes-of-new-device-cloudhost`
+                            | See :ref:`add-shared-attributes-of-ta652fh-w-cloudhost`
 
         Telemetry Upload    | Telemetry per uploadFreq seconds 
-                            | See :ref:`add-shared-attributes-of-new-device-cloudhost`
+                            | See :ref:`add-shared-attributes-of-ta652fh-w-cloudhost`
 
         Sync Time           | Sync time per syncTimeFreq seconds 
-                            | See :ref:`add-shared-attributes-of-new-device-cloudhost`
+                            | See :ref:`add-shared-attributes-of-ta652fh-w-cloudhost`
 
         Memory Usage        byte, iram: internal RAM, spiram: external SPI RAM
         Wi-Fi FUOTA         | First input a HTTP URL of Wi-Fi module F/W, 

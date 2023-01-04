@@ -1159,7 +1159,7 @@ timeNTPServer
      - Default: 60
      - ●
      - ●
-     - Timeseries (Telemetry) |br| upload Frequency. see |br| :ref:`add-shared-attributes-of-new-device-cloudhost`.
+     - Timeseries (Telemetry) |br| upload Frequency. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
    * - syncTimeFreq
      - int
@@ -1170,7 +1170,7 @@ timeNTPServer
      - Default: |br| 24 * 3600
      - ●
      - ●
-     - timer period of |br| sync datetime. see |br| :ref:`add-shared-attributes-of-new-device-cloudhost`.
+     - timer period of |br| sync datetime. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
    * - timezone
      - int
@@ -1181,7 +1181,7 @@ timeNTPServer
      - 
      - ●
      - ●
-     - offset UTC. see |br| :ref:`add-shared-attributes-of-new-device-cloudhost`.
+     - offset UTC. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
    * - timeNTPServer
      - string
@@ -1192,7 +1192,7 @@ timeNTPServer
      - (127 char+'\0')
      - ●
      - ●
-     - SNTP server, eg: |br| pool.ntp.org . see |br| :ref:`add-shared-attributes-of-new-device-cloudhost`.
+     - SNTP server, eg: |br| pool.ntp.org . see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
 
 
