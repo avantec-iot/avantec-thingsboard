@@ -1021,13 +1021,12 @@ See `remoteClearWiFiConfig`_.
 Claiming 
 --------------
 
-Refer :ref:`Claiming_API`.
+Refer to :ref:`Claiming_API`.
 
 Firmware update with ThingsBoard Server
 ------------------------------------------
 
-Refer :ref:`Firmware_API`.
-
+Refer to :ref:`Firmware_API`.
 
 
 Telemetry (Timeseries data)

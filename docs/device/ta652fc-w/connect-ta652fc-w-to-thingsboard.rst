@@ -57,7 +57,7 @@ Step 1. Get Access-Token
 ==========================
 
 Get a access-token of TA652FC-W from ThingsBoard. 
-See :ref:`copy-credentials-of-new-device`.
+See :ref:`Step 5.1 Copy credentials of new TA652FC-W device`.
 
 
 Step 2. Power On

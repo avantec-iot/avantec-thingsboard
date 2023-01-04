@@ -58,7 +58,7 @@ Default State
 *  Thermostats widgets:
     * Fields: 
         * Entity name, Entity type, Type, active.
-        * Room temp, Change Over Sensor Temp, Setpoint, Fan status, Unit: Refer `Monitor State`_.
+        * Room temp, Change Over Sensor Temp, Setpoint, Fan status, Unit: Refer to `Monitor State`_.
     * Actions:
         * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_。
 
@@ -100,7 +100,7 @@ Monitor State
         Fan Status                      "Off", "Low", "Med" or "High"
         Temperature history             | Room temperature & Change Over Sensor temperature \
                                         | history. Click |Temperature history edit timewindow| \
-                                        | to edit this timewindow. Refer  `Default State`_
+                                        | to edit this timewindow. Refer to `Default State`_
         =============================== ============================================================
 
 .. |Temperature history edit timewindow| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-monitor-2.png
@@ -112,7 +112,7 @@ Control State
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer to `Default State`_.
 
 * Widgets:
     .. table:: 
@@ -138,7 +138,7 @@ Program State
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer to `Default State`_.
 
 * Widgets:
     .. table:: 
@@ -161,7 +161,7 @@ Program_Setpoints State
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer to `Default State`_.
 
 * Widgets:
     .. table:: 
@@ -182,7 +182,7 @@ Settings State
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer to `Default State`_.
 
 * Widgets:
     .. table:: 
@@ -212,7 +212,7 @@ Admin State
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer to `Default State`_.
 
 * Widgets:
     .. table:: 
