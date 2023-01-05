@@ -5,7 +5,7 @@ Get Started
 .. tip:: 
    
    - This section applies to situations where there is no running instance of ThingBoard Server, or no Avantec HVAC device has been added to ThingBoard Server.
-   - If you add some Avantec HVAC devies to ThingsBoard Server again, please refer to the instructions of each devies.
+   - If you add some Avantec HVAC devices to ThingsBoard Server again, please refer to the instructions of each device.
 
 Reprinted this article from `Getting Started with ThingsBoard`_, slightly modified.
 
@@ -26,7 +26,7 @@ We will connect and visualize data from a Avantec HVAC device to keep it simple.
 Refer to `Getting Started with ThingsBoard`_ to get support for the following features:
 
 * Define thresholds and trigger alarms;
-* Push notifications about new alarms over email, sms or other systems.
+* Push notifications about new alarms over email, SMS or other systems.
 
 
 Prerequisites
@@ -35,7 +35,7 @@ Prerequisites
 You will need to have ThingsBoard server up and running. 
 
 * The easiest way is to use `Live Demo server`_.
-* Or `Thingsboard Cloud`_ for thingsboard cloud.
+* Or `ThingsBoard Cloud`_.
 * The alternative option is to install ThingsBoard using :doc:`/thingsboard/thingsboard-installation-options`. 
    * **Windows** users should follow this `guide`_. 
    * **Linux** users that have docker installed should execute the following commands:
@@ -54,7 +54,7 @@ You will need to have ThingsBoard server up and running.
 .. _guide: https://thingsboard.io/docs/user-guide/install/docker-windows/
 .. _demo accounts: https://thingsboard.io/docs/samples/demo-account/
 
-.. _Thingsboard Cloud: https://thingsboard.io/pricing/?section=thingsboard-pe-options&product=thingsboard-cloud
+.. _ThingsBoard Cloud: https://thingsboard.io/pricing/?section=thingsboard-pe-options&product=thingsboard-cloud
 
 
 .. _Some important parameters:

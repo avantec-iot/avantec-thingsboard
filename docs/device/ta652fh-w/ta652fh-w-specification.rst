@@ -26,8 +26,8 @@ Feature List
 =============
 
 * Voltage supply: 230Vac
-* Temperature display in oC or oF
-* Temperature measurable range : 0 - 50 C 
+* Temperature display in °C or °F
+* Temperature measurable range : 0 - 50 °C 
 * Selection of Heat/Cool
 * Adaptive control
 * 7days / 5+1+1days, 1day program, no program.
@@ -155,7 +155,7 @@ Hold |icon_onoff| to turn On / Off the thermostat. When the thermostat is Off. N
 Clock setting
 -------------
 
-**Nomally the clock is automatically set once wifi is connected and synchronize for each day. So manual set is not ncecssary when it is online.**
+**Normally the clock is automatically set once Wi-Fi is connected and synchronize for each day. So manual set is not necessary when it is online.**
 
 * Press |icon_clock| to start the setting
 * Press |icon_up| / |icon_down| to change the day of week
@@ -169,7 +169,7 @@ Clock setting
 Clock synchronization
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-when Wi-Fi is connected and time synronize is need. Plesae use the App for time synchronization.
+When Wi-Fi is connected and time synchronization is need. Please use the App for time synchronization.
 
 
 Schedule Programming
@@ -180,7 +180,7 @@ When **1 day** / **5+1+1 day** / **7day program** is selected in internal settin
 * Hold  |icon_clock| to start the setting.
 * Press |icon_up| / |icon_down| to adjust the day of week
 * Press |icon_clock| to confirm.
-* Press |icon_up| / |icon_down| to adjust the time of schdule
+* Press |icon_up| / |icon_down| to adjust the time of schedule
 * Press |icon_clock| to confirm.
 * Press |icon_up| / |icon_down| to adjust the setpoint
 * Press |icon_clock| to confirm.
@@ -192,7 +192,7 @@ Override Temperature
 
 The Set point can be adjusted by |icon_up| / |icon_down|.
 
-When it is in program mode, The set point will be overrided until the next time slot. 
+When it is in program mode, the set point will be overwritten until the next time slot. 
 
 |icon_clock| can be pressed to release the override status.
 
@@ -219,7 +219,7 @@ P07   Program mode                  | No program (0) /          3
                                     | 1day program (1) / 
                                     | 5+1+1 program (2) /
                                     | 7day program (3)	
-P08   Adaptvie Control              Enable / Disable	        Disable
+P08   Adaptive Control              Enable / Disable	        Disable
 P09   System Mode                   Heat / Cool	                Heat
 P10   Sensor Mode                   | Internal Sensor /         Internal Sensor
                                     | External Sensor /
@@ -239,7 +239,7 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
     The count down time (in seconds) to screen saver mode.
 
 * Display Unit:
-    Temperature unit in Celesius or Farenheit.
+    Temperature unit in Celsius or Fahrenheit.
 
 * Time Display Unit:
     12/24.
@@ -257,18 +257,18 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
         :width: 49%
 
 * Program Mode:
-    * 0: **No Program** Mode, The thermostat control the temperature simply according to single setpoint.
-    * 1: **1 day** program, The thermostat control the temperature according to single schedule.
-    * 2: **5+1+1 day** program, The thermostat control the temperature according to 5 +1+1 schedule (Mon to Fri, Sat, Sun).
-    * 3: **7 days** program, The thermostat control the temperature according to 7day program (individual program for each day).
+    * 0: **No Program** Mode, the thermostat control the temperature simply according to single setpoint.
+    * 1: **1 day** program, the thermostat control the temperature according to single schedule.
+    * 2: **5+1+1 day** program, the thermostat control the temperature according to 5 +1+1 schedule (Mon to Fri, Sat, Sun).
+    * 3: **7 days** program, the thermostat control the temperature according to 7day program (individual program for each day).
 
 * Adaptive control
     When this function is enable, the thermostat learns the time taken to reach the desired setpoint and turn on the heating / cooling earlier so that the room temperature will reach the setpoint at desired schedule. This is no effect when **No program** is selected.
 
 * Heat / Cool Mode
-    When **Heat mode** is selected, the thermostat control The room temperature with heating. **Room Sensor**, **Floor Sensor** or **Combined sensor** can be selected.
+    When **Heat mode** is selected, the thermostat control the room temperature with heating. **Room Sensor**, **Floor Sensor** or **Combined sensor** can be selected.
 
-    When **Cool mode** is selected, the thermostat control The room temperature with cooling. Only **Room Sensor**, will be used.
+    When **Cool mode** is selected, the thermostat control the room temperature with cooling. Only **Room Sensor**, will be used.
 
 * Sensor Mode
     There are 3 different settings of sensor control for Heat Mode. (For Cool Mode. Only Room sensor will be used)
@@ -277,7 +277,8 @@ P11   Floor temperature limited     20-40°C, 68-104°F	        40°C
         Thermostat control the room temperature based on Room Sensor
 
     * Floor sensor
-        Thermostat controla the room temperature based on Floor Sensor
+        Thermostat control the room temperature based on Floor Sensor
+
     * Combined Floor-/Room sensor
         Thermostat control the room temperature based on Room Sensor. And the output will be off if floor temperature above “floor temperature limited” for protection.
 
@@ -296,15 +297,15 @@ Internal parameter setting 2
 ===== ============================================= =========== ====================
 ID    Items	                                        Value	    Default Value
 ===== ============================================= =========== ====================
-P19   Clear Wifi Configuration                      Yes or No   No
+P19   Clear Wi-Fi Configuration                      Yes or No   No
 P20   Clear Parameter setting (restore default)     Yes or No   No
 ===== ============================================= =========== ====================
 
-* Clear Wifi Configuration: 
-    When set to yes,the SSID and Password stored in the thermostat will be clerared  so another SSID and Password can be set again.
+* Clear Wi-Fi Configuration: 
+    When set to yes, the SSID and Password stored in the thermostat will be cleared  so another SSID and Password can be set again.
 
 * Clear Parameter setting: 
-    When set to yes, all Internal parameter setting will be restored to default value in next power on (reset)
+    When set to yes, all internal parameter setting will be restored to default value in next power on (reset)
 
 
 Minimum off time

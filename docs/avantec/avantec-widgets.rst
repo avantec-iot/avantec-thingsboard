@@ -32,36 +32,36 @@ Control widget.
 .. image:: /_static/extension/avantec-widgets/segmented-switch-of-string-value-1.png
 
 
-Select double value from flexiable options
+Select double value from flexible options
 --------------------------------------------------------
 
 Control widget.
 
 *Deprecated!*
 
-.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexiable-options-1.png
+.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexible-options-1.png
 
 
-Select double value from flexiable options (New)
+Select double value from flexible options (New)
 ------------------------------------------------
 
 Control widget.
 
-.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexiable-options-new-1.png
+.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexible-options-new-1.png
 
 
-Select double value from flexiable options with pattern key
+Select double value from flexible options with pattern key
 ------------------------------------------------------------
 
 Control widget.
 
 Some parameters of this widget can be appended with a suffix for programming time.
 
-.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexiable-options-with-pattern-key-1.png
+.. image:: /_static/extension/avantec-widgets/select-double-value-from-flexible-options-with-pattern-key-1.png
 
 
-Select timezone value
----------------------
+Select time zone value
+------------------------
 
 Control widget.
 

@@ -43,7 +43,7 @@ Next steps
 
 * ThingsBoard Data visualization
     * `Visualizing assets data using Maps and Tables`__ : Learn how to: create assets and devices and define their relationships; add the server attributes and create a new dashboard; visualize data from the asset attributes using “Entities Table” and “Map” widgets.
-    * `Dashboard states, aliases and widget actions`__ : Learn how to: add and configure new dashboard states; create various aliases; visualize the attributes data using the Image Map widget; create actions in different widgets in order to navigate between states; visualize the telemetry data using Analogue and Digital gauges and the Timeseries widget.
+    * `Dashboard states, aliases and widget actions`__ : Learn how to: add and configure new dashboard states; create various aliases; visualize the attributes data using the Image Map widget; create actions in different widgets in order to navigate between states; visualize the telemetry data using Analogue and Digital gauges and the Time-series widget.
     * `Remote device control and alarm management`__ : Learn how to: add and use the Knob Control widget; create alarm rules; handle alarms using the Alarms widget; make a dashboard public.
     * `Basic widget settings`__ : Learn how to: change widget title, background, colors, fonts, shadows, etc.
     * `Latest Values Map widget`__ : Learn how to create Map widget, based on latitude and longitude, and customize the Map widget layout and properties.

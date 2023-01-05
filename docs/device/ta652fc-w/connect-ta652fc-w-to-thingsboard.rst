@@ -108,7 +108,7 @@ Step 3. Configure
 Step 4. Check
 ================
 
-Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the Tonezone relationship on ThingsBoard correctly, the time displayed by TA652FC-W may be slightly off.
+Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the tone zone relationship on ThingsBoard correctly, the time displayed by TA652FC-W may be slightly off.
  
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/check_connection.png
       :width: 60%
@@ -117,7 +117,7 @@ Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly
 Troubleshooting
 ================
 
-Thermostat TA652FC-W cann't connect to Wi-Fi:
+Thermostat TA652FC-W can't connect to Wi-Fi:
 
 - If the Thermostat has never been connected to any Wi-Fi router since leaving the factory, it will enter Soft-AP mode. You can search for Wi-Fi SSID similar to "EasyStat-xxxx" through your mobile phone or computer.
 - Make sure the Wi-Fi router supports and turns on the 2.4G signal. Currently, some dual-band (2.4G & 5G) Wi-Fi routers can turn off the 2.4G signal. Please turn it on in your router settings.

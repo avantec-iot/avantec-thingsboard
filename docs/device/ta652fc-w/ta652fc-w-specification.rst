@@ -26,9 +26,9 @@ Feature List
 * Temperature display in °C or °F
 * Temperature measurable range : 0 - 50 °C
 * 2-pipe system
-* Manual changeover or Autochangeover can be selected 
+* Manual changeover or Auto changeover can be selected 
 * Selection of Heat/Cool
-* 7days/5+1+1days,1day program, no program.
+* 7days/5+1+1days, 1day program, no program.
 * EEPROM stores all settings
 * Adjustable control span
 
@@ -152,7 +152,7 @@ Hold |icon_onoff| to turn On / Off the thermostat. When the thermostat is Off. N
 Clock setting
 -------------
 
-**Nomally the clock is automatically set once wifi is connected and synchronize for each day. So manual set is not ncecssary when it is online.**
+**Normally the clock is automatically set once Wi-Fi is connected and synchronize for each day. So manual set is not necessary when it is online.**
 
 * Press |icon_clock| to start the setting
 * Press |icon_up| / |icon_down| to change the day of week
@@ -166,7 +166,7 @@ Clock setting
 Clock synchronization
 ^^^^^^^^^^^^^^^^^^^^^^
 
-when Wi-Fi is connected and time synronize is need. Plesae use the App for time synchronization.
+When Wi-Fi is connected and time synchronization is need. Please use the App for time synchronization.
 
 
 Schedule Programming
@@ -177,7 +177,7 @@ When **1 day** / **5+1+1 day** / **7day program** is selected in internal settin
 * Hold  |icon_clock| to start the setting.
 * Press |icon_up| / |icon_down| to adjust the day of week
 * Press |icon_clock| to confirm.
-* Press |icon_up| / |icon_down| to adjust the time of schdule
+* Press |icon_up| / |icon_down| to adjust the time of schedule
 * Press |icon_clock| to confirm.
 * Press |icon_up| / |icon_down| to adjust the setpoint
 * Press |icon_clock| to confirm.
@@ -189,7 +189,7 @@ Override Temperature
 
 The Set point can be adjusted by |icon_up| / |icon_down|.
 
-When it is in program mode, The set point will be overrided until the next time slot. 
+When it is in program mode, the set point will be overwritten until the next time slot. 
 
 |icon_clock| can be pressed to release the override status.
 
@@ -216,7 +216,7 @@ P07   Program mode                  | No program (0) /          3
                                     | 1day program (1) / 
                                     | 5+1+1 program (2) /
                                     | 7day program (3)	
-P12   Froce Ventilation             Disable, Enable	            Disable
+P12   Force Ventilation             Disable, Enable	            Disable
 P13   Changeover Mode               Heat, Cool, Auto	        Heat
 P14   Changeover temperature Heat   27 - 40°C	                27°C
 P15   Changeover temperature Cool   10-25°C	                    10°C
@@ -234,7 +234,7 @@ P15   Changeover temperature Cool   10-25°C	                    10°C
     The count down time (in seconds) to screen saver mode.
 
 * Display Unit:
-    Temperature unit in Celesius or Farenheit.
+    Temperature unit in Celsius or Fahrenheit.
 
 * Time Display Unit:
     12/24.
@@ -252,12 +252,12 @@ P15   Changeover temperature Cool   10-25°C	                    10°C
         :width: 49%
 
 * Program Mode:
-    * 0: **No Program** Mode, The thermostat control the temperature simply according to single setpoint.
-    * 1: **1 day** program, The thermostat control the temperature according to single schedule.
-    * 2: **5+1+1 day** program, The thermostat control the temperature according to 5 +1+1 schedule (Mon to Fri, Sat, Sun).
-    * 3: **7 days** program, The thermostat control the temperature according to 7day program (individual program for each day).
+    * 0: **No Program** Mode, the thermostat control the temperature simply according to single setpoint.
+    * 1: **1 day** program, the thermostat control the temperature according to single schedule.
+    * 2: **5+1+1 day** program, the thermostat control the temperature according to 5 +1+1 schedule (Mon to Fri, Sat, Sun).
+    * 3: **7 days** program, the thermostat control the temperature according to 7day program (individual program for each day).
 
-* Froce Ventialtion:
+* Forced Ventilation:
     * **Disable**: Fan will turn on only when heat/cool is on.
     * **Enable**: Fan keeps on (low) even heat / cool is off.
 
@@ -268,10 +268,10 @@ P15   Changeover temperature Cool   10-25°C	                    10°C
         When changeover sensor detect the temperature below changeover cool set point. Cool mode will be activated.
 
 * Changeover heating setpoint:
-    Paramter for Auto Changeover mode.
+    Parameter for Auto Changeover mode.
 
 * Changeover cooling setpoint:
-    Paramter for Auto Changeover mode.
+    Parameter for Auto Changeover mode.
 
 
 Internal parameter setting 2
@@ -285,15 +285,15 @@ Internal parameter setting 2
 ===== ============================================= =========== ====================
 ID    Items	                                        Value	    Default Value
 ===== ============================================= =========== ====================
-P19   Clear Wifi Configuration                      Yes or No   No
+P19   Clear Wi-Fi Configuration                      Yes or No   No
 P20   Clear Parameter setting (restore default)     Yes or No   No
 ===== ============================================= =========== ====================
 
-* Clear Wifi Configuration: 
-    When set to yes,the SSID and Password stored in the thermostat will be clerared  so another SSID and Password can be set again.
+* Clear Wi-Fi Configuration: 
+    When set to yes, the SSID and Password stored in the thermostat will be cleared  so another SSID and Password can be set again.
 
 * Clear Parameter setting: 
-    When set to yes, all Internal parameter setting will be restored to default value in next power on (reset)
+    When set to yes, all internal parameter setting will be restored to default value in next power on (reset)
 
 
 Technical Data

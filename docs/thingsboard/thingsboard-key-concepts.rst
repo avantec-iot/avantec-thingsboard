@@ -65,13 +65,13 @@ See `Working with telemetry data`__.
 
    TBDev  ->  TBSrv: Telemetry upload API (**Device API**)
 
-   == Timeseries data Query ==
+   == Time-series data Query ==
 
-   TBSrv  <-  TBApp: Timeseries data keys API (**REST API**)
-   TBSrv  <-  TBApp: Timeseries data values API (**REST API**)
-   ... other **Timeseries data Query API** ...
+   TBSrv  <-  TBApp: Time-series data keys API (**REST API**)
+   TBSrv  <-  TBApp: Time-series data values API (**REST API**)
+   ... other **Time-series data Query API** ...
 
-   == or Timeseries data Subscription ==
+   == or Time-series data Subscription ==
 
    TBSrv  <-  WebUI: subscription commands (**Websocket API**)
    TBSrv  ->  WebUI: subscription updates (**Websocket API**)

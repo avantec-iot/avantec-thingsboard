@@ -72,15 +72,15 @@ Flow Chart
 
 .. tip::
 
-  The range of values for message fields is referred to in the following sections, see  `Telemetry (Timeseries data)`_, `Shared attributes`_, `Client-side attributes`_ and `Server-side RPC`_.
+  The range of values for message fields is referred to in the following sections, see  `Telemetry (Time-series data)`_, `Shared attributes`_, `Client-side attributes`_ and `Server-side RPC`_.
 
-TELE.01 Timeseries Data Upload
+TELE.01 Time-series Data Upload
 -------------------------------
 
 Chart:
   .. uml::
 
-    caption  Timeseries Data Upload
+    caption  Time-series Data Upload
 
     participant "TA652FC-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20
@@ -91,7 +91,7 @@ Chart:
 
   .. uml::
 
-    caption  Timeseries Data Upload
+    caption  Time-series Data Upload
 
     participant "TA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
@@ -1029,8 +1029,8 @@ Firmware update with ThingsBoard Server
 Refer to :ref:`Firmware_API`.
 
 
-Telemetry (Timeseries data)
-===========================
+Telemetry (Time-series data)
+============================
 
 .. tip::
     All of these telemetry (timeseries data) is 
@@ -1052,7 +1052,7 @@ wifiRssi
    :widths: auto
    :header-rows: 1
 
-   * - Timeseries
+   * - Time-series
      - Type
      - Unit
      - Min
@@ -1158,7 +1158,7 @@ timeNTPServer
      - Default: 60
      - ●
      - ●
-     - Timeseries (Telemetry) |br| upload Frequency. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
+     - Time-series (Telemetry) |br| upload Frequency. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
    * - syncTimeFreq
      - int

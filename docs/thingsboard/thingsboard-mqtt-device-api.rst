@@ -57,7 +57,7 @@ ThingsBoard API consists of two main parts: **Device API** and **Server-side API
    * *REST API*:
       * `Administration REST API`__ - The server-side core APIs.
       * `Attributes query API`__ - The server-side APIs provided by `Telemetry Service`__.
-      * `Timeseries query API`__ - The server-side APIs provided by `Telemetry Service`__.
+      * `Time-series query API`__ - The server-side APIs provided by `Telemetry Service`__.
       * `RPC API`__ - The server-side APIs provided by `RPC Service`__.
       * `REST Client`__ 
    * *Websocket API*:

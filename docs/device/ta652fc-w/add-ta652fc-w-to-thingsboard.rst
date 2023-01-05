@@ -31,7 +31,7 @@ Step 2. Import Device Profile of TA652FC-W
 
 * Download :download:`ta652fc_w_thermostat.json </configuration-item/device-profiles/ta652fc_w_thermostat.json>`.
 
-* **Profiles** --> **Device profiles** --> **+** --> **Popup dialog: Import device profile** --> Drag and drop *my deive profile File* --> **Import**.
+* **Profiles** --> **Device profiles** --> **+** --> **Popup dialog: Import device profile** --> Drag and drop *my device profile File* --> **Import**.
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-device-profile-1.png
 
@@ -64,7 +64,7 @@ Step 3.1 Import Detail Dashboard
 Step 3.2 Modify Device Profile - Mobile dashboards
 ---------------------------------------------------
 
-* **Profiles** --> **Device profiles** --> click *my deivce profile* --> **Toggle edit mode** (red icon)
+* **Profiles** --> **Device profiles** --> click *my device profile* --> **Toggle edit mode** (red icon)
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/modify-device-profile-mobile-dashboard-1.png
 
@@ -152,7 +152,7 @@ Step 4. Provision TA652FC-W device
 Step 4.1 Add device 
 ---------------------
 
-* **Devices** --> **+** --> **Add new deivce** --> **Popup  Dialog** --> Input **Name, Label & Description**, select **device profile** --> **Add**.
+* **Devices** --> **+** --> **Add new device** --> **Popup  Dialog** --> Input **Name, Label & Description**, select **device profile** --> **Add**.
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/add-device-1.png
 
@@ -164,7 +164,7 @@ Step 4.1 Add device
    ===============  =============================================
    Name*            My device name, e.g. TA652FC-W-TB             
    Device profile*  **TA652FC-W Thermostat**
-   Label            My device label, e.g. AVANTEC Headquaters       
+   Label            My device label, e.g. AVANTEC Headquarters       
    Description      My device description, e.g. A Thermostat for fan-coil
    ===============  =============================================
 
@@ -205,7 +205,7 @@ Please add the following Shared attributes of **TA652FC-W**:
                                                | The time offset from UTC, minutes.
                                                | For example Hongkong is UTC+8:00 time 
                                                | zone, this offset is 480 minutes (8*60)
-   timeNTPServer String       pool.ntp.org     | SNTP Server URL, eg: pool.ntp.org, 
+   timeNTPServer String       pool.ntp.org     | SNTP Server URL, e.g. pool.ntp.org, 
                                                | 0.pool.ntp.org, 1.pool.ntp.org, 
                                                | uk.pool.ntp.org, hk.pool.ntp.org, 
                                                | time.nist.gov, …
@@ -258,7 +258,7 @@ See :doc:`/device/ta652fc-w/connect-ta652fc-w-to-thingsboard`.
 Step 5.3 Publish data to ThingsBoard
 ---------------------------------------
 
-Now your device has already published telemetry data to thingsboard. You should immediately see them in the Device Telemetry Tab:
+Now your device has already published telemetry data to Thingsboard. You should immediately see them in the Device Telemetry Tab:
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/publish-data-to-thingsboard-1.png
 
@@ -277,7 +277,7 @@ Refer to :ref:`Step 7.1 Create customers`, :ref:`Step 7.4 Create customer user` 
 Step 6.1 Assign dashboards of TA652FC-W to Customer
 ----------------------------------------------------
 
-* Assign *Detail dashboard* to Customer: **Dashboards** --> Click **Manage assigned customers** (icon) in *Deatil dashboard* line --> **Popup Dialog** --> Select *My New Customer* --> **Update**.
+* Assign *Detail dashboard* to Customer: **Dashboards** --> Click **Manage assigned customers** (icon) in *Detail dashboard* line --> **Popup Dialog** --> Select *My New Customer* --> **Update**.
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/assign-dashboards-to-customer-1.png
 
@@ -328,6 +328,6 @@ See :doc:`/device/ta652fc-w/ta652fc-w-demo-dashboards-usage`.
 Your feedback
 ==============
 
-Don't hesitate to star Avante on `github`_ to help us spread the word.
+Don't hesitate to star Avantec on `github`_ to help us spread the word.
 
 .. _github: https://github.com/avantec-iot/avantec-thingsboard

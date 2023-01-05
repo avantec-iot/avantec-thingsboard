@@ -35,6 +35,6 @@ Add device
 Your feedback
 ==============
 
-Don't hesitate to star Avante on `github`_ to help us spread the word.
+Don't hesitate to star Avantec on `github`_ to help us spread the word.
 
 .. _github: https://github.com/avantec-iot/avantec-thingsboard

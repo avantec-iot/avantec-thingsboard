@@ -49,7 +49,7 @@ Default State
 *  Dashboard bar:
     * |Dashboard name| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
     * |Dashboard expand to fullscreen| : Click the two ICONS in the upper left corner to display the page in full screen.
-    * |Dashboard edit timewindow| : Edit timewindow.
+    * |Dashboard edit timewindow| : Edit time window.
 
 .. |Dashboard name| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-2.png
 .. |Dashboard expand to fullscreen| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-3.png
@@ -197,9 +197,9 @@ Settings State
         Change Over Temp Heating     Change over temperature heating
         Change Over Temp Cooling     Change over temperature cooling
 
-        Force Ventialation           Used in automatic *Fan Mode*
+        Force Ventilation            Used in automatic *Fan Mode*
 
-        Temp Offset(Internal Sensor) Internal sensor temperture offset
+        Temp Offset(Internal Sensor) Internal sensor temperature offset
         Switching Diff Heating       Switching differential heating
         Switching Diff Cooling       Switching differential cooling
         ============================ ===========================================================
@@ -223,7 +223,7 @@ Admin State
         =================== ===========================================================
         Time Format         "12 Hours" or "24 Hours"
         Timezone            See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
-        NTP Server          | SNTP protocol server URL, eg: pool.ntp.org, 
+        NTP Server          | SNTP protocol server URL, e.g. pool.ntp.org, 
                             | 0.pool.ntp.org, 1.pool.ntp.org, 
                             | time.nist.gov, …
                             | see :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`

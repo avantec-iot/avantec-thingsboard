@@ -98,7 +98,7 @@ Here is an overview about Avantec Customization.
 TA652FC-W Wi-Fi Thermostat
 ==============================
 
-These references will help you learn more about TA652FC-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
+These references will help you learn more about TA652FC-W Wi-Fi Thermostat, operate it, and even realize your personalized Dashboard.
 
 * :doc:`Specification </device/ta652fc-w/ta652fc-w-specification>`
 * :doc:`Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>` | 
@@ -122,7 +122,7 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
 TA652FH-W Wi-Fi Thermostat
 ============================
 
-These references will help you learn more about TA652FH-W Wi-Fi Thermostat, operate it, and even realize your personalized DashBoard.
+These references will help you learn more about TA652FH-W Wi-Fi Thermostat, operate it, and even realize your personalized Dashboard.
 
 * :doc:`Specification </device/ta652fh-w/ta652fh-w-specification>`
 * :doc:`Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>` | 
