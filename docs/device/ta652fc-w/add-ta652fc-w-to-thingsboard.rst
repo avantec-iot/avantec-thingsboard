@@ -160,12 +160,12 @@ Step 4.1 Add device
    :widths: auto
 
    ===============  =============================================
-   Field            Device A                 
+   Field            Value                
    ===============  =============================================
    Name*            My device name, e.g. TA652FC-W-TB             
    Device profile*  **TA652FC-W Thermostat**
    Label            My device label, e.g. AVANTEC Headquaters       
-   Description      My device descript, e.g. A Thermostat for fan-coil
+   Description      My device description, e.g. A Thermostat for fan-coil
    ===============  =============================================
 
 .. note:: 
