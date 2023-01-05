@@ -105,6 +105,8 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
+.. _Step 2. Import Avantec Widgets:
+
 Step 2. Import Avantec Widgets
 ==============================
 
@@ -134,23 +136,23 @@ See :doc:`/avantec/avantec-widgets`.
 Step 3. Import device profile
 =============================
 
-* Refer to :ref:`Step 2. Import Device Profile of TA652FC-W`.
+* See :ref:`Step 2. Import Device Profile of TA652FC-W`.
 
 Step 4. Import Dashboards
 =========================
 
-* Refer to :ref:`Step 3. Import Dashboards of TA652FC-W`.
+* See :ref:`Step 3. Import Dashboards of TA652FC-W`.
 
 Step 5. Provision device
 ========================
 
-* Refer to :ref:`Step 4. Provision TA652FC-W device`.
+* See :ref:`Step 4. Provision TA652FC-W device`.
 
 
 Step 6. Connect device
 =======================
 
-* Refer to :ref:`Step 5. Connect TA652FC-W device`.
+* See :ref:`Step 5. Connect TA652FC-W device`.
 
 Step 7. Assign Device and Dashboards to Customer
 ================================================
@@ -183,7 +185,7 @@ Step 7.2 Assign dashboards to Customer
 
 Let's share our dashboard with the Customer. The Customer users will have read-only access to the Dashboard. 
 
-Refer to :ref:`Step 6.1 Assign dashboards of TA652FC-W to Customer`.
+See :ref:`Step 6.1 Assign dashboards of TA652FC-W to Customer`.
 
 
 Step 7.3 Assign device to Customer
@@ -191,7 +193,7 @@ Step 7.3 Assign device to Customer
 
 Let's assign device to the Customer. The Customer users will have ability to read and write telemetry and send commands to devices. 
 
-Refer to :ref:`Step 6.2 Assign TA652FC-W device to Customer`.
+See :ref:`Step 6.2 Assign TA652FC-W device to Customer`.
 
 
 .. _Step 7.4 Create customer user:
@@ -247,7 +249,7 @@ Step 7.5 Activate customer user
 Step 8. Open Dashboards
 =========================
 
-* Refer to :ref:`Step 7. Open Dashboards of TA652FC-W`.
+* See :ref:`Step 7. Open Dashboards of TA652FC-W`.
 
 
 Next Steps
