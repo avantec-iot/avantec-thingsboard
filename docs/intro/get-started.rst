@@ -265,13 +265,10 @@ Next Steps
 
 * `Trendz Analytics`_ - Converts the IoT dataset into insights and simplifies the decision-making process.
 
-* `Getting started with ThingsBoard Mobile Application`_ or `Getting started with ThingsBoard PE Mobile Application`_ -  help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
+* :doc:`/thingsboard/thingsboard-mobile-application` - learn how to customize the mobile application.
 
-* :doc:`/thingsboard/thingsboard-mqtt-device-api`, :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api` & :doc:`/device/ta652fh-w/ta652fh-w-mqtt-api` - Connect Avantec HVAC device to your existing IoT platform.
+* :doc:`/thingsboard/thingsboard-mqtt-device-api` | :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api` | :doc:`/device/ta652fh-w/ta652fh-w-mqtt-api` - Connect Avantec HVAC device to your existing IoT platform.
 
-
-.. _Getting started with ThingsBoard Mobile Application: https://thingsboard.io/docs/mobile/getting-started/
-.. _Getting started with ThingsBoard PE Mobile Application: https://thingsboard.io/docs/pe/mobile/getting-started/
 .. _Platform Integrations: https://thingsboard.io/docs/user-guide/integrations/
 .. _Trendz Analytics: https://thingsboard.io/docs/trendz/
 

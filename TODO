@@ -1,22 +1,10 @@
 1. 对比代码与协议： TA652FC-W TA652FH-W 的差异。
 1. 补全文档中不完整的部分： TODO...
 
-## Next Step
-
-Using it in Web browser
-Using it in Mobile Application
-Customize your Dashboards
-Customize your Widgets
-Rule engine
-White Labeling (PE)
-Integrations (PE)
-Analytics
+1. 加入 OTA 操作说明。
 
 ## TA652FC-W
 
-1. 更新 Widgets。
-1. 加入 Widgets 说明。
-1. 加入 OTA 操作说明。
 
 ## TA652FH-W
 
@@ -24,14 +12,88 @@ Analytics
 1. 加入 Dashboards 说明。
 1. 部分引用 TA652FC-W 的说明。
 
-1. 完善加入说明： 一个总的加入说明，每个型号一个分的说明。
-
-## 
-
-1. 使用指南。
-1. 开发指南。
-
 ## 测试
 
 1. 测试文档。
 1. 测试硬件。
+
+
+## TA652FC-W TA652FH-W 的差异
+
+TELE.01 Timeseries Data Upload¶
+	// Message Type:  Telemetry upload (MQTT, PUBLISH)
+	// Topic:         v1/devices/me/telemetry
+	// Payload - TA652FC-W:
+	{"roomTemp":26.2,"changeOverTemp":26.3}
+	// Payload - TA652FH-W:
+	{"roomTemp":26.2,"floorTemp":26.3}
+	
+	 changeOverTemp (only for TA652FC-W), floorTemp (only for TA652FH-W).
+
+CTRL.02 Fan Mode & Fan Status (only for TA652FC-W)¶
+	fanMode (only for TA652FC-W), fanStatus (only for TA652FC-W) and remoteSetFanMode (only for TA652FC-W).
+	
+SET.01 Upload Device Attributes when the device is started
+	See `floorTempLimitedMin`_ (only for TA652FH-W), `floorTempLimitedMax`_ (only for TA652FH-W), `floorTempLimitedStep`_ (only for TA652FH-W),
+	`changeOverTempHeatingMin`_ (only for TA652FC-W), `changeOverTempHeatingMax`_ (only for TA652FC-W), `changeOverTempHeatingStep`_ (only for TA652FC-W),
+	`changeOverTempCoolingMin`_ (only for TA652FC-W), `changeOverTempCoolingMax`_ (only for TA652FC-W) and `changeOverTempCoolingStep`_ (only for TA652FC-W).
+
+SET.02 Settings
+	systemMode and remoteSetSystemMode(only for TA652FH-W),
+	sensorMode and remoteSetSensorMode(only for TA652FH-W),
+	floorTempLimited and remoteSetFloorTempLimited(only for TA652FH-W),
+	adaptiveControl and remoteSetAdaptiveControl.(only for TA652FH-W)
+
+	forceVent and remoteSetForceVent(only for TA652FC-W),
+	changeOverMode and remoteSetChangeOverMode(only for TA652FC-W),
+	changeOverTempHeating and remoteSetChangeOverTempHeating(only for TA652FC-W),
+	changeOverTempCooling and remoteSetChangeOverTempCooling.(only for TA652FC-W)
+	
+
+
+====== backup ==============================================================================================================
+
+
+.. _Telemetry_upload_API:
+.. _Attributes_API:
+.. _PRC_API:
+.. _Claiming_API:
+.. _Firmware_API:
+.. _我的锚点:
+.. _TA652FC-W Thermostat List:
+.. _TA652FC-W Thermostat (For Mobile App):
+
+更多信息参考 :ref:`我的锚点`
+
+
+See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
+
+
+==================================================
+Get Started																									First			Append
+	Introduction												same										Y
+	Prerequisites												same										Y
+	Step 1. Tenant Login										same										Y				R
+	Step 2. Import Avantec Widgets								same										Y
+	Step 3. Import Device Profile								步骤一样，参数不同								Y+R(Para)		R(Step) + Y(Para)	(device profile first)
+	Step 4. Import Dashboards									步骤一样，参数不同								Y+R(Para)		R(Step) + Y(Para)	(device profile first)
+		Step 4.1 Import Detail Dashboard
+		#Step 4.2 Modify Device Profile - Mobile Dashboards
+		Step 4.3 Import List Dashboard							步骤一样，不同的型号Dashboards不同				Y+R(Para)		R(Step) + Y(Para), (device profile first)
+		#Step 4.4 Modify List Dashboard							步骤一样，不同的型号操作不同						Y+R(Para)		R(Step) + Y(Para), (device profile first)
+	Step 5. Provison device
+		Step 5.1 Add device 					         	    步骤一样，参数不同								Y+R(Para)		R(Step) + Y(Para)
+		Step 5.2 Add shared attributes of new device			步骤一样，不同的型号参数不同						Y+R(Para)		R(Step) + Y(Para)
+	Step 6. Connect device
+		Step 6.1 Copy credentials of new device					same										Y				R
+		Step 6.2 Connect device to ThingsBoard					大部分相同，不同的型号过程可能会有差异				R				Y&Local
+		Step 6.3 Publish data to ThingsBoard					same										Y				R
+	Step 7. Assign Device and Dashboards to Customer
+		Step 7.1 Create customers								same										Y				R
+		Step 7.2 Assign dashboards to Customer					步骤一样，不同的型号参数不同						Y				R(device profile first)
+		Step 7.3 Assign device to Customer						步骤一样，不同的型号参数不同						Y				R
+		Step 7.4 Create customer user							same										Y				R
+		Step 7.5 Activate customer user							same										Y				R
+	Step 8. Open Dashboards										步骤一样，不同的型号Dashboards不同				Y(eg)			Y
+	
+	
