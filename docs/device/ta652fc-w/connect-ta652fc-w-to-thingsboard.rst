@@ -94,7 +94,7 @@ Step 3. Configure
       Auth Token    Access Token of your TA652FC-W. See `Step 1. Get Access-Token`_
       Host          | This ThingsBoard Server's MQTT URL.
                     | It must begin with "MQTT ://", such as mqtt://192.168.21.206
-                    | **Please replace 192.168.21.206 with your Thingsboard IP Address**.
+                    | **Please replace 192.168.21.206 with your ThingsBoard IP Address**.
                     | See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
       ============  =====================================================================
 
@@ -128,5 +128,5 @@ Thermostat TA652FC-W can't connect to Wi-Fi:
    - Confirm that the Token did not fail during the copying process.
    - Confirm that the Token has no special characters. Token can only contain A-Z, a~z, 0~9. Illegal characters such as "-" will appear in the case of product end. You can edit and get a new Token in `Step 1. Get Access-Token`_.
 
-- Confirm that the `Host` parameter is correct. Host must start with "mqtt://", followed by IP address or domain name of Thingsboard.
+- Confirm that the `Host` parameter is correct. Host must start with "mqtt://", followed by IP address or domain name of ThingsBoard.
 - If the above parameters are confirmed to be correct, you can start from `Step 2. Power On`_ and try several times.

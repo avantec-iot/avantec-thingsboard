@@ -1,10 +1,10 @@
 1. 补全文档中不完整的部分： TODO...
 
+## ThingsBoard
+
 1. 加入 OTA 操作说明。
 
 ## TA652FC-W
-
-1. 对比代码与协议： TA652FC-W TA652FH-W 的差异。
 
 ## TA652FH-W
 
@@ -48,7 +48,7 @@ SET.02 Settings
 	changeOverTempHeating and remoteSetChangeOverTempHeating(only for TA652FC-W),
 	changeOverTempCooling and remoteSetChangeOverTempCooling.(only for TA652FC-W)
 
-====== backup ==============================================================================================================
+====== backup ========================================================================================
 
 .. _Telemetry_upload_API:
 .. _Attributes_API:

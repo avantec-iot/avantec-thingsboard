@@ -66,9 +66,9 @@ ThingsBoard IoT platform
 ThingsBoard IoT Gateway
 ---------------------------
 
-The `Thingsboard IoT Gateway`_ is an open-source solution that allows you to integrate devices connected to legacy and third-party systems with Thingsboard.
+The `ThingsBoard IoT Gateway`_ is an open-source solution that allows you to integrate devices connected to legacy and third-party systems with ThingsBoard.
 
-.. _Thingsboard IoT Gateway: https://thingsboard.io/docs/iot-gateway/what-is-iot-gateway/
+.. _ThingsBoard IoT Gateway: https://thingsboard.io/docs/iot-gateway/what-is-iot-gateway/
 
 
 ThingsBoard Mobile Application

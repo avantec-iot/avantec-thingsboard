@@ -258,7 +258,7 @@ See :doc:`/device/ta652fc-w/connect-ta652fc-w-to-thingsboard`.
 Step 5.3 Publish data to ThingsBoard
 ---------------------------------------
 
-Now your device has already published telemetry data to Thingsboard. You should immediately see them in the Device Telemetry Tab:
+Now your device has already published telemetry data to ThingsBoard. You should immediately see them in the Device Telemetry Tab:
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/publish-data-to-thingsboard-1.png
 

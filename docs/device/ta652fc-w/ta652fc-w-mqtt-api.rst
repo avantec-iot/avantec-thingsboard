@@ -875,7 +875,7 @@ See `timezone`_, `timeNTPServer`_  and `remoteSyncTimeRequest`_.
 ADM.04 FUOTA (firmware update over the air) 
 --------------------------------------------------
 
-The flow is to download the firmware from your HTTP server. For the flow of downloading firmware from Thingsboard server, please refer to :ref:`Firmware_API`.
+The flow is to download the firmware from your HTTP server. For the flow of downloading firmware from ThingsBoard server, please refer to :ref:`Firmware_API`.
 
 Chart:
   .. uml::
@@ -1113,7 +1113,7 @@ wifiRssi
    <br/>
 
 .. tip::
-    In order to reduce the load on Thingsboard server, `wifiRssi` is no longer sent.
+    In order to reduce the load on ThingsBoard server, `wifiRssi` is no longer sent.
 
 Shared attributes
 =================
