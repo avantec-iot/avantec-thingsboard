@@ -12,7 +12,11 @@ IoT Dashboards are light-weight and you may have millions of dashboards. For exa
 You can find useful links to get started below:
 
 * `Dashboards`__
+    ThingsBoard provides the ability to create and manage dashboards. Each dashboard can contain plenty of widgets. Dashboards display data from many entities: devices, assets, etc. Dashboards can be assigned to Customers.
+
 * `Widgets Library`__
+    All IoT Dashboards are constructed using ThingsBoard widgets defined in the Widget Library. Each widget provides end-user functionality such as data visualization, remote device control, alarm management and display of static custom HTML content.
+
     * **Digital** and **analog** gauges for latest real-time values visualization
     * Highly customizable Bar and Line **charts** for visualization of historical and sliding-window data points
     * **Map** widgets for tracking movement and latest positions of IoT devices on Google or OpenStreet maps.
@@ -24,25 +28,17 @@ You can find useful links to get started below:
 
 How to customize
 =================
-
-* In Avantec Widgets & Avantec Dashboard:
+* In Avantec Widgets & Avantec Dashboards:
     * Change widget title, background, colors, fonts, shadows, etc
     * Add or remove widget
     * Modify dashboard states, aliases and widget actions
     * Visualizing assets data using Maps and Tables
-
 * Create new Widgets
-
 * Create your Dashboards
 
-* Customize your White labeling
-
-* Customize your Mobile Application
-
-* Create your service, like ThingsBoard. See :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api`.
 
 
-Next step
+Next steps
 ==================
 
 * ThingsBoard Data visualization
@@ -63,6 +59,6 @@ Next step
 .. __: https://thingsboard.io/docs/user-guide/ui/trip-animation-widget
 
 * ThingsBoard Contribution and Development
-    * `Widgets Development Guide`__ : Learn how to customize and create custom widgets
+    * `Widgets Development Guide`__ : Learn how to customize and create custom widgets.
 
 .. __: https://thingsboard.io/docs/user-guide/contribution/widgets-development/

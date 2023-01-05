@@ -250,7 +250,31 @@ Step 8. Open Dashboards
 * Refer to :ref:`Step 7. Open Dashboards of TA652FC-W`.
 
 
-Next steps
+Next Steps
+=============
+
+* :doc:`/thingsboard/thingsboard-dashboards` - Customize your Dashboard & Widget.
+
+* :doc:`/thingsboard/thingsboard-rule-engine` - Customize your event processing with Rule engine.
+
+* :doc:`/thingsboard/thingsboard-white-labeling` - Customize your company or product logo with ThingsBoard PE.
+
+* `Platform Integrations`_ - Connect existing NB IoT, LoRaWAN, SigFox and other devices with specific payload formats directly to ThingsBoard platform.
+
+* `Trendz Analytics`_ - Converts the IoT dataset into insights and simplifies the decision-making process.
+
+* `Getting started with ThingsBoard Mobile Application`_ or `Getting started with ThingsBoard PE Mobile Application`_ -  help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
+
+* :doc:`/thingsboard/thingsboard-mqtt-device-api`, :doc:`/device/ta652fc-w/ta652fc-w-mqtt-api` & :doc:`/device/ta652fh-w/ta652fh-w-mqtt-api` - Connect Avantec HVAC device to your existing IoT platform.
+
+
+.. _Getting started with ThingsBoard Mobile Application: https://thingsboard.io/docs/mobile/getting-started/
+.. _Getting started with ThingsBoard PE Mobile Application: https://thingsboard.io/docs/pe/mobile/getting-started/
+.. _Platform Integrations: https://thingsboard.io/docs/user-guide/integrations/
+.. _Trendz Analytics: https://thingsboard.io/docs/trendz/
+
+
+See also
 ===========
 
 * `Installation guides`_ - Learn how to setup ThingsBoard on various available operating systems.
@@ -278,6 +302,6 @@ Next steps
 Your feedback
 ==============
 
-Don't hesitate to star Avante on `github`_ to help us spread the word.
+Don't hesitate to star Avantec on `github`_ to help us spread the word.
 
 .. _github: https://github.com/avantec-iot/avantec-thingsboard
