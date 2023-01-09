@@ -56,6 +56,7 @@ Sphinx_intl is a useful tool for internationalization and localization.
     (.venv) > ...
     (.venv) > deactivate                                 # Leaving the virtual environment
     ```
+
     * Linux:
 
     ```sh

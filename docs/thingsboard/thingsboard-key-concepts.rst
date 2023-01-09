@@ -77,6 +77,8 @@ See `Working with telemetry data`__.
    TBSrv  ->  WebUI: subscription updates (**Websocket API**)
 
 
+.. _Working with IoT device attributes:
+
 
 Working with IoT device attributes
 ----------------------------------
