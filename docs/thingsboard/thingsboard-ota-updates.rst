@@ -59,6 +59,31 @@ Provision OTA package to ThingsBoard repository
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/ota-updates-provision-package-to-repository-1.png
 
+.. list-table:: OTA package parameters
+   :widths: auto
+   :header-rows: 1
+
+   * - Model
+     - Title
+     - Version
+     - Device profile
+     - Type
+     - Checksum algorithm
+
+   * - TA652FC-W
+     - TA652FC-W-TB
+     - e.g. 1.6.10
+     - TA652FC-W Thermostat
+     - Firmware
+     - MD5
+
+   * - TA652FH-W
+     - TA652FH-W-TB
+     - e.g. 1.6.10
+     - TA652FH-W Thermostat
+     - Firmware
+     - MD5
+
 * Navigate to the “OTA Updates” menu item to list and upload OTA update packages. Each package consist of:
 
     * Title - the name of your package. You can use different names for production and debug firmware.
@@ -68,6 +93,7 @@ Provision OTA package to ThingsBoard repository
     * Checksum algorithm - optional parameter, it is a short name of the checksum algorithm to use. Please select **MD5** checksum algorithm.
     * Checksum - optional parameter, it's a value of the file checksum. If no checksum provided by the user, server will use SHA-256 algorithm automatically.
     * Description - optional text description of the firmware.
+
 
 * You can browse the provisioned packages as well as search them by title. Also, you are able to download and delete packages. 
 
@@ -104,6 +130,8 @@ You may assign firmware to the device profile to automatically distribute the pa
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/fw-deviceprofile-ce-3.png
 
+.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-deviceprofile-ce-4.png
+
 The device profile details will let you choose only compatible OTA update packages (see `provisioning`_ for more info). Device profile may be used by thousands of devices. Assignment of the firmware triggers the :ref:`update process`.
 
 .. _provisioning: https://thingsboard.io/docs/user-guide/ota-updates/?remoteintegrationdockerinstall=mqtt#provision-ota-package-to-thingsboard-repository
@@ -121,8 +149,6 @@ You may also assign firmware to specific device. See screenshots below.
 .. image:: /_static/thingsboard/thingsboard-ota-updates/assign-package-to-device-2.png
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/assign-package-to-device-3.png
-
-.. image:: /_static/thingsboard/thingsboard-ota-updates/assign-package-to-device-4.png
 
 The firmware version assigned to the device will automatically overwrite firmware version that is assigned to the device profile.
 
