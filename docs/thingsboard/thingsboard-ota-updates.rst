@@ -19,15 +19,28 @@ Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-
 
 .. _OTA updates Dashboard:
 
-Dashboard
-==========
-
+Firmware update monitoring dashboard
+====================================
 ThingsBoard provides the summary of the firmware update to monitor and track the firmware update status of your device, such as which devices are updating right now, any boot issues, and which ones have already been updated.
 
-Firmware update monitoring dashboard
--------------------------------------
-The dashboard is created automatically for each new tenant that you add to ThingsBoard. You can also download the dashboard JSON `firmwre dashboard <https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/firmware.json>`_ and import it for existing tenants.
+Check firmware dashboard
+-------------------------
+The dashboard is created automatically for each new tenant that you add to ThingsBoard in ThingsBoard CE. But this is not the case in ThingsBoard PE and `ThingsBoard Demo <https://demo.thingsboard.board>`_. Check if you have a firmware dashboard in your dashboard list:
 
+.. image:: /_static/thingsboard/thingsboard-ota-updates/ota-update-check-dashboard-1.png
+
+
+Import firmware dashboard
+-------------------------- 
+If there is not firmware dashboard, you can also download the dashboard JSON :download:`firmware.json </configuration-item/dashboards/firmware.json>` and import it for existing tenants.
+
+* **Dashboards** --> **+** --> **Import a dashboard** --> Drag and drop **firmware.json** --> **Import**.
+
+.. image:: /_static/thingsboard/thingsboard-ota-updates/ota-update-import-1.png
+
+
+Firmware dashboard details
+---------------------------
 
 There you can see a list of all devices with full information about their firmware.
 
@@ -42,29 +55,35 @@ Click the “History of the firmware updates” button next to the device name t
 Provision OTA package to ThingsBoard repository
 ================================================
 
-Navigate to the “OTA Updates” menu item to list and upload OTA update packages. Each package consist of:
-
-* Title - the name of your package. You can use different names for production and debug firmware.
-* Version - the version of your package. Combination of the title and version must be unique in scope of a tenant.
-* Device Profile - each package is compatible with one device profile. We track compatibility to prevent accidental updates of devices with incompatible firmware. Link to a device profile means that device that use this profile may be updated to the current package. However, the update is not triggered, until the user or script :ref:`assigns <Assign OTA package to device profile>` the package to the device profile or device.
-* Type - can be either Firmware or Software.
-* Checksum algorithm - optional parameter, it is a short name of the checksum algorithm to use.
-* Checksum - optional parameter, it's a value of the file checksum. If no checksum provided by the user, server will use SHA-256 algorithm automatically.
-* Description - optional text description of the firmware.
+* **OTA updates** --> **+** --> Input *title* & *version* --> Select **device profile** --> select **Firmware** --> Enable **Upload binary file** --> Drag and drop a package file --> Disable **Audo-generate checksum** --> Select **MD5** checksum algorithm, Checksum is blank --> add.
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/ota-updates-provision-package-to-repository-1.png
 
-You can browse the provisioned packages as well as search them by title. Also, you are able to download and delete packages. To open package details, click the table row. Package details allow you to copy package ID and checksum. Also, `Audit logs`_ track information about users who provisioned the firmware.
+* Navigate to the “OTA Updates” menu item to list and upload OTA update packages. Each package consist of:
 
-.. _Audit logs: https://thingsboard.io/docs/user-guide/audit-log/
+    * Title - the name of your package. You can use different names for production and debug firmware.
+    * Version - the version of your package. Combination of the title and version must be unique in scope of a tenant.
+    * Device Profile - each package is compatible with one device profile. We track compatibility to prevent accidental updates of devices with incompatible firmware. Link to a device profile means that device that use this profile may be updated to the current package. However, the update is not triggered, until the user or script :ref:`assigns <Assign OTA package to device profile>` the package to the device profile or device.
+    * Type - can be either Firmware or Software.
+    * Checksum algorithm - optional parameter, it is a short name of the checksum algorithm to use. Please select **MD5** checksum algorithm.
+    * Checksum - optional parameter, it's a value of the file checksum. If no checksum provided by the user, server will use SHA-256 algorithm automatically.
+    * Description - optional text description of the firmware.
+
+* You can browse the provisioned packages as well as search them by title. Also, you are able to download and delete packages. 
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/list-firmware-ce-1.png
+
+* To open package details, click the table row. Package details allow you to copy package ID and checksum.
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/list-firmware-ce-2.png
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/list-firmware-ce-3.png
 
+* Also, `Audit logs`_ track information about users who provisioned the firmware.
+
 .. image:: /_static/thingsboard/thingsboard-ota-updates/list-firmware-ce-4.png
+
+.. _Audit logs: https://thingsboard.io/docs/user-guide/audit-log/
 
 
 All actions listed are also available via `REST API`_.

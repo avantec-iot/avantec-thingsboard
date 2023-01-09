@@ -1,8 +1,6 @@
 {
   "title": "Firmware",
   "image": null,
-  "mobileHide": false,
-  "mobileOrder": null,
   "configuration": {
     "description": "",
     "widgets": {
