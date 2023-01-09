@@ -9,7 +9,7 @@ Refer `here`_.
 
 Overview
 =========
-Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-air(OTA) updates to devices. As a tenant administrator, you may upload firmware or software packages to the OTA repository. Once uploaded, you may assign them to `Device Profile`_ or `Device`_. ThingsBoard will notify devices about the available update and provide a protocol-specific API to download the firmware. The platform tracks status of the update and stores history of the updates. As a platform user, you may monitor the update process using the dashboard.
+Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-air(OTA) updates to devices. As a tenant administrator, you may upload firmware packages to the OTA repository. Once uploaded, you may assign them to `Device Profile`_ or `Device`_. ThingsBoard will notify devices about the available update and provide a protocol-specific API to download the firmware. The platform tracks status of the update and stores history of the updates. As a platform user, you may monitor the update process using the dashboard.
 
 .. _Device Profile: https://thingsboard.io/docs/user-guide/device-profiles/
 .. _Device: https://thingsboard.io/docs/user-guide/ui/devices/
@@ -17,14 +17,36 @@ Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-
 .. image:: /_static/thingsboard/thingsboard-ota-updates/ota-updates-overview-1.png
 
 
+.. _OTA updates Dashboard:
+
+Dashboard
+==========
+
+ThingsBoard provides the summary of the firmware update to monitor and track the firmware update status of your device, such as which devices are updating right now, any boot issues, and which ones have already been updated.
+
+Firmware update monitoring dashboard
+-------------------------------------
+The dashboard is created automatically for each new tenant that you add to ThingsBoard. You can also download the dashboard JSON `firmwre dashboard <https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/firmware.json>`_ and import it for existing tenants.
+
+
+There you can see a list of all devices with full information about their firmware.
+
+.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-dashboard-1.png
+.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-dashboard-2.png
+
+Click the “History of the firmware updates” button next to the device name to learn about the firmware update status of specific device.
+
+.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-status-1.png
+.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-status-2.png
+
 Provision OTA package to ThingsBoard repository
 ================================================
 
 Navigate to the “OTA Updates” menu item to list and upload OTA update packages. Each package consist of:
 
-* Title - the name of your package. You can use different names for production and debug firmware/software.
+* Title - the name of your package. You can use different names for production and debug firmware.
 * Version - the version of your package. Combination of the title and version must be unique in scope of a tenant.
-* Device Profile - each package is compatible with one device profile. We track compatibility to prevent accidental updates of devices with incompatible firmware/software. Link to a device profile means that device that use this profile may be updated to the current package. However, the update is not triggered, until the user or script :ref:`assigns <Assign OTA package to device profile>` the package to the device profile or device.
+* Device Profile - each package is compatible with one device profile. We track compatibility to prevent accidental updates of devices with incompatible firmware. Link to a device profile means that device that use this profile may be updated to the current package. However, the update is not triggered, until the user or script :ref:`assigns <Assign OTA package to device profile>` the package to the device profile or device.
 * Type - can be either Firmware or Software.
 * Checksum algorithm - optional parameter, it is a short name of the checksum algorithm to use.
 * Checksum - optional parameter, it's a value of the file checksum. If no checksum provided by the user, server will use SHA-256 algorithm automatically.
@@ -55,7 +77,7 @@ All actions listed are also available via `REST API`_.
 Assign OTA package to device profile
 ====================================
 
-You may assign firmware/software to the device profile to automatically distribute the package to all devices that share the same profile. See screenshots below.
+You may assign firmware to the device profile to automatically distribute the package to all devices that share the same profile. See screenshots below.
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/fw-deviceprofile-ce-1.png
 
@@ -101,25 +123,25 @@ Customers may choose available firmware and assign it to the devices that belong
 Update process
 ===============
 
-Assignment of the firmware/software to the device or device profile triggers the update process. ThingsBoard tracks the progress of the update and persists it to the device attributes.
+Assignment of the firmware to the device or device profile triggers the update process. ThingsBoard tracks the progress of the update and persists it to the device attributes.
 
 Update progress may have one of the following states. The state of the update is stored as an attribute of the device and is used to visualize the update process on the :ref:`dashboard <OTA updates Dashboard>`.
 
 QUEUED state
 ------------
 
-The very first state of the firmware/software update. Means that the notification about new firmware/software is queued but not yet pushed to the device. ThingsBoard queues the update notifications to avoid peak loads. The queue is processed with the constant pace. By default, it is configured to notify up to 100 device per minute. See :ref:`configuration properties <ota update queue processing pace>` for more details.
+The very first state of the firmware update. Means that the notification about new firmware is queued but not yet pushed to the device. ThingsBoard queues the update notifications to avoid peak loads. The queue is processed with the constant pace. By default, it is configured to notify up to 100 device per minute. See :ref:`configuration properties <ota update queue processing pace>` for more details.
 
 INITIATED state
 ----------------
 
-Means that the notification about firmware/software is fetched from queue and pushed to device. Under the hood, ThingsBoard converts notification to the update of the following :ref:`shared attributes <Working with IoT device attributes>`:
+Means that the notification about firmware is fetched from queue and pushed to device. Under the hood, ThingsBoard converts notification to the update of the following :ref:`shared attributes <Working with IoT device attributes>`:
 
-* fw(sf)_title - name of the firmware (software).
-* fw(sf)_version - version of the firmware (software).
-* fw(sf)_size - size of the firmware (software) file in bytes.
-* fw(sf)_checksum - attribute that is used to verify integrity of the received file.
-* fw(sf)_checksum_algorithm - the algorithm used to calculate file checksum.
+* fw_title - name of the firmware.
+* fw_version - version of the firmware.
+* fw_size - size of the firmware file in bytes.
+* fw_checksum - attribute that is used to verify integrity of the received file.
+* fw_checksum_algorithm - the algorithm used to calculate file checksum.
 
 .. image:: /_static/thingsboard/thingsboard-ota-updates/fw-attributes-ce.png
 
@@ -128,15 +150,15 @@ Device is able to subscribe to shared attribute update using :doc:`MQTT API </th
 Update states reported by the device
 -------------------------------------
 
-The remaining states are reported by the device firmware/software that is currently processing the update. We have prepared description of those states and sample applications for the most popular protocols written in python. Sample applications simulate behavior of the device firmware/software and may used as a reference for the implementation.
+The remaining states are reported by the device firmware that is currently processing the update. We have prepared description of those states and sample applications for the most popular protocols written in python. Sample applications simulate behavior of the device firmware and may used as a reference for the implementation.
 
-* DOWNLOADING - notification about new firmware/software update was received and device started downloading the update package.
+* DOWNLOADING - notification about new firmware update was received and device started downloading the update package.
 * DOWNLOADED - device completed downloading of the update package.
 * VERIFIED - device verified the checksum of the downloaded package.
-* UPDATING - device started the firmware/software update. Typically is sent before reboot of the device or restart of the service.
+* UPDATING - device started the firmware update. Typically is sent before reboot of the device or restart of the service.
 * UPDATED - the firmware was successfully updated to the next version.
 * FAILED - checksum wasn’t verified, or the device failed to update. See “Device failed” tab on the Firmware dashboard for more details.
-* Once the firmware/software is updated, ThingsBoard expect the device to send the following telemetry:
+* Once the firmware is updated, ThingsBoard expect the device to send the following telemetry:
 
 for firmware:
 
@@ -144,7 +166,7 @@ for firmware:
 
     {"current_fw_title": "TA652FC-W-TB", "current_fw_version": "1.6.3", "fw_state": "UPDATED"}
 
-If the firmware/software update failed, ThingsBoard expect the device to send the following telemetry:
+If the firmware update failed, ThingsBoard expect the device to send the following telemetry:
 
 for firmware:
 
@@ -158,37 +180,6 @@ Firmware of the device is updated. To see its status, you should go to the firmw
 To find out about the firmware update, you need to :ref:`make a request and subscribe to attributes <Firmware_API>`.
 
 
-.. _OTA updates Dashboard:
-
-Dashboard
-==========
-
-ThingsBoard provides the summary of the firmware/software update to monitor and track the firmware/software update status of your device, such as which devices are updating right now, any boot issues, and which ones have already been updated.
-
-Firmware update monitoring dashboard
--------------------------------------
-The dashboard is created automatically for each new tenant that you add to ThingsBoard. You can also download the dashboard JSON `firmwre dashboard <https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/firmware.json>`_ and import it for existing tenants.
-
-
-There you can see a list of all devices with full information about their firmware.
-
-.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-dashboard-1.png
-.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-dashboard-2.png
-
-Click the “History of the firmware updates” button next to the device name to learn about the firmware update status of specific device.
-
-.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-status-1.png
-.. image:: /_static/thingsboard/thingsboard-ota-updates/fw-status-2.png
-
-Software update monitoring dashboard
--------------------------------------
-
-The dashboard is created automatically for each new tenant that you add to ThingsBoard. You can also download the dashboard JSON `software dashboard <https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/software.json>`_ and import it for existing tenants.
-
-There you can see a list of all devices with full information about their software.
-
-Click the “History of the software updates” button next to the device name to learn about the software update status of specific device.
-
 Configuration
 ==============
 
@@ -199,7 +190,7 @@ Queue processing pace
 
 To set the max number of devices that will be notified in the chosen time period using the following `configuration <https://thingsboard.io/docs/user-guide/install/config/>`_ properties:
 
-.. code::shell
+.. code:: shell
 
     export TB_QUEUE_CORE_FW_PACK_INTERVAL_MS=60000
     export TB_QUEUE_CORE_FW_PACK_SIZE=100
