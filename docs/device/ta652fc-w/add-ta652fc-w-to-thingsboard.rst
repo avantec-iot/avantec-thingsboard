@@ -194,12 +194,7 @@ Please add the following Shared attributes of **TA652FC-W**:
    ============= ===========  ================ =========================================
    Key*          Value Type*  Value*                     Memo
    ============= ===========  ================ =========================================
-   cloudHost     String       | mqtt://\       | **Please replace THINGSBOARD_IP** 
-                              | THINGSBOARD_IP | **with your value**.
-                                               | This ThingsBoard Server's MQTT URL, 
-                                               | It must begin with "MQTT ://", such as
-                                               | mqtt://192.168.21.222
-   uploadFreq    Integer      120              Telemetry per uploadFreq seconds
+   uploadFreq    Integer      300              Telemetry per uploadFreq seconds
    syncTimeFreq  Integer      1800             Sync time per syncTimeFreq seconds
    timezone      Integer      480              | **Please replace with your value**.
                                                | The time offset from UTC, minutes.
