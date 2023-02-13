@@ -1188,7 +1188,7 @@ timeNTPServer
      - 
      - 
      - 
-     - (127 char+'\0')
+     - Default: |br| pool.ntp.org |br| (127 char+'\0')
      - ●
      - ●
      - SNTP server, eg: |br| pool.ntp.org . see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
