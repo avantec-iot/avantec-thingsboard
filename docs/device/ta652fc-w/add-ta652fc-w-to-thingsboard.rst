@@ -194,8 +194,8 @@ Please add the following Shared attributes of **TA652FC-W**:
    ============= ===========  ================ =========================================
    Key*          Value Type*  Value*                     Memo
    ============= ===========  ================ =========================================
-   uploadFreq    Integer      300              Telemetry per uploadFreq seconds
-   syncTimeFreq  Integer      1800             Sync time per syncTimeFreq seconds
+   uploadFreq    Integer      300              5*60. Telemetry per uploadFreq seconds
+   syncTimeFreq  Integer      86400            24*3600. Sync time per syncTimeFreq seconds
    timezone      Integer      480              | **Please replace with your value**.
                                                | The time offset from UTC, minutes.
                                                | For example Hongkong is UTC+8:00 time 
