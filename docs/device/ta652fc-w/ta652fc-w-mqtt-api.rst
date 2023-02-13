@@ -768,7 +768,7 @@ Chart:
 
     TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"uploadFreq,\nsyncTimeFreq,timezone,timeNTPServer"}
     
-    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"uploadFreq":300,\n"syncTimeFreq":86400,timezone":120,\n""timeNTPServer":"pool.ntp.org"}}
+    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"uploadFreq":300,\n"syncTimeFreq":86400,timezone":480,\n""timeNTPServer":"pool.ntp.org"}}
 
 Message 1:
   .. code:: javascript
@@ -785,7 +785,7 @@ Message 2:
     // Topic:         v1/devices/me/attributes/response/$request_id
     // Payload: 
     {"shared":{"uploadFreq":300,"syncTimeFreq":86400,
-    "timezone":120,"timeNTPServer":"pool.ntp.org"}}
+    "timezone":480,"timeNTPServer":"pool.ntp.org"}}
 
 See `uploadFreq`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer`_. 
 
@@ -1166,7 +1166,7 @@ timeNTPServer
      - `syncTimeFreqMin`_
      - `syncTimeFreqMax`_
      - `syncTimeFreqStep`_
-     - Default: |br| 86400 (24 * 3600)
+     - Default: |br| 86400 (24*3600)
      - ●
      - ●
      - timer period of |br| sync datetime. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
@@ -1177,7 +1177,7 @@ timeNTPServer
      - 
      - 
      - 
-     - 
+     - Default: |br| 480 (8*60)
      - ●
      - ●
      - offset UTC. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
