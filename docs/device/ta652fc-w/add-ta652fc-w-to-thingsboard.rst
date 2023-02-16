@@ -7,6 +7,7 @@ Add TA652FC-W to ThingsBoard
    - This section applies to the situation where you add TA652FC-W to ThingsBoard Server.
    - If you are adding the first Avantec HVAC device to ThingsBoard Server, please refer to :doc:`/intro/get-started`.
 
+
 Step 1. Tenant Login
 =====================
 
@@ -176,6 +177,8 @@ Step 4.1 Add device
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/add-device-2.png
 
 
+.. _add-shared-attributes-of-ta652fc-w-cloudhost:
+
 Step 4.2 Add shared attributes of new device
 ----------------------------------------------
 
@@ -186,25 +189,44 @@ Step 4.2 Add shared attributes of new device
 
 Please add the following Shared attributes of **TA652FC-W**:
 
-.. _add-shared-attributes-of-ta652fc-w-cloudhost:
+.. # define a hard line break for HTML
+.. |br| raw:: html
 
-.. table:: Add shared attributes of TA652FC-W
+   <br/>
+
+.. list-table:: Add shared attributes of TA652FC-W
    :widths: 15, 10, 15, 50
+   :header-rows: 1
 
-   ============= ===========  ================ =========================================
-   Key*          Value Type*  Value*                     Memo
-   ============= ===========  ================ =========================================
-   uploadFreq    Integer      300              5*60. Telemetry per uploadFreq seconds
-   syncTimeFreq  Integer      86400            24*3600. Sync time per syncTimeFreq seconds
-   timezone      Integer      480              | **Please replace with your value**.
-                                               | The time offset from UTC, minutes.
-                                               | For example Hongkong is UTC+8:00 time 
-                                               | zone, this offset is 480 minutes (8*60)
-   timeNTPServer String       pool.ntp.org     | SNTP Server URL, e.g. pool.ntp.org, 
-                                               | 0.pool.ntp.org, 1.pool.ntp.org, 
-                                               | uk.pool.ntp.org, hk.pool.ntp.org, 
-                                               | time.nist.gov, …
-   ============= ===========  ================ =========================================
+   * - Key*
+     - Value Type*
+     - Value*
+     - Memo
+
+   * - :ref:`uploadFreq <ta652fc-w-uploadFreq>`
+     - Integer
+     - 300
+     - 5*60. Telemetry per uploadFreq seconds
+
+   * - :ref:`uploadThreshold <ta652fc-w-uploadThreshold>`
+     - Double
+     - 1.5
+     - 1.5°C. If the temprature (Telemetry data) |br| change exceeds it, upload immediately!
+
+   * - :ref:`syncTimeFreq <ta652fc-w-syncTimeFreq>`
+     - Integer
+     - 86400
+     - 24*3600. Sync time per syncTimeFreq seconds
+
+   * - :ref:`timezone <ta652fc-w-timezone>`
+     - Integer
+     - 480
+     - **Please replace with your value**. |br| The time offset from UTC, minutes. |br| For example Hongkong is UTC+8:00 time |br| zone, this offset is 480 minutes (8*60)
+
+   * - :ref:`timeNTPServer <ta652fc-w-timeNTPServer>`
+     - String
+     - pool.ntp.org
+     - SNTP Server URL, e.g. pool.ntp.org, |br| 0.pool.ntp.org, 1.pool.ntp.org, |br| uk.pool.ntp.org, hk.pool.ntp.org, |br| time.nist.gov, …
 
 .. note:: 
    The field with * must be filled in.

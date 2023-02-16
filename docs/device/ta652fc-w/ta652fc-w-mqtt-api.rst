@@ -86,7 +86,10 @@ Chart:
     participant "ThingsBoard Server"  as TBSrv order 20
 
 
-    [-> TBDev: Timer(telemetry, period: uploadFreq)
+    [-> TBDev: Timer(telemetry, period: **uploadFreq**)
+    TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"changeOverTemp":26.3}
+
+    [-> TBDev: (telemetry, If temprature change \n exceeds **uploadThreshold**, \n upload immediately)
     TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"changeOverTemp":26.3}
 
   .. uml::
@@ -97,7 +100,10 @@ Chart:
     participant "ThingsBoard Server"  as TBSrv order 20 
 
 
-    [-> TBDev: Timer(telemetry, period: uploadFreq)
+    [-> TBDev: Timer(telemetry, period: **uploadFreq**)
+    TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"floorTemp":26.3}
+
+    [-> TBDev: (telemetry, If temprature change \n exceeds **uploadThreshold**, \n upload immediately)
     TBDev -> TBSrv: Telemetry upload (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/telemetry** \nPayload: {"roomTemp":26.2,"floorTemp":26.3}
 
 Message:
@@ -113,6 +119,8 @@ Message:
 See `roomTemp`_, `changeOverTemp`_ (only for TA652FC-W), `floorTemp`_ (only for TA652FH-W).
 
 See `uploadFreq`_.
+
+See `uploadThreshold`_.
 
 
 CTRL.01 Control Mode
@@ -415,7 +423,7 @@ Chart:
     end note
 
     == Upload  temperature unit related attributes ==
-    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"currentTempUnit":"°C",\n"envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,\n"spValueMin":5,"spValueMax":40,"spValueStep":0.5,\n"internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"currentTempUnit":"°C",\n"envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,\n"spValueMin":5,"spValueMax":40,"spValueStep":0.5,\n"internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5,\n"uploadThresholdMin":0.2,"uploadThresholdMax":5,"uploadThresholdStep":0.1}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"floorTempLimitedMin":20,"floorTempLimitedMax":40,"floorTempLimitedStep":0.5,\n"switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,\n"switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5,\n"changeOverTempHeatingMin":27,"changeOverTempHeatingMax":40,"changeOverTempHeatingStep":0.5,\n"changeOverTempCoolingMin":10,"changeOverTempCoolingMax":25,"changeOverTempCoolingStep":0.5}
 
     note over TBDev, TBSrv
@@ -443,7 +451,8 @@ Message 2:
     {"currentTempUnit":"°C",
     "envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,
     "spValueMin":5,"spValueMax":40,"spValueStep":0.5,
-    "internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5}
+    "internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5,
+    "uploadThresholdMin":0.2,"uploadThresholdMax":5,"uploadThresholdStep":0.1}
 
 Message 3 - TA652FC-W:
   .. code:: javascript
@@ -472,10 +481,11 @@ See `model`_, `mac`_,
 `uploadFreqMin`_, `uploadFreqMax`_, `uploadFreqStep`_, 
 `syncTimeFreqMin`_, `syncTimeFreqMax`_ and `syncTimeFreqStep`_.
 
-See `currentTempUnit`_, 
-`envirTempMin`_, `envirTempMax`_, `envirTempStep`_, 
-`spValueMin`_, `spValueMax`_, `spValueStep`_, 
-`internalOffsetMin`_, `internalOffsetMax`_ and `internalOffsetStep`_.
+See `currentTempUnit`_,
+`envirTempMin`_, `envirTempMax`_, `envirTempStep`_,
+`spValueMin`_, `spValueMax`_, `spValueStep`_,
+`internalOffsetMin`_, `internalOffsetMax`_ and `internalOffsetStep`_,
+`uploadThresholdMin`_, `uploadThresholdMax`_ and `uploadThresholdStep`_.
 
 See `floorTempLimitedMin`_ (only for TA652FH-W), `floorTempLimitedMax`_ (only for TA652FH-W), `floorTempLimitedStep`_ (only for TA652FH-W),
 `switchingDiffHeatingMin`_, `switchingDiffHeatingMax`_, `switchingDiffHeatingStep`_,
@@ -766,9 +776,9 @@ Chart:
     participant "TA652FC-W\nTA652FH-W" as TBDev order 10
     participant "ThingsBoard Server"  as TBSrv order 20 
 
-    TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"uploadFreq,\nsyncTimeFreq,timezone,timeNTPServer"}
+    TBDev  ->  TBSrv: request attribute values from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/request/$request_id** \nPayload: {"sharedKeys":"uploadFreq,uploadThreshold,\nsyncTimeFreq,timezone,timeNTPServer"}
     
-    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"uploadFreq":300,\n"syncTimeFreq":86400,timezone":480,\n""timeNTPServer":"pool.ntp.org"}}
+    TBDev <--  TBSrv: receive response (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes/response/$request_id** \nPayload: {"shared":{"uploadFreq":300,"uploadThreshold":1.5,\n"syncTimeFreq":86400,timezone":480,\n"timeNTPServer":"pool.ntp.org"}}
 
 Message 1:
   .. code:: javascript
@@ -776,7 +786,7 @@ Message 1:
     // Message Type:  request attribute values from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes/request/$request_id
     // Payload: 
-    {"sharedKeys":"uploadFreq,syncTimeFreq,timezone,timeNTPServer"}
+    {"sharedKeys":"uploadFreq,uploadThreshold,syncTimeFreq,timezone,timeNTPServer"}
 
 Message 2:
   .. code:: javascript
@@ -784,13 +794,13 @@ Message 2:
     // Message Type:  receive response (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes/response/$request_id
     // Payload: 
-    {"shared":{"uploadFreq":300,"syncTimeFreq":86400,
+    {"shared":{"uploadFreq":300,"uploadThreshold":1.5,"syncTimeFreq":86400,
     "timezone":480,"timeNTPServer":"pool.ntp.org"}}
 
-See `uploadFreq`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer`_. 
+See `uploadFreq`_, `uploadThreshold`_, `syncTimeFreq`_, `timezone`_ and `timeNTPServer`_.
 
 
-ADM.02 Timer Parameters
+ADM.02 Timer Parameters & upload threshold
 -----------------------------------------------
 
 Chart:
@@ -803,6 +813,7 @@ Chart:
 
     == Modify Timer Parameters ==
     TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"uploadFreq":300}
+    TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"uploadThreshold":1.5}
     TBDev  <-  TBSrv: receive attribute update from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"syncTimeFreq":86400}
 
 Message 1:
@@ -810,7 +821,7 @@ Message 1:
 
     // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
-    // Payload: 
+    // Payload:
     {"uploadFreq":300}
 
 Message 2:
@@ -818,10 +829,18 @@ Message 2:
 
     // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
+    // Payload:
+    {"uploadThreshold":1.5}
+
+Message 3:
+  .. code:: javascript
+
+    // Message Type:  receive attribute update from the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/attributes
     // Payload: 
     {"syncTimeFreq":86400}
 
-See `uploadFreq`_  and `syncTimeFreq`_. 
+See `uploadFreq`_, `uploadThreshold`_  and `syncTimeFreq`_.
 
 
 ADM.03 Remote Sync Time
@@ -1033,8 +1052,8 @@ Telemetry (Time-series data)
 ============================
 
 .. tip::
-    All of these telemetry (timeseries data) is 
-    uploaded every `uploadFreq`_ seconds.
+    * All of these telemetry (timeseries data) is uploaded every `uploadFreq`_ seconds.
+    * If these telemetry (timeseries data) change exceeds `uploadThreshold`_, upload immediately.
 
 roomTemp
 ----------
@@ -1122,14 +1141,27 @@ Shared attributes
     All of these shared attributes may be obtained 
     from your ThingsBoard server.
 
+.. _ta652fc-w-uploadFreq:
+
 uploadFreq
 ------------
+
+.. _ta652fc-w-uploadThreshold:
+
+uploadThreshold
+-------------------
+
+.. _ta652fc-w-syncTimeFreq:
 
 syncTimeFreq
 ---------------
 
+.. _ta652fc-w-timezone:
+
 timezone
 ---------
+
+.. _ta652fc-w-timeNTPServer:
 
 timeNTPServer
 ----------------
@@ -1159,6 +1191,17 @@ timeNTPServer
      - ●
      - ●
      - Time-series (Telemetry) |br| upload Frequency. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
+
+   * - uploadThreshold
+     - double
+     - temperature
+     - `uploadThresholdMin`_
+     - `uploadThresholdMax`_
+     - `uploadThresholdStep`_
+     - Default: 1.5
+     - ●
+     - ●
+     - Time-series (Telemetry) |br| upload Threshold. see |br| :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`.
 
    * - syncTimeFreq
      - int
@@ -1403,6 +1446,15 @@ internalOffsetMax
 internalOffsetStep
 ^^^^^^^^^^^^^^^^^^
 
+uploadThresholdMin
+^^^^^^^^^^^^^^^^^^
+
+uploadThresholdMax
+^^^^^^^^^^^^^^^^^^^
+
+uploadThresholdStep
+^^^^^^^^^^^^^^^^^^^^^
+
 floorTempLimitedMin
 ^^^^^^^^^^^^^^^^^^^
 
@@ -1533,6 +1585,28 @@ changeOverTempCoolingStep
      - ●
      - ●
      - the step value of |br| `internalOffset`_
+
+   * - uploadThresholdMin
+     - float
+     - `currentTempUnit`_
+     - 0.2 (°C) / 32 (°F)
+     - ●
+     - ●
+     - the minimum value of |br| `uploadThreshold`_
+   * - uploadThresholdMax
+     - float
+     - `currentTempUnit`_
+     - 5.0 (°C) /  41 (°F)
+     - ●
+     - ●
+     - the maximum value of |br| `uploadThreshold`_
+   * - uploadThresholdtep
+     - float
+     - `currentTempUnit`_
+     - 0.1 (°C) / 0.5 (°F)
+     - ●
+     - ●
+     - the step value of |br| `uploadThreshold`_
 
    * - floorTempLimitedMin
      - float
