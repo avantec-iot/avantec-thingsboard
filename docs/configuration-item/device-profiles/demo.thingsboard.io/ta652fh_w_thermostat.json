@@ -1,0 +1,29 @@
+{
+  "name": "TA652FH-W Thermostat",
+  "description": "Avantec Thermostat Floor Heating",
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "DEFAULT",
+  "provisionType": "CHECK_PRE_PROVISIONED_DEVICES",
+  "defaultRuleChainId": null,
+  "defaultDashboardId": null,
+  "defaultQueueName": null,
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "DEFAULT"
+    },
+    "provisionConfiguration": {
+      "type": "CHECK_PRE_PROVISIONED_DEVICES",
+      "provisionDeviceSecret": "TA652FH-W-TB_PROVISION-SECRET"
+    },
+    "alarms": null
+  },
+  "provisionDeviceKey": "TA652FH-W-TB_PROVISION-KEY",
+  "firmwareId": null,
+  "softwareId": null,
+  "externalId": null,
+  "default": false
+}
