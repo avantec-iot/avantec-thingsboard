@@ -1,15 +1,12 @@
 {
-  "name": "TA652FC-W Thermostat",
+  "name": "TA652FH-W Thermostat",
   "description": null,
   "image": null,
   "type": "DEFAULT",
   "transportType": "DEFAULT",
   "provisionType": "CHECK_PRE_PROVISIONED_DEVICES",
   "defaultRuleChainId": null,
-  "defaultDashboardId": {
-    "entityType": "DASHBOARD",
-    "id": "752954a0-8697-11ed-a9b3-4f7e77852806"
-  },
+  "defaultDashboardId": null,
   "defaultQueueName": null,
   "profileData": {
     "configuration": {
@@ -20,11 +17,11 @@
     },
     "provisionConfiguration": {
       "type": "CHECK_PRE_PROVISIONED_DEVICES",
-      "provisionDeviceSecret": "TA652FC-W-TB_PROVISION-SECRET"
+      "provisionDeviceSecret": "TA652FH-W-TB_PROVISION-SECRET"
     },
     "alarms": null
   },
-  "provisionDeviceKey": "TA652FC-W-TB_PROVISION-KEY",
+  "provisionDeviceKey": "TA652FH-W-TB_PROVISION-KEY",
   "firmwareId": null,
   "softwareId": null,
   "default": false

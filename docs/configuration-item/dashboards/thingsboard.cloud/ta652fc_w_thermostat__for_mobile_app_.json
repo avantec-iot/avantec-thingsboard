@@ -962,8 +962,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -1294,8 +1313,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -2164,8 +2202,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -2585,8 +2642,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -3938,8 +4014,11 @@
                 "icon": "more_horiz",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
-                "type": "custom",
-                "customFunction": "openDashboardState('monitor');\n\nfunction openDashboardState(statedId) {\n    var currentState = widgetContext.stateController.getStateId();\n    if (currentState !== statedId) {\n          var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        widgetContext.stateController.updateState(statedId, params, false);\n    }\n}",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
@@ -4050,8 +4129,11 @@
                 "icon": "more_horiz",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
-                "type": "custom",
-                "customFunction": "openDashboardState('monitor');\n\nfunction openDashboardState(statedId) {\n    var currentState = widgetContext.stateController.getStateId();\n    if (currentState !== statedId) {\n          var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        widgetContext.stateController.updateState(statedId, params, false);\n    }\n}",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
@@ -4098,8 +4180,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -4215,8 +4316,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4279,8 +4399,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4528,8 +4667,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1679882267484,
+                "endTimeMs": 1679968667484
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,

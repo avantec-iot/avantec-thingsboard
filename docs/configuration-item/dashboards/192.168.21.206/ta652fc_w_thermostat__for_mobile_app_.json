@@ -3938,8 +3938,11 @@
                 "icon": "more_horiz",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
-                "type": "custom",
-                "customFunction": "openDashboardState('monitor');\n\nfunction openDashboardState(statedId) {\n    var currentState = widgetContext.stateController.getStateId();\n    if (currentState !== statedId) {\n          var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        widgetContext.stateController.updateState(statedId, params, false);\n    }\n}",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
@@ -4050,8 +4053,11 @@
                 "icon": "more_horiz",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
-                "type": "custom",
-                "customFunction": "openDashboardState('monitor');\n\nfunction openDashboardState(statedId) {\n    var currentState = widgetContext.stateController.getStateId();\n    if (currentState !== statedId) {\n          var params = {\n            entityId: entityId,\n            entityName: entityName\n        };\n        widgetContext.stateController.updateState(statedId, params, false);\n    }\n}",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
@@ -4204,12 +4210,17 @@
                   "_hash": 0.31252687522391964
                 },
                 {
-                  "name": "tempUnit",
+                  "name": "currentTempUnit",
                   "type": "attribute",
-                  "label": "tempUnit",
+                  "label": "currentTempUnit",
                   "color": "#4caf50",
                   "settings": {},
-                  "_hash": 0.9299557253984947
+                  "_hash": 0.9299557253984947,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
                 }
               ]
             }
@@ -4224,7 +4235,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Change over sensor temperature\n        </div>\n        <div class='value'>\n            ${changeOverTemp:1}${tempUnit}\n        </div>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Change over sensor temperature\n        </div>\n        <div class='value'>\n            ${changeOverTemp:1}${currentTempUnit}\n        </div>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
@@ -5422,20 +5433,7 @@
     "entityAliases": {
       "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b": {
         "id": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
-        "alias": "TA652FC-W",
-        "filter": {
-          "type": "stateEntity",
-          "resolveMultiple": false,
-          "stateEntityParamName": null,
-          "defaultStateEntity": {
-            "entityType": "DEVICE",
-            "id": "c58b8420-4a99-11ed-88cf-3bc720ab387f"
-          }
-        }
-      },
-      "323f24e7-0464-49db-4eca-23d1103b993b": {
-        "id": "323f24e7-0464-49db-4eca-23d1103b993b",
-        "alias": "Current thermostat",
+        "alias": "Current TA652FC-W",
         "filter": {
           "type": "stateEntity",
           "resolveMultiple": false,
