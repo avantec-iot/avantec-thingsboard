@@ -15,8 +15,13 @@ TA652FC-W
 TA652FH-W
 ----------
 
-* TA652FC-W Thermostat List - device list. *TODO:...*
-* TA652FC-W Thermostat (For Mobile App) - device detail. *TODO:...*
+* TA652FH-W Thermostat List - device list.
+
+    *TODO:...*
+
+* TA652FH-W Thermostat (For Mobile App) - device detail.
+
+    *TODO:...*
 
 
 Other Dashboards
@@ -24,9 +29,13 @@ Other Dashboards
 
 * Firmware - firmware update. *Some versions of ThingsBoard already have this Dashboard, which can be used without importing*. :download:`firmware.json </configuration-item/dashboards/firmware.json>`
 
-* *Manage device claiming* - *TODO:...*
+* *Manage device claiming* - ...
 
-* *Claiming* - *TODO:...*
+    *TODO:...*
+
+* *Claiming* - ...
+
+    *TODO:...*
 
 See also
 ===============

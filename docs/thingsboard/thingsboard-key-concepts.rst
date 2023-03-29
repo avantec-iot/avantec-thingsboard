@@ -197,11 +197,7 @@ Refer to `Claiming devices`__.
 Over-the-air firmware and software updates
 ----------------------------------------------
 
-Refer to `Over-the-air firmware and software updates`__.
-
-.. __: https://thingsboard.io/docs/user-guide/ota-updates/
-
-*TODO...*
+See :doc:`OTA Updates </thingsboard/thingsboard-ota-updates>`.
 
 Getting Started Guides
 ======================

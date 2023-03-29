@@ -72,7 +72,7 @@ When you first power up, TA652FC-W will enter Wi-Fi AP mode without any Wi-Fi pa
 Step 3. Configure
 ===================
 
-- Connect to TA652FC-W's Wi-Fi hotspot on your computer or phone. It's like ``EasyStat-XXXXX``.
+- Connect to TA652FC-W's Wi-Fi hotspot on your computer or smart phone. It's like ``Avan-Stats-CEBD8``.
 
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/connect_ta65_ap.png
       :width: 50 %
@@ -93,7 +93,7 @@ Step 3. Configure
       Password      password of your Wi-Fi router
       Auth Token    Access Token of your TA652FC-W. See `Step 1. Get Access-Token`_
       Host          | This ThingsBoard Server's MQTT URL.
-                    | It must begin with "MQTT ://", such as mqtt://192.168.21.206
+                    | It must begin with "mqtt://", such as "mqtt://192.168.21.206"
                     | **Please replace 192.168.21.206 with your ThingsBoard IP Address**.
                     | See :ref:`add-shared-attributes-of-ta652fc-w-cloudhost`
       ============  =====================================================================
@@ -108,7 +108,7 @@ Step 3. Configure
 Step 4. Check
 ================
 
-Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **00:00**. If you do not set the tone zone relationship on ThingsBoard correctly, the time displayed by TA652FC-W may be slightly off.
+Check if TA652FC-W is connected to ThingsBoard correctly. If connected correctly, there will be a Wi-Fi icon in the upper right corner of the Thermostat, and the time will no longer be **12:00**. If you do not set the tone zone relationship on ThingsBoard correctly, the time displayed by TA652FC-W may be slightly off.
  
    .. image:: /_static/device/ta652fc-w/connect-ta652fc-w-to-thingsboard/check_connection.png
       :width: 60%
@@ -119,7 +119,7 @@ Troubleshooting
 
 Thermostat TA652FC-W can't connect to Wi-Fi:
 
-- If the Thermostat has never been connected to any Wi-Fi router since leaving the factory, it will enter Soft-AP mode. You can search for Wi-Fi SSID similar to "EasyStat-xxxx" through your mobile phone or computer.
+- If the Thermostat has never been connected to any Wi-Fi router since leaving the factory, it will enter Soft-AP mode. You can search for Wi-Fi SSID similar to "Avan-Stats-CEBD8" through your mobile phone or computer.
 - Make sure the Wi-Fi router supports and turns on the 2.4G signal. Currently, some dual-band (2.4G & 5G) Wi-Fi routers can turn off the 2.4G signal. Please turn it on in your router settings.
 - Make sure your Wi-Fi SSID and Password are correct, and they are related parameters of 2.4G Wi-Fi signal.
 - Confirm that the Token is normal.

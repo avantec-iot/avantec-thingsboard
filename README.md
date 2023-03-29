@@ -208,7 +208,7 @@ Plantuml is a library for generating UML diagrams from a simple text markup lang
 You can following this command to build HTML document at `docs\`:
 
 ```shell
-make html
+make html  #.\make html #windows
 ```
 
 Your `index.rst` has been built into `index.html` in your documentation output directory (typically `_build/html/index.html`). Open this file in your web browser to see your docs.

@@ -16,8 +16,8 @@ ThingsBoard API consists of two main parts: **Device API** and **Server-side API
 .. uml::
 
    interface "MQTT Device API" as MQTTAPI
-   interface "CoAP Device API" as CoAPAPI
-   interface "HTTP Device API" as HTTPAPI
+   interface "<s>CoAP Device API</s>" as CoAPAPI
+   interface "<s>HTTP Device API</s>" as HTTPAPI
 
    interface "Websocket API" as WebsocketAPI
    interface "REST API" as RestAPI
@@ -77,8 +77,8 @@ ThingsBoard API consists of two main parts: **Device API** and **Server-side API
 
 * **Device API** is grouped by supported communication protocols:
    * `MQTT Device API`__
-   * `CoAP Device API`__
-   * `HTTP Device API`__
+   * `CoAP Device API`__ ( Not supported! )
+   * `HTTP Device API`__ ( Not supported! )
 
 .. __: https://thingsboard.io/docs/reference/mqtt-api
 .. __: https://thingsboard.io/docs/reference/coap-api

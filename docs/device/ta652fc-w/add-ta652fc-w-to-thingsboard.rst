@@ -163,7 +163,7 @@ Step 4.1 Add device
    ===============  =============================================
    Field            Value                
    ===============  =============================================
-   Name*            My device name, e.g. TA652FC-W-TB             
+   Name*            My device name, e.g. TA652FC-W-TB, A8:48:FA:57:60:A4
    Device profile*  **TA652FC-W Thermostat**
    Label            My device label, e.g. AVANTEC Headquarters       
    Description      My device description, e.g. A Thermostat for fan-coil
