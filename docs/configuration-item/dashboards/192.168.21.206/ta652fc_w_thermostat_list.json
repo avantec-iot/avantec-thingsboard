@@ -53,12 +53,14 @@
             "enableStickyAction": true,
             "reserveSpaceForHiddenAction": "true",
             "displayEntityName": true,
-            "displayEntityLabel": false,
-            "displayEntityType": true,
+            "displayEntityLabel": true,
+            "displayEntityType": false,
             "displayPagination": true,
             "defaultPageSize": 10,
             "defaultSortOrder": "entityName",
-            "useRowStyleFunction": false
+            "useRowStyleFunction": false,
+            "entityNameColumnTitle": "Device name",
+            "entityLabelColumnTitle": "Label"
           },
           "title": "New Entities table",
           "dropShadow": true,
@@ -84,22 +86,6 @@
                   "color": "#e91e63",
                   "settings": {},
                   "_hash": 0.2975901043633382
-                },
-                {
-                  "name": "label",
-                  "type": "entityField",
-                  "label": "Label",
-                  "color": "#3f51b5",
-                  "settings": {
-                    "columnWidth": "0px",
-                    "useCellStyleFunction": false,
-                    "cellStyleFunction": "",
-                    "useCellContentFunction": false,
-                    "cellContentFunction": "",
-                    "defaultColumnVisibility": "visible",
-                    "columnSelectionToDisplay": "enabled"
-                  },
-                  "_hash": 0.9840629903024176
                 },
                 {
                   "name": "active",
