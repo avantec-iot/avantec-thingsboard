@@ -981,8 +981,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455348,
-                "endTimeMs": 1680055855348
+                "startTimeMs": 1679970232849,
+                "endTimeMs": 1680056632849
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -1332,8 +1332,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232849,
+                "endTimeMs": 1680056632849
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -1414,7 +1414,7 @@
             "updateRPCMethod": "remoteSetTempUnit",
             "convertValueFunction": "/* console.log(value); */\nreturn value;",
             "requestTimeout": 5000,
-            "title": "Temperature unit"
+            "title": "Temperature unit (Your thermostat needs to be restarted !)"
           },
           "title": "",
           "showTitleIcon": false,
@@ -2221,8 +2221,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232849,
+                "endTimeMs": 1680056632849
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2661,8 +2661,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232849,
+                "endTimeMs": 1680056632849
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2681,7 +2681,7 @@
             "isRequired": true,
             "requiredErrorMessage": "input text is error",
             "showResultMessage": true,
-            "labelValue": "NTP server",
+            "labelValue": "NTP server (uk.pool.ntp.org, 1.pool.ntp.org, etc.)",
             "minLength": 0,
             "maxLength": 127
           },
@@ -4199,8 +4199,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232850,
+                "endTimeMs": 1680056632850
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4341,8 +4341,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232850,
+                "endTimeMs": 1680056632850
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4424,8 +4424,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232850,
+                "endTimeMs": 1680056632850
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4698,8 +4698,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679969455349,
-                "endTimeMs": 1680055855349
+                "startTimeMs": 1679970232850,
+                "endTimeMs": 1680056632850
               },
               "quickInterval": "CURRENT_DAY"
             },

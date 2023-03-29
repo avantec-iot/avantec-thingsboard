@@ -1375,7 +1375,7 @@
             "updateRPCMethod": "remoteSetTempUnit",
             "convertValueFunction": "/* console.log(value); */\nreturn value;",
             "requestTimeout": 5000,
-            "title": "Temperature unit"
+            "title": "Temperature unit (Your thermostat needs to be restarted !)"
           },
           "title": "",
           "showTitleIcon": false,
@@ -2604,7 +2604,7 @@
             "isRequired": true,
             "requiredErrorMessage": "input text is error",
             "showResultMessage": true,
-            "labelValue": "NTP server",
+            "labelValue": "NTP server (uk.pool.ntp.org, 1.pool.ntp.org, etc.)",
             "minLength": 0,
             "maxLength": 127
           },
@@ -2628,7 +2628,16 @@
           "displayTimewindow": true,
           "widgetCss": "",
           "pageSize": 1024,
-          "noDataDisplayMessage": ""
+          "noDataDisplayMessage": "",
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
         },
         "id": "b8e2b1c2-2ad5-9148-aa06-08d56e967af3"
       },
