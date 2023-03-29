@@ -85,3 +85,7 @@
 # firmware.json
 
 * 使用 192.168.21.206 版本。
+
+# thermostat.json
+
+* 192.168.21.206 与 thingsboard.cloud 各不相同。 不清楚谁是最新的，可能前者还在继续修改。

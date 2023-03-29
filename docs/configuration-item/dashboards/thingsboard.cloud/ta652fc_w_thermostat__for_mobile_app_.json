@@ -951,12 +951,18 @@
                   "_hash": 0.07602886479310622
                 },
                 {
-                  "name": "tempUnit",
+                  "name": "currentTempUnit",
                   "type": "attribute",
-                  "label": "tempUnit",
+                  "label": "currentTempUnit",
                   "color": "#ffc107",
                   "settings": {},
-                  "_hash": 0.04199464631222183
+                  "_hash": 0.04199464631222183,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
                 }
               ]
             }
@@ -975,8 +981,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787870,
+                "endTimeMs": 1679999187870
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -990,7 +996,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Program\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='description'>\n                        Next setpoint\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='value'>\n                        ${prgNextEnable}\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${prgNextDaysTime}  ${prgNextSetpoint:1}${tempUnit}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Program\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='description'>\n                        Next setpoint\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='value'>\n                        ${prgNextEnable}\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${prgNextDaysTime}  ${prgNextSetpoint:1}${currentTempUnit}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.0em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
@@ -1326,8 +1332,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787870,
+                "endTimeMs": 1679999187870
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2215,8 +2221,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2655,8 +2661,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4193,8 +4199,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4305,12 +4311,18 @@
                   "_hash": 0.31252687522391964
                 },
                 {
-                  "name": "tempUnit",
+                  "name": "currentTempUnit",
                   "type": "attribute",
-                  "label": "tempUnit",
+                  "label": "currentTempUnit",
                   "color": "#4caf50",
                   "settings": {},
-                  "_hash": 0.9299557253984947
+                  "_hash": 0.9299557253984947,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
                 }
               ]
             }
@@ -4329,8 +4341,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4344,7 +4356,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Change over sensor temperature\n        </div>\n        <div class='value'>\n            ${changeOverTemp:1}${tempUnit}\n        </div>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Change over sensor temperature\n        </div>\n        <div class='value'>\n            ${changeOverTemp:1}${currentTempUnit}\n        </div>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
@@ -4412,8 +4424,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4648,12 +4660,18 @@
               "filterId": null,
               "dataKeys": [
                 {
-                  "name": "tempUnit",
+                  "name": "currentTempUnit",
                   "type": "attribute",
-                  "label": "tempUnit",
+                  "label": "currentTempUnit",
                   "color": "#4caf50",
                   "settings": {},
-                  "_hash": 0.9299557253984947
+                  "_hash": 0.9299557253984947,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
                 },
                 {
                   "name": "spValue",
@@ -4680,8 +4698,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679882267484,
-                "endTimeMs": 1679968667484
+                "startTimeMs": 1679912787871,
+                "endTimeMs": 1679999187871
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4695,7 +4713,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Setpoint\n        </div>\n        <div class='value'>\n            ${spValue:1}${tempUnit}\n        </div>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Setpoint\n        </div>\n        <div class='value'>\n            ${spValue:1}${currentTempUnit}\n        </div>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
