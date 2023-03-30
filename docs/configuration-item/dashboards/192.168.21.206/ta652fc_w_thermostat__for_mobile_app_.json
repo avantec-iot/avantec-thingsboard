@@ -4083,120 +4083,6 @@
         "col": 0,
         "id": "595cdd96-f537-64f5-0bfd-b033ac448997"
       },
-      "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd": {
-        "isSystemType": true,
-        "bundleAlias": "analogue_gauges",
-        "typeAlias": "radial_gauge_canvas_gauges",
-        "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 6,
-        "sizeY": 5,
-        "config": {
-          "datasources": [
-            {
-              "type": "entity",
-              "name": null,
-              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
-              "filterId": null,
-              "dataKeys": [
-                {
-                  "name": "roomTemp",
-                  "type": "timeseries",
-                  "label": "Room temperature",
-                  "color": "#2196f3",
-                  "settings": {},
-                  "_hash": 0.8929891561541388,
-                  "units": null,
-                  "decimals": 1,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
-                }
-              ]
-            }
-          ],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": true,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
-          "settings": {
-            "startAngle": 45,
-            "ticksAngle": 270,
-            "needleCircleSize": 10,
-            "defaultColor": "#e65100",
-            "minValue": -10,
-            "maxValue": 110,
-            "colorMajorTicks": "#444",
-            "colorMinorTicks": "#666",
-            "numbersFont": {
-              "family": "Roboto",
-              "size": 18,
-              "style": "normal",
-              "weight": "500",
-              "color": "#616161"
-            },
-            "showUnitTitle": false,
-            "unitsFont": {
-              "family": "Roboto",
-              "size": 22,
-              "style": "normal",
-              "weight": "500",
-              "color": "#616161"
-            },
-            "valueBox": true,
-            "valueInt": 1,
-            "valueFont": {
-              "family": "Segment7Standard",
-              "size": 40,
-              "style": "normal",
-              "weight": "normal",
-              "color": "#444",
-              "shadowColor": "rgba(0, 0, 0, 0.49)"
-            },
-            "colorValueBoxRect": "#888",
-            "colorValueBoxRectEnd": "#666",
-            "colorValueBoxBackground": "#babab2",
-            "colorValueBoxShadow": "rgba(0,0,0,1)",
-            "showBorder": true,
-            "colorPlate": "#fff",
-            "colorNeedleShadowUp": "rgba(2, 255, 255, 0)",
-            "colorNeedleShadowDown": "rgba(188,143,143,0.45)",
-            "highlightsWidth": 15,
-            "highlights": [],
-            "animation": true,
-            "animationDuration": 500,
-            "animationRule": "cycle"
-          },
-          "title": "Room temperature",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "titleStyle": {
-            "fontSize": "0.8em",
-            "fontWeight": "normal",
-            "opacity": 0.5
-          },
-          "enableDataExport": false,
-          "widgetStyle": {},
-          "widgetCss": "",
-          "pageSize": 1024,
-          "decimals": null,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "mobileOrder": 10,
-          "showTitleIcon": false,
-          "titleTooltip": ""
-        },
-        "row": 0,
-        "col": 0,
-        "id": "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd"
-      },
       "1aada6ae-f094-af35-da9d-ac33552aad34": {
         "isSystemType": true,
         "bundleAlias": "cards",
@@ -4337,183 +4223,6 @@
         "row": 0,
         "col": 0,
         "id": "c13f238f-b6a3-bf07-0a5a-c73aae6403d2"
-      },
-      "00175d77-b83d-0db5-057b-b4574f2406d9": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
-        "type": "timeseries",
-        "title": "New widget",
-        "sizeX": 14,
-        "sizeY": 4,
-        "config": {
-          "datasources": [
-            {
-              "type": "entity",
-              "name": null,
-              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
-              "filterId": null,
-              "dataKeys": [
-                {
-                  "name": "roomTemp",
-                  "type": "timeseries",
-                  "label": "Room temperatue",
-                  "color": "#2196f3",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.6820514628132672,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
-                },
-                {
-                  "name": "changeOverTemp",
-                  "type": "timeseries",
-                  "label": "Change over sensor temperatue",
-                  "color": "#4caf50",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.08265907167834907,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
-                }
-              ],
-              "latestDataKeys": null
-            }
-          ],
-          "timewindow": {
-            "hideInterval": false,
-            "hideAggregation": false,
-            "hideAggInterval": false,
-            "hideTimezone": false,
-            "selectedTab": 0,
-            "realtime": {
-              "realtimeType": 0,
-              "timewindowMs": 604800000,
-              "quickInterval": "CURRENT_DAY",
-              "interval": 7200000
-            },
-            "aggregation": {
-              "type": "AVG",
-              "limit": 25000
-            }
-          },
-          "showTitle": true,
-          "backgroundColor": "#fff",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
-          "settings": {
-            "stack": false,
-            "fontSize": 10,
-            "fontColor": "#545454",
-            "showTooltip": true,
-            "tooltipIndividual": false,
-            "tooltipCumulative": false,
-            "hideZeros": false,
-            "grid": {
-              "verticalLines": true,
-              "horizontalLines": true,
-              "outlineWidth": 1,
-              "color": "#545454",
-              "backgroundColor": null,
-              "tickColor": "#DDDDDD"
-            },
-            "xaxis": {
-              "title": null,
-              "showLabels": true,
-              "color": "#545454"
-            },
-            "yaxis": {
-              "min": null,
-              "max": null,
-              "title": null,
-              "showLabels": true,
-              "color": "#545454",
-              "tickSize": null,
-              "tickDecimals": 0,
-              "ticksFormatter": ""
-            },
-            "shadowSize": 4,
-            "smoothLines": true,
-            "comparisonEnabled": false,
-            "xaxisSecond": {
-              "axisPosition": "top",
-              "title": null,
-              "showLabels": false
-            },
-            "customLegendEnabled": true,
-            "dataKeysListForLabels": []
-          },
-          "title": "Temperature history",
-          "dropShadow": false,
-          "enableFullscreen": true,
-          "titleStyle": {
-            "fontSize": "0.8em",
-            "fontWeight": "normal",
-            "opacity": 0.5
-          },
-          "mobileHeight": null,
-          "showTitleIcon": false,
-          "titleIcon": null,
-          "iconColor": "rgba(0, 0, 0, 0.87)",
-          "iconSize": "24px",
-          "titleTooltip": "",
-          "widgetStyle": {},
-          "useDashboardTimewindow": false,
-          "displayTimewindow": true,
-          "showLegend": true,
-          "actions": {},
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "showMin": false,
-            "showMax": false,
-            "showAvg": false,
-            "showTotal": false
-          },
-          "enableDataExport": true,
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": ""
-        },
-        "id": "00175d77-b83d-0db5-057b-b4574f2406d9"
       },
       "8c526bea-ee6a-8ea1-53e3-bee7689820aa": {
         "isSystemType": true,
@@ -4712,6 +4421,309 @@
         "row": 0,
         "col": 0,
         "id": "51d3b8c7-31fd-8691-f957-69925dfe63fb"
+      },
+      "19cb4bff-0057-9538-5b57-567cbd15b940": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 4,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperature",
+                  "color": "#009b4d",
+                  "settings": {},
+                  "_hash": 0.9937628442804367,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "maxValue": 125,
+            "minValue": 0,
+            "donutStartAngle": 90,
+            "showValue": true,
+            "showMinMax": true,
+            "levelColors": [],
+            "titleFont": {
+              "family": "Roboto",
+              "size": 18,
+              "style": "normal",
+              "weight": "500",
+              "color": "#999999"
+            },
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "600",
+              "size": 24,
+              "color": "#333333"
+            },
+            "minMaxFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500",
+              "color": "#666666"
+            },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "gaugeColor": "#eeeeee",
+            "showTitle": false,
+            "gaugeType": "arc",
+            "roundedLineCap": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "useFixedLevelColor": false,
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear",
+            "tickWidth": 4,
+            "colorTicks": "#666",
+            "gaugeWidthScale": 0.65
+          },
+          "title": "Room temperature",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "0.8em",
+            "fontWeight": "normal",
+            "opacity": 0.5
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "19cb4bff-0057-9538-5b57-567cbd15b940"
+      },
+      "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "basic_timeseries",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperatue",
+                  "color": "#009b4d",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 3,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.7558212875420249,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "changeOverTemp",
+                  "type": "timeseries",
+                  "label": "Change over sensor temperature",
+                  "color": "#2196f3",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 3,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.8323556652467088,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 604800000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 7200000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickSize": 0,
+              "tickDecimals": 0,
+              "min": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": false,
+            "tooltipIndividual": false,
+            "smoothLines": true,
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": false
+            },
+            "customLegendEnabled": true
+          },
+          "title": "Temperature history",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "0.8em",
+            "fontWeight": "normal",
+            "opacity": 0.5
+          },
+          "mobileHeight": 4,
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          },
+          "mobileOrder": 14
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5"
       }
     },
     "states": {
@@ -5382,14 +5394,6 @@
                 "col": 0,
                 "mobileHide": true
               },
-              "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd": {
-                "sizeX": 6,
-                "sizeY": 4,
-                "mobileOrder": 10,
-                "mobileHeight": 3,
-                "row": 2,
-                "col": 0
-              },
               "1aada6ae-f094-af35-da9d-ac33552aad34": {
                 "sizeX": 9,
                 "sizeY": 2,
@@ -5405,14 +5409,6 @@
                 "mobileHeight": 1,
                 "row": 4,
                 "col": 11
-              },
-              "00175d77-b83d-0db5-057b-b4574f2406d9": {
-                "sizeX": 15,
-                "sizeY": 5,
-                "mobileOrder": 14,
-                "mobileHeight": 4,
-                "row": 6,
-                "col": 0
               },
               "8c526bea-ee6a-8ea1-53e3-bee7689820aa": {
                 "sizeX": 5,
@@ -5437,6 +5433,22 @@
                 "mobileHeight": 1,
                 "row": 1,
                 "col": 8
+              },
+              "19cb4bff-0057-9538-5b57-567cbd15b940": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "mobileOrder": 10,
+                "mobileHeight": 3,
+                "row": 2,
+                "col": 0
+              },
+              "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5": {
+                "sizeX": 15,
+                "sizeY": 5,
+                "mobileOrder": 14,
+                "mobileHeight": 4,
+                "row": 6,
+                "col": 0
               }
             },
             "gridSettings": {

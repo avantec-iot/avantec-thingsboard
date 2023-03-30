@@ -981,8 +981,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378578,
-                "endTimeMs": 1680057778578
+                "startTimeMs": 1680077513877,
+                "endTimeMs": 1680163913877
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -1332,8 +1332,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513877,
+                "endTimeMs": 1680163913877
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2221,8 +2221,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513877,
+                "endTimeMs": 1680163913877
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2661,8 +2661,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513877,
+                "endTimeMs": 1680163913877
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4151,139 +4151,6 @@
         "col": 0,
         "id": "595cdd96-f537-64f5-0bfd-b033ac448997"
       },
-      "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd": {
-        "isSystemType": true,
-        "bundleAlias": "analogue_gauges",
-        "typeAlias": "radial_gauge_canvas_gauges",
-        "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 6,
-        "sizeY": 5,
-        "config": {
-          "datasources": [
-            {
-              "type": "entity",
-              "name": null,
-              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
-              "filterId": null,
-              "dataKeys": [
-                {
-                  "name": "roomTemp",
-                  "type": "timeseries",
-                  "label": "Room temperature",
-                  "color": "#2196f3",
-                  "settings": {},
-                  "_hash": 0.8929891561541388,
-                  "units": null,
-                  "decimals": 1,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
-                }
-              ]
-            }
-          ],
-          "timewindow": {
-            "displayValue": "",
-            "selectedTab": 0,
-            "realtime": {
-              "realtimeType": 1,
-              "interval": 1000,
-              "timewindowMs": 60000,
-              "quickInterval": "CURRENT_DAY"
-            },
-            "history": {
-              "historyType": 0,
-              "interval": 1000,
-              "timewindowMs": 60000,
-              "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
-              },
-              "quickInterval": "CURRENT_DAY"
-            },
-            "aggregation": {
-              "type": "AVG",
-              "limit": 25000
-            }
-          },
-          "showTitle": true,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
-          "settings": {
-            "startAngle": 45,
-            "ticksAngle": 270,
-            "needleCircleSize": 10,
-            "defaultColor": "#e65100",
-            "minValue": -10,
-            "maxValue": 110,
-            "colorMajorTicks": "#444",
-            "colorMinorTicks": "#666",
-            "numbersFont": {
-              "family": "Roboto",
-              "size": 18,
-              "style": "normal",
-              "weight": "500",
-              "color": "#616161"
-            },
-            "showUnitTitle": false,
-            "unitsFont": {
-              "family": "Roboto",
-              "size": 22,
-              "style": "normal",
-              "weight": "500",
-              "color": "#616161"
-            },
-            "valueBox": true,
-            "valueInt": 1,
-            "valueFont": {
-              "family": "Segment7Standard",
-              "size": 40,
-              "style": "normal",
-              "weight": "normal",
-              "color": "#444",
-              "shadowColor": "rgba(0, 0, 0, 0.49)"
-            },
-            "colorValueBoxRect": "#888",
-            "colorValueBoxRectEnd": "#666",
-            "colorValueBoxBackground": "#babab2",
-            "colorValueBoxShadow": "rgba(0,0,0,1)",
-            "showBorder": true,
-            "colorPlate": "#fff",
-            "colorNeedleShadowUp": "rgba(2, 255, 255, 0)",
-            "colorNeedleShadowDown": "rgba(188,143,143,0.45)",
-            "highlightsWidth": 15,
-            "highlights": [],
-            "animation": true,
-            "animationDuration": 500,
-            "animationRule": "cycle"
-          },
-          "title": "Room temperature",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "titleStyle": {
-            "fontSize": "0.8em",
-            "fontWeight": "normal",
-            "opacity": 0.5
-          },
-          "enableDataExport": false,
-          "widgetStyle": {},
-          "widgetCss": "",
-          "pageSize": 1024,
-          "decimals": null,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "mobileOrder": 10,
-          "showTitleIcon": false,
-          "titleTooltip": ""
-        },
-        "row": 0,
-        "col": 0,
-        "id": "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd"
-      },
       "1aada6ae-f094-af35-da9d-ac33552aad34": {
         "isSystemType": true,
         "bundleAlias": "cards",
@@ -4341,8 +4208,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513878,
+                "endTimeMs": 1680163913878
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4424,8 +4291,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513878,
+                "endTimeMs": 1680163913878
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4484,7 +4351,7 @@
                   "name": "roomTemp",
                   "type": "timeseries",
                   "label": "Room temperatue",
-                  "color": "#2196f3",
+                  "color": "#009b4d",
                   "settings": {
                     "excludeFromStacking": false,
                     "hideDataByDefault": false,
@@ -4508,13 +4375,14 @@
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
-                  "postFuncBody": null
+                  "postFuncBody": null,
+                  "aggregationType": null
                 },
                 {
                   "name": "changeOverTemp",
                   "type": "timeseries",
                   "label": "Change over sensor temperatue",
-                  "color": "#4caf50",
+                  "color": "#2196f3",
                   "settings": {
                     "excludeFromStacking": false,
                     "hideDataByDefault": false,
@@ -4538,7 +4406,8 @@
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
-                  "postFuncBody": null
+                  "postFuncBody": null,
+                  "aggregationType": null
                 }
               ],
               "latestDataKeys": null
@@ -4698,8 +4567,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1679971378579,
-                "endTimeMs": 1680057778579
+                "startTimeMs": 1680077513878,
+                "endTimeMs": 1680163913878
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4858,6 +4727,126 @@
         "row": 0,
         "col": 0,
         "id": "51d3b8c7-31fd-8691-f957-69925dfe63fb"
+      },
+      "a107753c-f413-d73c-6003-74455299c29e": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 4,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperature",
+                  "color": "#009b4d",
+                  "settings": {},
+                  "_hash": 0.12217724909158312,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1680077513878,
+                "endTimeMs": 1680163913878
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "minValue": 0,
+            "maxValue": 125,
+            "gaugeType": "arc",
+            "gaugeWidthScale": 0.65,
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "roundedLineCap": false,
+            "gaugeColor": "#eeeeee",
+            "useFixedLevelColor": false,
+            "levelColors": [],
+            "showTitle": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "showValue": true,
+            "valueFont": {
+              "family": "Roboto",
+              "size": 24,
+              "style": "normal",
+              "weight": "500",
+              "color": "#666666"
+            },
+            "showMinMax": true,
+            "minMaxFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500",
+              "color": "#666666"
+            },
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "Room temperature",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "0.8em",
+            "fontWeight": "normal",
+            "opacity": 0.5
+          },
+          "useDashboardTimewindow": true,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "a107753c-f413-d73c-6003-74455299c29e"
       }
     },
     "states": {
@@ -5528,14 +5517,6 @@
                 "col": 0,
                 "mobileHide": true
               },
-              "33cd3252-5e90-f7f4-6512-4c59c5f4f2bd": {
-                "sizeX": 6,
-                "sizeY": 4,
-                "mobileOrder": 10,
-                "mobileHeight": 3,
-                "row": 2,
-                "col": 0
-              },
               "1aada6ae-f094-af35-da9d-ac33552aad34": {
                 "sizeX": 9,
                 "sizeY": 2,
@@ -5583,6 +5564,14 @@
                 "mobileHeight": 1,
                 "row": 1,
                 "col": 8
+              },
+              "a107753c-f413-d73c-6003-74455299c29e": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "mobileOrder": 10,
+                "mobileHeight": 3,
+                "row": 2,
+                "col": 0
               }
             },
             "gridSettings": {
