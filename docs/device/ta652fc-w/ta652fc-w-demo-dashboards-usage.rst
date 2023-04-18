@@ -57,8 +57,8 @@ Default State
 
 *  Thermostats widgets:
     * Fields: 
-        * Entity name, Entity type, Type, active.
-        * Room temp, Change Over Sensor Temp, Setpoint, Fan status, Unit: Refer to `Monitor State`_.
+        * Device name, Label, Type, active.
+        * Room temperature, Change Over Sensor Temperature, Setpoint, Fan status, Unit: Refer to `Monitor State`_.
     * Actions:
         * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_。
 

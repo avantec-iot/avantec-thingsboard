@@ -15,14 +15,8 @@ TA652FC-W
 TA652FH-W
 ----------
 
-* TA652FH-W Thermostat List - device list.
-
-    *TODO:...*
-
-* TA652FH-W Thermostat (For Mobile App) - device detail.
-
-    *TODO:...*
-
+* :ref:`TA652FH-W Thermostat List` - device list.
+* :ref:`TA652FH-W Thermostat (For Mobile App)` - device detail.
 
 Other Dashboards
 -----------------
