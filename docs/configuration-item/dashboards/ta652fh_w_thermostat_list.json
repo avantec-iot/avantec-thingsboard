@@ -1,0 +1,284 @@
+{
+  "title": "TA652FH-W Thermostat List",
+  "image": null,
+  "mobileHide": true,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "TA652FH-W Thermostat List",
+    "widgets": {
+      "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "entities_table",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 6.5,
+        "config": {
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1680082358034,
+                "endTimeMs": 1680168758034
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "entitiesTitle": "TA652FH-W Thermostats",
+            "enableSearch": true,
+            "enableSelectColumnDisplay": true,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "reserveSpaceForHiddenAction": "true",
+            "displayEntityName": true,
+            "displayEntityLabel": true,
+            "displayEntityType": false,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "defaultSortOrder": "entityName",
+            "useRowStyleFunction": false,
+            "entityNameColumnTitle": "Device name",
+            "entityLabelColumnTitle": "Label"
+          },
+          "title": "New Entities table",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "ddeebca7-32f9-d8aa-d1e6-ec59a26631db",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "type",
+                  "type": "entityField",
+                  "label": "Type",
+                  "color": "#e91e63",
+                  "settings": {},
+                  "_hash": 0.2975901043633382
+                },
+                {
+                  "name": "active",
+                  "type": "attribute",
+                  "label": "active",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.9836070312446519
+                },
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room Temp",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.9594098739434804,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "floorTemp",
+                  "type": "timeseries",
+                  "label": "Floor Temp",
+                  "color": "#ffc107",
+                  "settings": {
+                    "columnWidth": "0px",
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  },
+                  "_hash": 0.36221424662217094,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "spValue",
+                  "type": "attribute",
+                  "label": "Setpoint",
+                  "color": "#607d8b",
+                  "settings": {
+                    "columnWidth": "0px",
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  },
+                  "_hash": 0.6273381598191303,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "currentTempUnit",
+                  "type": "attribute",
+                  "label": "Unit",
+                  "color": "#f44336",
+                  "settings": {},
+                  "_hash": 0.7860563692413678,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "displayTimewindow": true,
+          "mobileHide": true,
+          "actions": {
+            "actionCellButton": [
+              {
+                "name": "to_ta652fh-w_detail",
+                "icon": "settings",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "openDashboard",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openNewBrowserTab": false,
+                "targetDashboardId": "43e55270-cedd-11ed-9b15-dd2dac50548f",
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "79ce3b25-dd62-a929-2fa5-eb1d36cf8cb2"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "69b8f8cb-cfe2-4b54-d435-1cd0f550358d"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "TA652FH-W Thermostat List",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
+                "sizeX": 21,
+                "sizeY": 8,
+                "mobileHide": true,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "ddeebca7-32f9-d8aa-d1e6-ec59a26631db": {
+        "id": "ddeebca7-32f9-d8aa-d1e6-ec59a26631db",
+        "alias": "TA652FH-W Thermostats",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FH-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      },
+      "51860026-d4c7-309d-d658-ee05eb713072": {
+        "id": "51860026-d4c7-309d-d658-ee05eb713072",
+        "alias": "TA652FC-W Thermostats",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceType": "TA652FC-W Thermostat",
+          "deviceNameFilter": ""
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1679994825731,
+          "endTimeMs": 1680081225731
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "externalId": null,
+  "name": "TA652FH-W Thermostat List"
+}

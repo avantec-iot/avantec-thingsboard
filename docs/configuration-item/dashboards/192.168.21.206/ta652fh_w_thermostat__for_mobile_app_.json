@@ -547,7 +547,7 @@
                 {
                   "name": "roomTemp",
                   "type": "timeseries",
-                  "label": "Room temperatue",
+                  "label": "Room temperature",
                   "color": "#009b4d",
                   "settings": {
                     "excludeFromStacking": false,
@@ -582,7 +582,7 @@
                 {
                   "name": "floorTemp",
                   "type": "timeseries",
-                  "label": "Floor Temp",
+                  "label": "Floor  temperature",
                   "color": "#2196f3",
                   "settings": {
                     "excludeFromStacking": false,
@@ -4886,7 +4886,7 @@
               "23f882ee-4efd-ec19-7ca6-d777509c5216": {
                 "sizeX": 7,
                 "sizeY": 1,
-                "mobileOrder": 22,
+                "mobileOrder": 42,
                 "mobileHeight": 1,
                 "row": 4,
                 "col": 8

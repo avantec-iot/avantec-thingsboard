@@ -428,14 +428,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405190,
-                "endTimeMs": 1681788805190
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": false,
@@ -524,14 +524,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405191,
-                "endTimeMs": 1681788805191
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": false,
@@ -1238,14 +1238,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405191,
-                "endTimeMs": 1681788805191
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": false,
@@ -3429,14 +3429,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405191,
-                "endTimeMs": 1681788805191
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": false,
@@ -3657,14 +3657,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405191,
-                "endTimeMs": 1681788805191
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": false,
@@ -4562,14 +4562,14 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1681702405191,
-                "endTimeMs": 1681788805191
+                "startTimeMs": 1681702313001,
+                "endTimeMs": 1681788713001
               },
               "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "AVG",
-              "limit": 25000
+              "limit": 2500
             }
           },
           "showTitle": true,
@@ -4650,9 +4650,7 @@
             "showMax": false,
             "showAvg": false,
             "showTotal": false
-          },
-          "enableDataExport": false,
-          "pageSize": 1024
+          }
         },
         "row": 0,
         "col": 0,

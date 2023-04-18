@@ -82,6 +82,15 @@
     },
     ```
 
+
+# ta652fh_w_thermostat_list.json
+
+* 192.168.21.206， demo.thingsboard.io 与 thingsboard.cloud 三者基本相同。仅timewindow部分都有差异。
+
+# ta652fh_w_thermostat__for_mobile_app_.json
+
+* 192.168.21.206， demo.thingsboard.io 与 thingsboard.cloud 三者基本相同。仅timewindow部分都有差异。
+
 # firmware.json
 
 * 使用 192.168.21.206 版本。
