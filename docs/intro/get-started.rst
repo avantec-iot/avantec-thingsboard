@@ -4,8 +4,10 @@ Get Started
 
 .. tip:: 
    
-   - This section applies to situations where there is no running instance of ThingBoard Server, or no Avantec HVAC device has been added to ThingBoard Server.
+   - This section applies when no Avantec HVAC device is added to the ThingBoard server.
    - If you add some Avantec HVAC devices to ThingsBoard Server again, please refer to the instructions of each device.
+      - :doc:`Add TA652FC-W to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>`
+      - :doc:`Add TA652FH-W to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>`
 
 Reprinted this article from `Getting Started with ThingsBoard`_, slightly modified.
 
@@ -136,23 +138,27 @@ See :doc:`/avantec/avantec-widgets`.
 Step 3. Import device profile
 =============================
 
-* See :ref:`Step 2. Import Device Profile of TA652FC-W`.
+* See :ref:`Step 2. Import Device Profile of TA652FC-W`, or
+* See :ref:`Step 2. Import Device Profile of TA652FH-W`.
+
 
 Step 4. Import Dashboards
 =========================
 
-* See :ref:`Step 3. Import Dashboards of TA652FC-W`.
+* See :ref:`Step 3. Import Dashboards of TA652FC-W`, or
+* See :ref:`Step 3. Import Dashboards of TA652FH-W`.
 
 Step 5. Provision device
 ========================
 
-* See :ref:`Step 4. Provision TA652FC-W device`.
-
+* See :ref:`Step 4. Provision TA652FC-W device`, or
+* See :ref:`Step 4. Provision TA652FH-W device`.
 
 Step 6. Connect device
 =======================
 
-* See :ref:`Step 5. Connect TA652FC-W device`.
+* See :ref:`Step 5. Connect TA652FC-W device`, or
+* See :ref:`Step 5. Connect TA652FH-W device`.
 
 Step 7. Assign Device and Dashboards to Customer
 ================================================
@@ -185,16 +191,16 @@ Step 7.2 Assign dashboards to Customer
 
 Let's share our dashboard with the Customer. The Customer users will have read-only access to the Dashboard. 
 
-See :ref:`Step 6.1 Assign dashboards of TA652FC-W to Customer`.
-
+* See :ref:`Step 6.1 Assign dashboards of TA652FC-W to Customer`, or
+* See :ref:`Step 6.1 Assign dashboards of TA652FH-W to Customer`.
 
 Step 7.3 Assign device to Customer
 -----------------------------------
 
 Let's assign device to the Customer. The Customer users will have ability to read and write telemetry and send commands to devices. 
 
-See :ref:`Step 6.2 Assign TA652FC-W device to Customer`.
-
+* See :ref:`Step 6.2 Assign TA652FC-W device to Customer`, or
+* See :ref:`Step 6.2 Assign TA652FH-W device to Customer`
 
 .. _Step 7.4 Create customer user:
 
@@ -249,8 +255,8 @@ Step 7.5 Activate customer user
 Step 8. Open Dashboards
 =========================
 
-* See :ref:`Step 7. Open Dashboards of TA652FC-W`.
-
+* See :ref:`Step 7. Open Dashboards of TA652FC-W`, or
+* See :ref:`Step 7. Open Dashboards of TA652FH-W`.
 
 Next Steps
 =============

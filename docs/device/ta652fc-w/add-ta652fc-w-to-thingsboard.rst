@@ -318,7 +318,7 @@ Step 6.2 Assign TA652FC-W device to Customer
 
 * It's like this now.
 
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/assign-device-to-customer-1.png
+.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/assign-device-to-customer-2.png
 
 
 .. _Step 7. Open Dashboards of TA652FC-W:

@@ -4,14 +4,7 @@
 
 ## TA652FC-W
 
-1. List Dashboard 已更新，但图片未更新。
-1. Detail Dashboard 已更新，但图片未更新。
-
 ## TA652FH-W
-
-1. 更新 Dashboards。
-1. 加入 Dashboards 说明。
-1. 部分引用 TA652FC-W 的说明。
 
 ## 测试
 
@@ -26,7 +19,7 @@
 
 ## TA652FC-W TA652FH-W 的差异
 
-TELE.01 Time-series Data Upload¶
+TELE.01 Time-series Data Upload
 	// Message Type:  Telemetry upload (MQTT, PUBLISH)
 	// Topic:         v1/devices/me/telemetry
 	// Payload - TA652FC-W:
@@ -36,7 +29,7 @@ TELE.01 Time-series Data Upload¶
 	
 	 changeOverTemp (only for TA652FC-W), floorTemp (only for TA652FH-W).
 
-CTRL.02 Fan Mode & Fan Status (only for TA652FC-W)¶
+CTRL.02 Fan Mode & Fan Status (only for TA652FC-W)
 	fanMode (only for TA652FC-W), fanStatus (only for TA652FC-W) and remoteSetFanMode (only for TA652FC-W).
 	
 SET.01 Upload Device Attributes when the device is started

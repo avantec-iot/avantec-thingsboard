@@ -26,3 +26,6 @@
   },
    ```
 
+# ta652fh_w_thermostat.json
+
+* 使用 demo.thingsboard.io 版本。
