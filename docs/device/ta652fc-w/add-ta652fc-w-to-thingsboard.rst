@@ -44,6 +44,8 @@ Step 2. Import Device Profile of TA652FC-W
 Step 3. Import Dashboards of TA652FC-W
 =======================================
 
+.. _Step 3.1 Import Detail Dashboard of TA652FC-W:
+
 Step 3.1 Import Detail Dashboard
 --------------------------------
 
@@ -61,6 +63,8 @@ Step 3.1 Import Detail Dashboard
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-detail-dashboard-2.png
 
+
+.. _Step 3.2 Modify Device Profile - Mobile dashboards of TA652FC-W:
 
 Step 3.2 Modify Device Profile - Mobile dashboards
 ---------------------------------------------------
@@ -84,6 +88,9 @@ These values are shown in the following table:
    Mobile dashboard        TA652FC-W Thermostat (For Mobile App)
    ======================= ====================
 
+
+.. _Step 3.3 Import List Dashboard of TA652FC-W:
+
 Step 3.3 Import List Dashboard
 ---------------------------------
 
@@ -100,6 +107,8 @@ Step 3.3 Import List Dashboard
 
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-list-dashboard-2.png
 
+
+.. _Step 3.4 Modify List Dashboard - Action Target dashboard of TA652FC-W:
 
 Step 3.4 Modify List Dashboard - Action Target dashboard
 ----------------------------------------------------------

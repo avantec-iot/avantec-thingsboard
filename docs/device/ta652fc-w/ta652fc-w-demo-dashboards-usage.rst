@@ -39,7 +39,12 @@ There are two dashboards related to TA652FC-W, namely ``TA652FC-W Thermostat Lis
 TA652FC-W Thermostat List
 ==========================
 
-*Default State* is root state.
+**Import steps:**
+
+* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FC-W>`.
+* :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FC-W>`.
+
+``Default State`` is root state.
 
 Default State
 ----------------
@@ -70,7 +75,12 @@ Default State
 TA652FC-W Thermostat (For Mobile App)
 ======================================
 
-*Monitor State* is root state.
+**Import steps:**
+
+* :ref:`Import Device Profile of TA652FC-W <Step 2. Import Device Profile of TA652FC-W>`.
+* :ref:`Import Dashboards of TA652FC-W <Step 3. Import Dashboards of TA652FC-W>`.
+
+``Monitor State`` is root state.
 
 Monitor State
 -------------------------

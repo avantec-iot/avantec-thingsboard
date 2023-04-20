@@ -5,7 +5,7 @@ TA652FH-W Demo Dashboards Usage
 Overview
 =========
 
-There are two dashboards related to TA652FH-W, namely ``TA652FH-W Thermostat List`` and ``TA652FH-W Thermostat (For Mobile App)``. We open the former to start operating TA652FH-W.
+There are some dashboards related to TA652FH-W, namely ``TA652FH-W Thermostat List``, ``TA652FH-W Thermostat (For Mobile App)`` and ``Office center - TA652FH-W Thermostats``. We open the former to start operating TA652FH-W.
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-overview-1.png
 
@@ -18,7 +18,7 @@ There are two dashboards related to TA652FH-W, namely ``TA652FH-W Thermostat Lis
      - For Web UI
      - For Mobile App
      - Entry*
-   * - TA652FH-W Thermostat List
+   * - TA652FH-W Thermostat List*
      - list
      - Yes
      - No
@@ -28,18 +28,36 @@ There are two dashboards related to TA652FH-W, namely ``TA652FH-W Thermostat Lis
      - Yes
      - Yes
      - No
+   * - 
+     - 
+     - 
+     - 
+     - 
+   * - Office center - TA652FH-W Thermostats**
+     - list & details
+     - Yes
+     - Yes
+     - Yes
 
 .. hint::
 
     - If *Entry* is *Yes*, then directly enter the Dashboard and there will be data displayed.
     - If *Entry* is *No*, there will be no data display when entering this Dashboard directly, and you need to jump to this Dashboard from other Dashboards.
+    - 
+    - ``TA652FH-W Thermostat List`` depends on ``TA652FH-W Thermostat (For Mobile App)``.
+    - ``Office center - TA652FH-W Thermostats`` can be used independently.
 
 .. _TA652FH-W Thermostat List:
 
 TA652FH-W Thermostat List
 ==========================
 
-*Default State* is root state.
+**Import steps:**
+
+* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FH-W>`.
+
+``Default State`` is root state.
 
 Default State
 ----------------
@@ -57,7 +75,7 @@ Default State
 
 *  Thermostats widgets:
     * Fields: 
-        * Entity name, Entity type, Type, active.
+        * Device name, Label, Type, active.
         * Room temperature, Floor Temperature, Setpoint, Unit: Refer to `Monitor State`_.
     * Actions:
         * |detail_dashboard| : skip to `TA652FH-W Thermostat (For Mobile App)`_。
@@ -70,7 +88,12 @@ Default State
 TA652FH-W Thermostat (For Mobile App)
 ======================================
 
-*Monitor State* is root state.
+**Import steps:**
+
+* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FH-W>`.
+
+``Monitor State`` is root state.
 
 Monitor State
 -------------------------
@@ -237,3 +260,67 @@ Admin State
         Reboot              Reboot device
         Clear Wi-Fi Config  Clear device's Wi-Fi configuration
         =================== ===========================================================
+
+.. _Office center - TA652FH-W Thermostats:
+
+Office center - TA652FH-W Thermostats
+======================================
+
+**Import steps:**
+
+* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* Download & import this dashboard :download:`office_center___ta652fh_w_thermostats.json </configuration-item/dashboards/office_center___ta652fh_w_thermostats.json>`.
+
+``Office state`` is root state.
+
+Office State
+----------------
+
+.. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-1.png
+
+*  Dashboard bar:
+    * |office state root state| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
+
+.. |office state root state| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-2.png
+
+*  Thermostats List:
+    * Fields: 
+        * Thermostat name, Label, active.
+        * Room temperature, Floor Temperature, Setpoint, Unit, xPos, yPos.
+    * Actions:
+        * |Edit Location| : Skip to `Map State`_.
+        * |Add Thermostat| : Open a dialog, to add a new thermostat.
+        * |Thermostat chart| : Skip to `Chart State`_.
+        * |Edit Thermostat| : Open a dialog, to edit a thermostat.
+        * |Delete Thermostat| : Open a dialog, to edit a thermostat.
+
+.. |Edit Location| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-3.png
+.. |Add Thermostat| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-4.png
+.. |Thermostat chart| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-5.png
+.. |Edit Thermostat| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-6.png
+.. |Delete Thermostat| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-7.png
+
+* Map widget:
+    * |Anchor Thermostat| : Open a box, to show some text.
+    * |Thermostat link| : Skip to `Chart State`_.
+
+.. |Anchor Thermostat| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-8.png
+.. |Thermostat link| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-9.png
+
+
+Map State
+----------------
+
+.. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-map-state-1.png
+
+* Map widget:
+    * |Drag-drop mode| : Click to enter drag-drop mode, you can modify the position of the thermostat. Click again to save the modification and exit drag-drop mode.
+
+
+.. |Drag-drop mode| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-map-state-2.png
+
+
+Chart State
+----------------
+
+.. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-chart-state-1.png

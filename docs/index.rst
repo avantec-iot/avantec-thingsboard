@@ -63,7 +63,7 @@ Avantec Extension
 
 Here is an overview about Avantec Customization.
 
-* :doc:`Avantec Dashboards </avantec/avantec-dashboards>`
+* :doc:`Demo Dashboards </avantec/avantec-dashboards>`
 * :doc:`Avantec Widgets </avantec/avantec-widgets>`
 
 .. toctree::
@@ -71,7 +71,7 @@ Here is an overview about Avantec Customization.
    :maxdepth: 5
    :caption: Avantec Extension
 
-   Avantec Dashboards </avantec/avantec-dashboards>
+   Demo Dashboards </avantec/avantec-dashboards>
    Avantec Widgets </avantec/avantec-widgets>
 
 
@@ -107,7 +107,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
 * :doc:`Specification </device/ta652fh-w/ta652fh-w-specification>`
 * :doc:`Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>` | 
   :doc:`Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>` |
-  :doc:`Demo Dashboard</device/ta652fh-w/ta652fh-w-demo-dashboards-usage>`
+  :doc:`Demo Dashboards</device/ta652fh-w/ta652fh-w-demo-dashboards-usage>`
 * :doc:`MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>`
 
 .. toctree::
@@ -118,7 +118,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    Specification </device/ta652fh-w/ta652fh-w-specification>
    Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>
    Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>
-   Demo Dashboard</device/ta652fh-w/ta652fh-w-demo-dashboards-usage>
+   Demo Dashboards </device/ta652fh-w/ta652fh-w-demo-dashboards-usage>
    MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>
 
 
