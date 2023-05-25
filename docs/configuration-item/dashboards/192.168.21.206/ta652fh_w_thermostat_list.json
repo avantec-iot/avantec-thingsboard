@@ -4,7 +4,7 @@
   "mobileHide": true,
   "mobileOrder": null,
   "configuration": {
-    "description": "TA652FH-W Thermostat List",
+    "description": "TA652FH-W Thermostat List (v1.0.0, 2023-05-25)",
     "widgets": {
       "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
         "isSystemType": true,
@@ -46,7 +46,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "4px",
           "settings": {
-            "entitiesTitle": "TA652FH-W Thermostats (v.1.0)",
+            "entitiesTitle": "TA652FH-W Thermostats",
             "enableSearch": true,
             "enableSelectColumnDisplay": true,
             "enableStickyHeader": true,
