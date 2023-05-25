@@ -1,7 +1,8 @@
 # ta652fc_w_thermostat_list.json
 
-* 使用 thingsboard.cloud 版本。
-
+* 以 192.168.21.206 为准。
+* 192.168.21.206 与 thingsboard.cloud 基本相同，如下一段有差异，可能是前者有些问题
+   ?????
 * demo.thingsboard.io 与 thingsboard.cloud 基本相同。以下部分有差异。
 
    ```json
@@ -14,9 +15,6 @@
    "targetDashboardId": "3dfa5bf0-8b47-11ed-a522-53ac05faa748",
    ...
    ```
-
-* 192.168.21.206 与 thingsboard.cloud 基本相同，如下一段有差异，可能是前者有些问题
-
 
 # ta652fc_w_thermostat__for_mobile_app_.json
 
@@ -85,6 +83,7 @@
 
 # ta652fh_w_thermostat_list.json
 
+* 以 192.168.21.206 为准。
 * 192.168.21.206， demo.thingsboard.io 与 thingsboard.cloud 三者基本相同。仅timewindow部分都有差异。
 
 # ta652fh_w_thermostat__for_mobile_app_.json
