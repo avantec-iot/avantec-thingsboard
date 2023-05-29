@@ -4,7 +4,7 @@
   "mobileHide": true,
   "mobileOrder": null,
   "configuration": {
-    "description": "TA652FH-W Thermostat List",
+    "description": "TA652FH-W Thermostat List (v1.0.0, 2023-05-25)",
     "widgets": {
       "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
         "isSystemType": true,
@@ -31,8 +31,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680080514088,
-                "endTimeMs": 1680166914088
+                "startTimeMs": 1680082358034,
+                "endTimeMs": 1680168758034
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -171,7 +171,21 @@
           "actions": {
             "actionCellButton": [
               {
-                "name": "to_ta652fh-w_detail",
+                "name": "Edit thermostat",
+                "icon": "edit",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "customPretty",
+                "customHtml": "<form #editEntityForm=\"ngForm\" [formGroup]=\"editEntityFormGroup\"\n      (ngSubmit)=\"save()\"  class=\"edit-entity-form\">\n    <mat-toolbar fxLayout=\"row\" color=\"primary\">\n        <h2>Edit Thermostat - {{entityName}}</h2>\n        <span fxFlex></span>\n        <button mat-icon-button (click)=\"cancel()\" type=\"button\">\n            <mat-icon class=\"material-icons\">close</mat-icon>\n        </button>\n    </mat-toolbar>\n    <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n    </mat-progress-bar>\n    <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n    <div mat-dialog-content fxLayout=\"column\">\n        <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">\n<!--        <mat-form-field fxFlex class=\"mat-block\">\n                <mat-label>Device Name</mat-label>\n                <input matInput formControlName=\"entityName\" required readonly=\"\">\n            </mat-form-field>-->\n            <mat-form-field fxFlex class=\"mat-block\">\n                <mat-label>Device Label</mat-label>\n                <input matInput formControlName=\"entityLabel\" >\n            </mat-form-field>\n        </div>\n<!--    <div formGroupName=\"attributes\" fxLayout=\"column\">\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">\n                <mat-form-field fxFlex class=\"mat-block\">\n                    <mat-label>xPos</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"xPos\">\n                </mat-form-field>\n                <mat-form-field fxFlex class=\"mat-block\">\n                    <mat-label>yPos</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"yPos\">\n                </mat-form-field>\n            </div>\n        </div>\n        <tb-entity-autocomplete\n            *ngIf=isTenant\n            [entityType]='\"CUSTOMER\"'\n            formControlName=\"customerId\"\n        >\n        </tb-entity-autocomplete>-->\n    </div>\n    <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n        <button mat-button color=\"primary\"\n                type=\"button\"\n                [disabled]=\"(isLoading$ | async)\"\n                (click)=\"cancel()\" cdkFocusInitial>\n            Cancel\n        </button>\n        <button mat-button mat-raised-button color=\"primary\"\n                type=\"submit\"\n                [disabled]=\"(isLoading$ | async) || editEntityForm.invalid || !editEntityForm.dirty\">\n            Save\n        </button>\n    </div>\n</form>",
+                "customCss": "/*=======================================================================*/\n/*==========  There are two examples: for edit and add entity  ==========*/\n/*=======================================================================*/\n/*========================  Edit entity example  ========================*/\n/*=======================================================================*/\n/*\n.edit-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.edit-entity-form .boolean-value-input .checkbox-label {\n    margin-bottom: 8px;\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n/*========================================================================*/\n/*=========================  Add entity example  =========================*/\n/*========================================================================*/\n/*\n.add-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.add-entity-form .boolean-value-input .checkbox-label {\n    margin-bottom: 8px;\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n",
+                "customFunction": "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet entityService = $injector.get(widgetContext.servicesMap.get('entityService'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenEditEntityDialog();\n\nfunction openEditEntityDialog() {\n    customDialog.customDialog(htmlTemplate, EditEntityDialogController).subscribe();\n}\n\nfunction EditEntityDialogController(instance) {\n    let vm = instance;\n    \n    const NULL_UUID = '13814000-1dd2-11b2-8080-808080808080';\n\n    vm.entityName = entityName;\n    //vm.attributes = {};\n    vm.entity = {};\n    vm.isTenant = widgetContext.currentUser.authority == 'TENANT_ADMIN';\n\n    vm.editEntityFormGroup = vm.fb.group({\n        //entityName: ['', [vm.validators.required]],\n        entityLabel: [null]/*,\n        attributes: vm.fb.group({\n            xPos: [null],\n            yPos: [null]\n        }),\n        customerId: [null]*/\n    });\n\n    getEntityInfo();\n\n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n\n    vm.save = function() {\n        widgetContext.rxjs.forkJoin([\n            saveAttributes(entityId),\n            saveEntity()\n        ]).subscribe(\n            function () {\n                widgetContext.updateAliases();\n                vm.dialogRef.close(null);\n            }\n        );\n    };\n\n    function getEntityAttributes(attributes) {\n        /*for (var i = 0; i < attributes.length; i++) {\n            vm.attributes[attributes[i].key] = attributes[i].value;\n        }*/\n    }\n\n    function getEntityInfo() {\n        widgetContext.rxjs.forkJoin([\n            attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE'),\n            entityService.getEntity(entityId.entityType, entityId.id)\n        ]).subscribe(\n            function (data) {\n                getEntityAttributes(data[0]);\n                vm.entity = data[1];\n                vm.editEntityFormGroup.patchValue({\n                    //entityName: vm.entity.name,\n                    entityLabel: vm.entity.label/*,\n                    attributes: vm.attributes,\n                    customerId: vm.entity.customerId.id !== NULL_UUID ? vm.entity.customerId.id : null*/\n                }, {emitEvent: false});\n            }\n        );\n    }\n\n    function saveEntity() {\n        const formValues = vm.editEntityFormGroup.value;\n        \n        /*let customerId;\n        if (formValues.customerId === null) {\n            customerId = {\n                id: NULL_UUID,\n                entityType: \"CUSTOMER\"\n            };\n        } else {\n            customerId = {\n                id: formValues.customerId,\n                entityType: \"CUSTOMER\"\n            };\n        }*/\n        \n        if (vm.entity.label !== formValues.entityLabel /*||\n            vm.entity.customerId.id !== customerId.id*/){\n            vm.entity.label = formValues.entityLabel;\n            //vm.entity.customerId = customerId;\n            return deviceService.saveDevice(vm.entity);\n        }\n        return widgetContext.rxjs.of([]);\n    }\n\n    function saveAttributes(entityId) {\n        /*let attributes = vm.editEntityFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            if (attributes[key] !== vm.attributes[key]) {\n                attributesArray.push({key: key, value: attributes[key]});\n            }\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n        }*/\n        return widgetContext.rxjs.of([]);\n    }\n}\n",
+                "customResources": [],
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "50111976-7348-21bd-b53e-b1cb8257fc52"
+              },
+              {
+                "name": "Thermostat detail",
                 "icon": "settings",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
@@ -183,7 +197,7 @@
                 "targetDashboardId": "92954fb0-ced8-11ed-ae5a-d705b52c9493",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
-                "id": "79ce3b25-dd62-a929-2fa5-eb1d36cf8cb2"
+                "id": "22219139-2477-f35f-1fd2-b047cc0328ea"
               }
             ]
           }
@@ -201,8 +215,8 @@
           "main": {
             "widgets": {
               "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
-                "sizeX": 21,
-                "sizeY": 8,
+                "sizeX": 23,
+                "sizeY": 11,
                 "mobileHide": true,
                 "row": 0,
                 "col": 0
@@ -212,7 +226,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -225,8 +240,10 @@
         "filter": {
           "type": "deviceType",
           "resolveMultiple": true,
-          "deviceType": "TA652FH-W Thermostat",
-          "deviceNameFilter": ""
+          "deviceNameFilter": "",
+          "deviceTypes": [
+            "TA652FH-W Thermostat"
+          ]
         }
       },
       "51860026-d4c7-309d-d658-ee05eb713072": {
@@ -235,8 +252,10 @@
         "filter": {
           "type": "deviceType",
           "resolveMultiple": true,
-          "deviceType": "TA652FC-W Thermostat",
-          "deviceNameFilter": ""
+          "deviceNameFilter": "",
+          "deviceTypes": [
+            "TA652FC-W Thermostat"
+          ]
         }
       }
     },

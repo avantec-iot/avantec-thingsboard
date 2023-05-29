@@ -4,7 +4,7 @@
   "mobileHide": true,
   "mobileOrder": null,
   "configuration": {
-    "description": "",
+    "description": "v.1.0.0, 2023-05-23 14:34",
     "widgets": {
       "029961f0-898b-7b58-2905-3869418c7090": {
         "isSystemType": true,
@@ -951,20 +951,38 @@
                   "_hash": 0.07602886479310622
                 },
                 {
+                  "name": "prgNextCtrlMode",
+                  "type": "attribute",
+                  "label": "prgNextCtrlMode",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.35217998814407525,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "if (typeof value === 'undefined') {\n    return \"Control On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"Control On\";\n} else if (value === null) {\n    return \"Control On\";\n} else {\n    return \"Control \" + value;\n}"
+                },
+                {
                   "name": "currentTempUnit",
                   "type": "attribute",
                   "label": "currentTempUnit",
                   "color": "#ffc107",
                   "settings": {},
                   "_hash": 0.04199464631222183,
-                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
                   "postFuncBody": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
             }
           ],
           "timewindow": {
@@ -981,8 +999,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513877,
-                "endTimeMs": 1680163913877
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -996,7 +1014,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Program\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='description'>\n                        Next setpoint\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='value'>\n                        ${prgNextEnable}\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${prgNextDaysTime}  ${prgNextSetpoint:1}${currentTempUnit}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"25%\">\n                    <div class='description'>\n                        Program\n                    </div>\n                </td>\n                <td width=\"75%\">\n                    <div class='description'>\n                        Next setpoint\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"25%\">\n                    <div class='value'>\n                        ${prgNextEnable}\n                    </div>\n                </td>\n                <td width=\"75%\">\n                    <div class='value'>\n                        ${prgNextDaysTime} &nbsp;&nbsp;&nbsp; ${prgNextCtrlMode} &nbsp;&nbsp;&nbsp; ${prgNextSetpoint:1}${currentTempUnit}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.0em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
@@ -1332,8 +1350,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513877,
-                "endTimeMs": 1680163913877
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2221,8 +2239,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513877,
-                "endTimeMs": 1680163913877
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2661,8 +2679,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513877,
-                "endTimeMs": 1680163913877
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2705,7 +2723,16 @@
           "displayTimewindow": true,
           "widgetCss": "",
           "pageSize": 1024,
-          "noDataDisplayMessage": ""
+          "noDataDisplayMessage": "",
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
         },
         "id": "b8e2b1c2-2ad5-9148-aa06-08d56e967af3"
       },
@@ -4184,7 +4211,6 @@
                   "color": "#4caf50",
                   "settings": {},
                   "_hash": 0.9299557253984947,
-                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
@@ -4208,8 +4234,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513878,
-                "endTimeMs": 1680163913878
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4291,8 +4317,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513878,
-                "endTimeMs": 1680163913878
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4331,185 +4357,6 @@
         "col": 0,
         "id": "c13f238f-b6a3-bf07-0a5a-c73aae6403d2"
       },
-      "00175d77-b83d-0db5-057b-b4574f2406d9": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
-        "type": "timeseries",
-        "title": "New widget",
-        "sizeX": 14,
-        "sizeY": 4,
-        "config": {
-          "datasources": [
-            {
-              "type": "entity",
-              "name": null,
-              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
-              "filterId": null,
-              "dataKeys": [
-                {
-                  "name": "roomTemp",
-                  "type": "timeseries",
-                  "label": "Room temperatue",
-                  "color": "#009b4d",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.6820514628132672,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null,
-                  "aggregationType": null
-                },
-                {
-                  "name": "changeOverTemp",
-                  "type": "timeseries",
-                  "label": "Change over sensor temperatue",
-                  "color": "#2196f3",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.08265907167834907,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null,
-                  "aggregationType": null
-                }
-              ],
-              "latestDataKeys": null
-            }
-          ],
-          "timewindow": {
-            "hideInterval": false,
-            "hideAggregation": false,
-            "hideAggInterval": false,
-            "hideTimezone": false,
-            "selectedTab": 0,
-            "realtime": {
-              "realtimeType": 0,
-              "timewindowMs": 604800000,
-              "quickInterval": "CURRENT_DAY",
-              "interval": 7200000
-            },
-            "aggregation": {
-              "type": "AVG",
-              "limit": 25000
-            }
-          },
-          "showTitle": true,
-          "backgroundColor": "#fff",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
-          "settings": {
-            "stack": false,
-            "fontSize": 10,
-            "fontColor": "#545454",
-            "showTooltip": true,
-            "tooltipIndividual": false,
-            "tooltipCumulative": false,
-            "hideZeros": false,
-            "grid": {
-              "verticalLines": true,
-              "horizontalLines": true,
-              "outlineWidth": 1,
-              "color": "#545454",
-              "backgroundColor": null,
-              "tickColor": "#DDDDDD"
-            },
-            "xaxis": {
-              "title": null,
-              "showLabels": true,
-              "color": "#545454"
-            },
-            "yaxis": {
-              "min": null,
-              "max": null,
-              "title": null,
-              "showLabels": true,
-              "color": "#545454",
-              "tickSize": null,
-              "tickDecimals": 0,
-              "ticksFormatter": ""
-            },
-            "shadowSize": 4,
-            "smoothLines": true,
-            "comparisonEnabled": false,
-            "xaxisSecond": {
-              "axisPosition": "top",
-              "title": null,
-              "showLabels": false
-            },
-            "customLegendEnabled": true,
-            "dataKeysListForLabels": []
-          },
-          "title": "Temperature history",
-          "dropShadow": false,
-          "enableFullscreen": true,
-          "titleStyle": {
-            "fontSize": "0.8em",
-            "fontWeight": "normal",
-            "opacity": 0.5
-          },
-          "mobileHeight": null,
-          "showTitleIcon": false,
-          "titleIcon": null,
-          "iconColor": "rgba(0, 0, 0, 0.87)",
-          "iconSize": "24px",
-          "titleTooltip": "",
-          "widgetStyle": {},
-          "useDashboardTimewindow": false,
-          "displayTimewindow": true,
-          "showLegend": true,
-          "actions": {},
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "showMin": false,
-            "showMax": false,
-            "showAvg": false,
-            "showTotal": false
-          },
-          "enableDataExport": true,
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": ""
-        },
-        "id": "00175d77-b83d-0db5-057b-b4574f2406d9"
-      },
       "8c526bea-ee6a-8ea1-53e3-bee7689820aa": {
         "isSystemType": true,
         "bundleAlias": "cards",
@@ -4535,7 +4382,6 @@
                   "color": "#4caf50",
                   "settings": {},
                   "_hash": 0.9299557253984947,
-                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
@@ -4567,8 +4413,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513878,
-                "endTimeMs": 1680163913878
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4728,7 +4574,7 @@
         "col": 0,
         "id": "51d3b8c7-31fd-8691-f957-69925dfe63fb"
       },
-      "a107753c-f413-d73c-6003-74455299c29e": {
+      "19cb4bff-0057-9538-5b57-567cbd15b940": {
         "isSystemType": true,
         "bundleAlias": "digital_gauges",
         "typeAlias": "gauge_justgage",
@@ -4752,8 +4598,7 @@
                   "label": "Room temperature",
                   "color": "#009b4d",
                   "settings": {},
-                  "_hash": 0.12217724909158312,
-                  "aggregationType": "NONE",
+                  "_hash": 0.9937628442804367,
                   "units": null,
                   "decimals": 1,
                   "funcBody": null,
@@ -4777,8 +4622,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1680077513878,
-                "endTimeMs": 1680163913878
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -4792,28 +4637,32 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
-            "minValue": 0,
             "maxValue": 125,
-            "gaugeType": "arc",
-            "gaugeWidthScale": 0.65,
-            "neonGlowBrightness": 0,
-            "dashThickness": 0,
-            "roundedLineCap": false,
-            "gaugeColor": "#eeeeee",
-            "useFixedLevelColor": false,
-            "levelColors": [],
-            "showTitle": false,
-            "showUnitTitle": false,
-            "showTimestamp": false,
+            "minValue": 0,
+            "donutStartAngle": 90,
             "showValue": true,
-            "valueFont": {
+            "showMinMax": true,
+            "levelColors": [],
+            "titleFont": {
               "family": "Roboto",
-              "size": 24,
+              "size": 18,
               "style": "normal",
               "weight": "500",
-              "color": "#666666"
+              "color": "#999999"
             },
-            "showMinMax": true,
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "600",
+              "size": 24,
+              "color": "#333333"
+            },
             "minMaxFont": {
               "family": "Roboto",
               "size": 8,
@@ -4821,10 +4670,23 @@
               "weight": "500",
               "color": "#666666"
             },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "gaugeColor": "#eeeeee",
+            "showTitle": false,
+            "gaugeType": "arc",
+            "roundedLineCap": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "useFixedLevelColor": false,
             "showTicks": false,
             "animation": true,
             "animationDuration": 500,
-            "animationRule": "linear"
+            "animationRule": "linear",
+            "tickWidth": 4,
+            "colorTicks": "#666",
+            "gaugeWidthScale": 0.65
           },
           "title": "Room temperature",
           "dropShadow": false,
@@ -4834,19 +4696,473 @@
             "fontWeight": "normal",
             "opacity": 0.5
           },
-          "useDashboardTimewindow": true,
-          "enableDataExport": false,
+          "showTitleIcon": false,
+          "titleTooltip": "",
           "widgetStyle": {},
           "widgetCss": "",
-          "pageSize": 1024,
           "noDataDisplayMessage": "",
           "showLegend": false,
-          "showTitleIcon": false,
-          "titleTooltip": ""
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
         },
         "row": 0,
         "col": 0,
-        "id": "a107753c-f413-d73c-6003-74455299c29e"
+        "id": "19cb4bff-0057-9538-5b57-567cbd15b940"
+      },
+      "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "basic_timeseries",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "Room temperatue",
+                  "color": "#009b4d",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 3,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.7558212875420249,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "changeOverTemp",
+                  "type": "timeseries",
+                  "label": "Change over sensor temperature",
+                  "color": "#2196f3",
+                  "settings": {
+                    "excludeFromStacking": false,
+                    "hideDataByDefault": false,
+                    "disableDataHiding": false,
+                    "removeFromLegend": false,
+                    "showLines": true,
+                    "fillLines": false,
+                    "showPoints": false,
+                    "showPointShape": "circle",
+                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                    "showPointsLineWidth": 5,
+                    "showPointsRadius": 3,
+                    "showSeparateAxis": false,
+                    "axisPosition": "left",
+                    "thresholds": [
+                      {
+                        "thresholdValueSource": "predefinedValue"
+                      }
+                    ],
+                    "comparisonSettings": {
+                      "showValuesForComparison": true
+                    }
+                  },
+                  "_hash": 0.8323556652467088,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 604800000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 7200000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "shadowSize": 4,
+            "fontColor": "#545454",
+            "fontSize": 10,
+            "xaxis": {
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "showLabels": true,
+              "color": "#545454",
+              "tickSize": 0,
+              "tickDecimals": 0,
+              "min": 0
+            },
+            "grid": {
+              "color": "#545454",
+              "tickColor": "#DDDDDD",
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1
+            },
+            "stack": false,
+            "tooltipIndividual": false,
+            "smoothLines": true,
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "showTooltip": true,
+            "comparisonEnabled": false,
+            "timeForComparison": "previousInterval",
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "showLabels": false
+            },
+            "customLegendEnabled": true
+          },
+          "title": "Temperature history",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "0.8em",
+            "fontWeight": "normal",
+            "opacity": 0.5
+          },
+          "mobileHeight": 4,
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          },
+          "mobileOrder": 14
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5"
+      },
+      "890ce5ea-660c-81af-a239-2588d920f669": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "styled_button_of_string_value_with_pattern_key",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 10,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "requestTimeout": 5000,
+            "retrieveMethod": "attribute",
+            "updateMethod": "rpc",
+            "buttonState": {
+              "on": {
+                "label": "On",
+                "isRaised": true,
+                "isPrimary": true,
+                "value": "On"
+              },
+              "off": {
+                "value": "Off",
+                "label": "Off",
+                "isRaised": true,
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "patternCommonParam": "0",
+            "convertUpdatedValueFunction": "return value;",
+            "showResultMessage": false,
+            "patternParamOfRetrieveAttributeKey": "prgCtrlMode",
+            "patternParamOfUpdateRPCMethodName": "remoteSetPrgCtrlMode",
+            "convertRetrievedAttributeKeyOrMethodNameFunction": "//console.log(\"retrieve\", patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\n//console.log(\"stateParams in Program-Setpoints\", stateParams);\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfetrievedAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfetrievedAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n\n",
+            "convertUpdatedAttributeKeyOrMethodNameFunction": "//console.log(\"update\", patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfUpdateAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfUpdateAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n",
+            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}"
+          },
+          "title": "New Styled button of string value with pattern key",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b"
+          ],
+          "margin": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "890ce5ea-660c-81af-a239-2588d920f669"
+      },
+      "f858fbb8-8a0f-4412-2869-4cb61e803aac": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "styled_button_of_string_value_with_pattern_key",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 10,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "requestTimeout": 5000,
+            "retrieveMethod": "attribute",
+            "updateMethod": "rpc",
+            "buttonState": {
+              "on": {
+                "label": "On",
+                "isRaised": true,
+                "isPrimary": true,
+                "value": "On"
+              },
+              "off": {
+                "value": "Off",
+                "label": "Off",
+                "isRaised": true,
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "patternCommonParam": "2",
+            "convertUpdatedValueFunction": "return value;",
+            "showResultMessage": false,
+            "patternParamOfRetrieveAttributeKey": "prgCtrlMode",
+            "patternParamOfUpdateRPCMethodName": "remoteSetPrgCtrlMode",
+            "convertRetrievedAttributeKeyOrMethodNameFunction": "//console.log(\"retrieve\", patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\n//console.log(\"stateParams in Program-Setpoints\", stateParams);\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfetrievedAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfetrievedAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n\n",
+            "convertUpdatedAttributeKeyOrMethodNameFunction": "//console.log(\"update\", patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfUpdateAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfUpdateAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n",
+            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}"
+          },
+          "title": "New Styled button of string value with pattern key",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b"
+          ],
+          "margin": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f858fbb8-8a0f-4412-2869-4cb61e803aac"
+      },
+      "33e82fdb-e3b8-84c6-ffcb-496fb6531d01": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "styled_button_of_string_value_with_pattern_key",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 10,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "requestTimeout": 5000,
+            "retrieveMethod": "attribute",
+            "updateMethod": "rpc",
+            "buttonState": {
+              "on": {
+                "label": "On",
+                "isRaised": true,
+                "isPrimary": true,
+                "value": "On"
+              },
+              "off": {
+                "value": "Off",
+                "label": "Off",
+                "isRaised": true,
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "patternCommonParam": "1",
+            "convertUpdatedValueFunction": "return value;",
+            "showResultMessage": false,
+            "patternParamOfRetrieveAttributeKey": "prgCtrlMode",
+            "patternParamOfUpdateRPCMethodName": "remoteSetPrgCtrlMode",
+            "convertRetrievedAttributeKeyOrMethodNameFunction": "//console.log(\"retrieve\", patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\n//console.log(\"stateParams in Program-Setpoints\", stateParams);\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfetrievedAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfetrievedAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n\n",
+            "convertUpdatedAttributeKeyOrMethodNameFunction": "//console.log(\"update\", patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfUpdateAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfUpdateAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n",
+            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}"
+          },
+          "title": "New Styled button of string value with pattern key",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b"
+          ],
+          "margin": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "33e82fdb-e3b8-84c6-ffcb-496fb6531d01"
+      },
+      "5adeee19-102e-5baf-a7fb-04834f98b5a6": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "styled_button_of_string_value_with_pattern_key",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 10,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "requestTimeout": 5000,
+            "retrieveMethod": "attribute",
+            "updateMethod": "rpc",
+            "buttonState": {
+              "on": {
+                "label": "On",
+                "isRaised": true,
+                "isPrimary": true,
+                "value": "On"
+              },
+              "off": {
+                "value": "Off",
+                "label": "Off",
+                "isRaised": true,
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "patternCommonParam": "3",
+            "convertUpdatedValueFunction": "return value;",
+            "showResultMessage": false,
+            "patternParamOfRetrieveAttributeKey": "prgCtrlMode",
+            "patternParamOfUpdateRPCMethodName": "remoteSetPrgCtrlMode",
+            "convertRetrievedAttributeKeyOrMethodNameFunction": "//console.log(\"retrieve\", patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\n//console.log(\"stateParams in Program-Setpoints\", stateParams);\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfetrievedAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfetrievedAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n\n",
+            "convertUpdatedAttributeKeyOrMethodNameFunction": "//console.log(\"update\", patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfUpdateAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfUpdateAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n",
+            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}"
+          },
+          "title": "New Styled button of string value with pattern key",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "39e9ec11-bd6b-c6c0-4cdf-cc54e491c25b"
+          ],
+          "margin": "0px"
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5adeee19-102e-5baf-a7fb-04834f98b5a6"
       }
     },
     "states": {
@@ -4857,41 +5173,41 @@
           "main": {
             "widgets": {
               "b2866443-f291-164b-da53-06beae014e6a": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 1,
                 "mobileHeight": null,
                 "row": 0,
-                "col": 3,
+                "col": 4,
                 "mobileHide": true
               },
               "e1111009-c283-0187-db8e-a10b09df2e55": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 2,
                 "row": 0,
-                "col": 6,
+                "col": 8,
                 "mobileHide": true
               },
               "89dfc590-f190-2b91-f140-9250291114f3": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 3,
-                "row": 0,
-                "col": 9,
-                "mobileHide": true
-              },
-              "d7beb6d3-4c48-770b-13cd-5e4281f46c58": {
-                "sizeX": 3,
-                "sizeY": 1,
-                "mobileOrder": 4,
-                "mobileHeight": 1,
                 "row": 0,
                 "col": 12,
                 "mobileHide": true
               },
+              "d7beb6d3-4c48-770b-13cd-5e4281f46c58": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "mobileOrder": 4,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 16,
+                "mobileHide": true
+              },
               "8375b9ad-6d6c-0f94-2e5f-ac61bb9a639e": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 10,
                 "mobileHeight": 1,
@@ -4899,7 +5215,7 @@
                 "col": 0
               },
               "477fc08c-2728-7d22-2432-da66177753a1": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 20,
                 "mobileHeight": 1,
@@ -4908,7 +5224,7 @@
                 "mobileHide": false
               },
               "6851e62a-2311-b6b1-5bee-ead1f5f09994": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 21,
                 "mobileHeight": 1,
@@ -4916,7 +5232,7 @@
                 "col": 0
               },
               "138a2f9e-6560-fc33-f3e1-08276dd4cf98": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 22,
                 "mobileHeight": 1,
@@ -4924,40 +5240,40 @@
                 "col": 0
               },
               "faf11979-79f5-6c18-c287-96374e4eeae8": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 15,
                 "mobileHeight": 1,
                 "row": 2,
-                "col": 8
+                "col": 11
               },
               "003628d2-e0c3-798e-caa0-b2f38927486d": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 30,
                 "mobileHeight": 1,
                 "row": 5,
-                "col": 8,
+                "col": 11,
                 "mobileHide": false
               },
               "f287eba1-d369-2a19-9ff8-c68df8dc0103": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 35,
                 "mobileHeight": 1,
                 "row": 7,
-                "col": 8
+                "col": 11
               },
               "db289a10-33a0-6a34-4d5c-1ebb995fd97d": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 36,
                 "mobileHeight": 1,
                 "row": 9,
-                "col": 8
+                "col": 11
               },
               "b66703eb-c8d1-c19a-d7d2-cee3d103edad": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 1,
                 "mobileOrder": 11,
                 "mobileHeight": 1,
@@ -4965,15 +5281,15 @@
                 "col": 0
               },
               "788c8903-2942-d7a7-6f21-c84767615873": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 1,
                 "mobileOrder": 16,
                 "mobileHeight": 1,
                 "row": 4,
-                "col": 8
+                "col": 11
               },
               "37e87f4c-f442-0e9d-8f51-ac374c816c44": {
-                "sizeX": 7,
+                "sizeX": 8,
                 "sizeY": 1,
                 "mobileOrder": 23,
                 "mobileHeight": 1,
@@ -4986,18 +5302,18 @@
                 "mobileOrder": 31,
                 "mobileHeight": 1,
                 "row": 1,
-                "col": 8
+                "col": 12
               },
               "a6f323a8-65ad-d104-fb04-54f281d6d83c": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 37,
                 "mobileHeight": 1,
                 "row": 1,
-                "col": 12
+                "col": 16
               },
               "fa4bda45-616e-4973-b4be-223f0d903615": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
                 "col": 0,
@@ -5008,7 +5324,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5020,41 +5337,41 @@
           "main": {
             "widgets": {
               "c98e8534-253d-879d-3c75-d228d8de6e09": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 1,
                 "mobileHeight": 1,
                 "row": 0,
-                "col": 3,
+                "col": 4,
                 "mobileHide": true
               },
               "27868cd3-c0dc-23a1-ae61-70c6a97ee3e2": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 2,
                 "row": 0,
-                "col": 6,
+                "col": 8,
                 "mobileHide": true
               },
               "3c0fe7a5-3ad5-4e6e-830a-2157c308f50b": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 3,
-                "row": 0,
-                "col": 9,
-                "mobileHide": true
-              },
-              "12497874-fc82-95e0-7cb2-8eb8a8e1819b": {
-                "sizeX": 3,
-                "sizeY": 1,
-                "mobileOrder": 4,
-                "mobileHeight": 1,
                 "row": 0,
                 "col": 12,
                 "mobileHide": true
               },
+              "12497874-fc82-95e0-7cb2-8eb8a8e1819b": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "mobileOrder": 4,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 16,
+                "mobileHide": true
+              },
               "7de0ad13-1435-709a-c573-156350c94af4": {
-                "sizeX": 15,
+                "sizeX": 20,
                 "sizeY": 2,
                 "mobileOrder": 5,
                 "mobileHeight": 1,
@@ -5062,7 +5379,7 @@
                 "col": 0
               },
               "a710cabd-1c26-f945-756f-9fd37f9baefe": {
-                "sizeX": 15,
+                "sizeX": 20,
                 "sizeY": 1,
                 "mobileOrder": 22,
                 "mobileHeight": 1,
@@ -5070,7 +5387,7 @@
                 "col": 0
               },
               "1afb9a26-37a1-f01a-820c-0267bd0d992a": {
-                "sizeX": 15,
+                "sizeX": 20,
                 "sizeY": 7,
                 "mobileOrder": 10,
                 "mobileHeight": 4,
@@ -5078,7 +5395,7 @@
                 "col": 0
               },
               "f77c93b2-fd7b-34be-c8c2-bbba5ca3ab5f": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
                 "col": 0,
@@ -5089,7 +5406,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5101,43 +5419,43 @@
           "main": {
             "widgets": {
               "029961f0-898b-7b58-2905-3869418c7090": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
-                "col": 6,
+                "col": 8,
                 "mobileOrder": 3,
                 "mobileHeight": 1,
                 "mobileHide": true
               },
               "7929fcc5-18c9-0251-be51-7045de53bfab": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 2,
                 "mobileHeight": 1,
                 "row": 0,
-                "col": 3,
+                "col": 4,
                 "mobileHide": true
               },
               "4945467d-14af-dccf-67e5-3c6452665cce": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 4,
-                "mobileHeight": 1,
-                "row": 0,
-                "col": 9,
-                "mobileHide": true
-              },
-              "4040da8c-6d80-7577-eb54-ef94953ceda1": {
-                "sizeX": 3,
-                "sizeY": 1,
-                "mobileOrder": 5,
                 "mobileHeight": 1,
                 "row": 0,
                 "col": 12,
                 "mobileHide": true
               },
+              "4040da8c-6d80-7577-eb54-ef94953ceda1": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "mobileOrder": 5,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 16,
+                "mobileHide": true
+              },
               "90e758aa-d595-2a53-67e9-013f45d923e4": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 11,
                 "mobileHeight": 1,
@@ -5145,7 +5463,7 @@
                 "col": 0
               },
               "18820432-b679-9223-1add-e8bf2ab2c54a": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 10,
                 "mobileHeight": 1,
@@ -5153,7 +5471,7 @@
                 "col": 0
               },
               "d716db4e-ad69-61e2-f033-43da0085f684": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 12,
                 "mobileHeight": 1,
@@ -5161,47 +5479,47 @@
                 "col": 0
               },
               "3d24e230-12e7-62e3-74d4-a0cb01ca56ad": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 20,
                 "mobileHeight": 1,
                 "row": 2,
-                "col": 8
+                "col": 11
               },
               "da1f0a38-39d2-e72e-bf8a-c7ebdd4a8989": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 30,
                 "mobileHeight": 1,
                 "row": 7,
-                "col": 8
+                "col": 11
               },
               "cc673ff7-d16f-88a5-cde3-059644b75228": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 2,
                 "mobileOrder": 21,
                 "row": 4,
-                "col": 8,
+                "col": 11,
                 "mobileHeight": 1
               },
               "cf30160b-9743-f452-cd5c-ac10cd9cca68": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 1,
                 "mobileOrder": 41,
                 "mobileHeight": 1,
                 "row": 1,
-                "col": 8
+                "col": 11
               },
               "dd1b90c5-95fc-54b6-da55-63bc3456eff4": {
-                "sizeX": 7,
+                "sizeX": 20,
                 "sizeY": 1,
                 "mobileOrder": 22,
                 "mobileHeight": 1,
                 "row": 6,
-                "col": 8
+                "col": 0
               },
               "52740d13-dec1-7e11-ba3f-f1bb5da792c4": {
-                "sizeX": 7,
+                "sizeX": 9,
                 "sizeY": 1,
                 "mobileOrder": 13,
                 "mobileHeight": 1,
@@ -5210,7 +5528,7 @@
                 "col": 0
               },
               "595cdd96-f537-64f5-0bfd-b033ac448997": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
                 "col": 0,
@@ -5222,7 +5540,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5234,59 +5553,59 @@
           "main": {
             "widgets": {
               "cd8bd38f-48ae-4fe9-402c-c856ffa986c5": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 4,
+                "mobileHeight": null,
+                "row": 0,
+                "col": 16,
+                "mobileHide": true
+              },
+              "1351c449-906c-2a1f-e55f-97b5f1e103b2": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "mobileOrder": 2,
+                "mobileHeight": null,
+                "row": 0,
+                "col": 8,
+                "mobileHide": true
+              },
+              "6df0ddc7-2bec-6233-a4e2-5e1f8e54127a": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "mobileOrder": 3,
                 "mobileHeight": null,
                 "row": 0,
                 "col": 12,
                 "mobileHide": true
               },
-              "1351c449-906c-2a1f-e55f-97b5f1e103b2": {
-                "sizeX": 3,
-                "sizeY": 1,
-                "mobileOrder": 2,
-                "mobileHeight": null,
-                "row": 0,
-                "col": 6,
-                "mobileHide": true
-              },
-              "6df0ddc7-2bec-6233-a4e2-5e1f8e54127a": {
-                "sizeX": 3,
-                "sizeY": 1,
-                "mobileOrder": 3,
-                "mobileHeight": null,
-                "row": 0,
-                "col": 9,
-                "mobileHide": true
-              },
               "62eb13db-9dc7-79b4-f2c6-5fc14eb6d9e6": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 1,
                 "mobileHeight": null,
                 "row": 0,
-                "col": 3,
+                "col": 4,
                 "mobileHide": true
               },
               "506f52ab-1fb1-4ce6-4c0b-f529dfc15dfb": {
-                "sizeX": 8,
+                "sizeX": 10,
                 "sizeY": 2,
                 "mobileOrder": 21,
-                "row": 8,
-                "col": 7,
+                "row": 9,
+                "col": 10,
                 "mobileHeight": 1
               },
               "1020a795-81b0-9461-3a6f-5986410cd5bd": {
-                "sizeX": 8,
+                "sizeX": 10,
                 "sizeY": 2,
                 "mobileOrder": 20,
                 "mobileHeight": 1,
-                "row": 6,
-                "col": 7
+                "row": 7,
+                "col": 10
               },
               "8d7df23e-1764-d35d-5866-3223957b1f0b": {
-                "sizeX": 4,
+                "sizeX": 8,
                 "sizeY": 1,
                 "mobileOrder": 9,
                 "mobileHeight": 1,
@@ -5294,24 +5613,24 @@
                 "col": 8
               },
               "eb311c8b-bd81-2d06-6bee-9e52756b2038": {
-                "sizeX": 8,
-                "sizeY": 4,
+                "sizeX": 10,
+                "sizeY": 5,
                 "mobileOrder": 5,
                 "mobileHeight": 3,
                 "mobileHide": false,
                 "row": 2,
-                "col": 7
+                "col": 10
               },
               "7d2bfb46-cebf-5b7e-a201-1c62d29fc3e1": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 22,
                 "mobileHeight": 1,
                 "row": 1,
-                "col": 12
+                "col": 16
               },
               "514c7593-4bff-1142-2f3e-20e0bc6a2a0d": {
-                "sizeX": 6,
+                "sizeX": 8,
                 "sizeY": 2,
                 "mobileOrder": 10,
                 "mobileHeight": 1,
@@ -5319,31 +5638,31 @@
                 "col": 0
               },
               "24573360-f0dd-d97a-f824-b11d83741317": {
-                "sizeX": 6,
+                "sizeX": 8,
                 "sizeY": 2,
+                "mobileOrder": 12,
+                "mobileHeight": 1,
+                "row": 7,
+                "col": 0
+              },
+              "b8e2b1c2-2ad5-9148-aa06-08d56e967af3": {
+                "sizeX": 8,
+                "sizeY": 3,
                 "mobileOrder": 11,
                 "mobileHeight": 1,
                 "row": 4,
                 "col": 0
               },
-              "b8e2b1c2-2ad5-9148-aa06-08d56e967af3": {
-                "sizeX": 6,
-                "sizeY": 2,
-                "mobileOrder": 12,
-                "mobileHeight": 1,
-                "row": 6,
-                "col": 0
-              },
               "0f6f1ca2-eae3-a6ca-bf7a-27595e1c5a3a": {
-                "sizeX": 6,
+                "sizeX": 8,
                 "sizeY": 2,
                 "mobileOrder": 13,
                 "mobileHeight": 1,
-                "row": 8,
+                "row": 9,
                 "col": 0
               },
               "66a1b085-5b37-53f1-cefa-b67ca91b73eb": {
-                "sizeX": 7,
+                "sizeX": 8,
                 "sizeY": 1,
                 "mobileOrder": 14,
                 "mobileHeight": 1,
@@ -5351,7 +5670,7 @@
                 "col": 0
               },
               "b7400337-3e0e-c6b7-2a81-a14fbf8b3c35": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
                 "col": 0,
@@ -5362,7 +5681,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5377,36 +5697,36 @@
                 "sizeX": 3,
                 "sizeY": 2,
                 "row": 3,
-                "col": 4,
-                "mobileOrder": 12,
+                "col": 7,
+                "mobileOrder": 13,
                 "mobileHeight": 1
               },
               "e5a89808-1fa2-0ff6-a92a-258d21e325bc": {
                 "sizeX": 3,
                 "sizeY": 2,
-                "mobileOrder": 22,
+                "mobileOrder": 23,
                 "mobileHeight": 1,
                 "row": 6,
-                "col": 4
+                "col": 7
               },
               "f359289d-a75d-320d-8ef6-4831fc0220ed": {
                 "sizeX": 3,
                 "sizeY": 2,
-                "mobileOrder": 32,
+                "mobileOrder": 33,
                 "mobileHeight": 1,
                 "row": 3,
-                "col": 12
+                "col": 18
               },
               "2359c9de-1204-e3a2-91c0-d3bac508aae3": {
                 "sizeX": 3,
                 "sizeY": 2,
-                "mobileOrder": 42,
+                "mobileOrder": 43,
                 "mobileHeight": 1,
                 "row": 6,
-                "col": 12
+                "col": 18
               },
               "2679c73a-4fde-f280-76b3-2a3c913c09af": {
-                "sizeX": 4,
+                "sizeX": 5,
                 "sizeY": 2,
                 "row": 3,
                 "col": 0,
@@ -5414,7 +5734,7 @@
                 "mobileHeight": 1
               },
               "b1eb0cc5-2ec9-77ed-dfc7-d1bc09b4746b": {
-                "sizeX": 4,
+                "sizeX": 5,
                 "sizeY": 2,
                 "mobileOrder": 21,
                 "mobileHeight": 1,
@@ -5422,24 +5742,24 @@
                 "col": 0
               },
               "9e5ebdcf-97ce-5480-76d0-e36c7bd3415a": {
-                "sizeX": 4,
+                "sizeX": 5,
                 "sizeY": 2,
                 "mobileOrder": 31,
                 "mobileHeight": 1,
                 "row": 3,
-                "col": 8
+                "col": 11
               },
               "f543be45-a5db-2771-e1b1-43fd73fb96e3": {
-                "sizeX": 4,
+                "sizeX": 5,
                 "sizeY": 2,
                 "mobileOrder": 41,
                 "mobileHeight": 1,
                 "row": 6,
-                "col": 8,
+                "col": 11,
                 "mobileHide": false
               },
               "f921dfda-a401-0580-9950-1d2a72c068f5": {
-                "sizeX": 15,
+                "sizeX": 21,
                 "sizeY": 1,
                 "mobileOrder": 200,
                 "mobileHeight": 1,
@@ -5447,25 +5767,58 @@
                 "col": 0
               },
               "acd42e82-2d0b-160e-2799-836e17c7d5fb": {
-                "sizeX": 15,
+                "sizeX": 21,
                 "sizeY": 1,
                 "row": 0,
                 "col": 0,
                 "mobileHide": true
               },
               "51d3b8c7-31fd-8691-f957-69925dfe63fb": {
-                "sizeX": 15,
+                "sizeX": 21,
                 "sizeY": 1,
                 "mobileOrder": 2,
                 "row": 2,
                 "col": 0
+              },
+              "890ce5ea-660c-81af-a239-2588d920f669": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 3,
+                "col": 5,
+                "mobileOrder": 12,
+                "mobileHeight": 1
+              },
+              "f858fbb8-8a0f-4412-2869-4cb61e803aac": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 3,
+                "col": 16,
+                "mobileOrder": 32,
+                "mobileHeight": 1
+              },
+              "33e82fdb-e3b8-84c6-ffcb-496fb6531d01": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 6,
+                "col": 5,
+                "mobileOrder": 22,
+                "mobileHeight": 1
+              },
+              "5adeee19-102e-5baf-a7fb-04834f98b5a6": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 6,
+                "col": 16,
+                "mobileOrder": 42,
+                "mobileHeight": 1
               }
             },
             "gridSettings": {
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5477,39 +5830,39 @@
           "main": {
             "widgets": {
               "0a30e143-2bc7-7484-4ebe-f2be05e16a08": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
-                "col": 6,
+                "col": 8,
                 "mobileOrder": 3,
                 "mobileHeight": 1
               },
               "b0a2d273-8025-6abf-0e62-0aee72470b43": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 2,
                 "mobileHeight": 1,
                 "row": 0,
-                "col": 3
+                "col": 4
               },
               "8674c328-9cb4-77f0-3d36-df6a5093caae": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "row": 0,
-                "col": 9,
+                "col": 12,
                 "mobileOrder": 4,
                 "mobileHeight": 1
               },
               "e2ed8c76-5979-f0ab-91e9-e900068e3265": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 5,
                 "mobileHeight": 1,
                 "row": 0,
-                "col": 12
+                "col": 16
               },
               "e67ebe7c-62a3-45a6-e35f-83ee19eca421": {
-                "sizeX": 3,
+                "sizeX": 4,
                 "sizeY": 1,
                 "mobileOrder": 1,
                 "mobileHeight": 1,
@@ -5518,39 +5871,31 @@
                 "mobileHide": true
               },
               "1aada6ae-f094-af35-da9d-ac33552aad34": {
-                "sizeX": 9,
+                "sizeX": 12,
                 "sizeY": 2,
                 "mobileOrder": 11,
                 "mobileHeight": 1,
                 "row": 2,
-                "col": 6
+                "col": 8
               },
               "c13f238f-b6a3-bf07-0a5a-c73aae6403d2": {
-                "sizeX": 4,
+                "sizeX": 6,
                 "sizeY": 2,
                 "mobileOrder": 13,
                 "mobileHeight": 1,
                 "row": 4,
-                "col": 11
-              },
-              "00175d77-b83d-0db5-057b-b4574f2406d9": {
-                "sizeX": 15,
-                "sizeY": 5,
-                "mobileOrder": 14,
-                "mobileHeight": 4,
-                "row": 6,
-                "col": 0
+                "col": 14
               },
               "8c526bea-ee6a-8ea1-53e3-bee7689820aa": {
-                "sizeX": 5,
+                "sizeX": 6,
                 "sizeY": 2,
                 "mobileOrder": 12,
                 "mobileHeight": 1,
                 "row": 4,
-                "col": 6
+                "col": 8
               },
               "f53dd529-e972-e648-5c23-f7f3bd92f29b": {
-                "sizeX": 7,
+                "sizeX": 10,
                 "sizeY": 1,
                 "mobileOrder": 9,
                 "mobileHeight": 1,
@@ -5558,19 +5903,27 @@
                 "col": 0
               },
               "501d7bd4-fcca-fae1-5e56-0862a21f4cef": {
-                "sizeX": 7,
+                "sizeX": 10,
                 "sizeY": 1,
                 "mobileOrder": 20,
                 "mobileHeight": 1,
                 "row": 1,
-                "col": 8
+                "col": 10
               },
-              "a107753c-f413-d73c-6003-74455299c29e": {
-                "sizeX": 6,
+              "19cb4bff-0057-9538-5b57-567cbd15b940": {
+                "sizeX": 8,
                 "sizeY": 4,
                 "mobileOrder": 10,
                 "mobileHeight": 3,
                 "row": 2,
+                "col": 0
+              },
+              "8d1c3233-b7d1-8b65-33f8-f9f59c758ce5": {
+                "sizeX": 20,
+                "sizeY": 5,
+                "mobileOrder": 14,
+                "mobileHeight": 4,
+                "row": 6,
                 "col": 0
               }
             },
@@ -5578,7 +5931,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }

@@ -185,7 +185,7 @@
                 "id": "50111976-7348-21bd-b53e-b1cb8257fc52"
               },
               {
-                "name": "to_ta652fh-w_detail",
+                "name": "Thermostat detail",
                 "icon": "settings",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
