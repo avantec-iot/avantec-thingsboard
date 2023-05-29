@@ -285,6 +285,7 @@ Chart:
     [-> TBDev 
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgMode":"Every-day"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextEnable":true}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextCtrlMode":"On"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextSetpoint":24.5}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextDaysTime":"Wed, 06:00 PM"}
 
@@ -292,6 +293,7 @@ Chart:
     TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteSetPrgMode","params":"Sun_mon-fri_sat"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgMode":"Sun_mon-fri_sat"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextEnable":true}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextCtrlMode":"On"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextSetpoint":25.5}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgNextDaysTime":"Mon, 10:00 PM"}
 
@@ -317,7 +319,7 @@ Message 3:
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"prgNextSetpoint":24.5}
+    {"prgNextCtrlMode":"On"} //{"prgNextCtrlMode":"Off"}
 
 Message 4:
   .. code:: javascript
@@ -325,9 +327,17 @@ Message 4:
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"prgNextDaysTime":"Wed, 06:00 PM"}
+    {"prgNextSetpoint":24.5}
 
 Message 5:
+  .. code:: javascript
+
+    // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/attributes
+    // Payload: 
+    {"prgNextDaysTime":"Wed, 06:00 PM"}
+
+Message 6:
   .. code:: javascript
 
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
@@ -335,7 +345,7 @@ Message 5:
     // Payload: 
     {"method":"remoteSetPrgMode","params":"Sun_mon-fri_sat"}
 
-See `prgMode`_, `prgNextEnable`_, `prgNextSetpoint`_, `prgNextDaysTime`_ and `remoteSetPrgMode`_. 
+See `prgMode`_, `prgNextEnable`_, `prgNextCtrlMode`_, `prgNextSetpoint`_, `prgNextDaysTime`_ and `remoteSetPrgMode`_. 
 
 
 PRG.02 Program Setpoint & Time
@@ -352,18 +362,23 @@ Chart:
     == local operate ==
     [-> TBDev 
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgSpTime00":"10:00"}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgCtrlMode00":"On"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgSpValue00":27.5}
 
     == remote operate ==
     TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteSetPrgSpTime27","params":"23:00"}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgSpTime27":"23:00"}
+    TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteSetPrgCtrlMode01","params":"Off"}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgCtrlMode01":"Off"}
     TBDev  <-  TBSrv: receive server-side RPC request from the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/rpc/request/$request_id** \nPayload: {"method":"remoteSetPrgSpValue14","params":21.5}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"prgSpValue14":21.5}
 
     note over TBDev, TBSrv
     prgSpTime00  ~ prgSpTime27
+    prgCtrlMode00 ~ prgCtrlMode27
     prgSpValue00 ~ prgSpValue27
     remoteSetPrgSpTime00  ~ remoteSetPrgSpTime27
+    remoteSetPrgCtrlMode00 ~ remoteSetPrgCtrlMode27
     remoteSetPrgSpValue00 ~ remoteSetPrgSpValue27
     end note
 
@@ -381,15 +396,15 @@ Message 2:
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"prgSpValue00":27.5}
+    {"prgCtrlMode00":"On"} //{"prgCtrlMode27":"Off"}
 
 Message 3:
   .. code:: javascript
 
-    // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
-    // Topic:         v1/devices/me/rpc/request/$request_id
+    // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"method":"remoteSetPrgSpTime27","params":"23:00"}
+    {"prgSpValue00":27.5}
 
 Message 4:
   .. code:: javascript
@@ -397,9 +412,25 @@ Message 4:
     // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/rpc/request/$request_id
     // Payload: 
+    {"method":"remoteSetPrgSpTime27","params":"23:00"}
+
+Message 5:
+  .. code:: javascript
+
+    // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/rpc/request/$request_id
+    // Payload: 
+    {"method":"remoteSetPrgCtrlMode27","params":"Off"} //{"method":"remoteSetPrgCtrlMode00","params":"On"}
+
+Message 6:
+  .. code:: javascript
+
+    // Message Type:  receive server-side RPC request from the server (MQTT, PUBLISH)
+    // Topic:         v1/devices/me/rpc/request/$request_id
+    // Payload: 
     {"method":"remoteSetPrgSpValue14","params":21.5}
 
-See `prgSpTimeXX`_, `prgSpValueXX`_, `remoteSetPrgSpTimeXX`_ and `remoteSetPrgSpValueXX`_. 
+See `prgSpTimeXX`_, `prgCtrlModeXX`_, `prgSpValueXX`_, `remoteSetPrgSpTimeXX`_, `remoteSetPrgCtrlModeXX`_ and `remoteSetPrgSpValueXX`_. 
 
 
 SET.01 Upload Device Attributes when the device is started
@@ -423,7 +454,7 @@ Chart:
     end note
 
     == Upload  temperature unit related attributes ==
-    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"currentTempUnit":"°C",\n"envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,\n"spValueMin":5,"spValueMax":40,"spValueStep":0.5,\n"internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5,\n"uploadThresholdMin":0.2,"uploadThresholdMax":5,"uploadThresholdStep":0.1}
+    TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"supportCtrlModeInSchedule":"Yes",\n"currentTempUnit":"°C",\n"envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,\n"spValueMin":5,"spValueMax":40,"spValueStep":0.5,\n"internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5,\n"uploadThresholdMin":0.2,"uploadThresholdMax":5,"uploadThresholdStep":0.1}
     TBDev  ->  TBSrv: publish client-side attributes update to the server (**MQTT, PUBLISH**) \nTopic: **v1/devices/me/attributes** \nPayload: {"floorTempLimitedMin":20,"floorTempLimitedMax":40,"floorTempLimitedStep":0.5,\n"switchingDiffHeatingMin":1,"switchingDiffHeatingMax":4,"switchingDiffHeatingStep":0.5,\n"switchingDiffCoolingMin":1,"switchingDiffCoolingMax":4,"switchingDiffCoolingStep":0.5,\n"changeOverTempHeatingMin":27,"changeOverTempHeatingMax":40,"changeOverTempHeatingStep":0.5,\n"changeOverTempCoolingMin":10,"changeOverTempCoolingMax":25,"changeOverTempCoolingStep":0.5}
 
     note over TBDev, TBSrv
@@ -448,7 +479,8 @@ Message 2:
     // Message Type:  publish client-side attributes update to the server (MQTT, PUBLISH)
     // Topic:         v1/devices/me/attributes
     // Payload: 
-    {"currentTempUnit":"°C",
+    {"supportCtrlModeInSchedule":"Yes",
+    "currentTempUnit":"°C",
     "envirTempMin":0,"envirTempMax":50,"envirTempStep":0.1,
     "spValueMin":5,"spValueMax":40,"spValueStep":0.5,
     "internalOffsetMin":-5,"internalOffsetMax":5,"internalOffsetStep":0.5,
@@ -481,7 +513,7 @@ See `model`_, `mac`_,
 `uploadFreqMin`_, `uploadFreqMax`_, `uploadFreqStep`_, 
 `syncTimeFreqMin`_, `syncTimeFreqMax`_ and `syncTimeFreqStep`_.
 
-See `currentTempUnit`_,
+See `supportCtrlModeInSchedule`_, `currentTempUnit`_,
 `envirTempMin`_, `envirTempMax`_, `envirTempStep`_,
 `spValueMin`_, `spValueMax`_, `spValueStep`_,
 `internalOffsetMin`_, `internalOffsetMax`_ and `internalOffsetStep`_,
@@ -1413,6 +1445,9 @@ syncTimeFreqStep
 Client-side attribute (semi-static)
 ---------------------------------------
 
+supportCtrlModeInSchedule
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 currentTempUnit
 ^^^^^^^^^^^^^^^
 
@@ -1511,6 +1546,14 @@ changeOverTempCoolingStep
      - TA652 |br| FC-W
      - TA652 |br| FH-W
      - Memo
+
+   * - supportCtrlModeInSchedule
+     - string
+     - 
+     - "Yes" / "No"
+     - ●
+     - ●
+     - Control On/Off |br| in schedule
 
    * - currentTempUnit
      - string
@@ -1731,6 +1774,9 @@ overrideStatus
 prgNextEnable
 ^^^^^^^^^^^^^^^
 
+prgNextCtrlMode
+^^^^^^^^^^^^^^^^
+
 prgNextDaysTime
 ^^^^^^^^^^^^^^^
 
@@ -1773,6 +1819,14 @@ prgNextSetpoint
      - ●
      - ●
      - Next program |br| enabled
+
+   * - prgNextCtrlMode
+     - string
+     - 
+     - "On", |br| "Off"
+     - ●
+     - ●
+     - Next program |br| control On/Off
 
    * - prgNextDaysTime
      - float
@@ -2011,6 +2065,11 @@ prgSpTimeXX
 
 0 <= XX <= 27, prgSpTime00 ~ prgSpTime27
 
+prgCtrlModeXX 
+^^^^^^^^^^^^^^^^
+
+0 <= XX <= 27, prgCtrlMode00 ~ prgCtrlMode27
+
 prgSpValueXX
 ^^^^^^^^^^^^^
 
@@ -2085,6 +2144,17 @@ prgSpValueXX
      - ●
      - ●
      - see `remoteSetPrgSpTimeXX`_
+
+   * - prgCtrlModeXX
+     - string
+     - 
+     - 
+     - 
+     - 
+     - "On", |br| "Off"
+     - ●
+     - ●
+     - see `remoteSetPrgCtrlModeXX`_
 
    * - prgSpValueXX
      - float
@@ -2164,6 +2234,11 @@ remoteSetPrgSpTimeXX
 ^^^^^^^^^^^^^^^^^^^^
 
  0 <= XX <= 27, remoteSetPrgSpTime00 ~ remoteSetPrgSpTime27
+
+remoteSetPrgCtrlModeXX
+^^^^^^^^^^^^^^^^^^^^^^
+
+ 0 <= XX <= 27, remoteSetPrgCtrlMode00 ~ remoteSetPrgCtrlMode27
 
 remoteSetPrgSpValueXX
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2301,7 +2376,13 @@ remoteSetPrgSpValueXX
      - "hh:mm", |br| eg: "23:50"
      - ●
      - ●
-     - remoteSetPrgSpTime00 ~ |br| remoteSetPrgSpTime27, |br| see `prgSpTimeXX`_ 
+     - remoteSetPrgSpTime00 ~ |br| remoteSetPrgSpTime27, |br| see `prgSpTimeXX`_
+   * - remoteSetPrgCtrlModeXX
+     - string
+     - "On" |br| "Off"
+     - ●
+     - ●
+     - remoteSetPrgCtrlMode00 ~ |br| remoteSetPrgCtrlMode27, |br| see `prgCtrlModeXX`_
    * - remoteSetPrgSpValueXX
      - float
      - 
