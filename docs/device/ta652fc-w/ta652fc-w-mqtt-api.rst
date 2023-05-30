@@ -2,6 +2,8 @@
 TA652FC-W MQTT API
 *********************************
 
+**Protocol Version:** v.2.2
+
 .. tip::
 
   - This section applies to both ``TA652FC-W`` and ``TA652FH-W``.

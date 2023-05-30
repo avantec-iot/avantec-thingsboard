@@ -107,33 +107,10 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
-.. _Step 2. Import Avantec Widgets:
-
 Step 2. Import Avantec Widgets
 ==============================
 
-.. tip:: 
-   Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported it, you can skip this step.
-
-
-
-* Download :download:`avantec_widgets.json </configuration-item/widgets/avantec_widgets.json>`.
-
-* **Widgets Library** --> **+** --> **Import widgets bundle** --> **Popup dialog: Import widgets bundle** --> Drag and drop **avantec_widgets.json** --> **Import**.
-
-.. image:: /_static/intro/get-started/import-avantec-widgets-1.png
-
-* **Widgets Library** --> click **Avantec widgets**
-
-.. image:: /_static/intro/get-started/import-avantec-widgets-2.png
-
-* All Avantec widgets
-
-.. image:: /_static/intro/get-started/import-avantec-widgets-3.png
-
-See :doc:`/avantec/avantec-widgets`.
+* See :ref:`Import Avantec Widgets <Import Avantec Widgets>`.
 
 Step 3. Import device profile
 =============================
