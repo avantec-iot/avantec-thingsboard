@@ -54,7 +54,7 @@ TA652FH-W Thermostat List
 
 **Import steps:**
 
-* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
 * :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FH-W>`.
 
 ``Default State`` is root state.
@@ -90,7 +90,7 @@ TA652FH-W Thermostat (For Mobile App)
 
 **Import steps:**
 
-* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
 * :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FH-W>`.
 
 ``Monitor State`` is root state.
@@ -268,7 +268,7 @@ Office center - TA652FH-W Thermostats
 
 **Import steps:**
 
-* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FH-W>`.
+* :ref:`Import Device Profile of TA652FH-W Thermostat`.
 * Download & import this dashboard :download:`office_center___ta652fh_w_thermostats.json </configuration-item/dashboards/office_center___ta652fh_w_thermostats.json>`.
 
 ``Office state`` is root state.

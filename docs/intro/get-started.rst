@@ -115,8 +115,8 @@ Step 2. Import Avantec Widgets
 Step 3. Import device profile
 =============================
 
-* See :ref:`Step 2. Import Device Profile of TA652FC-W`, or
-* See :ref:`Step 2. Import Device Profile of TA652FH-W`.
+* See :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`, or
+* See :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
 
 
 Step 4. Import Dashboards

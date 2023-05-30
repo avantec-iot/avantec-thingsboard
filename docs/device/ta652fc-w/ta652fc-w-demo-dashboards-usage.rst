@@ -41,7 +41,7 @@ TA652FC-W Thermostat List
 
 **Import steps:**
 
-* :ref:`Import Device Profile of TA652FH-W <Step 2. Import Device Profile of TA652FC-W>`.
+* :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
 * :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FC-W>`.
 
 ``Default State`` is root state.
@@ -75,15 +75,13 @@ Default State
 TA652FC-W Thermostat (For Mobile App)
 ======================================
 
-**Import steps:**
-
-* :ref:`Import Device Profile of TA652FC-W <Step 2. Import Device Profile of TA652FC-W>`.
-* :ref:`Import Dashboards of TA652FC-W <Step 3. Import Dashboards of TA652FC-W>`.
-
-``Monitor State`` is root state.
+Dashboard States
+------------------
 
 Monitor State
--------------------------
+^^^^^^^^^^^^^^^
+
+``Monitor State`` is root state.
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-monitor-1.png
 
@@ -116,7 +114,7 @@ Monitor State
 .. |Temperature history edit timewindow| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-monitor-2.png
 
 Control State
--------------------------
+^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-control-1.png
 
@@ -142,7 +140,7 @@ Control State
         =============================== ============================================================
 
 Program State
-------------------------
+^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-program-1.png
 
@@ -161,11 +159,11 @@ Program State
         1 DAY (MON)             Using 4 set points of Monday every day
         1+5+1 (SUN+MON+SAT)     Using 4 set points of Monday from Monday to Friday
         7 DAYS (SUN~SAT)        Using 4 set points every day
-        Sunday, ...             Skip to `Program_Setpoints State`_
+        Sunday, ...             Skip to `Program Setpoints State`_
         ======================= ===================================================
 
-Program_Setpoints State
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Program Setpoints State
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-program-setpoints-1.png
 
@@ -186,7 +184,7 @@ Program_Setpoints State
 
 
 Settings State
--------------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-settings-1.png
 
@@ -216,7 +214,7 @@ Settings State
 
 
 Admin State
-----------------------
+^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-admin-1.png
 
@@ -248,3 +246,11 @@ Admin State
         Reboot              Reboot device
         Clear Wi-Fi Config  Clear device's Wi-Fi configuration
         =================== ===========================================================
+
+
+Import steps
+---------------
+
+* :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
+* :ref:`Import Dashboards of TA652FC-W <Step 3. Import Dashboards of TA652FC-W>`.
+

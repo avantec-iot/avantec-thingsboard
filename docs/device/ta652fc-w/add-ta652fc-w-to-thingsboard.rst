@@ -19,25 +19,10 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
-.. _Step 2. Import Device Profile of TA652FC-W:
-
 Step 2. Import Device Profile of TA652FC-W
 ===========================================
 
-.. tip:: 
-   *A Device Profile file* can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported it, you can skip this step.
-
-
-* Download :download:`ta652fc_w_thermostat.json </configuration-item/device-profiles/ta652fc_w_thermostat.json>`.
-
-* **Profiles** --> **Device profiles** --> **+** --> **Popup dialog: Import device profile** --> Drag and drop *my device profile File* --> **Import**.
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-device-profile-1.png
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-device-profile-2.png
-
+See :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
 
 .. _Step 3. Import Dashboards of TA652FC-W:
 
@@ -64,29 +49,10 @@ Step 3.1 Import Detail Dashboard
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-detail-dashboard-2.png
 
 
-.. _Step 3.2 Modify Device Profile - Mobile dashboards of TA652FC-W:
-
-Step 3.2 Modify Device Profile - Mobile dashboards
+Step 3.2 Modify device profile - mobile dashboard
 ---------------------------------------------------
 
-* **Profiles** --> **Device profiles** --> click *my device profile* --> **Toggle edit mode** (red icon)
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/modify-device-profile-mobile-dashboard-1.png
-
-* Modify *Mobile dashboard* --> **Apply changes** (red icon)
-
-.. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/modify-device-profile-mobile-dashboard-2.png
-
-These values are shown in the following table:
-
-.. table::
-   :widths: auto
-
-   ======================= ====================
-   Field                   Value
-   ======================= ====================
-   Mobile dashboard        TA652FC-W Thermostat (For Mobile App)
-   ======================= ====================
+See :ref:`Modify device profile of TA652FC-W Thermostat for mobile dashboard <Modify device profile of TA652FC-W Thermostat for mobile dashboard>`.
 
 
 .. _Step 3.3 Import List Dashboard of TA652FC-W:

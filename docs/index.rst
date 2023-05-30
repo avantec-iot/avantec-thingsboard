@@ -88,12 +88,13 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
 
 .. toctree::
    :hidden:
-   :maxdepth: 5
+   :maxdepth: 7
    :caption: TA652FC-W Wi-Fi Thermostat
 
    Specification </device/ta652fc-w/ta652fc-w-specification>
    Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>
    Connect to ThingsBoard </device/ta652fc-w/connect-ta652fc-w-to-thingsboard>
+   Demo Device Profile </device/ta652fc-w/ta652fc-w-demo-device-profile-usage>
    Demo Dashboards </device/ta652fc-w/ta652fc-w-demo-dashboards-usage>
    MQTT Device API </device/ta652fc-w/ta652fc-w-mqtt-api>
 
@@ -112,12 +113,13 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
 
 .. toctree::
    :hidden:
-   :maxdepth: 5
+   :maxdepth: 7
    :caption: TA652FH-W Wi-Fi Thermostat
 
    Specification </device/ta652fh-w/ta652fh-w-specification>
    Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>
    Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>
+   Demo Device Profile </device/ta652fh-w/ta652fh-w-demo-device-profile-usage>
    Demo Dashboards </device/ta652fh-w/ta652fh-w-demo-dashboards-usage>
    MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>
 
@@ -138,6 +140,7 @@ Learn about the project and the company.
    avantec
    copyright
 
+.. :numbered:
 
 .. Indices and tables
 .. ==================
