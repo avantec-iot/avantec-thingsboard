@@ -90,10 +90,21 @@
                 {
                   "name": "active",
                   "type": "attribute",
-                  "label": "active",
+                  "label": "Active",
                   "color": "#8bc34a",
-                  "settings": {},
-                  "_hash": 0.9836070312446519
+                  "settings": {
+                    "columnWidth": "0px",
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled"
+                  },
+                  "_hash": 0.9836070312446519,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
                 },
                 {
                   "name": "roomTemp",
@@ -193,7 +204,7 @@
                 "id": "d9b80e3a-8777-67b0-d4cd-24542a0bdeae"
               },
               {
-                "name": "to_ta652fc-w_detail",
+                "name": "Thermostat detail",
                 "icon": "settings",
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
