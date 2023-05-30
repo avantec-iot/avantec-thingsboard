@@ -5,43 +5,6 @@ Avantec widgets
 
 **Widgets Version: v.2.2**
 
-
-.. _Import Avantec Widgets:
-
-Import Avantec Widgets
-========================
-
-.. tip:: 
-   Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
-
-   If you have already imported it, you can skip this step or `Update Avantec Widgets`_.
-
-* Download :download:`avantec_widgets.json </configuration-item/widgets/avantec_widgets.json>`.
-
-* **Widgets Library** --> **+** --> **Import widgets bundle** --> **Popup dialog: Import widgets bundle** --> Drag and drop **avantec_widgets.json** --> **Import**.
-
-.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-1.png
-
-* **Widgets Library** --> click **Avantec widgets**
-
-.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-2.png
-
-* All Avantec widgets
-
-.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-3.png
-
-Update Avantec Widgets
-==========================
-
-.. |icon_delete| image:: /_static/extension/avantec-widgets/icon-delete.png
-    :scale: 100%
-
-* First Delete Avantec Widgets: **Widgets Library** --> Click |icon_delete| in the row of `Avantec widgets` --> **Popup dialog: Are you sure you want to delete ...?** --> **Yes**.
-
-.. image:: /_static/extension/avantec-widgets/delete-avantec-widgets-1.png
-
-* Then `Import Avantec Widgets`_.
-
 Widget list
 ===============
 
@@ -174,3 +137,40 @@ Control widget.
 Some parameters of this widget can be appended with a suffix for programming time.
 
 .. image:: /_static/extension/avantec-widgets/update-time-value-with-pattern-key-1.png
+
+
+.. _Import Avantec Widgets:
+
+Import Avantec Widgets
+========================
+
+.. tip:: 
+   Avantec_widgets.json can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
+
+   If you have already imported it, you can skip this step or `Update Avantec Widgets`_.
+
+* Download :download:`avantec_widgets.json </configuration-item/widgets/avantec_widgets.json>`.
+
+* **Widgets Library** --> **+** --> **Import widgets bundle** --> **Popup dialog: Import widgets bundle** --> Drag and drop **avantec_widgets.json** --> **Import**.
+
+.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-1.png
+
+* **Widgets Library** --> click **Avantec widgets**
+
+.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-2.png
+
+* All Avantec widgets
+
+.. image:: /_static/extension/avantec-widgets/import-avantec-widgets-3.png
+
+Update Avantec Widgets
+==========================
+
+.. |icon_delete| image:: /_static/extension/avantec-widgets/icon-delete.png
+    :scale: 100%
+
+* First Delete Avantec Widgets: **Widgets Library** --> Click |icon_delete| in the row of `Avantec widgets` --> **Popup dialog: Are you sure you want to delete ...?** --> **Yes**.
+
+.. image:: /_static/extension/avantec-widgets/delete-avantec-widgets-1.png
+
+* Then `Import Avantec Widgets`_.
