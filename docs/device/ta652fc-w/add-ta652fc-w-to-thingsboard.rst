@@ -19,10 +19,10 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
-.. _Step 2. Import Dashboards of TA652FC-W:
+.. _Step 2. Import Detail Dashboard of TA652FC-W:
 
-Step 2. Import Dashboards of TA652FC-W
-=======================================
+Step 2. Import Detail Dashboard of TA652FC-W
+===============================================
 
 Step 2.1 Import Device Profile of TA652FC-W
 ---------------------------------------------
@@ -34,7 +34,7 @@ Step 2.2 Import Detail Dashboard
 --------------------------------
 
 .. tip:: 
-   *A Dashboard file* can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
+   *A Dashboard file* can only be imported once. If you have already imported it, you don't need and cannot repeat the import.
 
    If you have already imported it, you can skip this step.
 

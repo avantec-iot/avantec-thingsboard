@@ -34,5 +34,5 @@ See also
 
 Learn how to import dashboard:
 
-* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Dashboards of TA652FC-W>`
+* :ref:`Import Detail Dashboard of TA652FC-W <Step 2. Import Detail Dashboard of TA652FC-W>`
 * :ref:`Import List Dashboard of TA652FC-W <Step 3. Import List Dashboard of TA652FC-W>`
