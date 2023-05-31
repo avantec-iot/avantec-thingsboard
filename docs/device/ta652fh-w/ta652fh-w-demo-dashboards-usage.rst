@@ -57,7 +57,7 @@ Dashboard states
 ------------------
 
 Default state
-----------------
+^^^^^^^^^^^^^^^^^^^
 
 ``Default state`` is root state.
 
