@@ -54,6 +54,11 @@ Step 2.3 Modify device profile - mobile dashboard
 See :ref:`Modify device profile of TA652FC-W Thermostat for mobile dashboard <Modify device profile of TA652FC-W Thermostat for mobile dashboard>`.
 
 
+.. _Step 3. Import List Dashboard of TA652FC-W:
+
+Step 3. Import List Dashboard of TA652FC-W
+=============================================
+
 Step 3.1 Import List Dashboard
 ---------------------------------
 

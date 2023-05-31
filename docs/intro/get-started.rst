@@ -122,8 +122,8 @@ Step 3. Import device profile
 Step 4. Import Dashboards
 =========================
 
-* See :ref:`Step 2. Import Dashboards of TA652FC-W`, or
-* See :ref:`Step 2. Import Dashboards of TA652FH-W`.
+* See :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Dashboards of TA652FC-W>` and :ref:`Import List Dashboard of TA652FC-W <Step 3. Import List Dashboard of TA652FC-W>` , or
+* See :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>` and :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
 
 Step 5. Provision device
 ========================

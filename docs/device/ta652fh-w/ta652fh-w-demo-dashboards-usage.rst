@@ -55,7 +55,8 @@ TA652FH-W Thermostat List
 **Import steps:**
 
 * :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
-* :ref:`Import Dashboards of TA652FH-W <Step 2. Import Dashboards of TA652FH-W>`.
+* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
+* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
 
 ``Default State`` is root state.
 
@@ -91,7 +92,8 @@ TA652FH-W Thermostat (For Mobile App)
 **Import steps:**
 
 * :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
-* :ref:`Import Dashboards of TA652FH-W <Step 2. Import Dashboards of TA652FH-W>`.
+* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
+* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
 
 ``Monitor State`` is root state.
 

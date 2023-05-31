@@ -19,10 +19,10 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
-.. _Step 2. Import Dashboards of TA652FH-W:
+.. _Step 2. Import Detail Dashboard of TA652FH-W:
 
-Step 2. Import Dashboards of TA652FH-W
-=======================================
+Step 2. Import Detail Dashboard of TA652FH-W
+=================================================
 
 Step 2.1 Import Device Profile of TA652FH-W
 ------------------------------------------------
@@ -54,6 +54,11 @@ Step 2.3 Modify device profile - mobile dashboard
 
 See :ref:`Modify device profile of TA652FH-W Thermostat for mobile dashboard <Modify device profile of TA652FH-W Thermostat for mobile dashboard>`.
 
+
+.. _Step 3. Import List Dashboard of TA652FH-W:
+
+Step 3. Import List Dashboard of TA652FH-W
+=================================================
 
 
 Step 3.1 Import List Dashboard
