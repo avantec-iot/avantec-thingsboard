@@ -63,9 +63,11 @@ Default state
         * Device name, Label, Type, active.
         * Room temperature, Change Over Sensor Temperature, Setpoint, Fan status, Unit: Refer to `Monitor state`_.
     * Actions:
-        * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_。
+        * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_.
+        * |edit_device| : Popup dialog to editing a device's label.
 
 .. |detail_dashboard| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-5.png
+.. |edit_device| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-6.png
 
 
 

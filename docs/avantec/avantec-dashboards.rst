@@ -14,12 +14,14 @@ TA652FH-W
 
 * :ref:`TA652FH-W Thermostat List` - device list.
 * :ref:`TA652FH-W Thermostat (For Mobile App)` - device detail.
-* :ref:`Office center - TA652FH-W Thermostats` - multiple TA652FH-W Thermostats in a office center.
+* :ref:`Office center - TA652FH-W Thermostats` - multiple TA652FH-W Thermostats in an office center.
 
 Other Dashboards
 ===================
 
-* Firmware - firmware update. *Some versions of ThingsBoard already have this Dashboard, which can be used without importing*. :download:`firmware.json </configuration-item/dashboards/firmware.json>`
+* Firmware - firmware update. 
+
+    *Some versions of ThingsBoard already have this Dashboard, which can be used without importing*. :download:`firmware.json </configuration-item/dashboards/firmware.json>`
 
 * *Manage device claiming* - ...
 
@@ -29,10 +31,3 @@ Other Dashboards
 
     *TODO:...*
 
-See also
-===============
-
-Learn how to import dashboard:
-
-* :ref:`Import TA652FC-W Detail Dashboard <Import TA652FC-W Detail Dashboard>`
-* :ref:`Import TA652FC-W List Dashboard <Import TA652FC-W List Dashboard>`
