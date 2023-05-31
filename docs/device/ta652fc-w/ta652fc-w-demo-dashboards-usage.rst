@@ -39,21 +39,18 @@ There are two dashboards related to TA652FC-W, namely ``TA652FC-W Thermostat Lis
 TA652FC-W Thermostat List
 ==========================
 
-**Import steps:**
+Dashboard states
+------------------
 
-* :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
-* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Dashboards of TA652FC-W>`.
-* :ref:`Import List Dashboard of TA652FC-W <Step 3. Import List Dashboard of TA652FC-W>`.
+Default state
+^^^^^^^^^^^^^^^^^^^
 
-``Default State`` is root state.
-
-Default State
-----------------
+``Default state`` is root state.
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-1.png
 
 *  Dashboard bar:
-    * |Dashboard name| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
+    * |Dashboard name| : Click here to skip to **root state**. Since **default state** is *root state*, click here and there is no response.
     * |Dashboard expand to fullscreen| : Click the two ICONS in the upper left corner to display the page in full screen.
     * |Dashboard edit timewindow| : Edit time window.
 
@@ -64,11 +61,19 @@ Default State
 *  Thermostats widgets:
     * Fields: 
         * Device name, Label, Type, active.
-        * Room temperature, Change Over Sensor Temperature, Setpoint, Fan status, Unit: Refer to `Monitor State`_.
+        * Room temperature, Change Over Sensor Temperature, Setpoint, Fan status, Unit: Refer to `Monitor state`_.
     * Actions:
         * |detail_dashboard| : skip to `TA652FC-W Thermostat (For Mobile App)`_。
 
 .. |detail_dashboard| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-list-5.png
+
+
+Import steps
+---------------
+
+* :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
+* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Dashboards of TA652FC-W>`.
+* :ref:`Import List Dashboard of TA652FC-W <Step 3. Import List Dashboard of TA652FC-W>`.
 
 
 .. _TA652FC-W Thermostat (For Mobile App):
@@ -76,19 +81,19 @@ Default State
 TA652FC-W Thermostat (For Mobile App)
 ======================================
 
-Dashboard States
+Dashboard states
 ------------------
 
-Monitor State
+Monitor state
 ^^^^^^^^^^^^^^^
 
-``Monitor State`` is root state.
+``Monitor state`` is root state.
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-monitor-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer  `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -97,11 +102,11 @@ Monitor State
         =============================== ============================================================
         Widget                          Description
         =============================== ============================================================
-        MONITOR                         skip to `Monitor State`_
-        CONTROL                         skip to `Control State`_
-        PROGRAM                         skip to `Program State`_
-        SETTINGS                        skip to `Settings State`_
-        ADMIN                           skip to `Admin State`_
+        MONITOR                         skip to `Monitor state`_
+        CONTROL                         skip to `Control state`_
+        PROGRAM                         skip to `Program state`_
+        SETTINGS                        skip to `Settings state`_
+        ADMIN                           skip to `Admin state`_
 
         Room Temperature                room temperature
         Change Over Sensor Temperature  change over sensor temperature
@@ -109,19 +114,19 @@ Monitor State
         Fan Status                      "Off", "Low", "Med" or "High"
         Temperature history             | Room temperature & Change Over Sensor temperature \
                                         | history. Click |Temperature history edit timewindow| \
-                                        | to edit this timewindow. Refer to `Default State`_
+                                        | to edit this timewindow. Refer to `Default state`_
         =============================== ============================================================
 
 .. |Temperature history edit timewindow| image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-monitor-2.png
 
-Control State
+Control state
 ^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-control-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -140,14 +145,14 @@ Control State
         Control Mode                    "Off" or "On"
         =============================== ============================================================
 
-Program State
+Program state
 ^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-program-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -160,17 +165,17 @@ Program State
         1 DAY (MON)             Using 4 set points of Monday every day
         1+5+1 (SUN+MON+SAT)     Using 4 set points of Monday from Monday to Friday
         7 DAYS (SUN~SAT)        Using 4 set points every day
-        Sunday, ...             Skip to `Program Setpoints State`_
+        Sunday, ...             Skip to `Program_setpoints state`_
         ======================= ===================================================
 
-Program Setpoints State
+Program_setpoints state
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-program-setpoints-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -184,14 +189,14 @@ Program Setpoints State
         =========================== ======================================================
 
 
-Settings State
+Settings state
 ^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-settings-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -214,14 +219,14 @@ Settings State
         ============================ ===========================================================
 
 
-Admin State
+Admin state
 ^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-dashboards-usage/ta652fc-w-demo-dashboards-usage-detail-admin-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 

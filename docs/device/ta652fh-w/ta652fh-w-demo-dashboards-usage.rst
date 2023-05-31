@@ -47,26 +47,24 @@ There are some dashboards related to TA652FH-W, namely ``TA652FH-W Thermostat Li
     - ``TA652FH-W Thermostat List`` depends on ``TA652FH-W Thermostat (For Mobile App)``.
     - ``Office center - TA652FH-W Thermostats`` can be used independently.
 
+
 .. _TA652FH-W Thermostat List:
 
 TA652FH-W Thermostat List
 ==========================
 
-**Import steps:**
+Dashboard states
+------------------
 
-* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
-* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
-* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
-
-``Default State`` is root state.
-
-Default State
+Default state
 ----------------
+
+``Default state`` is root state.
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-list-1.png
 
 *  Dashboard bar:
-    * |Dashboard name| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
+    * |Dashboard name| : Click here to skip to **root state**. Since **default state** is *root state*, click here and there is no response.
     * |Dashboard expand to fullscreen| : Click the two ICONS in the upper left corner to display the page in full screen.
     * |Dashboard edit timewindow| : Edit time window.
 
@@ -77,11 +75,20 @@ Default State
 *  Thermostats widgets:
     * Fields: 
         * Device name, Label, Type, active.
-        * Room temperature, Floor Temperature, Setpoint, Unit: Refer to `Monitor State`_.
+        * Room temperature, Floor Temperature, Setpoint, Unit: Refer to `Monitor state`_.
     * Actions:
         * |detail_dashboard| : skip to `TA652FH-W Thermostat (For Mobile App)`_。
 
 .. |detail_dashboard| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-list-5.png
+
+
+Import steps
+----------------
+
+* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
+* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
+* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
+
 
 
 .. _TA652FH-W Thermostat (For Mobile App):
@@ -89,22 +96,19 @@ Default State
 TA652FH-W Thermostat (For Mobile App)
 ======================================
 
-**Import steps:**
+Dashboard states
+------------------
 
-* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
-* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
-* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
+Monitor state
+^^^^^^^^^^^^^^^^^^^
 
-``Monitor State`` is root state.
-
-Monitor State
--------------------------
+``Monitor state`` is root state.
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-monitor-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default State`_.
+    Refer  `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -113,30 +117,30 @@ Monitor State
         =============================== ============================================================
         Widget                          Description
         =============================== ============================================================
-        MONITOR                         skip to `Monitor State`_
-        CONTROL                         skip to `Control State`_
-        PROGRAM                         skip to `Program State`_
-        SETTINGS                        skip to `Settings State`_
-        ADMIN                           skip to `Admin State`_
+        MONITOR                         skip to `Monitor state`_
+        CONTROL                         skip to `Control state`_
+        PROGRAM                         skip to `Program state`_
+        SETTINGS                        skip to `Settings state`_
+        ADMIN                           skip to `Admin state`_
 
         Room Temperature                room temperature
         Floor Temperature               floor temperature
         Setpoint                        current setpoint value
         Temperature history             | Room temperature & Change Over Sensor temperature \
                                         | history. Click |Temperature history edit timewindow| \
-                                        | to edit this timewindow. Refer to `Default State`_
+                                        | to edit this timewindow. Refer to `Default state`_
         =============================== ============================================================
 
 .. |Temperature history edit timewindow| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-monitor-2.png
 
-Control State
--------------------------
+Control state
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-control-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -153,14 +157,14 @@ Control State
         Control Mode                    "Off" or "On"
         =============================== ============================================================
 
-Program State
-------------------------
+Program state
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-program-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -173,17 +177,17 @@ Program State
         1 DAY (MON)             Using 4 set points of Monday every day
         1+5+1 (SUN+MON+SAT)     Using 4 set points of Monday from Monday to Friday
         7 DAYS (SUN~SAT)        Using 4 set points every day
-        Sunday, ...             Skip to `Program_Setpoints State`_
+        Sunday, ...             Skip to `Program_setpoints state`_
         ======================= ===================================================
 
-Program_Setpoints State
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Program_setpoints state
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-program-setpoints-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -197,14 +201,14 @@ Program_Setpoints State
         =========================== ======================================================
 
 
-Settings State
--------------------------
+Settings state
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-settings-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -229,14 +233,14 @@ Settings State
         ============================ ===========================================================
 
 
-Admin State
-----------------------
+Admin state
+^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/ta652fh-w-demo-dashboards-usage-detail-admin-1.png
 
 *  Dashboard bar:
     Hidden.
-    Refer to `Default State`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 
@@ -263,25 +267,33 @@ Admin State
         Clear Wi-Fi Config  Clear device's Wi-Fi configuration
         =================== ===========================================================
 
+
+Import steps
+------------------
+
+* :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
+* :ref:`Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
+* :ref:`Import List Dashboard of TA652FH-W <Step 3. Import List Dashboard of TA652FH-W>`.
+
+
+
 .. _Office center - TA652FH-W Thermostats:
 
 Office center - TA652FH-W Thermostats
 ======================================
 
-**Import steps:**
+Dashboard states
+------------------
 
-* :ref:`Import Device Profile of TA652FH-W Thermostat`.
-* Download & import this dashboard :download:`office_center___ta652fh_w_thermostats.json </configuration-item/dashboards/office_center___ta652fh_w_thermostats.json>`.
+Office state
+^^^^^^^^^^^^^^^^^^^^^^^
 
 ``Office state`` is root state.
-
-Office State
-----------------
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-1.png
 
 *  Dashboard bar:
-    * |office state root state| : Click here to skip to **root State**. Since **default State** is *root state*, click here and there is no response.
+    * |office state root state| : Click here to skip to **root state**. Since **default state** is *root state*, click here and there is no response.
 
 .. |office state root state| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-2.png
 
@@ -290,9 +302,9 @@ Office State
         * Thermostat name, Label, active.
         * Room temperature, Floor Temperature, Setpoint, Unit, xPos, yPos.
     * Actions:
-        * |Edit Location| : Skip to `Map State`_.
+        * |Edit Location| : Skip to `Map state`_.
         * |Add Thermostat| : Open a dialog, to add a new thermostat.
-        * |Thermostat chart| : Skip to `Chart State`_.
+        * |Thermostat chart| : Skip to `Chart state`_.
         * |Edit Thermostat| : Open a dialog, to edit a thermostat.
         * |Delete Thermostat| : Open a dialog, to edit a thermostat.
 
@@ -304,14 +316,14 @@ Office State
 
 * Map widget:
     * |Anchor Thermostat| : Open a box, to show some text.
-    * |Thermostat link| : Skip to `Chart State`_.
+    * |Thermostat link| : Skip to `Chart state`_.
 
 .. |Anchor Thermostat| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-8.png
 .. |Thermostat link| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-office-state-9.png
 
 
-Map State
-----------------
+Map state
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-map-state-1.png
 
@@ -322,7 +334,14 @@ Map State
 .. |Drag-drop mode| image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-map-state-2.png
 
 
-Chart State
-----------------
+Chart state
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-dashboards-usage/office-center-dashboard-chart-state-1.png
+
+
+Import steps
+----------------
+
+* :ref:`Import Device Profile of TA652FH-W Thermostat`.
+* Download & import this dashboard :download:`office_center___ta652fh_w_thermostats.json </configuration-item/dashboards/office_center___ta652fh_w_thermostats.json>`.
