@@ -32,4 +32,4 @@ Other Dashboards
 See also
 ===============
 
-* :ref:`Step 3. Import Dashboards of TA652FC-W` - Learn how to import dashboard.
+* :ref:`Step 2. Import Dashboards of TA652FC-W` - Learn how to import dashboard.

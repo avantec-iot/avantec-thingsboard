@@ -19,19 +19,18 @@ Step 1. Tenant Login
 Tenant default username and password, refer to :ref:`Some important parameters`.
 
 
-Step 2. Import Device Profile of TA652FC-W
-===========================================
+.. _Step 2. Import Dashboards of TA652FC-W:
+
+Step 2. Import Dashboards of TA652FC-W
+=======================================
+
+Step 2.1 Import Device Profile of TA652FC-W
+---------------------------------------------
 
 See :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
 
-.. _Step 3. Import Dashboards of TA652FC-W:
 
-Step 3. Import Dashboards of TA652FC-W
-=======================================
-
-.. _Step 3.1 Import Detail Dashboard of TA652FC-W:
-
-Step 3.1 Import Detail Dashboard
+Step 2.2 Import Detail Dashboard
 --------------------------------
 
 .. tip:: 
@@ -49,15 +48,13 @@ Step 3.1 Import Detail Dashboard
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-detail-dashboard-2.png
 
 
-Step 3.2 Modify device profile - mobile dashboard
+Step 2.3 Modify device profile - mobile dashboard
 ---------------------------------------------------
 
 See :ref:`Modify device profile of TA652FC-W Thermostat for mobile dashboard <Modify device profile of TA652FC-W Thermostat for mobile dashboard>`.
 
 
-.. _Step 3.3 Import List Dashboard of TA652FC-W:
-
-Step 3.3 Import List Dashboard
+Step 3.1 Import List Dashboard
 ---------------------------------
 
 .. tip:: 
@@ -74,9 +71,7 @@ Step 3.3 Import List Dashboard
 .. image:: /_static/device/ta652fc-w/add-ta652fc-w-to-thingsboard/import-list-dashboard-2.png
 
 
-.. _Step 3.4 Modify List Dashboard - Action Target dashboard of TA652FC-W:
-
-Step 3.4 Modify List Dashboard - Action Target dashboard
+Step 3.2 Modify List Dashboard - Action Target dashboard
 ----------------------------------------------------------
 
 * **Dashboards** --> Click *my list dashboard*

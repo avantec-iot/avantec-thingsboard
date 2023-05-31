@@ -42,7 +42,7 @@ TA652FC-W Thermostat List
 **Import steps:**
 
 * :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
-* :ref:`Import Dashboards of TA652FH-W <Step 3. Import Dashboards of TA652FC-W>`.
+* :ref:`Import Dashboards of TA652FH-W <Step 2. Import Dashboards of TA652FC-W>`.
 
 ``Default State`` is root state.
 
@@ -252,5 +252,5 @@ Import steps
 ---------------
 
 * :ref:`Import Device Profile of TA652FC-W Thermostat <Import Device Profile of TA652FC-W Thermostat>`.
-* :ref:`Import Dashboards of TA652FC-W <Step 3. Import Dashboards of TA652FC-W>`.
+* :ref:`Import Dashboards of TA652FC-W <Step 2. Import Dashboards of TA652FC-W>`.
 
