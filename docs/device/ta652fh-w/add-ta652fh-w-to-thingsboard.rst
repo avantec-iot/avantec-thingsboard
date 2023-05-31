@@ -24,20 +24,12 @@ Tenant default username and password, refer to :ref:`Some important parameters`.
 Step 2. Import Detail Dashboard of TA652FH-W
 =================================================
 
-Step 2.1 Import Device Profile of TA652FH-W
-------------------------------------------------
-
-See :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
-
-
-
-Step 2.2 Import Detail Dashboard
---------------------------------
-
 .. tip:: 
    *A Dashboard file* can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
 
    If you have already imported it, you can skip this step.
+
+In order to use this dashboard, you must to create ``TA652FH-W Thermostat Device Profile``. If it doesn't exist, you can import it. See :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>`.
 
 
 * Download :download:`ta652fh_w_thermostat__for_mobile_app_.json </configuration-item/dashboards/ta652fh_w_thermostat__for_mobile_app_.json>`.
@@ -48,11 +40,7 @@ Step 2.2 Import Detail Dashboard
 
 .. image:: /_static/device/ta652fh-w/add-ta652fh-w-to-thingsboard/import-detail-dashboard-2.png
 
-
-Step 2.3 Modify device profile - mobile dashboard
----------------------------------------------------
-
-See :ref:`Modify device profile of TA652FH-W Thermostat for mobile dashboard <Modify device profile of TA652FH-W Thermostat for mobile dashboard>`.
+* Optional, This dashboard can be set as ``TA652FH-W Thermostat Device Profile``'s mobile dashboard. See :ref:`Modify device profile of TA652FH-W Thermostat for mobile dashboard <Modify device profile of TA652FH-W Thermostat for mobile dashboard>`.
 
 
 .. _Step 3. Import List Dashboard of TA652FH-W:
@@ -60,14 +48,14 @@ See :ref:`Modify device profile of TA652FH-W Thermostat for mobile dashboard <Mo
 Step 3. Import List Dashboard of TA652FH-W
 =================================================
 
-
-Step 3.1 Import List Dashboard
----------------------------------
-
 .. tip:: 
    *A Dashboard file* can only be imported once. If you have already imported it, you do not need and cannot repeat the import.
 
    If you have already imported it, you can skip this step.
+
+In order to use this dashboard, you must to create ``TA652FH-W Thermostat Device Profile`` and ``TA652FH-W Thermostat (For Mobile App)``. If they don't exist, you can import them. See :ref:`Import Device Profile of TA652FH-W Thermostat <Import Device Profile of TA652FH-W Thermostat>` or :ref:`Step 2. Import Detail Dashboard of TA652FH-W <Step 2. Import Detail Dashboard of TA652FH-W>`.
+
+First, you can import this dashboard.
 
 * Download :download:`ta652fh_w_thermostat_list.json </configuration-item/dashboards/ta652fh_w_thermostat_list.json>`.
 
@@ -78,9 +66,7 @@ Step 3.1 Import List Dashboard
 .. image:: /_static/device/ta652fh-w/add-ta652fh-w-to-thingsboard/import-list-dashboard-2.png
 
 
-
-Step 3.2 Modify List Dashboard - Action Target dashboard
-----------------------------------------------------------
+Next, modify a action's target dashboard and target dashboard state.
 
 * **Dashboards** --> Click *my list dashboard*
 
