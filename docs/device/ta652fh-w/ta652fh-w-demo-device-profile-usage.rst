@@ -22,9 +22,9 @@ Import device profile
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-device-profile-usage/import-device-profile-2.png
 
 
-.. _Modify device profile of TA652FH-W Thermostat for mobile dashboard:
+.. _Modify TA652FH-W Thermostat device profile's mobile dashboard:
 
-Modify device profile - mobile dashboard
+Modify device profile's mobile dashboard
 ============================================
 
 

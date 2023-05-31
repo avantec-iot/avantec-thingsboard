@@ -22,9 +22,9 @@ Import device profile
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-device-profile-usage/import-device-profile-2.png
 
 
-.. _Modify device profile of TA652FC-W Thermostat for mobile dashboard:
+.. _Modify TA652FC-W Thermostat device profile's mobile dashboard:
 
-Modify device profile - mobile dashboard
+Modify device profile's mobile dashboard
 ============================================
 
 * **Profiles** --> **Device profiles** --> click *my device profile* --> **Toggle edit mode** (red icon)
