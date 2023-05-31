@@ -77,6 +77,13 @@ Import List Dashboard
 .. include:: ta652fc-w-demo-list-dashboard-import.rst
 
 
+.. _Update TA652FC-W List Dashboard:
+
+Update List Dashboard
+----------------------
+
+.. include:: ta652fc-w-demo-list-dashboard-update.rst
+
 
 .. _TA652FC-W Thermostat (For Mobile App):
 
@@ -263,3 +270,12 @@ Import Detail Dashboard
 ------------------------
 
 .. include:: ta652fc-w-demo-detail-dashboard-import.rst
+
+
+
+.. _Update TA652FC-W Detail Dashboard:
+
+Update Detail Dashboard
+---------------------------
+
+.. include:: ta652fc-w-demo-detail-dashboard-update.rst

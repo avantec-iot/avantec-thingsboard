@@ -27,6 +27,8 @@ Import device profile
 Modify device profile's mobile dashboard
 ============================================
 
+**Device profile's mobile dashboard** is for ``ThingsBoard Mobile Application`` or ``ThingsBoard PE Mobile Application``.
+
 * **Profiles** --> **Device profiles** --> click *my device profile* --> **Toggle edit mode** (red icon)
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-device-profile-usage/modify-device-profile-mobile-dashboard-1.png
@@ -45,3 +47,20 @@ These values are shown in the following table:
    ======================= ====================
    Mobile dashboard        TA652FC-W Thermostat (For Mobile App)
    ======================= ====================
+
+
+.. _Clear TA652FC-W Thermostat device profile's mobile dashboard:
+
+Clear device profile's mobile dashboard
+============================================
+
+Sometimes if ``TA652FC-W Thermostat device profile``'s mobile dashboard is cleared, ``TA652FC-W Thermostat (For Mobile App)`` can only be deleted.
+
+
+* **Profiles** --> **Device profiles** --> click *my device profile* --> **Toggle edit mode** (red icon)
+
+.. image:: /_static/device/ta652fc-w/ta652fc-w-demo-device-profile-usage/clear-device-profile-mobile-dashboard-1.png
+
+* Clear *Mobile dashboard* --> **Apply changes** (red icon)
+
+.. image:: /_static/device/ta652fc-w/ta652fc-w-demo-device-profile-usage/clear-device-profile-mobile-dashboard-2.png

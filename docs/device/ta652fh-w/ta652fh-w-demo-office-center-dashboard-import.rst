@@ -15,3 +15,14 @@ In order to use this dashboard, you must to create ``TA652FH-W Thermostat Device
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-office-center-dashboard-import/office-center-dashboard-import-1.png
 
 .. image:: /_static/device/ta652fh-w/ta652fh-w-demo-office-center-dashboard-import/office-center-dashboard-import-2.png
+
+
+.. |icon_modify_office_center| image:: /_static/device/ta652fh-w/ta652fh-w-demo-office-center-dashboard-import/icon_modify.png
+    :scale: 100%
+
+* Edit the position: Click |icon_modify_office_center| in a row -->  Enter xPos/yPos in Popup dialog --> **Save**.
+
+.. image:: /_static/device/ta652fh-w/ta652fh-w-demo-office-center-dashboard-import/office-center-dashboard-import-3.png
+
+.. image:: /_static/device/ta652fh-w/ta652fh-w-demo-office-center-dashboard-import/office-center-dashboard-import-4.png
+

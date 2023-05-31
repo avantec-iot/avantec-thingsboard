@@ -169,8 +169,8 @@ Update Avantec Widgets
 .. |icon_delete| image:: /_static/extension/avantec-widgets/icon-delete.png
     :scale: 100%
 
-* First Delete Avantec Widgets: **Widgets Library** --> Click |icon_delete| in the row of `Avantec widgets` --> **Popup dialog: Are you sure you want to delete ...?** --> **Yes**.
+* First, Delete Avantec Widgets: **Widgets Library** --> Click |icon_delete| in the row of `Avantec widgets` --> **Popup dialog: Are you sure you want to delete ...?** --> **Yes**.
 
 .. image:: /_static/extension/avantec-widgets/delete-avantec-widgets-1.png
 
-* Then `Import Avantec Widgets`_.
+* Next, `Import Avantec Widgets`_.

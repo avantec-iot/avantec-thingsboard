@@ -92,6 +92,16 @@ Import List Dashboard
 
 
 
+.. _Update TA652FH-W List Dashboard:
+
+Update List Dashboard
+----------------------
+
+.. include:: ta652fh-w-demo-list-dashboard-update.rst
+
+
+
+
 .. _TA652FH-W Thermostat (For Mobile App):
 
 TA652FH-W Thermostat (For Mobile App)
@@ -278,6 +288,17 @@ Import Detail Dashboard
 
 
 
+.. _Update TA652FH-W Detail Dashboard:
+
+Update Detail Dashboard
+---------------------------
+
+.. include:: ta652fh-w-demo-detail-dashboard-update.rst
+
+
+
+
+
 
 .. _Office center - TA652FH-W Thermostats:
 
@@ -349,3 +370,12 @@ Import Office Center Dashboard
 ---------------------------------
 
 .. include:: ta652fh-w-demo-office-center-dashboard-import.rst
+
+
+.. _Update Office Center Dashboard:
+
+Update Office Center Dashboard
+--------------------------------
+
+.. include:: ta652fh-w-demo-office-center-dashboard-update.rst
+
