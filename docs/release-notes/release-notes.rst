@@ -7,7 +7,7 @@ v2.2 (June 1, 2023)
 
 * TA652FC-W MQTT API/Protocol
     * New feature: support (control mode) on/off in schdule.
-        * New client-side attributes: ``supportCtrlModeInSchedule``(string), ``prgNextCtrlMode``(string),  ``prgCtrlModeXX``(string).
+        * New client-side attributes: ``supportCtrlModeInSchedule`` (string), ``prgNextCtrlMode`` (string),  ``prgCtrlModeXX`` (string).
         * New Server-side RPC: ``remoteSetPrgCtrlModeXX``.
 
 * Avantec Widgets
@@ -40,6 +40,6 @@ v2.1 (Apr 18, 2023)
 
 
 v1.0 (Jul 24, 2020 / Dec 20, 2022)
-===================
+=====================================
 
 Inital version.
