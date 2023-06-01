@@ -71,8 +71,8 @@ Here is an overview about Avantec Customization.
    :maxdepth: 5
    :caption: Avantec Extension
 
-   Demo Dashboards </avantec/avantec-dashboards>
    Avantec Widgets </avantec/avantec-widgets>
+   Demo Dashboards </avantec/avantec-dashboards>
 
 
 TA652FC-W Wi-Fi Thermostat
@@ -122,6 +122,23 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    Demo Device Profile </device/ta652fh-w/ta652fh-w-demo-device-profile-usage>
    Demo Dashboards </device/ta652fh-w/ta652fh-w-demo-dashboards-usage>
    MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>
+
+
+Release Notes
+==================
+
+Release notes about documents, MQTT protocol, widgets, dashboard, etc.
+
+* :doc:`Release Notes </release-notes/release-notes>`
+* :doc:`Upgrade instructions </release-notes/upgrade-instructions>`
+
+.. toctree::
+   :hidden:
+   :maxdepth: 5
+   :caption: Release Notes
+
+   Release Notes </release-notes/release-notes>
+   Upgrade instructions </release-notes/upgrade-instructions>
 
 
 Avantec and the project

@@ -17,7 +17,7 @@ Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-
 .. image:: /_static/thingsboard/thingsboard-ota-updates/ota-updates-overview-1.png
 
 
-.. _OTA updates Dashboard:
+.. _Firmware OTA updates Dashboard:
 
 Firmware update monitoring dashboard
 ====================================
@@ -170,7 +170,7 @@ Update process
 
 Assignment of the firmware to the device or device profile triggers the update process. ThingsBoard tracks the progress of the update and persists it to the device attributes.
 
-Update progress may have one of the following states. The state of the update is stored as an attribute of the device and is used to visualize the update process on the :ref:`dashboard <OTA updates Dashboard>`.
+Update progress may have one of the following states. The state of the update is stored as an attribute of the device and is used to visualize the update process on the :ref:`dashboard <Firmware OTA updates Dashboard>`.
 
 QUEUED state
 ------------

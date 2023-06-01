@@ -3,8 +3,6 @@
 Avantec widgets
 ******************
 
-**Widgets Version: v.2.2**
-
 Widget list
 ===============
 
@@ -162,6 +160,8 @@ Import Avantec Widgets
 * All Avantec widgets
 
 .. image:: /_static/extension/avantec-widgets/import-avantec-widgets-3.png
+
+.. _Update Avantec Widgets:
 
 Update Avantec Widgets
 ==========================
