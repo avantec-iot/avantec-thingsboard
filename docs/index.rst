@@ -124,6 +124,28 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
    MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>
 
 
+TA692FC-L-5 LoRaWAN Thermostat
+===============================
+
+These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, operate it, and even realize your personalized Dashboard.
+
+* :doc:`Specification </device/ta692fc-l-5/ta692fc-l-5-specification>`
+* :doc:`Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>`
+  :doc:`Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>`
+* :doc:`LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>`
+
+.. toctree::
+   :hidden:
+   :maxdepth: 7
+   :caption: TA692FC-L-5 LoRaWAN Thermostat
+
+   Specification </device/ta692fc-l-5/ta692fc-l-5-specification>
+   Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>
+   Demo Device Profile </device/ta692fc-l-5/ta692fc-l-5-demo-device-profile-usage>
+   Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>
+   LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>
+
+
 Release Notes
 ==================
 

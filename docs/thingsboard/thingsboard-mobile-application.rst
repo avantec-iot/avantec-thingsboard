@@ -10,9 +10,9 @@ The ThingsBoard Mobile Application is an open-source `project <https://github.co
 
 This documentation can help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
 
-* `Getting started <https://thingsboard.io/docs/mobile/getting-started/>`_ - Learn how to setup and run your first IoT mobile app.
-* `Customize your app <https://thingsboard.io/docs/mobile/customization/>`_ - Learn how to customize your app without code changes.
-* `Publish your app <https://thingsboard.io/docs/mobile/release/>`_ - Learn how to publish your app to Google Play or App Store.
+    * `Getting started <https://thingsboard.io/docs/mobile/getting-started/>`_ - Learn how to setup and run your first IoT mobile app.
+    * `Customize your app <https://thingsboard.io/docs/mobile/customization/>`_ - Learn how to customize your app without code changes.
+    * `Publish your app <https://thingsboard.io/docs/mobile/release/>`_ - Learn how to publish your app to Google Play or App Store.
 
 
 ThingsBoard PE mobile application
@@ -23,7 +23,7 @@ The ThingsBoard **PE** Mobile Application is an open-source `project <https://gi
 This documentation can help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
 
 
-* `Getting started <https://thingsboard.io/docs/pe/mobile/getting-started/>`_ - Learn how to setup and run your first IoT mobile app.
-* `Customize your app <https://thingsboard.io/docs/pe/mobile/customization/>`_ - Learn how to customize your app without code changes.
-* `Publish your app <https://thingsboard.io/docs/pe/mobile/release/>`_ - Learn how to publish your app to Google Play or App Store.
+    * `Getting started <https://thingsboard.io/docs/pe/mobile/getting-started/>`_ - Learn how to setup and run your first IoT mobile app.
+    * `Customize your app <https://thingsboard.io/docs/pe/mobile/customization/>`_ - Learn how to customize your app without code changes.
+    * `Publish your app <https://thingsboard.io/docs/pe/mobile/release/>`_ - Learn how to publish your app to Google Play or App Store.
 

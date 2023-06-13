@@ -23,6 +23,7 @@ Why Avantec + ThingsBoard?
    }
 
    TBSrv <-down-> TBDev : MQTT
+   TBSrv <.down.> TBDev : LoRaWAN, ...
    TBSrv <-down-> TBWebUI 
    TBSrv <-down-> TBMobileApp 
 
@@ -140,7 +141,21 @@ TA652FH-W
 * Floor Heating Wi-Fi Thermostat. 
 * Firmware ID: ``TA652FH-W-TB``.
 
-  *Coming soon...*
+.. image:: /_static/device/ta652fh-w/ta652fh-w.png
+   :width: 30%
+   :align: center
+
+
+TA692FC-L-5
+^^^^^^^^^^^
+
+* LoRaWAN thermostat for fan coil units.
+.. * Firmware ID: ``TA692FC-L-5``.
+
+.. image:: /_static/device/ta692fc-l-5/ta692fc-l-5.png
+   :width: 30%
+   :align: center
+
 
 
 HA652-W
