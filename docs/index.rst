@@ -141,6 +141,8 @@ These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, 
 
    Specification </device/ta692fc-l-5/ta692fc-l-5-specification>
    Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>
+   MTCAP-868-041A - Gateway </device/ta692fc-l-5/mtcap-868-041a>
+   ChirpStack v3 - Network Server </device/ta692fc-l-5/chirpstack-v3>
    Demo Device Profile </device/ta692fc-l-5/ta692fc-l-5-demo-device-profile-usage>
    Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>
    LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>

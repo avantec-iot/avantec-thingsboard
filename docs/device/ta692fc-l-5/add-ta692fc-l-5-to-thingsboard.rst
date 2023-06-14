@@ -2,6 +2,19 @@
 Add TA692FC-L-5 to ThingsBoard
 ************************************
 
+.. tip:: 
+
+   - This section applies to the situation where you add TA692FC-L-5 to ThingsBoard PE.
+   - Only `ThingsBoard PE <https://thingsboard.io/products/thingsboard-pe/>`_ supports **Platform Integrations** feature.
+   - Use `ThingsBoard Cloud <https://thingsboard.cloud/signup>`_ or `install <https://thingsboard.io/docs/user-guide/install/pe/installation-options/>`_ your own ThingsBoard PE platform instance.
+
+
+Introduction
+=============
+
+The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks.
+After integrating ChirpStack with ThingsBoard, you can connect, communicate, process and visualize data from TA692FC-L-5 thermostat in the ThingsBoard IoT platform.
+
 .. uml::
 
   caption System Architecture\n\n
@@ -32,6 +45,84 @@ Add TA692FC-L-5 to ThingsBoard
    TBSrv <-down-> TBApp : REST API, Websocket API
 
 
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+
+   * - Item
+     - Description
+   * - LoRaWAN Device
+     - TA692FC-L-5, Frequency 868 MHz*
+   * - LoRaWAN Gateway
+     - MTCAP-868-041A, Frequency 868 MHz*
+   * - LoRaWAN Network Server
+     - ChirpStack v3**
+   * - LoRaWAN Application Server
+     - ThingsBoard PE v3.5.x**
+
+.. note::
+    The frequency of LoRaWAN device and gateway must match!
+
+.. warning::
+    ChirpStack v4, the latest version, doesn't handle downlink data from ThingsBoard PE v3.5.x.
+
+
+Prerequisites
+-------------
+
+* MTCAP upgrade -------------------------------------------------------------------
+* Install ChirpStack v3
+* Subscribe or install ThingsBoard PE 
+
+
+MTCAP configuration
+====================
+
+TA692FC-L-5 thermostat 上电......
+
+
+
+ChirpStack configuration
+=========================
+
+xxxx
+------
+
+Connect device to ChirpStack
+-----------------------------
+
+
+Check data on ChirpStack
+------------------------
+
+
+Integrating ChirpStack with ThingsBoard PE
+==========================================
+
+xxxx
+------
+
+Check data on ThingsBoard
+--------------------------
+
+Synchronize device state using client and shared attribute requests (Optional)
+------------------------------------------------------------------------------
+
+Control device using shared attributes (Optional)
+--------------------------------------------------
+
+Dashboard
+==========
+
+Conclusion
+==========
+
+
+adfasd
+===========
+
+
+
 
 LoRaWAN Device - TA692FC-L-5
 =============================
@@ -57,9 +148,9 @@ Obtain the following parameters from your equipment vendor.
      - Class C
    * - EU868 band
      - 868.1MHz ~ 868.5MHz
-   * - DevEUI*
+   * - DevEUI/AppEUI/JoinEUI*
      - *YOUR_DEV_EUI*, *eg: 00:12:BD:FF:FE:02:AD:04*
-   * - AppKey / Application Key*
+   * - AppKey/Application Key/Network Key*
      - *YOUR_APP_KEY*, *eg: 72357538782F413F4428472B4B625065*
 
 **Note:** These parameters are different for every thermostat. 
@@ -67,17 +158,6 @@ Obtain the following parameters from your equipment vendor.
 
 LoRaWAN Gateway - MultiTech Conduit AP (MTCAP)
 ==============================================
-
-升级固件 (Option)
-------------------
-
-固件版本 5.3.3 太旧，升级到 6.0.4 后进行其它操作。
-
-1. 下载固件。从 http://www.multitech.net/developer/downloads/ 的 "Conduit Access Point and Conduit IP67 200 Series: mPower Models (MTCAP and MTCDTIP2)" 下载最新固件 [MTCAP 6.0.1 (signed firmware)](https://webfiles.multitech.com/wireless/mtcap/MTCAP_6.0.4_upgrade-signed.zip) 与 [Release Notes](https://webfiles.multitech.com/wireless/mtcap/mtcap-release-notes_6.x.x.pdf)。
-
-2. 升级固件。登录 MTCAP 的 Web UI, 依次点击 **Administartion** -> **FirmWare Upgrade** -> **Choose Firmware Upgrade File** -> 选择要升级的固件文件（如 *MTCAP_6.0.4_upgrade-signed.bin*） -> **Start Upgrade**，等待数分钟。固件升级成功后，MTCAP 会自动重启。 若升级成功，登录后会看到新的版本号（如 6.0.4）。
-
-说明：上述方法，只支持 mPower 5.x.x 升级到 6.x.x。若版本太旧，必须先升级到  mPower 5.x.x，然后再升级到  6.x.x。
 
 
 Configuration

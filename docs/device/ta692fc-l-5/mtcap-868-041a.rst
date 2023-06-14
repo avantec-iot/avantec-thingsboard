@@ -1,0 +1,169 @@
+************************************
+MultiTech Conduit® MTCAP-868-041A
+************************************
+
+MTCAP Series
+==================
+
+Refer `MultiTech Conduit® AP Access Point for LoRa® Technology (MTCAP Series) <https://www.multitech.com/brands/multiconnect-conduit-ap>`_.
+
+The MultiTech Conduit® AP conveniently provides deep in-building connectivity and improved performance for network operators and enterprises connecting thousands of IoT assets by harnessing the power of the LoRaWAN® protocol.
+
+Easy to deploy, the Conduit AP access point extends LoRa® connectivity in commercial buildings like hotels, convention centers, offices and retail facilities providing coverage in difficult to reach areas cell tower or rooftop deployments may not penetrate.
+
+MTCAP-868-041A
+==================
+
+Refer to:
+
+  * `WebSite: MTCAP-868-041A <https://www.multitech.com/models/92507541LF>`_
+  * `Data Sheet: MultiTech Conduit® AP Access Point for LoRa® Technology (EU868) <https://www.multitech.com/documents/publications/data-sheets/86002212.pdf>`_
+  * `Quick Start Guide: Conduit AP Quick Start Guide <https://www.multitech.com/documents/publications/quick-start-guides/8210475XL_MTCAP-MTCAP2_Ext_Ant_quick_start_.pdf>`_
+  * `Application Note: Configuring mDot with Conduit AP using LoRa <https://www.multitech.com/documents/publications/training/S000812--Configuring-mDot-w-MTACP-using-LoRa-App-Note.pdf>`_
+  * `Software Guide: mPowerTM Edge Intelligence Conduit AEP Software Guide <https://www.multitech.com/documents/publications/software-guides/s000727--mPower-Edge-Intelligence-Conduit-AEP-software-guide.pdf>`_
+
+
+Ethernet Only mPower Programmable Access Point with external LoRa antenna and EU/UK Accessory Kit.
+
+Accessory kit includes power supply and blade(s), LoRa antenna, Ethernet cable, mounting bracket and Quick Start Guide.
+
+
+First-Time Setup of Gateway
+----------------------------
+
+.. Note::
+
+    This configuration works with the LoRa packet forwarder. You may choose to use Ethernet with LoRa or Cellular with LoRa (if your model has a cellular radio).
+
+This setup wizard helps you configure the main features of your device for initial setup. In most cases, you can accept the provided defaults. See **First-Time Setup** in the `software guide <https://www.multitech.com/documents/publications/software-guides/s000727--mPower-Edge-Intelligence-Conduit-AEP-software-guide.pdf>`_ for more details.
+
+#. Go to your browser’s address line and enter the default IP address for the gateway to access the UI: 192.168.2.1. Most browsers display a warning about HTTP addresses being unsafe. Click on **Advanced** and continue to 192.168.2.1.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/first-time-1.png
+        :width: 60 %
+
+#. Upon power up for the first time, the device will be in commissioning mode. The system requires you to set up an administrative user. Enter your desired username and click **OK**.
+#. Enter a desired password for the administrative user and click **OK**. This password must be of sufficient length and strength (with a mix of character classes such as letters, numbers, and symbols). Enter the password again to confirm. Click **OK**.
+
+#. The login page appears. Enter username and password.
+#. **First-Time Setup Wizard** appears.
+#. For **Call Home**,
+    a. Accept all default settings (disabled).
+    b. Click **Next**.
+#. Set the date, time, and time zone.
+    a. If the information is correct, accept the default values.
+    b. Otherwise, update **Date**, **Time**, and/or **Time Zone**.
+    c. Click **Next**.
+#. Configure LAN network interfaces Eth0 and Br0.
+    a. Accept all default settings - **eth0** assigned to the bridge **br0** (with DHCP set automatically). **NOTE**: You will need to make additional configuration changes for Ethernet under Network Interfaces after **First-Time Setup**. See `Using Ethernet with LoRa Packet Forwarder`_.
+    b. Click Next.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/first-time-2.png
+        :width: 60 %
+
+#. Configure your device's **Cellular** connection.
+    a. If you have no cellular radio (Ethernet only) in your device or plan to use Ethernet with the LoRa packet forwarder, accept all defaults with **Enabled** deactivated (Cellular is disabled) and APN left blank.
+    b. If you have a cellular radio model and plan to use **Cellular** with the LoRa packet forwarder, select **Enabled** (Cellular is enabled).
+    c. If required by your network carrier, enter your **APN** (Some carrier networks may set it automatically via OTA registration. Leave it blank in that case).
+    d. Click **Next**.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/first-time-3.png    
+        :width: 60 %
+
+#. For **Cellular Authentication**,
+    a. Accept all defaults (NONE).
+    b. Click **Next**.
+#. For **Remote Management**,
+    a. Accept all defaults (disabled).
+    b. Click **Next**.
+#. For **HTTP/HTTPS Access**,
+    a. Accept all defaults (enable HTTP to HTTPS via LAN).
+    b. Click **Next**.
+#. For **Bootloader Protection** (setting a u-boot password),
+    a. Disable Bootloader Protection (defaults vary with firmware version).
+    b. Click **Finish**.
+#. To save your changes, click **Save and Apply**.
+
+Configuring LoRa Packet Forwarder
+---------------------------------
+
+Using Ethernet with LoRa Packet Forwarder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are planning to use Ethernet with the LoRa Packet Forwarder, then you must make
+this configuration change below before configuring and running Packet Forwarder. If you
+are using a Cellular connection with LoRa, you can skip these steps.
+
+#. Go to **Network Interfaces**. Click the pencil for the **eth0** interface.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/using-ethernet-with-lora-packet-forwarder-1.png
+
+#. Under **Network Interface ETH0**, 
+    a. change **Direction** to **WAN**.
+    b. Under **Mode**, select **DHCP Client**.
+    c. Click **Submit**.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/using-ethernet-with-lora-packet-forwarder-2.png
+
+#. Go to **Administration** > **Access Configuration** > **HTTPS**, Enable HTTPS via WAN, then click **Submit**.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/using-ethernet-with-lora-packet-forwarder-3.png
+
+#. Click Save and Apply.
+
+
+Configuring the Gateway
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate **LoRa Packet Forwarder** Mode on your device:
+
+#. For **LoRaWAN** > **Network Settings** > **LoRa Mode**, select **PACKET FORWARDER** under **Mode**. If **Manual Configuration** is showing, click **Normal Configuration** to switch.
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/configuring-the-gateway-1.png
+
+#. For **LoRaWAN** > **Network Settings** > **LoRa Packet Forwarder Configuration**, 
+    a. You should select the network to use from the drop-down under **Network**: **Manual**, **Radio Bridge ChirpStack**, **The Things Network**, **Senet**, or **Loriot**. In this case, select **Manual**.
+    b. Select the appropriate **Channel Plan** for the Packet Forwarder. Choose from the drop-down menu: **US915: 915**, **AU915: 915**, **AS923-1: 915**, **AS923-2: 915**, **AS923-3: 915**, **AS923-4: 915**, **KR920: 915**, **EU868: 868**, **IN865: 868**, **RU864: 868**, or **ISM2400: 2400**. In this case, select **EU868**.
+    c. Type your LoRaWAN Network **Server address** - your ChirpStack IP.
+    d. Type **upstream port** & **downstream port**: 1700.
+    e. Click **Submit**. 
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/configuring-the-gateway-2.png
+
+#. Then, click **Save and Apply**.
+
+#. Confirm that the Packet Forwarder is now running under **Status**. Show the **LoRa Card Information** and copy the **Gateway EUI** (save for later).
+
+    .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/configuring-the-gateway-3.png
+
+#. Make sure to properly add your gateway and any end devices to the network based on their specific system and instructions. For this example, we will configure the gateway and end device using **Manual**.
+
+
+
+Firmware Upgrade (Option)
+---------------------------
+
+.. tip::
+
+  To install mPower 6.3.0, the Conduit gateway must be upgraded to mPower 6.0.0 or higher. Customers that are running earlier versions of mPower should use the following upgrade process.
+
+  .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/fw-upgrade-0.png
+
+
+* Download a new firmware form `here <http://www.multitech.net/developer/downloads/>`_.
+
+  .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/fw-upgrade-1.png
+
+* Updrade: For **Administartion** > **Firmware Upgrade** > **Choose Firmware Upgrade File**, select *a new firmware* > **Open** > **Start Upgrade** > 
+
+  .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/fw-upgrade-2.png
+
+* Click **OK** in a popup dialog.
+
+  .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/fw-upgrade-3.png
+
+* Wait a few minutes. After the firmware upgrade is successful, MTCAP will automatically restart.  If the upgrade is successful, you will see the new version number after logging in.
+
+  .. image:: /_static/device/ta692fc-l-5/mtcap-868-041a/fw-upgrade-4.png
+
+
