@@ -150,6 +150,7 @@ TA692FC-L-5
 ^^^^^^^^^^^
 
 * LoRaWAN thermostat for fan coil units.
+
 .. * Firmware ID: ``TA692FC-L-5``.
 
 .. image:: /_static/device/ta692fc-l-5/ta692fc-l-5.png

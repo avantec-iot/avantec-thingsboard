@@ -27,6 +27,7 @@ Ethernet Only mPower Programmable Access Point with external LoRa antenna and EU
 
 Accessory kit includes power supply and blade(s), LoRa antenna, Ethernet cable, mounting bracket and Quick Start Guide.
 
+.. _First-Time Setup of Gateway:
 
 First-Time Setup of Gateway
 ----------------------------
@@ -84,6 +85,9 @@ This setup wizard helps you configure the main features of your device for initi
     b. Click **Finish**.
 #. To save your changes, click **Save and Apply**.
 
+
+.. _Configuring LoRa Packet Forwarder:
+
 Configuring LoRa Packet Forwarder
 ---------------------------------
 
@@ -140,7 +144,9 @@ To activate **LoRa Packet Forwarder** Mode on your device:
 
 
 
-Firmware Upgrade (Option)
+.. _MTCAP Firmware Upgrade:
+
+Optional: Firmware Upgrade
 ---------------------------
 
 .. tip::
