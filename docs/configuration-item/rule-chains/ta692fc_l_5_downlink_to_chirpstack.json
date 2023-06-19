@@ -1,0 +1,66 @@
+{
+  "ruleChain": {
+    "additionalInfo": {
+      "description": "Avantec Manufacturing Limited, v1.0.0, 20230607"
+    },
+    "name": "TA692FC-L-5 downlink to ChirpStack",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": true,
+    "configuration": null,
+    "externalId": null
+  },
+  "metadata": {
+    "firstNodeIndex": 0,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 268,
+          "layoutY": 150
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "name": "get required fields",
+        "debugMode": false,
+        "singletonMode": false,
+        "configuration": {
+          "tellFailureIfAbsent": true,
+          "fetchToData": false,
+          "clientAttributeNames": [
+            "integrationName",
+            "devEUI"
+          ],
+          "sharedAttributeNames": [],
+          "serverAttributeNames": [],
+          "latestTsKeyNames": [],
+          "getLatestValueWithTs": false
+        },
+        "externalId": null
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 554,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode",
+        "name": "Send downlink",
+        "debugMode": false,
+        "singletonMode": false,
+        "configuration": {
+          "integrationId": "535b41c0-0384-11ee-af14-175a6432e834"
+        },
+        "externalId": null
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}

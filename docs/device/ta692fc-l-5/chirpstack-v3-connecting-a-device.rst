@@ -7,7 +7,7 @@ Refer to `Connecting device <https://www.chirpstack.io/project/guides/connect-de
 This guide describes how to connect your LoRaWAN device with ChirpStack and how to validate that it can successfully activate. At this point it is expected that you have the ChirpStack Network Server and ChirpStack Application Server components installed and that you have successfully connected a LoRa gateway to it.
 
 Requirements
-^^^^^^^^^^^^^^^
+---------------
 
 Before continuing, there are a couple things you need to know about your device. This information is usually provided by the device vendor.
 
@@ -17,7 +17,7 @@ Before continuing, there are a couple things you need to know about your device.
 * OTAA: Device root-keys (when no external join-server is used)
 
 Login
-^^^^^^
+---------
 
 Login into the ChirpStack Application Server web-interface. The default credentials are:
 

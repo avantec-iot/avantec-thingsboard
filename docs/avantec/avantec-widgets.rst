@@ -119,6 +119,14 @@ Control widget.
 .. image:: /_static/extension/avantec-widgets/tabs-navigation-bar-1.png
 
 
+Update shared string attribute with segmented switch 
+-----------------------------------------------------
+
+Latest values widget.
+
+.. image:: /_static/extension/avantec-widgets/update-shared-string-attribute-with-segmented-switch-1.png
+
+
 Update time value
 ------------------
 

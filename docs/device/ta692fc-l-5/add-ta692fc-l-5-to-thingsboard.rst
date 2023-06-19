@@ -121,124 +121,484 @@ Prerequisites
     * `Install your own ThingsBoard PE instance <https://thingsboard.io/docs/user-guide/install/pe/installation-options/>`_
 
 
-MTCAP configuration
-====================
+Step 1. MTCAP configuration
+==============================
 
 * :ref:`Configuring LoRa Packet Forwarder`.
 
 
-ChirpStack configuration
-=========================
+Step 2. ChirpStack configuration
+==================================
 
 * :ref:`Connect gateway to ChirpStack <Connecting a Gateway>`.
 
 * :ref:`Connect device to ChirpStack <Connecting a Device>`.
 
 
-Integrating ChirpStack with ThingsBoard PE
-==========================================
+Step 3. Integrating ChirpStack with ThingsBoard PE
+===================================================
 
 Refer to `ChirpStack Integration <https://thingsboard.io/docs/user-guide/integrations/chirpstack/>`_.
 
-
-Importing uplink Converter
+Step 3.1 Uplink Converter
 --------------------------
 
-**TA692FC-L-5 uplink from ChirpStack** :
+Before creating the integration, you need to create/import an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard. To view the events, enable **Debug**. In the function decoder field, specify a script to parse and transform data.
+
+**NOTE** Although the Debug mode is very useful for development and troubleshooting, leaving it enabled in production mode may tremendously increase the disk space, used by the database, because all the debugging data is stored there. It is highly recommended to turn the Debug mode off when done debugging.
+
+sample uplink message 
+^^^^^^^^^^^^^^^^^^^^^^
+
+Let's review sample uplink message from ChirpStack:
+
+.. code:: json
+
+  {
+      "applicationID": "1",
+      "applicationName": "TA692FC-L-5-Application",
+      "deviceName": "Sales-Office",
+      "devEUI": "ABK9//4CrQQ=",
+      "rxInfo": [{
+          "gatewayID": "AIAAAAACDgs=",
+          "time": null,
+          "timeSinceGPSEpoch": null,
+          "rssi": -52,
+          "loRaSNR": 8.5,
+          "channel": 2,
+          "rfChain": 0,
+          "board": 0,
+          "antenna": 0,
+          "location": {
+              "latitude": 22.31025463915414,
+              "longitude": -245.77515719803597,
+              "altitude": 0,
+              "source": "UNKNOWN",
+              "accuracy": 0
+          },
+          "fineTimestampType": "NONE",
+          "context": "LZVORA==",
+          "uplinkID": "p7k/E6nyQpeMTwedtMqHgA==",
+          "crcStatus": "CRC_OK"
+      }],
+      "txInfo": {
+          "frequency": 868500000,
+          "modulation": "LORA",
+          "loRaModulationInfo": {
+              "bandwidth": 125,
+              "spreadingFactor": 12,
+              "codeRate": "4/5",
+              "polarizationInversion": false
+          }
+      },
+      "adr": true,
+      "dr": 0,
+      "fCnt": 114,
+      "fPort": 10,
+      "data": "AOAA12QCAwIBKAAeAw==",
+      "tags": {},
+      "confirmedUplink": false,
+      "devAddr": "ABCDuw==",
+      "publishedAt": "2023-06-15T08:24:14.436509221Z",
+      "deviceProfileID": "e87f230b-51a7-407a-aa6c-468308601139",
+      "deviceProfileName": "TA692FC-L-5-868 Thermostat"
+  }
+
+
+Device fields
+^^^^^^^^^^^^^^
+
+* As you can see the device EUI arrives in the **devEUI** field. We will use it as a **device name** in ThingsBoard.
+* As you can see the device profile name arrives in the **deviceProfileName** field. We will use it as a **device Type (device profile name)** in ThingsBoard. 
+* As you can see the device name arrives in the **deviceName** field. We will use it as a **device label** in ThingsBoard.
+
+.. list-table:: ChirpStack fields v.s. ThingsBoard fields in this case
+    :widths: auto
+    :header-rows: 1
+
+  * - No.
+    - ChirpStack field
+    - Editable
+    - 
+    - ThingsBoard field
+    - Editable
+  * - 1
+    - devEUI
+    - No
+    - 
+    - deviceName
+    - No
+  * - 2
+    - deviceProfileName
+    - No
+    - 
+    - deviceType (deviceProfileName)
+    - Yes [1]_
+  * - 3
+    - deviceName
+    - Yes [2]_
+    - 
+    - deviceLabel
+    - Yes [2]_
+
+.. rubric:: Notes
+
+.. [1] In this case, if **deviceType (deviceProfileName)** of the device is modified, the device may not be able to receive messages from ChirpStack or send messages to ChirpStack.
+.. [2] Both are the same only when ThingsBoard automatically creates the device. They are not automatically kept in sync afterwards.
+
+
+In the converter it will be indicated like this:
 
 .. code:: javascript
 
-  // TODO:...
+  var deviceLabel = data.deviceName; // "Sales-Office"
+  var deviceName =  base64ToHexWithoutUppercase(data.devEUI); //'0012bdfffe02ad04', unique
+  var deviceType = data.deviceProfileName; //"TA692FC-L-5-868 Thermostat"
+
+  var result = {
+    deviceName: deviceName,
+    deviceType: deviceType,
+    deviceLabel: deviceLabel
+  }
+
+
+Device data
+^^^^^^^^^^^^
+
+Device data is encoded in the “data” field. The Base64 encoded data here is:
+
+.. code:: json
+
+  "data": "AOAA12QCAwIBKAAeAw=="
+
+
+Let's convert them into roomTemperature, setTemperature, fanMode and fanState, etc.
+
+In the decoded form we have the following string: **00 E0 00 D7 64 02 03 02 01 28 00 1E 03**
+
+* **00 E0** is the value for roomTemperature, 22.4.
+* **00 D7** is the value for setTemperature, 21.5.
+* **64** is the value for coolProportionalOutput, 100%.
+* **02** is the value for fanMode, MED.
+* **03** is the value for fanState, HIGH.
+* **02** is the value for threshold, 0.2.
+* **01** is the value for systemMode, COOL.
+* **28** is the value for coolPBand, 4.0.
+* **00 1E** is the value for coolITime, 30.
+* **03** is the value for kFactor, 3.
+
+In the converter it will be indicated like this:
+
+.. code:: javascript
+
+  var result = {
+    attributes: {
+      setTemperature: parseInt(incomingHexData.substring(4, 8), 16)/10,
+      coolProportionalOutput: parseInt(incomingHexData.substring(8, 10), 16)/100,
+      fanMode: fanModeStateMeta[parseInt(incomingHexData.substring(10, 12), 16)],
+      fanState: fanModeStateMeta[parseInt(incomingHexData.substring(12, 14), 16)],
+      threshold: parseInt(incomingHexData.substring(14, 16), 16)/10,
+      systemMode: systemModeMeta[parseInt(incomingHexData.substring(16, 18), 16)],
+      coolPBand: parseInt(incomingHexData.substring(18, 20), 16)/10,
+      coolITime: parseInt(incomingHexData.substring(20, 24), 16),
+      kFactor: parseInt(incomingHexData.substring(24, 26), 16)
+    },
+    telemetry: {
+      roomTemperature: parseInt(incomingHexData.substring(0, 4), 16)/10
+    }
+  }
+
+Importing uplink Converter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Download :download:`ChirpStack uplink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_downlink_converter_for_ta692fc_l_5.json>`.
+
+* **Data converters** --> **+** --> **Import converter**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-uplink-converter-1.png
+
+* Popup dialog: Import converter --> Drag and drop the converter file --> **Import**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-uplink-converter-2.png
+
+* Show it in the list of Data Converters.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-uplink-converter-3.png
+
+You can change the decoder/encoder function while creating the converter or after creating it. If the converter has already been created, then click on the “pencil” icon to edit it. Copy the configuration example for the converter (or your own configuration) and insert it into the decoder/encoder function. Save changes by clicking on the “checkmark” icon.
+
+
+Step 3.2 Downlink Converter
+----------------------------
+
+You can customize the downlink according to your configuration.
+Let's consider an example where we send an shared attribute update message - **remoteSetSetTemperature**. 
+
+.. code:: javascript
+
+  data: msg.remoteSetSetTemperature
+
+
+Also, indicate the required parameters in the metadata:
+
+.. code:: javascript
+
+  metadata: {
+    "cs_devEUI": "$Device_EUI"
+  }
+
+
+Example for downlink converter:
+
+.. code:: javascript
+
+  var remoteSetSetTemperature = msg.remoteSetSetTemperature;
+  var fPort = 91;
+  var content = Math.round(remoteSetSetTemperature * 10);
+  var contentBase64 = Uint16ToBase64(content);
+
+  // Result object with encoded downlink payload
+  var result = {
+      // downlink data content type: JSON, TEXT or BINARY (base64 format)
+      contentType: "TEXT",
+
+      // downlink data
+      data: contentBase64,//JSON.stringify(data),
+
+      // object: {...},   //ChirpStack v4 // decoded object (when application coded has been configured)
+      // Optional metadata object presented in key/value format
+      metadata: {
+              DevEUI: metadata.cs_devEUI, //ChirpStack v3
+              fPort: fPort                //ChirpStack v3
+      }
+  };
+
+  function Uint16ToBase64(value) {
+      let myArr = new Uint8Array(2);
+      myArr[0] = value >> 8; // High byte
+      myArr[1] = value >> 0; // Low byte
+
+      let myStr = Uint8ArrayToString(myArr);
+      return btoa(myStr);
+  }
+
+  function Uint8ArrayToString(fileData){
+    var dataString = "";
+    for (var i = 0; i < fileData.length; i++) {
+      dataString += String.fromCharCode(fileData[i]);
+    }
+
+    return dataString;
+  }
+
+  return result;
+
+Where **cs_devEUI** is device EUI, it will be taken from the device uplink message.
 
 
 Importing downlink Converter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Download :download:`ChirpStack downlink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_uplink_converter_for_ta692fc_l_5.json>`.
+
+* **Data converters** --> **+** --> **Import converter**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-downlink-converter-1.png
+
+* Popup dialog: Import converter --> Drag and drop the converter file --> **Import**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-downlink-converter-2.png
+
+* Show it in the list of Data Converters.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/import-downlink-converter-3.png
+
+
+Step 3.3 Create Integration
 ----------------------------
 
 
-.. code:: javascript
+Step 3.3.1 Get Application API key from ChirpStack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  // TODO:...
+* To get the API key we need to open Application server UI, open **API keys** tab from the left top menu and **Create** an API key.
 
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/get-application-api-key-from-chirpstack-1.png
 
-Get Application API key from ChirpStack
-----------------------------------------
+* Input your API key name --> **Create API key**.
 
-* ChirpStack
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/get-application-api-key-from-chirpstack-2.png
 
-  * Org.API keys -- Create a API key:
+* Copy your token.
 
-    * API key name: <u>Thingsboard integration</u>
-    * API key id: 32aafe54-c268-492b-9157-30903f200859
-    * API Key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5X2lkIjoiMzJhYWZlNTQtYzI2OC00OTJiLTkxNTctMzA5MDNmMjAwODU5IiwiYXVkIjoiYXMiLCJpc3MiOiJhcyIsIm5iZiI6MTY4NjIwMjU5OSwic3ViIjoiYXBpX2tleSJ9.Od17K2ZlAdpN7188jmePAO6TjSZ1GscAReo30rRAmRI
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/get-application-api-key-from-chirpstack-3.png
 
-Creating ChirpStack intergration
----------------------------------
+* Show it in the list of global API keys.
 
-* ThingsBoard Server:
-
-  * Integrations +
-
-    * Type: ChirpStack
-    * Name: <u>TA692FC-L-5 ChirpStack integration</u>
-    * Enable integration: v
-    * Debug mode: v (only for debug)
-    * Allow create devices or assets
-    * Uplink data converter: <u>TA692FC-L-5 uplink from ChirpStack</u>
-    * Downlink data converter: <u>TA692FC-L-5 downlink to ChirpStack</u>
-    * Base URL: <u>https://thingsboard.cloud</u>
-    * HTTP endpoint URL: *https://thingsboard.cloud/api/v1/integrations/chirpstack/127834db-ff11-8a6e-edc6-30da3828f2d7*
-    * Application server URL: <u>http://13.48.187.149:8080</u>
-    * Applicattion server API Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5X2lkIjoiMzJhYWZlNTQtYzI2OC00OTJiLTkxNTctMzA5MDNmMjAwODU5IiwiYXVkIjoiYXMiLCJpc3MiOiJhcyIsIm5iZiI6MTY4NjIwMjU5OSwic3ViIjoiYXBpX2tleSJ9.Od17K2ZlAdpN7188jmePAO6TjSZ1GscAReo30rRAmRI
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/get-application-api-key-from-chirpstack-4.png
 
 
-Importing rule chain to process shared attribute update
---------------------------------------------------------
+Step 3.3.2 Adding ChirpStack intergration on ThingsBoard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to send Downlink, we use the rule chain to process shared attribute update.
-To get fPort and DevEUI from device we have to import rule-chain.
+Now that the Uplink converter and Downlink converter have been created, and we have all required data, it is possible to create an integration.
 
-*TODO:....*
+* **Integrations** --> select a integration type: **ChirpStack** --> input name: *TA692FC-L-5 ChirpStack integration* --> enable **integration**, **debug mode** and **allow create devices or assets** --> **Next**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/adding-chirpstack-intergration-on-thingsboard-1.png
+
+* Select Uplink data convert: *TA692FC-L-5 downlink from ChirpStack*.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/adding-chirpstack-intergration-on-thingsboard-2.png
+
+* Select Downlink data convert: *TA692FC-L-5 uplink from ChirpStack*.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/adding-chirpstack-intergration-on-thingsboard-3.png
+
+* Check **Base URL** --> copy **HTTP endpoint URL** --> paste your ChirpStack **Application server URL** --> paste your ChirpStack **Application server API Token**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/adding-chirpstack-intergration-on-thingsboard-4.png
 
 
-Modify the root rule-chain
-------------------------------
+* Show it in the list of integrations.
 
-*TODO:....*
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/adding-chirpstack-intergration-on-thingsboard-5.png
 
 
-Create integration on ChirpStack Network server stack
--------------------------------------------------------
+**NOTE:** It is recommended to enable Debug mode for debug purposes to see uplink/downlink events on integration.
+
+
+Step 3.3.3 Configure an Integration for your ChirpStack application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create integration on ChirpStack Network server stack, we need to do the following steps:
 
-1. Login to ChirpStack Network server stack user interface (Default login/password - **admin/admin**).
-2. We go to the tab **Applications** in the left menu and open our application (our application is named Application).
-3. Open the **Integrations** tab and create a **HTTP** integration.
-4. Let`s go to the **Integrations** tab in ThingsBoard. Find your ChirpStack integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
-5. Fill the fields with endpoint url from ThingsBoard integration: <u>https://thingsboard.cloud/api/v1/integrations/chirpstack/127834db-ff11-8a6e-edc6-30da3828f2d7</u>
+* Login to ChirpStack Network server stack user interface (Default login/password - **admin/admin**).
+* We go to the tab **Applications** in the left menu and open our application (our application is named Application).
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-an-integration-for-your-chirpstack-application-1.png
+
+* Open the **Integrations** tab and create a **HTTP** integration.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-an-integration-for-your-chirpstack-application-2.png
+
+* Let`s go to the **Integrations** tab in ThingsBoard. Find your ChirpStack integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
+
+* Fill the fields with endpoint url from ThingsBoard integration:
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-an-integration-for-your-chirpstack-application-3.png
 
 
-validate data
---------------
+Step 3.3.4 Importing rule chain for Downlink
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to send Downlink, we use the rule chain to process shared attribute update.
+To get **devEUI** from device we have to import rule-chain.
+
+* Download :download:`Rule chain: TA692FC-L-5 downlink to ChirpStack </configuration-item/rule-chains/ta692fc_l_5_downlink_to_chirpstack.json>`.
+
+* **Rule chains** --> **+** --> **Import rule chain** --> Popup dialog: Import rule chain --> Drag and drop the Rule chain file --> **Import**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/importing-rule-chain-for-downlink-1.png
+
+* Show it in the list of Rule chains --> Click on the row.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/importing-rule-chain-for-downlink-2.png
+
+* Show the rule chain details.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/importing-rule-chain-for-downlink-3.png
+
+* Check the node of **get required fields**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/importing-rule-chain-for-downlink-4.png
 
 
-Synchronize device state using client and shared attribute requests (Optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Check the node of **Send downlink**.
 
-*TODO:....*
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/importing-rule-chain-for-downlink-5.png
 
-Control device using shared attributes (Optional)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*TODO:....*
 
-visiual data
---------------
+Step 3.3.5 Configure the root rule-chain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **Rule chains** --> Click on the row.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-the-root-rule-chain-1.png
+
+* Drag and drop the **Rule Chain** node --> Popup dialog: **Add rule node: rule chain** --> Input your node name, *eg: Downlin to ChirpStack* --> Select the Rule Chain, *eg: TA695FC-L-5 downlink to ChirpStack* --> **Add**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-the-root-rule-chain-2.png
+
+* Now, root rule chain looks like this:
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-the-root-rule-chain-3.png
+
+* Add link from **Message Type Switch** to **Downlink to ChirpStack** --> Popup dialog: Select a link label: **Attributes updated** --> **Add**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-the-root-rule-chain-4.png
+
+* Save the root rule chain.
+  
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/configure-the-root-rule-chain-5.png
+
+
+
+Step 3.4 Processing Uplink message
+-----------------------------------
+
+* When device sends uplink message, you will receive an uplink event on integration and data from the device.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-uplink-message-1.png
+
+* The created device with data can be seen in the section **Device groups** --> **All**.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-uplink-message-2.png
+    
+* Received data can be viewed in the Uplink converter. In the “In” and “Out” blocks of the Events tab:
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-uplink-message-3.png
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-uplink-message-4.png
+
+
+
+Step 3.5 Processing Downlink message
+-------------------------------------
+
+* We go to the **Device group** section in the **All** folder, to see this with an example. We add a **remoteSetSetTemperature** of the device in the **Shared attributes** (initialize the **remoteSetSetTemperature** to **25.5**).
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-1.png
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-2.png
+
+* Now, We have indicated the **remoteSetSetTemperature** of the device in the **Shared attributes**. Now we edit it by clicking on the “pencil” icon.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-3.png
+
+* Then we make changes to the attribute (change the **remoteSetSetTemperature** to **19.5**) and save the data.
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-4.png
+
+* Received data and data that was sent can be viewed in the downlink converter. In the **In** block of the Events tab, we see what data entered and the **Out** field displays messages to device:
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-5.png
+
+  .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-6.png
+
+
+
+Step 3.6 Visiual Data
+----------------------
+
+Use the Dashboards to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.
 
 Updating Avantec Widgets
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-*TODO:....*
+* See :ref:`Update Avantec Widgets <Update Avantec Widgets>`.
+
 
 Importing Dashboard
 ^^^^^^^^^^^^^^^^^^^
@@ -247,5 +607,11 @@ Importing Dashboard
 
 Modify Dashboard
 ^^^^^^^^^^^^^^^^
+
+*TODO:....*
+
+
+Modify Device Profile
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *TODO:....*
