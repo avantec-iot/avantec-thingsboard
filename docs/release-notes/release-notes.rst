@@ -2,6 +2,20 @@
 Release Notes
 *************************************************
 
+v2.3 (June 20, 2023)
+=====================
+
+* Add TA692FC-L-5's documents
+    * Add TA692FC-L-5 Specification
+    * Add TA692FC-L-5 LoRaWAN Device API
+    * New appliction note: Add TA692FC-L-5 to ThingsBoard
+    * Add TA692FC-L-5 List Dashboard
+    * Add TA692FC-L-5 Detail Dashboard
+
+* Avantec Widgets
+    * New widget - ``Update shared string attribute with segmented switch``.
+
+
 v2.2 (June 1, 2023)
 ===================
 

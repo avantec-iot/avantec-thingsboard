@@ -1,0 +1,3250 @@
+{
+  "title": "TA692FC-L-5 Thermostat (For Mobile App)",
+  "image": null,
+  "mobileHide": true,
+  "mobileOrder": null,
+  "configuration": {
+    "widgets": {
+      "e0cff2bd-93e8-83b0-c278-7bc65813a6e1": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "basic_timeseries",
+        "type": "timeseries",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemperature",
+                  "type": "timeseries",
+                  "label": "Room Temperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.2285146483862024,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              },
+              "latestDataKeys": []
+            }
+          ],
+          "timewindow": {
+            "hideInterval": false,
+            "hideLastInterval": false,
+            "hideQuickInterval": false,
+            "hideAggregation": false,
+            "hideAggInterval": false,
+            "hideTimezone": false,
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 604800000,
+              "quickInterval": "CURRENT_DAY",
+              "interval": 1800000
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "stack": false,
+            "fontSize": 10,
+            "fontColor": "#545454",
+            "showTooltip": true,
+            "tooltipIndividual": false,
+            "tooltipCumulative": false,
+            "hideZeros": false,
+            "grid": {
+              "verticalLines": true,
+              "horizontalLines": true,
+              "outlineWidth": 1,
+              "color": "#545454",
+              "backgroundColor": null,
+              "tickColor": "#DDDDDD"
+            },
+            "xaxis": {
+              "title": null,
+              "showLabels": true,
+              "color": "#545454"
+            },
+            "yaxis": {
+              "min": null,
+              "max": null,
+              "title": null,
+              "showLabels": true,
+              "color": "#545454",
+              "tickSize": null,
+              "tickDecimals": 0,
+              "ticksFormatter": ""
+            },
+            "shadowSize": 4,
+            "smoothLines": false,
+            "comparisonEnabled": false,
+            "xaxisSecond": {
+              "axisPosition": "top",
+              "title": null,
+              "showLabels": true
+            },
+            "customLegendEnabled": true,
+            "dataKeysListForLabels": []
+          },
+          "title": "Temperature history (°C)",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": false,
+          "displayTimewindow": true,
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": true,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": true,
+            "showTotal": false,
+            "showLatest": false
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e0cff2bd-93e8-83b0-c278-7bc65813a6e1"
+      },
+      "2774fb40-6586-f72a-8140-9b13d9f49f07": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Monitor &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
+          },
+          "title": "Navigation: Monitor",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "mobileOrder": 1,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "2774fb40-6586-f72a-8140-9b13d9f49f07"
+      },
+      "6a88f568-e74c-c7d3-50f0-381db917754f": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"control\">\n        <div class='description' id=\"control\">\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Control",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "control",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "control",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "012866f8-e828-7c56-9070-eb3f791631a0"
+              }
+            ]
+          },
+          "mobileOrder": 4,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6a88f568-e74c-c7d3-50f0-381db917754f"
+      },
+      "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"settings\">\n        <div class='description' id=\"settings\">\n             Settings  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Settings",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "settings",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "settings",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281"
+      },
+      "82f24596-c242-c99d-dec2-188858a645dd": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "82f24596-c242-c99d-dec2-188858a645dd"
+      },
+      "bbcfccf3-94b0-9856-3f93-49ab61fed51c": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bbcfccf3-94b0-9856-3f93-49ab61fed51c"
+      },
+      "62d27ec5-c33f-40f0-ed04-a407c5b2484a": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "gauge_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 4,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemperature",
+                  "type": "timeseries",
+                  "label": "roomTemperature",
+                  "color": "#009b4d",
+                  "settings": {},
+                  "_hash": 0.9937628442804367,
+                  "units": "",
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null,
+                  "aggregationType": "NONE"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#ffffff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "minValue": 0,
+            "maxValue": 50,
+            "gaugeType": "arc",
+            "gaugeWidthScale": 0.65,
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "roundedLineCap": false,
+            "gaugeColor": "#eeeeee",
+            "useFixedLevelColor": false,
+            "levelColors": [],
+            "showTitle": false,
+            "showUnitTitle": false,
+            "showTimestamp": false,
+            "showValue": true,
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "600",
+              "size": 24,
+              "color": "#333333"
+            },
+            "showMinMax": true,
+            "minMaxFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500",
+              "color": "#666666"
+            },
+            "showTicks": false,
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "Room temperature (°C)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "0.8em",
+            "fontWeight": "normal",
+            "opacity": 0.5
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          },
+          "useDashboardTimewindow": true,
+          "enableDataExport": false,
+          "pageSize": 1024
+        },
+        "row": 0,
+        "col": 0,
+        "id": "62d27ec5-c33f-40f0-ed04-a407c5b2484a"
+      },
+      "55e7a8e8-4959-cf77-3ad2-b9f06179635f": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "setTemperature",
+                  "type": "attribute",
+                  "label": "setTemperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\n//return ''+ value.toFixed(1) + ''; //xxx\nreturn '<b>'+ value.toFixed(1) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Set Temperature (°C)\n        </div>\n        <div class='value'>\n            ${setTemperature}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "55e7a8e8-4959-cf77-3ad2-b9f06179635f"
+      },
+      "2997fae8-bd27-3150-faf1-53f6f94acb53": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "fanState",
+                  "type": "attribute",
+                  "label": "fanState",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5675188028919651,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        \n        <div class='description'>\n            Fan State\n        </div>\n        <div class='value'>\n            ${fanState}\n        </div> \n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   width: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "2997fae8-bd27-3150-faf1-53f6f94acb53"
+      },
+      "16abffaf-1181-8167-c3f7-74451f6f2748": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "systemMode",
+                  "type": "attribute",
+                  "label": "systemMode",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.0028942423165743136,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            System Mode\n        </div>\n        <div class='value'>\n            ${systemMode}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "16abffaf-1181-8167-c3f7-74451f6f2748"
+      },
+      "4cc37622-20bb-23d2-6528-e647a9c11f6a": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "coolProportionalOutput",
+                  "type": "attribute",
+                  "label": "coolProportionalOutput",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.0028942423165743136,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": 0,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\nreturn '<b>'+ Math.round(value*100) +'</b>';\n"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Cool Proportional Output (%)\n        </div>\n        <div class='value'>\n            ${coolProportionalOutput}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4cc37622-20bb-23d2-6528-e647a9c11f6a"
+      },
+      "cb4fa65c-81dd-d7db-3aef-6965d18b6349": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "name",
+                  "type": "entityField",
+                  "label": "name",
+                  "color": "#607d8b",
+                  "settings": {},
+                  "_hash": 0.1429362656951716,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "type",
+                  "type": "entityField",
+                  "label": "type",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "_hash": 0.1520945911078957,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "label",
+                  "type": "entityField",
+                  "label": "label",
+                  "color": "#8bc34a",
+                  "settings": {},
+                  "_hash": 0.4711814499015259,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "devEUI",
+                  "type": "attribute",
+                  "label": "devEUI",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "_hash": 0.14131176611643248
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device name\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${name}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device profile (Type)\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${type}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Label\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${label}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        DevEUI\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${devEUI}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.0em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "cb4fa65c-81dd-d7db-3aef-6965d18b6349"
+      },
+      "42bcde6d-1400-0863-71b0-4580d1baa7da": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"monitor\">\n        <div class='description' id=\"monitor\">\n            Monitor  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Monitor",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "monitor",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "42bcde6d-1400-0863-71b0-4580d1baa7da"
+      },
+      "5e77b5a6-d447-fea8-0a95-05adbb7ad795": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
+          },
+          "title": "Navigation: Control",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "mobileOrder": 1,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5e77b5a6-d447-fea8-0a95-05adbb7ad795"
+      },
+      "3436402a-a154-f35c-91cc-21e00c43cb18": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"settings\">\n        <div class='description' id=\"settings\">\n            Settings &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Settings",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "settings",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "settings",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3436402a-a154-f35c-91cc-21e00c43cb18"
+      },
+      "f9841cb3-c76f-94da-7685-cbc3c82de06d": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "setTemperature",
+                  "type": "attribute",
+                  "label": "setTemperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\n//return ''+ value.toFixed(1) + ''; //xxx\nreturn '<b>'+ value.toFixed(1) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Set Temperature (°C)\n        </div>\n        <div class='value'>\n            ${setTemperature}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f9841cb3-c76f-94da-7685-cbc3c82de06d"
+      },
+      "228ee026-8a04-e823-9364-ec397e422c62": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "fanState",
+                  "type": "attribute",
+                  "label": "fanState",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5675188028919651,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        \n        <div class='description'>\n            Fan State\n        </div>\n        <div class='value'>\n            ${fanState}\n        </div> \n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   width: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "228ee026-8a04-e823-9364-ec397e422c62"
+      },
+      "bdb85906-0d69-f100-2ccf-7ab205a9af8d": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "systemMode",
+                  "type": "attribute",
+                  "label": "systemMode",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.0028942423165743136,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            System Mode\n        </div>\n        <div class='value'>\n            ${systemMode}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bdb85906-0d69-f100-2ccf-7ab205a9af8d"
+      },
+      "e27f0745-bb54-0955-10ce-844910397efb": {
+        "isSystemType": true,
+        "bundleAlias": "input_widgets",
+        "typeAlias": "update_shared_double_attribute",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetSetTemperature",
+                  "type": "attribute",
+                  "label": "remoteSetSetTemperature",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.19363756951342825,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686129372337,
+                "endTimeMs": 1686215772337
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "showLabel": false,
+            "isRequired": true,
+            "showResultMessage": false,
+            "minValue": 5,
+            "maxValue": 35
+          },
+          "title": "Set Temperature (5.0~35.0°C)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e27f0745-bb54-0955-10ce-844910397efb"
+      },
+      "35132269-4b62-08e7-568a-37e8dbff64a4": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "fanMode",
+                  "type": "attribute",
+                  "label": "fanMode",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.19671516830530145
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        \n        <div class='description'>\n            Fan Mode\n        </div>\n        <div class='value'>\n            ${fanMode}\n        </div> \n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   width: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "35132269-4b62-08e7-568a-37e8dbff64a4"
+      },
+      "477ed1f4-a530-1f2b-ccc6-980185e66a0a": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "fanMode",
+                  "type": "attribute",
+                  "label": "fanMode",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.19671516830530145
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        \n        <div class='description'>\n            Fan Mode\n        </div>\n        <div class='value'>\n            ${fanMode}\n        </div> \n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   width: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "477ed1f4-a530-1f2b-ccc6-980185e66a0a"
+      },
+      "b3346d3f-22e9-0708-2a34-9b2810c25b38": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "threshold",
+                  "type": "attribute",
+                  "label": "threshold",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\n//return ''+ value.toFixed(1) + ''; //xxx\nreturn '<b>'+ value.toFixed(1) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            Threshold (°C)\n        </div>\n        <div class='value'>\n            ${threshold}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "New HTML Value Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b3346d3f-22e9-0708-2a34-9b2810c25b38"
+      },
+      "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d": {
+        "isSystemType": true,
+        "bundleAlias": "input_widgets",
+        "typeAlias": "update_shared_double_attribute",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetThreshold",
+                  "type": "attribute",
+                  "label": "remoteSetThreshold",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.19363756951342825,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686129372337,
+                "endTimeMs": 1686215772337
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "showLabel": false,
+            "isRequired": true,
+            "showResultMessage": false,
+            "minValue": 0.2,
+            "maxValue": 5
+          },
+          "title": "Set Threshold (0.2~5.0°C)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d"
+      },
+      "80825308-24cc-3454-9155-89dba54ad83d": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "coolPBand",
+                  "type": "attribute",
+                  "label": "coolPBand",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\n//return ''+ value.toFixed(1) + ''; //xxx\nreturn '<b>'+ value.toFixed(1) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            P-Band for Cool (°C)\n        </div>\n        <div class='value'>\n            ${coolPBand}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "coolPBand",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "80825308-24cc-3454-9155-89dba54ad83d"
+      },
+      "f00582e8-4280-382f-32a9-007cd6292034": {
+        "isSystemType": true,
+        "bundleAlias": "input_widgets",
+        "typeAlias": "update_shared_double_attribute",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetCoolPBand",
+                  "type": "attribute",
+                  "label": "remoteSetCoolPBand",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.19363756951342825,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686129372337,
+                "endTimeMs": 1686215772337
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "showLabel": false,
+            "isRequired": true,
+            "showResultMessage": false,
+            "minValue": 1,
+            "maxValue": 4
+          },
+          "title": "Set P-Band for Cool (1.0~4.0°C)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f00582e8-4280-382f-32a9-007cd6292034"
+      },
+      "46786a84-4192-6a66-1939-094ebfc94896": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "coolITime",
+                  "type": "attribute",
+                  "label": "coolITime",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\nreturn '<b>'+ Math.round(value) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            I-Time for Cool (senconds)\n        </div>\n        <div class='value'>\n            ${coolITime}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "coolITime",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "46786a84-4192-6a66-1939-094ebfc94896"
+      },
+      "2e42ff61-7969-e9c3-5daf-862b48afd5cc": {
+        "isSystemType": true,
+        "bundleAlias": "input_widgets",
+        "typeAlias": "update_shared_integer_attribute",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetCoolITime",
+                  "type": "attribute",
+                  "label": "remoteSetCoolITime",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.8049482363280795
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686132085844,
+                "endTimeMs": 1686218485844
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "showLabel": false,
+            "isRequired": true,
+            "showResultMessage": false,
+            "minValue": 5,
+            "maxValue": 180
+          },
+          "title": "Set I-Time for Cool (5~180 seconds)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "2e42ff61-7969-e9c3-5daf-862b48afd5cc"
+      },
+      "966dcf51-535c-b4e8-4719-4b83da0bd8d2": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_value_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "kFactor",
+                  "type": "attribute",
+                  "label": "kFactor",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5365248376749141,
+                  "aggregationType": null,
+                  "units": "",
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "//return value;\nreturn '<b>'+ Math.round(value) +'</b>';"
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'> \n        <div class='description'>\n            K-Factor\n        </div>\n        <div class='value'>\n            ${kFactor}\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.5em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: center;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
+          },
+          "title": "K-Factor ",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "mobileOrder": 10,
+          "showTitleIcon": false,
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "966dcf51-535c-b4e8-4719-4b83da0bd8d2"
+      },
+      "0d68e299-fc6a-75b0-db04-9843fd00ec82": {
+        "isSystemType": true,
+        "bundleAlias": "input_widgets",
+        "typeAlias": "update_shared_integer_attribute",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetKFactor",
+                  "type": "attribute",
+                  "label": "remoteSetKFactor",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.8049482363280795,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686132085844,
+                "endTimeMs": 1686218485844
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "showLabel": false,
+            "isRequired": true,
+            "showResultMessage": false,
+            "minValue": 1,
+            "maxValue": 9
+          },
+          "title": "Set K-Factor (1~9)",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0d68e299-fc6a-75b0-db04-9843fd00ec82"
+      },
+      "0e3bba43-2c89-4e9f-7713-de5ffc626b09": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"monitor\">\n        <div class='description' id=\"monitor\">\n            monitor  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Monitor",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "monitor",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
+              }
+            ]
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0e3bba43-2c89-4e9f-7713-de5ffc626b09"
+      },
+      "0e511ba2-9f1a-25d6-3cbe-059e3c548059": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content' id=\"control\">\n        <div class='description' id=\"control\">\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
+          },
+          "title": "Navigation:  Control",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "control",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "control",
+                "setEntityId": false,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "7b4b9e9c-7b08-ddf0-ccdf-9b50651f7655"
+              }
+            ]
+          },
+          "mobileOrder": 4,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0e511ba2-9f1a-25d6-3cbe-059e3c548059"
+      },
+      "62fc24da-7b21-523a-fb3b-84d5dbe8bccb": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Settings &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
+            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
+          },
+          "title": "Navigation:  Settings",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {
+            "border": "1px solid #E0E0E0"
+          },
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "actions": {
+            "elementClick": []
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "62fc24da-7b21-523a-fb3b-84d5dbe8bccb"
+      },
+      "60f36c4c-3f39-28cb-783a-ce1a7a80c470": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetFanMode",
+                  "type": "attribute",
+                  "label": "remoteSetFanMode",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.349896497678867,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686476643031,
+                "endTimeMs": 1686563043031
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#FFFFFF",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "optionStyle": {
+              "orientation": "row",
+              "isRaised": true,
+              "checkedOption": {
+                "isPrimary": true
+              },
+              "uncheckedOption": {
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "options": [
+              {
+                "optionLabel": "OFF",
+                "attributeValue": "OFF"
+              },
+              {
+                "optionLabel": "LOW",
+                "attributeValue": "LOW"
+              },
+              {
+                "optionLabel": "MED",
+                "attributeValue": "MED"
+              },
+              {
+                "optionLabel": "HIGH",
+                "attributeValue": "HIGH"
+              },
+              {
+                "optionLabel": "AUTO",
+                "attributeValue": "AUTO"
+              }
+            ],
+            "showResultMessage": true
+          },
+          "title": "Set Fan Mode",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "useDashboardTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "60f36c4c-3f39-28cb-783a-ce1a7a80c470"
+      },
+      "be0803d1-153c-0ed4-2401-05b269630833": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "remoteSetSystemMode",
+                  "type": "attribute",
+                  "label": "remoteSetSystemMode",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.349896497678867,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1686476643031,
+                "endTimeMs": 1686563043031
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#FFFFFF",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "optionStyle": {
+              "orientation": "row",
+              "isRaised": true,
+              "checkedOption": {
+                "isPrimary": true
+              },
+              "uncheckedOption": {
+                "isPrimary": false,
+                "bgColor": "#e6e7e8"
+              }
+            },
+            "options": [
+              {
+                "optionLabel": "OFF",
+                "attributeValue": "OFF"
+              },
+              {
+                "optionLabel": "COOL",
+                "attributeValue": "COOL"
+              },
+              {
+                "optionLabel": "FAN-ONLY",
+                "attributeValue": "FAN-ONLY"
+              }
+            ],
+            "showResultMessage": true
+          },
+          "title": "Set System Mode",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": false,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "useDashboardTimewindow": true
+        },
+        "row": 0,
+        "col": 0,
+        "id": "be0803d1-153c-0ed4-2401-05b269630833"
+      }
+    },
+    "states": {
+      "monitor": {
+        "name": "${entityName} - Monitor",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "e0cff2bd-93e8-83b0-c278-7bc65813a6e1": {
+                "sizeX": 20,
+                "sizeY": 5,
+                "row": 6,
+                "col": 0
+              },
+              "2774fb40-6586-f72a-8140-9b13d9f49f07": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 1,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 0
+              },
+              "6a88f568-e74c-c7d3-50f0-381db917754f": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 4,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 7
+              },
+              "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 0,
+                "col": 14
+              },
+              "82f24596-c242-c99d-dec2-188858a645dd": {
+                "sizeX": 10,
+                "sizeY": 1,
+                "row": 1,
+                "col": 0
+              },
+              "bbcfccf3-94b0-9856-3f93-49ab61fed51c": {
+                "sizeX": 10,
+                "sizeY": 1,
+                "row": 1,
+                "col": 10
+              },
+              "62d27ec5-c33f-40f0-ed04-a407c5b2484a": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 2,
+                "col": 0
+              },
+              "55e7a8e8-4959-cf77-3ad2-b9f06179635f": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 6
+              },
+              "2997fae8-bd27-3150-faf1-53f6f94acb53": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 4,
+                "col": 10
+              },
+              "16abffaf-1181-8167-c3f7-74451f6f2748": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 4,
+                "col": 6
+              },
+              "4cc37622-20bb-23d2-6528-e647a9c11f6a": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 4,
+                "col": 14
+              },
+              "cb4fa65c-81dd-d7db-3aef-6965d18b6349": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 14
+              },
+              "477ed1f4-a530-1f2b-ccc6-980185e66a0a": {
+                "sizeX": 4,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 10
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "control": {
+        "name": "${entityName} - Control",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "42bcde6d-1400-0863-71b0-4580d1baa7da": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 0,
+                "col": 0
+              },
+              "5e77b5a6-d447-fea8-0a95-05adbb7ad795": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 1,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 7
+              },
+              "3436402a-a154-f35c-91cc-21e00c43cb18": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 0,
+                "col": 14
+              },
+              "f9841cb3-c76f-94da-7685-cbc3c82de06d": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 0
+              },
+              "228ee026-8a04-e823-9364-ec397e422c62": {
+                "sizeX": 3,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 10
+              },
+              "bdb85906-0d69-f100-2ccf-7ab205a9af8d": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 14
+              },
+              "e27f0745-bb54-0955-10ce-844910397efb": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 0
+              },
+              "35132269-4b62-08e7-568a-37e8dbff64a4": {
+                "sizeX": 3,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 7
+              },
+              "60f36c4c-3f39-28cb-783a-ce1a7a80c470": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 7
+              },
+              "be0803d1-153c-0ed4-2401-05b269630833": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 14
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      },
+      "settings": {
+        "name": "${entityName} - Settings",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "b3346d3f-22e9-0708-2a34-9b2810c25b38": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 7,
+                "col": 0
+              },
+              "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 9,
+                "col": 0
+              },
+              "80825308-24cc-3454-9155-89dba54ad83d": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 0
+              },
+              "f00582e8-4280-382f-32a9-007cd6292034": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 0
+              },
+              "46786a84-4192-6a66-1939-094ebfc94896": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 7
+              },
+              "2e42ff61-7969-e9c3-5daf-862b48afd5cc": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 7
+              },
+              "966dcf51-535c-b4e8-4719-4b83da0bd8d2": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "mobileOrder": 10,
+                "row": 2,
+                "col": 14
+              },
+              "0d68e299-fc6a-75b0-db04-9843fd00ec82": {
+                "sizeX": 6,
+                "sizeY": 2,
+                "row": 4,
+                "col": 14
+              },
+              "0e3bba43-2c89-4e9f-7713-de5ffc626b09": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 0,
+                "col": 0
+              },
+              "0e511ba2-9f1a-25d6-3cbe-059e3c548059": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 4,
+                "mobileHeight": 1,
+                "row": 0,
+                "col": 7
+              },
+              "62fc24da-7b21-523a-fb3b-84d5dbe8bccb": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 0,
+                "col": 14
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "dc6d959e-cc5e-ff7a-f09c-61796810bcd2": {
+        "id": "dc6d959e-cc5e-ff7a-f09c-61796810bcd2",
+        "alias": "Current TA692FC-L-5",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "hideInterval": false,
+      "hideLastInterval": false,
+      "hideQuickInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 86400000,
+        "quickInterval": "CURRENT_DAY",
+        "interval": 300000
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      },
+      "timezone": null
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": false,
+      "showUpdateDashboardImage": false,
+      "dashboardCss": ""
+    },
+    "description": "v.1.0.0, 2023-06-06 14:35"
+  },
+  "externalId": null,
+  "name": "TA692FC-L-5 Thermostat (For Mobile App)"
+}

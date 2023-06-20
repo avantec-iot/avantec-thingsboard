@@ -130,7 +130,7 @@ TA692FC-L-5 LoRaWAN Thermostat
 These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, operate it, and even realize your personalized Dashboard.
 
 * :doc:`Specification </device/ta692fc-l-5/ta692fc-l-5-specification>`
-* :doc:`Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>`
+* :doc:`Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>` |
   :doc:`Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>`
 * :doc:`LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>`
 

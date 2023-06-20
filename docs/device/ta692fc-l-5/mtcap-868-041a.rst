@@ -5,7 +5,7 @@ MultiTech Conduit® MTCAP-868-041A
 MTCAP Series
 ==================
 
-Refer `MultiTech Conduit® AP Access Point for LoRa® Technology (MTCAP Series) <https://www.multitech.com/brands/multiconnect-conduit-ap>`_.
+Refer to `MultiTech Conduit® AP Access Point for LoRa® Technology (MTCAP Series) <https://www.multitech.com/brands/multiconnect-conduit-ap>`_.
 
 The MultiTech Conduit® AP conveniently provides deep in-building connectivity and improved performance for network operators and enterprises connecting thousands of IoT assets by harnessing the power of the LoRaWAN® protocol.
 

@@ -588,30 +588,17 @@ Step 3.5 Processing Downlink message
   .. image:: /_static/device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard/processing-downlink-message-6.png
 
 
-
 Step 3.6 Visiual Data
 ----------------------
 
 Use the Dashboards to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.
 
-Updating Avantec Widgets
-^^^^^^^^^^^^^^^^^^^^^^^^
+#. :ref:`Update Avantec Widgets <Update Avantec Widgets>`.
 
-* See :ref:`Update Avantec Widgets <Update Avantec Widgets>`.
+#. :ref:`Import TA692FC-L-5 Detail Dashboard <Import TA692FC-L-5 Detail Dashboard>`.
+#. :ref:`Import TA692FC-L-5 List Dashboard <Import TA692FC-L-5 List Dashboard>`.
 
+#. :ref:`Modify TA692FC-L-5-868 Thermostat device profile's mobile dashboard <Modify TA692FC-L-5-868 Thermostat device profile's mobile dashboard>`.
 
-Importing Dashboard
-^^^^^^^^^^^^^^^^^^^
+For more information about the dashboard, please refer to :doc:`here </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>`.
 
-*TODO:....*
-
-Modify Dashboard
-^^^^^^^^^^^^^^^^
-
-*TODO:....*
-
-
-Modify Device Profile
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-*TODO:....*

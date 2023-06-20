@@ -12,6 +12,7 @@ First, you can import this dashboard.
 
 * Download :download:`ta652fc_w_thermostat_list.json </configuration-item/dashboards/ta652fc_w_thermostat_list.json>`.
 
+
 * **Dashboards** --> **+** --> **Popup dialog: Import dashboard** --> Drag and drop *list dashboard File* --> **Import**.
 
 .. image:: /_static/device/ta652fc-w/ta652fc-w-demo-list-dashboard-import/import-list-dashboard-1.png

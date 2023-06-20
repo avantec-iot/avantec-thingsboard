@@ -120,7 +120,7 @@ Monitor state
 
 *  Dashboard bar:
     Hidden.
-    Refer  `Default state`_.
+    Refer to `Default state`_.
 
 * Widgets:
     .. table:: 

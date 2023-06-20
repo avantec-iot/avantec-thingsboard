@@ -2,7 +2,7 @@
 Over-the-air firmware updates
 ******************************
 
-Refer `here`_.
+Refer to `here`_.
 
 .. _here: https://thingsboard.io/docs/user-guide/ota-updates/
 

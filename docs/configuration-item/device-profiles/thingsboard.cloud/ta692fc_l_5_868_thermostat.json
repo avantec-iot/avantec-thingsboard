@@ -1,0 +1,33 @@
+{
+  "name": "TA692FC-L-5-868 Thermostat",
+  "description": "Default device profile",
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "DEFAULT",
+  "provisionType": "DISABLED",
+  "defaultRuleChainId": null,
+  "defaultDashboardId": {
+    "entityType": "DASHBOARD",
+    "id": "0d85ec50-0441-11ee-be75-959bde3b0638"
+  },
+  "defaultQueueName": null,
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "DEFAULT"
+    },
+    "provisionConfiguration": {
+      "type": "DISABLED",
+      "provisionDeviceSecret": null
+    },
+    "alarms": null
+  },
+  "provisionDeviceKey": null,
+  "firmwareId": null,
+  "softwareId": null,
+  "defaultEdgeRuleChainId": null,
+  "externalId": null,
+  "default": false
+}
