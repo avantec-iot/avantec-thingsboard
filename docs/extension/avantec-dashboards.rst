@@ -27,6 +27,13 @@ TA692FC-L-5
 Other Dashboards
 ===================
 
+* Thermostats - All Avantec Thermostas.
+
+   * After import it, Entit aliases must be updated!
+   * After import it, some action's targe dashboard must be update in Thermostats Cards - a widget of Entities Cards!
+
+   *TODO:...*
+
 * Firmware - firmware update. 
 
     *Some versions of ThingsBoard have already installed this Dashboard, which can be used without importing*.
@@ -37,9 +44,9 @@ Other Dashboards
 
 * *Manage device claiming* - ...
 
-    *TODO:...*
+   *TODO:...*
 
 * *Claiming* - ...
 
-    *TODO:...*
+   *TODO:...*
 

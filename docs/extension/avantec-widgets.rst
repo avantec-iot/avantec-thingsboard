@@ -6,6 +6,15 @@ Avantec widgets
 Widget list
 ===============
 
+.. _Entities cards:
+
+.. Entities cards
+.. ---------------
+
+.. include:: /extension/avantec-widgets/entities-cards.rst
+
+
+
 RPC button with params & response
 ----------------------------------
 

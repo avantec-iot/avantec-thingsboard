@@ -116,7 +116,7 @@ What is Avantec + ThingsBoard?
 Avantec Extension
 -----------------
 
-We provide :doc:`/avantec/avantec-widgets` and :doc:`/avantec/avantec-dashboards` based on ThingsBoard IoT platform for demonstration.
+We provide :doc:`/extension/avantec-widgets` and :doc:`/extension/avantec-dashboards` based on ThingsBoard IoT platform for demonstration.
 
 Of course, you can also customize your own Web UI and Mobile Application based on them.
 

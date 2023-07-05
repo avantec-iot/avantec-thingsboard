@@ -1,0 +1,357 @@
+{
+  "title": "Thermostats",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "Avantec Manufacturing Limited. v1.0.0. 20230705.",
+    "widgets": {
+      "46adde5a-3cba-94f1-b684-a4c22d73a8a5": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "html_attributes_cards",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 8,
+        "sizeY": 6.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "a0ca5179-1109-e278-75ea-ef315a0b1801",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "roomTemp",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.4836193583766566,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "changeOverTemp",
+                  "type": "timeseries",
+                  "label": "changeOverTemp",
+                  "color": "#ffc107",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.6752127836212873,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "currentTempUnit",
+                  "type": "attribute",
+                  "label": "currentTempUnit",
+                  "color": "#9c27b0",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.8183714947998251,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            },
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "063db744-983a-6460-da78-8315bcc7a01c",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "roomTemp",
+                  "color": "#ffc107",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.5621160089200978,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "floorTemp",
+                  "type": "timeseries",
+                  "label": "floorTemp",
+                  "color": "#f44336",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.7268805144100934,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "currentTempUnit",
+                  "type": "attribute",
+                  "label": "currentTempUnit",
+                  "color": "#607d8b",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "useCellContentFunction": false
+                  },
+                  "_hash": 0.46924444335293836,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
+            }
+          ],
+          "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1687768334273,
+                "endTimeMs": 1687854734273
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 2500
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#EEEEEE",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardTemplates": [
+              {
+                "cardHtmlPattern": "<div class='card-title'> \n    ${entityLabel}\n</div>\n\n<div class='card-data-label'>\n    Room temperature\n</div>\n<div>\n    ${roomTemp}\n    <span class=\"card-data-unit\"> ${currentTempUnit} </span>\n</div>\n\n<div class='card-data-label'>\n    Change over temperature\n</div>\n<div>\n    ${changeOverTemp}\n    <span class=\"card-data-unit\"> ${currentTempUnit} </span>\n</div>",
+                "aliasName": "TA652FC-W Thermostats",
+                "cardStyleFunction": "//return { \n//  fontWeight: 'bold', \n//  background: '#2db36a',\n//  color: '#ffffff'// 'green' \n//};\n//return {background: '#2db36a', color: 'white'};\nreturn {background: 'white'};"
+              },
+              {
+                "cardHtmlPattern": "<div class='card-title'> \n    ${entityLabel}\n</div>\n\n<div class='card-data-label'>\n    Room temperature\n</div>\n<div>\n    ${roomTemp}\n    <span class=\"card-data-unit\"> ${currentTempUnit} </span>\n</div>\n\n<div class='card-data-label'>\n    Floor temperature\n</div>\n<div>\n    ${floorTemp}\n    <span class=\"card-data-unit\"> ${currentTempUnit} </span>\n</div>",
+                "aliasName": "TA652FH-W Thermostats",
+                "cardStyleFunction": "//return { \n//  fontWeight: 'bold', \n//  background: '#2db36a',\n//  color: '#ffffff'// 'green' \n//};\n//return {background: '#2db36a', color: 'white'};\nreturn {background: 'white'};"
+              }
+            ]
+          },
+          "title": "Thermostats Cards",
+          "useDashboardTimewindow": true,
+          "actions": {
+            "elementClick": [
+              {
+                "name": "TA652FH-W Thermostats",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "openDashboard",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openNewBrowserTab": false,
+                "targetDashboardId": "43e55270-cedd-11ed-9b15-dd2dac50548f",
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "b7335984-0af0-190b-03fe-cdc383316ddb"
+              },
+              {
+                "name": "TA652FC-W Thermostats",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "openDashboard",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openNewBrowserTab": false,
+                "targetDashboardId": "6079b150-fac6-11ed-a248-772f954272f9",
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "433a33ad-8305-bee8-2d8f-7ecad58e03fc"
+              }
+            ],
+            "cardClick": [],
+            "headerButton": []
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "width": "100%"
+          },
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "46adde5a-3cba-94f1-b684-a4c22d73a8a5"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Thermostats",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "46adde5a-3cba-94f1-b684-a4c22d73a8a5": {
+                "sizeX": 24,
+                "sizeY": 14,
+                "row": 0,
+                "col": 0,
+                "mobileOrder": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "a0ca5179-1109-e278-75ea-ef315a0b1801": {
+        "id": "a0ca5179-1109-e278-75ea-ef315a0b1801",
+        "alias": "TA652FC-W Thermostats",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceTypes": [
+            "TA652FC-W Thermostat"
+          ],
+          "deviceNameFilter": ""
+        }
+      },
+      "063db744-983a-6460-da78-8315bcc7a01c": {
+        "id": "063db744-983a-6460-da78-8315bcc7a01c",
+        "alias": "TA652FH-W Thermostats",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceTypes": [
+            "TA652FH-W Thermostat"
+          ],
+          "deviceNameFilter": ""
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideLastInterval": false,
+      "hideQuickInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1687662414260,
+          "endTimeMs": 1687748814260
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 2500
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": true,
+      "showFilters": true,
+      "showUpdateDashboardImage": true,
+      "dashboardCss": ""
+    }
+  },
+  "externalId": null,
+  "name": "Thermostats"
+}

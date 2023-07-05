@@ -63,16 +63,16 @@ Avantec Extension
 
 Here is an overview about Avantec Customization.
 
-* :doc:`Demo Dashboards </avantec/avantec-dashboards>`
-* :doc:`Avantec Widgets </avantec/avantec-widgets>`
+* :doc:`Demo Dashboards </extension/avantec-dashboards>`
+* :doc:`Avantec Widgets </extension/avantec-widgets>`
 
 .. toctree::
    :hidden:
    :maxdepth: 5
    :caption: Avantec Extension
 
-   Avantec Widgets </avantec/avantec-widgets>
-   Demo Dashboards </avantec/avantec-dashboards>
+   Avantec Widgets </extension/avantec-widgets>
+   Demo Dashboards </extension/avantec-dashboards>
 
 
 TA652FC-W Wi-Fi Thermostat
