@@ -2,6 +2,14 @@
 Release Notes
 *************************************************
 
+v2.3.2 (July 5, 2023)
+=====================
+
+* Avantec Dashboard
+    * Updated ``TA692FC-L-5 Detail Dashboard``
+    * Updated ``TA652FC-W Detail Dashboard``
+    * Updated ``TA652FH-W Detail Dashboard``
+
 v2.3.1 (July 5, 2023)
 =====================
 

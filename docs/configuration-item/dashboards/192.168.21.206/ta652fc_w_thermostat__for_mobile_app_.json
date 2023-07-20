@@ -5009,7 +5009,7 @@
     },
     "states": {
       "settings": {
-        "name": "${entityName} - Settings",
+        "name": "${entityLabel} - Settings",
         "root": false,
         "layouts": {
           "main": {
@@ -5172,7 +5172,7 @@
         }
       },
       "program": {
-        "name": "${entityName} - Program",
+        "name": "${entityLabel} - Program",
         "root": false,
         "layouts": {
           "main": {
@@ -5253,7 +5253,7 @@
         }
       },
       "control": {
-        "name": "${entityName} - Control",
+        "name": "${entityLabel} - Control",
         "root": false,
         "layouts": {
           "main": {
@@ -5386,7 +5386,7 @@
         }
       },
       "admin": {
-        "name": "${entityName} - Admin",
+        "name": "${entityLabel} - Admin",
         "root": false,
         "layouts": {
           "main": {
@@ -5526,7 +5526,7 @@
         }
       },
       "program_setpoints": {
-        "name": "${entityName} - Program Setpoints",
+        "name": "${entityLabel} - Program Setpoints",
         "root": false,
         "layouts": {
           "main": {
@@ -5661,7 +5661,7 @@
         }
       },
       "monitor": {
-        "name": "${entityName} - Monitor",
+        "name": "${entityLabel} - Monitor",
         "root": true,
         "layouts": {
           "main": {
@@ -5811,11 +5811,11 @@
       "showEntitiesSelect": false,
       "showDashboardTimewindow": false,
       "showDashboardExport": false,
-      "toolbarAlwaysOpen": false,
+      "toolbarAlwaysOpen": true,
       "titleColor": "rgba(0,0,0,0.870588)",
       "showDashboardLogo": false,
       "dashboardLogoUrl": null,
-      "hideToolbar": true,
+      "hideToolbar": false,
       "showFilters": false,
       "showUpdateDashboardImage": false,
       "dashboardCss": ""

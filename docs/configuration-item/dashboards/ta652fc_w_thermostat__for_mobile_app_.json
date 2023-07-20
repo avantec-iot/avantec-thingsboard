@@ -957,6 +957,7 @@
                   "color": "#607d8b",
                   "settings": {},
                   "_hash": 0.35217998814407525,
+                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
@@ -976,12 +977,36 @@
                   "usePostProcessing": null,
                   "postFuncBody": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -1312,8 +1337,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -2182,8 +2226,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -2603,8 +2666,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4139,8 +4221,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4203,8 +4304,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4280,8 +4400,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -4470,8 +4609,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1685261299610,
+                "endTimeMs": 1685347699610
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -4615,38 +4773,23 @@
                   "name": "changeOverTemp",
                   "type": "timeseries",
                   "label": "Change over sensor temperature",
-                  "color": "#2196f3",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "thresholds": [
-                      {
-                        "thresholdValueSource": "predefinedValue"
-                      }
-                    ],
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.8323556652467088,
+                  "color": "#2196F3",
+                  "settings": {},
+                  "_hash": 0.05612489307760127,
+                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
                   "postFuncBody": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              },
+              "latestDataKeys": null
             }
           ],
           "timewindow": {
@@ -4975,13 +5118,13 @@
               }
             },
             "patternCommonParam": "3",
+            "convertUpdatedValueFunction": "return value;",
             "showResultMessage": false,
             "patternParamOfRetrieveAttributeKey": "prgCtrlMode",
             "patternParamOfUpdateRPCMethodName": "remoteSetPrgCtrlMode",
             "convertRetrievedAttributeKeyOrMethodNameFunction": "//console.log(\"retrieve\", patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfetrievedAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\n//console.log(\"stateParams in Program-Setpoints\", stateParams);\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfetrievedAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfetrievedAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n\n",
             "convertUpdatedAttributeKeyOrMethodNameFunction": "//console.log(\"update\", patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam);\n//return patternParamOfUpdateAttributeKeyOrMethodName + patternCommonParam; /* console.log(value); */\n\nlet snNumb = 0;\nif (patternCommonParam) {\n    snNumb = parseInt(patternCommonParam, 10);\n}\n\nif (stateParams && stateParams.daysOfWeeks && stateParams\n    .daysOfWeeks >= 0 && stateParams.daysOfWeeks < 7) {\n    snNumb = snNumb + stateParams.daysOfWeeks * 4;\n}\n\nlet snStr = snNumb.toLocaleString('en-US', {\n    minimumIntegerDigits: 2,\n    useGrouping: false\n});\n\nlet attributeKeyOrMethodName = \"\";\nif (patternParamOfUpdateAttributeKeyOrMethodName) {\n    attributeKeyOrMethodName = patternParamOfUpdateAttributeKeyOrMethodName + snStr;\n} else {\n    attributeKeyOrMethodName = snStr;\n}\n\nreturn attributeKeyOrMethodName;\n",
-            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}",
-            "convertUpdatedValueFunction": "return value;"
+            "convertRetrievedValueFunction": "//console.log(\"prgCtrlMode=\", value, typeof value);\nif (typeof value === 'undefined') {\n    return \"On\";\n} else if (typeof value === \"string\" && value.trim() === \"\") {\n    return \"On\";\n} else if (value === null) {\n    return \"On\";\n} else {\n    return value;\n}"
           },
           "title": "New Styled button of string value with pattern key",
           "showTitleIcon": false,
@@ -5009,7 +5152,7 @@
     },
     "states": {
       "settings": {
-        "name": "${entityName} - Settings",
+        "name": "${entityLabel} - Settings",
         "root": false,
         "layouts": {
           "main": {
@@ -5166,13 +5309,14 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
       },
       "program": {
-        "name": "${entityName} - Program",
+        "name": "${entityLabel} - Program",
         "root": false,
         "layouts": {
           "main": {
@@ -5247,13 +5391,14 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
       },
       "control": {
-        "name": "${entityName} - Control",
+        "name": "${entityLabel} - Control",
         "root": false,
         "layouts": {
           "main": {
@@ -5380,13 +5525,14 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
       },
       "admin": {
-        "name": "${entityName} - Admin",
+        "name": "${entityLabel} - Admin",
         "root": false,
         "layouts": {
           "main": {
@@ -5520,13 +5666,14 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
       },
       "program_setpoints": {
-        "name": "${entityName} - Program Setpoints",
+        "name": "${entityLabel} - Program Setpoints",
         "root": false,
         "layouts": {
           "main": {
@@ -5655,13 +5802,14 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
       },
       "monitor": {
-        "name": "${entityName} - Monitor",
+        "name": "${entityLabel} - Monitor",
         "root": true,
         "layouts": {
           "main": {
@@ -5768,7 +5916,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -5811,15 +5960,16 @@
       "showEntitiesSelect": false,
       "showDashboardTimewindow": false,
       "showDashboardExport": false,
-      "toolbarAlwaysOpen": false,
+      "toolbarAlwaysOpen": true,
       "titleColor": "rgba(0,0,0,0.870588)",
       "showDashboardLogo": false,
       "dashboardLogoUrl": null,
-      "hideToolbar": true,
+      "hideToolbar": false,
       "showFilters": false,
       "showUpdateDashboardImage": false,
       "dashboardCss": ""
     }
   },
+  "externalId": null,
   "name": "TA652FC-W Thermostat (For Mobile App)"
 }

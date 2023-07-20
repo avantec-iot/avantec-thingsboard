@@ -2220,9 +2220,15 @@
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
-                  "postFuncBody": null
+                  "postFuncBody": null,
+                  "aggregationType": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
             }
           ],
           "timewindow": {
@@ -2254,7 +2260,7 @@
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device name\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${name}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device profile (Type)\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${type}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Label\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${label}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Model\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${model}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        MAC\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${mac}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Wi-Fi F/W version\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${wifiFWVersion}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        MCU F/W version\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${mcuFWVersion}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
+            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device name\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${name}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device profile (Type)\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${type}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Label\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${label:0}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Model\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${model}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        MAC\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${mac}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Wi-Fi F/W version\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${wifiFWVersion}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        MCU F/W version\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${mcuFWVersion}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.0em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
           },
           "title": "New HTML Value Card",
@@ -5167,7 +5173,7 @@
     },
     "states": {
       "settings": {
-        "name": "${entityName} - Settings",
+        "name": "${entityLabel} - Settings",
         "root": false,
         "layouts": {
           "main": {
@@ -5331,7 +5337,7 @@
         }
       },
       "program": {
-        "name": "${entityName} - Program",
+        "name": "${entityLabel} - Program",
         "root": false,
         "layouts": {
           "main": {
@@ -5413,7 +5419,7 @@
         }
       },
       "control": {
-        "name": "${entityName} - Control",
+        "name": "${entityLabel} - Control",
         "root": false,
         "layouts": {
           "main": {
@@ -5547,7 +5553,7 @@
         }
       },
       "admin": {
-        "name": "${entityName} - Admin",
+        "name": "${entityLabel} - Admin",
         "root": false,
         "layouts": {
           "main": {
@@ -5688,7 +5694,7 @@
         }
       },
       "program_setpoints": {
-        "name": "${entityName} - Program Setpoints",
+        "name": "${entityLabel} - Program Setpoints",
         "root": false,
         "layouts": {
           "main": {
@@ -5824,7 +5830,7 @@
         }
       },
       "monitor": {
-        "name": "${entityName} - Monitor",
+        "name": "${entityLabel} - Monitor",
         "root": true,
         "layouts": {
           "main": {
@@ -5975,11 +5981,11 @@
       "showEntitiesSelect": false,
       "showDashboardTimewindow": false,
       "showDashboardExport": false,
-      "toolbarAlwaysOpen": false,
+      "toolbarAlwaysOpen": true,
       "titleColor": "rgba(0,0,0,0.870588)",
       "showDashboardLogo": false,
       "dashboardLogoUrl": null,
-      "hideToolbar": true,
+      "hideToolbar": false,
       "showFilters": false,
       "showUpdateDashboardImage": false,
       "dashboardCss": ""

@@ -4773,38 +4773,23 @@
                   "name": "changeOverTemp",
                   "type": "timeseries",
                   "label": "Change over sensor temperature",
-                  "color": "#2196f3",
-                  "settings": {
-                    "excludeFromStacking": false,
-                    "hideDataByDefault": false,
-                    "disableDataHiding": false,
-                    "removeFromLegend": false,
-                    "showLines": true,
-                    "fillLines": false,
-                    "showPoints": false,
-                    "showPointShape": "circle",
-                    "pointShapeFormatter": "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
-                    "showPointsLineWidth": 5,
-                    "showPointsRadius": 3,
-                    "showSeparateAxis": false,
-                    "axisPosition": "left",
-                    "thresholds": [
-                      {
-                        "thresholdValueSource": "predefinedValue"
-                      }
-                    ],
-                    "comparisonSettings": {
-                      "showValuesForComparison": true
-                    }
-                  },
-                  "_hash": 0.8323556652467088,
+                  "color": "#2196F3",
+                  "settings": {},
+                  "_hash": 0.05612489307760127,
+                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
                   "usePostProcessing": null,
                   "postFuncBody": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              },
+              "latestDataKeys": null
             }
           ],
           "timewindow": {
@@ -5167,7 +5152,7 @@
     },
     "states": {
       "settings": {
-        "name": "${entityName} - Settings",
+        "name": "${entityLabel} - Settings",
         "root": false,
         "layouts": {
           "main": {
@@ -5331,7 +5316,7 @@
         }
       },
       "program": {
-        "name": "${entityName} - Program",
+        "name": "${entityLabel} - Program",
         "root": false,
         "layouts": {
           "main": {
@@ -5413,7 +5398,7 @@
         }
       },
       "control": {
-        "name": "${entityName} - Control",
+        "name": "${entityLabel} - Control",
         "root": false,
         "layouts": {
           "main": {
@@ -5547,7 +5532,7 @@
         }
       },
       "admin": {
-        "name": "${entityName} - Admin",
+        "name": "${entityLabel} - Admin",
         "root": false,
         "layouts": {
           "main": {
@@ -5688,7 +5673,7 @@
         }
       },
       "program_setpoints": {
-        "name": "${entityName} - Program Setpoints",
+        "name": "${entityLabel} - Program Setpoints",
         "root": false,
         "layouts": {
           "main": {
@@ -5824,7 +5809,7 @@
         }
       },
       "monitor": {
-        "name": "${entityName} - Monitor",
+        "name": "${entityLabel} - Monitor",
         "root": true,
         "layouts": {
           "main": {
@@ -5975,11 +5960,11 @@
       "showEntitiesSelect": false,
       "showDashboardTimewindow": false,
       "showDashboardExport": false,
-      "toolbarAlwaysOpen": false,
+      "toolbarAlwaysOpen": true,
       "titleColor": "rgba(0,0,0,0.870588)",
       "showDashboardLogo": false,
       "dashboardLogoUrl": null,
-      "hideToolbar": true,
+      "hideToolbar": false,
       "showFilters": false,
       "showUpdateDashboardImage": false,
       "dashboardCss": ""
