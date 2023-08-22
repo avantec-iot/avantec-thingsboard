@@ -49,7 +49,7 @@
             "entitiesTitle": "TA692FC-L-5 Thermostats",
             "enableSearch": true,
             "enableSelectColumnDisplay": true,
-            "enableStickyHeader": true,
+            "enableStickyHeader": false,
             "enableStickyAction": true,
             "reserveSpaceForHiddenAction": "true",
             "displayEntityName": true,
@@ -195,7 +195,7 @@
                 "useShowWidgetActionFunction": null,
                 "showWidgetActionFunction": "return true;",
                 "type": "openDashboard",
-                "targetDashboardStateId": "default",
+                "targetDashboardStateId": "monitor",
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
@@ -221,7 +221,7 @@
             "widgets": {
               "a1b148ad-3014-0a9a-ee40-798feb9762ca": {
                 "sizeX": 22,
-                "sizeY": 11,
+                "sizeY": 8,
                 "mobileHide": true,
                 "row": 0,
                 "col": 0

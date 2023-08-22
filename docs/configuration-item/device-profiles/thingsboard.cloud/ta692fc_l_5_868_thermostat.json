@@ -6,10 +6,7 @@
   "transportType": "DEFAULT",
   "provisionType": "DISABLED",
   "defaultRuleChainId": null,
-  "defaultDashboardId": {
-    "entityType": "DASHBOARD",
-    "id": "0d85ec50-0441-11ee-be75-959bde3b0638"
-  },
+  "defaultDashboardId": null,
   "defaultQueueName": null,
   "profileData": {
     "configuration": {
