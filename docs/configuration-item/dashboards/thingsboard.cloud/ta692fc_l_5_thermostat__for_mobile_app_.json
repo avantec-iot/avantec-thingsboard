@@ -2668,7 +2668,7 @@
         "col": 0,
         "id": "62fc24da-7b21-523a-fb3b-84d5dbe8bccb"
       },
-      "60f36c4c-3f39-28cb-783a-ce1a7a80c470": {
+      "edde4589-83fc-6161-d9f4-8e3e936eddae": {
         "isSystemType": false,
         "bundleAlias": "avantec_widgets",
         "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
@@ -2692,13 +2692,7 @@
                   "label": "remoteSetFanMode",
                   "color": "#2196f3",
                   "settings": {},
-                  "_hash": 0.349896497678867,
-                  "aggregationType": null,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
+                  "_hash": 0.020233132811722676
                 }
               ],
               "alarmFilterConfig": {
@@ -2722,8 +2716,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1686476643031,
-                "endTimeMs": 1686563043031
+                "startTimeMs": 1692686506695,
+                "endTimeMs": 1692772906695
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2791,9 +2785,9 @@
         },
         "row": 0,
         "col": 0,
-        "id": "60f36c4c-3f39-28cb-783a-ce1a7a80c470"
+        "id": "edde4589-83fc-6161-d9f4-8e3e936eddae"
       },
-      "be0803d1-153c-0ed4-2401-05b269630833": {
+      "b2603ebc-29b3-2ffb-cc91-5665efc6dcee": {
         "isSystemType": false,
         "bundleAlias": "avantec_widgets",
         "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
@@ -2817,13 +2811,7 @@
                   "label": "remoteSetSystemMode",
                   "color": "#2196f3",
                   "settings": {},
-                  "_hash": 0.349896497678867,
-                  "aggregationType": null,
-                  "units": null,
-                  "decimals": null,
-                  "funcBody": null,
-                  "usePostProcessing": null,
-                  "postFuncBody": null
+                  "_hash": 0.6415401600039985
                 }
               ],
               "alarmFilterConfig": {
@@ -2847,8 +2835,8 @@
               "interval": 1000,
               "timewindowMs": 60000,
               "fixedTimewindow": {
-                "startTimeMs": 1686476643031,
-                "endTimeMs": 1686563043031
+                "startTimeMs": 1692686700214,
+                "endTimeMs": 1692773100214
               },
               "quickInterval": "CURRENT_DAY"
             },
@@ -2908,7 +2896,7 @@
         },
         "row": 0,
         "col": 0,
-        "id": "be0803d1-153c-0ed4-2401-05b269630833"
+        "id": "b2603ebc-29b3-2ffb-cc91-5665efc6dcee"
       }
     },
     "states": {
@@ -3081,13 +3069,13 @@
                 "row": 2,
                 "col": 7
               },
-              "60f36c4c-3f39-28cb-783a-ce1a7a80c470": {
+              "edde4589-83fc-6161-d9f4-8e3e936eddae": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
                 "col": 7
               },
-              "be0803d1-153c-0ed4-2401-05b269630833": {
+              "b2603ebc-29b3-2ffb-cc91-5665efc6dcee": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
