@@ -120,6 +120,15 @@ Control widget.
 
 .. image:: /_static/extension/avantec-widgets/styled-button-of-string-value-with-pattern-key-1.png
 
+
+Buttons navigation bar
+------------------------
+
+Control widget.
+
+.. image:: /_static/extension/avantec-widgets/buttons-navigation-bar-1.png
+
+
 Tabs navigation bar
 -------------------
 

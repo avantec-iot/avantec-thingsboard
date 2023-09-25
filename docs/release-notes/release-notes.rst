@@ -2,6 +2,18 @@
 Release Notes
 *************************************************
 
+v2.3.3 (Sep 25, 2023)
+=====================
+
+* Avantec Dashboard
+    * New widget - ``Buttons navigation bar``.
+    * Update widget - ``Tabs navigation bar``.
+    * Update widget - ``Update time value with pattern key``.
+    * Update widget - ``Setting list``.
+    * Update dashboard - ``TA692FC-L-5 Detail Dashboard``
+    * Update dashboard - ``TA652FC-W Detail Dashboard``
+    * Update dashboard - ``TA652FH-W Detail Dashboard``
+
 v2.3.2 (July 5, 2023)
 =====================
 

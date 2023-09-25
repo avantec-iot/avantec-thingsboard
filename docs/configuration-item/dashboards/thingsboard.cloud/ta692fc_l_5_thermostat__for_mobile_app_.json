@@ -143,208 +143,6 @@
         "col": 0,
         "id": "e0cff2bd-93e8-83b0-c278-7bc65813a6e1"
       },
-      "2774fb40-6586-f72a-8140-9b13d9f49f07": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Monitor &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
-          },
-          "title": "Navigation: Monitor",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "mobileOrder": 1,
-          "mobileHeight": 1
-        },
-        "row": 0,
-        "col": 0,
-        "id": "2774fb40-6586-f72a-8140-9b13d9f49f07"
-      },
-      "6a88f568-e74c-c7d3-50f0-381db917754f": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"control\">\n        <div class='description' id=\"control\">\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Control",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "control",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "control",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "012866f8-e828-7c56-9070-eb3f791631a0"
-              }
-            ]
-          },
-          "mobileOrder": 4,
-          "mobileHeight": 1
-        },
-        "row": 0,
-        "col": 0,
-        "id": "6a88f568-e74c-c7d3-50f0-381db917754f"
-      },
-      "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"settings\">\n        <div class='description' id=\"settings\">\n             Settings  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Settings",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "settings",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "settings",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
-              }
-            ]
-          }
-        },
-        "row": 0,
-        "col": 0,
-        "id": "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281"
-      },
-      "82f24596-c242-c99d-dec2-188858a645dd": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "#eeeeee",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
-          "settings": {
-            "cardHtml": "<div class='card'></div>",
-            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
-          },
-          "title": "New HTML Card",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {},
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false
-        },
-        "row": 0,
-        "col": 0,
-        "id": "82f24596-c242-c99d-dec2-188858a645dd"
-      },
       "bbcfccf3-94b0-9856-3f93-49ab61fed51c": {
         "isSystemType": true,
         "bundleAlias": "cards",
@@ -994,7 +792,7 @@
           "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
+          "padding": "0px ",
           "settings": {
             "cardHtml": "<div class='card'>\n    <div class='content'>\n        <table>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device name\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${name}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Device profile (Type)\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${type}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        Label\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${label}\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td width=\"40%\">\n                    <div class='description'>\n                        DevEUI\n                    </div>\n                </td>\n                <td width=\"60%\">\n                    <div class='value'>\n                        ${devEUI}\n                    </div>\n                </td>\n            </tr>\n        </table>\n    </div>\n</div>",
             "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   border: 0px solid #E0E0E0;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 22px 10px;\n   display: flex;\n   flex-direction: column;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .value {\n    font-size: 1.0em;\n    font-weight: bold;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n}\n\n.card .description {\n    font-size: 0.8em;\n    font-weight: normal;\n    line-height: 1.5;\n    color: #333333;\n    text-align: left;\n    opacity: 0.5;\n}\n\n@media (min-width: 960px) and (max-width: 1200px) {\n    .card .value {\n        font-size: 1.2em;\n        line-height: 1;\n    }\n    \n    .card .description {\n        font-size: 0.8em;\n        line-height: 1;\n    }\n}"
@@ -1020,167 +818,6 @@
         "row": 0,
         "col": 0,
         "id": "cb4fa65c-81dd-d7db-3aef-6965d18b6349"
-      },
-      "42bcde6d-1400-0863-71b0-4580d1baa7da": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"monitor\">\n        <div class='description' id=\"monitor\">\n            Monitor  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Monitor",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "monitor",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "monitor",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
-              }
-            ]
-          }
-        },
-        "row": 0,
-        "col": 0,
-        "id": "42bcde6d-1400-0863-71b0-4580d1baa7da"
-      },
-      "5e77b5a6-d447-fea8-0a95-05adbb7ad795": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
-          },
-          "title": "Navigation: Control",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "mobileOrder": 1,
-          "mobileHeight": 1
-        },
-        "row": 0,
-        "col": 0,
-        "id": "5e77b5a6-d447-fea8-0a95-05adbb7ad795"
-      },
-      "3436402a-a154-f35c-91cc-21e00c43cb18": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"settings\">\n        <div class='description' id=\"settings\">\n            Settings &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Settings",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "settings",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "settings",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
-              }
-            ]
-          }
-        },
-        "row": 0,
-        "col": 0,
-        "id": "3436402a-a154-f35c-91cc-21e00c43cb18"
       },
       "f9841cb3-c76f-94da-7685-cbc3c82de06d": {
         "isSystemType": true,
@@ -1528,18 +1165,19 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
+            "widgetTitle": "Set Temperature (5.0~35.0°C)",
             "showLabel": false,
             "isRequired": true,
             "showResultMessage": false,
             "minValue": 5,
             "maxValue": 35
           },
-          "title": "Set Temperature (5.0~35.0°C)",
+          "title": "",
           "dropShadow": false,
           "enableFullscreen": false,
           "widgetStyle": {},
@@ -1896,18 +1534,19 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
+            "widgetTitle": "Set Threshold (0.2~5.0°C)",
             "showLabel": false,
             "isRequired": true,
             "showResultMessage": false,
             "minValue": 0.2,
             "maxValue": 5
           },
-          "title": "Set Threshold (0.2~5.0°C)",
+          "title": "",
           "dropShadow": false,
           "enableFullscreen": false,
           "widgetStyle": {},
@@ -2090,18 +1729,19 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
+            "widgetTitle": "Set P-Band for Cool (1.0~4.0°C)",
             "showLabel": false,
             "isRequired": true,
             "showResultMessage": false,
             "minValue": 1,
             "maxValue": 4
           },
-          "title": "Set P-Band for Cool (1.0~4.0°C)",
+          "title": "",
           "dropShadow": false,
           "enableFullscreen": false,
           "widgetStyle": {},
@@ -2278,18 +1918,19 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
           "settings": {
+            "widgetTitle": "Set I-Time for Cool (5~180 seconds)",
             "showLabel": false,
             "isRequired": true,
             "showResultMessage": false,
             "minValue": 5,
             "maxValue": 180
           },
-          "title": "Set I-Time for Cool (5~180 seconds)",
+          "title": "",
           "dropShadow": false,
           "enableFullscreen": false,
           "widgetStyle": {},
@@ -2471,18 +2112,19 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#fff",
           "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "0px 10px",
+          "padding": "0px",
           "settings": {
+            "widgetTitle": "Set K-Factor (1~9)",
             "showLabel": false,
             "isRequired": true,
             "showResultMessage": false,
             "minValue": 1,
             "maxValue": 9
           },
-          "title": "Set K-Factor (1~9)",
+          "title": "",
           "dropShadow": false,
           "enableFullscreen": false,
           "widgetStyle": {},
@@ -2503,170 +2145,6 @@
         "row": 0,
         "col": 0,
         "id": "0d68e299-fc6a-75b0-db04-9843fd00ec82"
-      },
-      "0e3bba43-2c89-4e9f-7713-de5ffc626b09": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"monitor\">\n        <div class='description' id=\"monitor\">\n            monitor  &nbsp; &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Monitor",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "monitor",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "monitor",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "b66d7505-c257-2b26-6275-88178ea0bac2"
-              }
-            ]
-          }
-        },
-        "row": 0,
-        "col": 0,
-        "id": "0e3bba43-2c89-4e9f-7713-de5ffc626b09"
-      },
-      "0e511ba2-9f1a-25d6-3cbe-059e3c548059": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content' id=\"control\">\n        <div class='description' id=\"control\">\n            Control &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n   transition: background-color 0.5s;\n}\n\n.card .content:hover {\n    background-color: #ddd;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n}\n"
-          },
-          "title": "Navigation:  Control",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": [
-              {
-                "name": "control",
-                "icon": "more_horiz",
-                "useShowWidgetActionFunction": null,
-                "showWidgetActionFunction": "return true;",
-                "type": "updateDashboardState",
-                "targetDashboardStateId": "control",
-                "setEntityId": false,
-                "stateEntityParamName": null,
-                "openRightLayout": false,
-                "openInSeparateDialog": false,
-                "openInPopover": false,
-                "id": "7b4b9e9c-7b08-ddf0-ccdf-9b50651f7655"
-              }
-            ]
-          },
-          "mobileOrder": 4,
-          "mobileHeight": 1
-        },
-        "row": 0,
-        "col": 0,
-        "id": "0e511ba2-9f1a-25d6-3cbe-059e3c548059"
-      },
-      "62fc24da-7b21-523a-fb3b-84d5dbe8bccb": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
-        "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
-        "sizeX": 7.5,
-        "sizeY": 3,
-        "config": {
-          "datasources": [],
-          "timewindow": {
-            "realtime": {
-              "timewindowMs": 60000
-            }
-          },
-          "showTitle": false,
-          "backgroundColor": "rgb(255, 255, 255)",
-          "color": "rgba(0, 0, 0, 0.87)",
-          "padding": "8px",
-          "settings": {
-            "cardHtml": "<div class='card'>\n    <div class='content'>\n        <div class='description'>\n            Settings &nbsp;  &gt;\n        </div>\n    </div>\n</div>",
-            "cardCss": ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content {\n   padding: 5px;\n   display: flex;\n   flex-direction: column;\n   align-items: center;\n   justify-content: center;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .description {\n    font-size: 0.75em;\n    font-weight: normal;\n    line-height: 2;\n    color: #333333;\n    text-transform: uppercase;\n    opacity: 0.5;\n}\n"
-          },
-          "title": "Navigation:  Settings",
-          "dropShadow": false,
-          "enableFullscreen": false,
-          "enableDataExport": true,
-          "widgetStyle": {
-            "border": "1px solid #E0E0E0"
-          },
-          "widgetCss": "",
-          "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": false,
-          "actions": {
-            "elementClick": []
-          }
-        },
-        "row": 0,
-        "col": 0,
-        "id": "62fc24da-7b21-523a-fb3b-84d5dbe8bccb"
       },
       "edde4589-83fc-6161-d9f4-8e3e936eddae": {
         "isSystemType": false,
@@ -2726,7 +2204,7 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#FFFFFF",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
@@ -2764,9 +2242,10 @@
                 "attributeValue": "AUTO"
               }
             ],
-            "showResultMessage": true
+            "showResultMessage": true,
+            "widgetTitle": "Set Fan Mode"
           },
-          "title": "Set Fan Mode",
+          "title": "",
           "showTitleIcon": false,
           "titleTooltip": "",
           "dropShadow": false,
@@ -2845,7 +2324,7 @@
               "limit": 25000
             }
           },
-          "showTitle": true,
+          "showTitle": false,
           "backgroundColor": "#FFFFFF",
           "color": "rgba(0, 0, 0, 0.87)",
           "padding": "0px 10px",
@@ -2875,9 +2354,10 @@
                 "attributeValue": "FAN-ONLY"
               }
             ],
-            "showResultMessage": true
+            "showResultMessage": true,
+            "widgetTitle": "Set System Mode"
           },
-          "title": "Set System Mode",
+          "title": "",
           "showTitleIcon": false,
           "titleTooltip": "",
           "dropShadow": false,
@@ -2897,6 +2377,552 @@
         "row": 0,
         "col": 0,
         "id": "b2603ebc-29b3-2ffb-cc91-5665efc6dcee"
+      },
+      "53cbdca3-7eaa-cd04-19f8-f1085cae2065": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "buttons_navigation_bar",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 9.5,
+        "sizeY": 2,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#EEEEEE",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "buttonsSelected": 0
+          },
+          "title": "New Buttons navigation bar",
+          "actions": {
+            "elementClick": [
+              {
+                "name": "Monitor",
+                "icon": "monitor_heart",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "e6bd9a5b-b2fa-233a-f7f7-271e9c742194"
+              },
+              {
+                "name": "Control",
+                "icon": "thermostat",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "control",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "2fc2648c-0071-5a04-437b-2a7ed2240a69"
+              },
+              {
+                "name": "Settings",
+                "icon": "settings",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "settings",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "c7644acb-0f1e-18ab-edf0-71b0204c62e9"
+              }
+            ]
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "dc6d959e-cc5e-ff7a-f09c-61796810bcd2"
+          ],
+          "mobileOrder": 1,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "53cbdca3-7eaa-cd04-19f8-f1085cae2065"
+      },
+      "7054d2c0-67ad-238b-394c-2a8a77971680": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "buttons_navigation_bar",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 9.5,
+        "sizeY": 2,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#EEEEEE",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "buttonsSelected": 1
+          },
+          "title": "New Buttons navigation bar",
+          "actions": {
+            "elementClick": [
+              {
+                "name": "Monitor",
+                "icon": "monitor_heart",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "e6bd9a5b-b2fa-233a-f7f7-271e9c742194"
+              },
+              {
+                "name": "Control",
+                "icon": "thermostat",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "control",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "2fc2648c-0071-5a04-437b-2a7ed2240a69"
+              },
+              {
+                "name": "Settings",
+                "icon": "settings",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "settings",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "c7644acb-0f1e-18ab-edf0-71b0204c62e9"
+              }
+            ]
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "dc6d959e-cc5e-ff7a-f09c-61796810bcd2"
+          ],
+          "mobileOrder": 1,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7054d2c0-67ad-238b-394c-2a8a77971680"
+      },
+      "0a1137c8-ab80-ba56-2229-86dcdd21b0c7": {
+        "isSystemType": false,
+        "bundleAlias": "avantec_widgets",
+        "typeAlias": "buttons_navigation_bar",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 9.5,
+        "sizeY": 2,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "#EEEEEE",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "buttonsSelected": 2
+          },
+          "title": "New Buttons navigation bar",
+          "actions": {
+            "elementClick": [
+              {
+                "name": "Monitor",
+                "icon": "monitor_heart",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "e6bd9a5b-b2fa-233a-f7f7-271e9c742194"
+              },
+              {
+                "name": "Control",
+                "icon": "thermostat",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "control",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "2fc2648c-0071-5a04-437b-2a7ed2240a69"
+              },
+              {
+                "name": "Settings",
+                "icon": "settings",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "settings",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "c7644acb-0f1e-18ab-edf0-71b0204c62e9"
+              }
+            ]
+          },
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "dc6d959e-cc5e-ff7a-f09c-61796810bcd2"
+          ],
+          "mobileOrder": 1,
+          "mobileHeight": 1
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0a1137c8-ab80-ba56-2229-86dcdd21b0c7"
+      },
+      "367fa218-64d7-2663-7b16-b58b945a67e6": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "367fa218-64d7-2663-7b16-b58b945a67e6"
+      },
+      "c8902462-1b17-14f0-5d75-281ffa62ba02": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "c8902462-1b17-14f0-5d75-281ffa62ba02"
+      },
+      "ac251db0-44fa-57b0-9cab-6c1a5b13d174": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "ac251db0-44fa-57b0-9cab-6c1a5b13d174"
+      },
+      "0c489ad2-9f49-35dc-ce32-6948cb9a1a78": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0c489ad2-9f49-35dc-ce32-6948cb9a1a78"
+      },
+      "5e33afd7-b74f-bf57-75d6-983eb7cdd334": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5e33afd7-b74f-bf57-75d6-983eb7cdd334"
+      },
+      "d384c9b5-d25c-c8e1-fe0a-26497b76d937": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "d384c9b5-d25c-c8e1-fe0a-26497b76d937"
+      },
+      "f81d23aa-b7b6-297a-9403-2c9d7abe97c2": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#eeeeee",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px 10px",
+          "settings": {
+            "cardHtml": "<div class='card'></div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "enableDataExport": true,
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f81d23aa-b7b6-297a-9403-2c9d7abe97c2"
       }
     },
     "states": {
@@ -2910,89 +2936,79 @@
                 "sizeX": 20,
                 "sizeY": 5,
                 "row": 6,
-                "col": 0
-              },
-              "2774fb40-6586-f72a-8140-9b13d9f49f07": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "mobileOrder": 1,
-                "mobileHeight": 1,
-                "row": 0,
-                "col": 0
-              },
-              "6a88f568-e74c-c7d3-50f0-381db917754f": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "mobileOrder": 4,
-                "mobileHeight": 1,
-                "row": 0,
-                "col": 7
-              },
-              "d9be50b9-5abf-3a4f-ac9f-5fbf360a5281": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "row": 0,
-                "col": 14
-              },
-              "82f24596-c242-c99d-dec2-188858a645dd": {
-                "sizeX": 10,
-                "sizeY": 1,
-                "row": 1,
-                "col": 0
+                "col": 0,
+                "mobileOrder": 20
               },
               "bbcfccf3-94b0-9856-3f93-49ab61fed51c": {
-                "sizeX": 10,
+                "sizeX": 20,
                 "sizeY": 1,
                 "row": 1,
-                "col": 10
+                "col": 0,
+                "mobileOrder": 30
               },
               "62d27ec5-c33f-40f0-ed04-a407c5b2484a": {
                 "sizeX": 6,
                 "sizeY": 4,
                 "row": 2,
-                "col": 0
+                "col": 0,
+                "mobileOrder": 10,
+                "mobileHeight": 2
               },
               "55e7a8e8-4959-cf77-3ad2-b9f06179635f": {
                 "sizeX": 4,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 11,
                 "row": 2,
-                "col": 6
+                "col": 6,
+                "mobileHeight": 1
               },
               "2997fae8-bd27-3150-faf1-53f6f94acb53": {
                 "sizeX": 4,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 14,
                 "row": 4,
-                "col": 10
+                "col": 10,
+                "mobileHeight": 1
               },
               "16abffaf-1181-8167-c3f7-74451f6f2748": {
                 "sizeX": 4,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 12,
                 "row": 4,
-                "col": 6
+                "col": 6,
+                "mobileHeight": 1
               },
               "4cc37622-20bb-23d2-6528-e647a9c11f6a": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 16,
                 "row": 4,
-                "col": 14
+                "col": 14,
+                "mobileHeight": 1
               },
               "cb4fa65c-81dd-d7db-3aef-6965d18b6349": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 29,
                 "row": 2,
                 "col": 14
               },
               "477ed1f4-a530-1f2b-ccc6-980185e66a0a": {
                 "sizeX": 4,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 13,
                 "row": 2,
-                "col": 10
+                "col": 10,
+                "mobileHeight": 1
+              },
+              "53cbdca3-7eaa-cd04-19f8-f1085cae2065": {
+                "sizeX": 20,
+                "sizeY": 1,
+                "mobileOrder": 1,
+                "mobileHeight": 1,
+                "desktopHide": false,
+                "row": 0,
+                "col": 0
               }
             },
             "gridSettings": {
@@ -3015,70 +3031,92 @@
         "layouts": {
           "main": {
             "widgets": {
-              "42bcde6d-1400-0863-71b0-4580d1baa7da": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "row": 0,
-                "col": 0
-              },
-              "5e77b5a6-d447-fea8-0a95-05adbb7ad795": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "mobileOrder": 1,
-                "mobileHeight": 1,
-                "row": 0,
-                "col": 7
-              },
-              "3436402a-a154-f35c-91cc-21e00c43cb18": {
-                "sizeX": 6,
-                "sizeY": 1,
-                "row": 0,
-                "col": 14
-              },
               "f9841cb3-c76f-94da-7685-cbc3c82de06d": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "mobileOrder": 10,
                 "row": 2,
-                "col": 0
+                "col": 0,
+                "mobileHeight": 1
               },
               "228ee026-8a04-e823-9364-ec397e422c62": {
                 "sizeX": 3,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 21,
                 "row": 2,
-                "col": 10
+                "col": 10,
+                "mobileHeight": 1
               },
               "bdb85906-0d69-f100-2ccf-7ab205a9af8d": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 30,
                 "row": 2,
-                "col": 14
+                "col": 14,
+                "mobileHeight": 1
               },
               "e27f0745-bb54-0955-10ce-844910397efb": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
-                "col": 0
+                "col": 0,
+                "mobileOrder": 11,
+                "mobileHeight": 1
               },
               "35132269-4b62-08e7-568a-37e8dbff64a4": {
                 "sizeX": 3,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 20,
                 "row": 2,
-                "col": 7
+                "col": 7,
+                "mobileHeight": 1
               },
               "edde4589-83fc-6161-d9f4-8e3e936eddae": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
-                "col": 7
+                "col": 7,
+                "mobileOrder": 22,
+                "mobileHeight": 1
               },
               "b2603ebc-29b3-2ffb-cc91-5665efc6dcee": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
+                "col": 14,
+                "mobileOrder": 32,
+                "mobileHeight": 1
+              },
+              "7054d2c0-67ad-238b-394c-2a8a77971680": {
+                "sizeX": 20,
+                "sizeY": 1,
+                "mobileOrder": 1,
+                "mobileHeight": 1,
+                "mobileHide": true,
+                "row": 0,
+                "col": 0
+              },
+              "367fa218-64d7-2663-7b16-b58b945a67e6": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 15,
+                "row": 6,
+                "col": 0
+              },
+              "ac251db0-44fa-57b0-9cab-6c1a5b13d174": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 25,
+                "mobileHeight": 1,
+                "row": 6,
+                "col": 7
+              },
+              "0c489ad2-9f49-35dc-ce32-6948cb9a1a78": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 35,
+                "mobileHeight": 1,
+                "row": 6,
                 "col": 14
               }
             },
@@ -3101,74 +3139,104 @@
               "b3346d3f-22e9-0708-2a34-9b2810c25b38": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 40,
                 "row": 7,
-                "col": 0
+                "col": 0,
+                "mobileHeight": 1
               },
               "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 9,
-                "col": 0
+                "col": 0,
+                "mobileOrder": 41,
+                "mobileHeight": 1
               },
               "80825308-24cc-3454-9155-89dba54ad83d": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "mobileOrder": 10,
                 "row": 2,
-                "col": 0
+                "col": 0,
+                "mobileHeight": 1
               },
               "f00582e8-4280-382f-32a9-007cd6292034": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
-                "col": 0
+                "col": 0,
+                "mobileOrder": 11,
+                "mobileHeight": 1
               },
               "46786a84-4192-6a66-1939-094ebfc94896": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 20,
                 "row": 2,
-                "col": 7
+                "col": 7,
+                "mobileHeight": 1
               },
               "2e42ff61-7969-e9c3-5daf-862b48afd5cc": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
-                "col": 7
+                "col": 7,
+                "mobileOrder": 21,
+                "mobileHeight": 1
               },
               "966dcf51-535c-b4e8-4719-4b83da0bd8d2": {
                 "sizeX": 6,
                 "sizeY": 2,
-                "mobileOrder": 10,
+                "mobileOrder": 30,
                 "row": 2,
-                "col": 14
+                "col": 14,
+                "mobileHeight": 1
               },
               "0d68e299-fc6a-75b0-db04-9843fd00ec82": {
                 "sizeX": 6,
                 "sizeY": 2,
                 "row": 4,
-                "col": 14
+                "col": 14,
+                "mobileOrder": 31,
+                "mobileHeight": 1
               },
-              "0e3bba43-2c89-4e9f-7713-de5ffc626b09": {
-                "sizeX": 6,
+              "0a1137c8-ab80-ba56-2229-86dcdd21b0c7": {
+                "sizeX": 20,
                 "sizeY": 1,
+                "mobileOrder": 1,
+                "mobileHeight": 1,
+                "mobileHide": true,
                 "row": 0,
                 "col": 0
               },
-              "0e511ba2-9f1a-25d6-3cbe-059e3c548059": {
+              "c8902462-1b17-14f0-5d75-281ffa62ba02": {
                 "sizeX": 6,
                 "sizeY": 1,
-                "mobileOrder": 4,
+                "mobileOrder": 15,
                 "mobileHeight": 1,
-                "row": 0,
+                "row": 1,
+                "col": 0
+              },
+              "5e33afd7-b74f-bf57-75d6-983eb7cdd334": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "mobileOrder": 22,
+                "mobileHeight": 1,
+                "row": 1,
                 "col": 7
               },
-              "62fc24da-7b21-523a-fb3b-84d5dbe8bccb": {
+              "d384c9b5-d25c-c8e1-fe0a-26497b76d937": {
                 "sizeX": 6,
                 "sizeY": 1,
-                "row": 0,
+                "mobileOrder": 35,
+                "row": 1,
                 "col": 14
+              },
+              "f81d23aa-b7b6-297a-9403-2c9d7abe97c2": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 6,
+                "col": 0
               }
             },
             "gridSettings": {

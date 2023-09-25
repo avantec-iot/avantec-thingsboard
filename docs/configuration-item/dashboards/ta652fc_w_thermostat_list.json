@@ -92,14 +92,9 @@
                   "type": "attribute",
                   "label": "Active",
                   "color": "#8bc34a",
-                  "settings": {
-                    "columnWidth": "0px",
-                    "useCellStyleFunction": false,
-                    "useCellContentFunction": false,
-                    "defaultColumnVisibility": "visible",
-                    "columnSelectionToDisplay": "enabled"
-                  },
+                  "settings": {},
                   "_hash": 0.9836070312446519,
+                  "aggregationType": null,
                   "units": null,
                   "decimals": null,
                   "funcBody": null,
@@ -182,7 +177,12 @@
                   "usePostProcessing": null,
                   "postFuncBody": null
                 }
-              ]
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
             }
           ],
           "displayTimewindow": true,
@@ -213,7 +213,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "752954a0-8697-11ed-a9b3-4f7e77852806",
+                "targetDashboardId": "fa21c520-fdf7-11ed-8f1a-691306f4897e",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "706e2ef4-5085-7b76-9ea2-def68e71a2bd"
@@ -245,7 +245,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -258,8 +259,10 @@
         "filter": {
           "type": "deviceType",
           "resolveMultiple": true,
-          "deviceType": "TA652FC-W Thermostat",
-          "deviceNameFilter": ""
+          "deviceNameFilter": "",
+          "deviceTypes": [
+            "TA652FC-W Thermostat"
+          ]
         }
       }
     },
@@ -291,5 +294,6 @@
       "toolbarAlwaysOpen": true
     }
   },
+  "externalId": null,
   "name": "TA652FC-W Thermostat List"
 }

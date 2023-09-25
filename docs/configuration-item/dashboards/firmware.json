@@ -1,7 +1,7 @@
 {
   "title": "Firmware",
   "image": null,
-  "mobileHide": false,
+  "mobileHide": true,
   "mobileOrder": null,
   "configuration": {
     "description": "",
@@ -18,9 +18,23 @@
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -498,8 +512,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -582,8 +615,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -666,8 +718,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -750,8 +821,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -813,9 +903,23 @@
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -1110,9 +1214,23 @@
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -1407,9 +1525,23 @@
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -1704,9 +1836,23 @@
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1673233150665,
+                "endTimeMs": 1673319550665
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -2490,5 +2636,6 @@
       "showUpdateDashboardImage": false
     }
   },
+  "externalId": null,
   "name": "Firmware"
 }
