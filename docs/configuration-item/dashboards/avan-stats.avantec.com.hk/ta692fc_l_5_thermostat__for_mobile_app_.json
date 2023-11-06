@@ -6,13 +6,7 @@
   "configuration": {
     "widgets": {
       "e0cff2bd-93e8-83b0-c278-7bc65813a6e1": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
         "type": "timeseries",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 8,
         "sizeY": 5,
         "config": {
@@ -109,7 +103,18 @@
               "showLabels": true
             },
             "customLegendEnabled": true,
-            "dataKeysListForLabels": []
+            "dataKeysListForLabels": [],
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": false,
+              "showTotal": false,
+              "showLatest": false
+            }
           },
           "title": "Temperature history (°C)",
           "dropShadow": false,
@@ -126,31 +131,15 @@
           "widgetStyle": {},
           "widgetCss": "",
           "pageSize": 1024,
-          "noDataDisplayMessage": "",
-          "showLegend": true,
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "sortDataKeys": false,
-            "showMin": false,
-            "showMax": false,
-            "showAvg": false,
-            "showTotal": false,
-            "showLatest": false
-          }
+          "noDataDisplayMessage": ""
         },
         "row": 0,
         "col": 0,
-        "id": "e0cff2bd-93e8-83b0-c278-7bc65813a6e1"
+        "id": "e0cff2bd-93e8-83b0-c278-7bc65813a6e1",
+        "typeFullFqn": "system.charts.basic_timeseries"
       },
       "bbcfccf3-94b0-9856-3f93-49ab61fed51c": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -180,16 +169,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "bbcfccf3-94b0-9856-3f93-49ab61fed51c"
+        "id": "bbcfccf3-94b0-9856-3f93-49ab61fed51c",
+        "typeFullFqn": "system.cards.html_card"
       },
       "62d27ec5-c33f-40f0-ed04-a407c5b2484a": {
-        "isSystemType": true,
-        "bundleAlias": "digital_gauges",
-        "typeAlias": "gauge_justgage",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 4,
         "sizeY": 3,
         "config": {
@@ -314,16 +298,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "62d27ec5-c33f-40f0-ed04-a407c5b2484a"
+        "id": "62d27ec5-c33f-40f0-ed04-a407c5b2484a",
+        "typeFullFqn": "system.digital_gauges.gauge_justgage"
       },
       "55e7a8e8-4959-cf77-3ad2-b9f06179635f": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -408,16 +387,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "55e7a8e8-4959-cf77-3ad2-b9f06179635f"
+        "id": "55e7a8e8-4959-cf77-3ad2-b9f06179635f",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "2997fae8-bd27-3150-faf1-53f6f94acb53": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -502,16 +476,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "2997fae8-bd27-3150-faf1-53f6f94acb53"
+        "id": "2997fae8-bd27-3150-faf1-53f6f94acb53",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "16abffaf-1181-8167-c3f7-74451f6f2748": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -596,16 +565,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "16abffaf-1181-8167-c3f7-74451f6f2748"
+        "id": "16abffaf-1181-8167-c3f7-74451f6f2748",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "4cc37622-20bb-23d2-6528-e647a9c11f6a": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -690,16 +654,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "4cc37622-20bb-23d2-6528-e647a9c11f6a"
+        "id": "4cc37622-20bb-23d2-6528-e647a9c11f6a",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "cb4fa65c-81dd-d7db-3aef-6965d18b6349": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -817,16 +776,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "cb4fa65c-81dd-d7db-3aef-6965d18b6349"
+        "id": "cb4fa65c-81dd-d7db-3aef-6965d18b6349",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "f9841cb3-c76f-94da-7685-cbc3c82de06d": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -911,16 +865,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "f9841cb3-c76f-94da-7685-cbc3c82de06d"
+        "id": "f9841cb3-c76f-94da-7685-cbc3c82de06d",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "228ee026-8a04-e823-9364-ec397e422c62": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1005,16 +954,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "228ee026-8a04-e823-9364-ec397e422c62"
+        "id": "228ee026-8a04-e823-9364-ec397e422c62",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "bdb85906-0d69-f100-2ccf-7ab205a9af8d": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1099,16 +1043,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "bdb85906-0d69-f100-2ccf-7ab205a9af8d"
+        "id": "bdb85906-0d69-f100-2ccf-7ab205a9af8d",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "e27f0745-bb54-0955-10ce-844910397efb": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_double_attribute",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1198,16 +1137,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "e27f0745-bb54-0955-10ce-844910397efb"
+        "id": "e27f0745-bb54-0955-10ce-844910397efb",
+        "typeFullFqn": "system.input_widgets.update_shared_double_attribute"
       },
       "35132269-4b62-08e7-568a-37e8dbff64a4": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1286,16 +1220,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "35132269-4b62-08e7-568a-37e8dbff64a4"
+        "id": "35132269-4b62-08e7-568a-37e8dbff64a4",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "477ed1f4-a530-1f2b-ccc6-980185e66a0a": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1374,16 +1303,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "477ed1f4-a530-1f2b-ccc6-980185e66a0a"
+        "id": "477ed1f4-a530-1f2b-ccc6-980185e66a0a",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "b3346d3f-22e9-0708-2a34-9b2810c25b38": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1468,16 +1392,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "b3346d3f-22e9-0708-2a34-9b2810c25b38"
+        "id": "b3346d3f-22e9-0708-2a34-9b2810c25b38",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_double_attribute",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1567,16 +1486,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d"
+        "id": "e3c3c166-e0f0-b6e1-f92c-7bcb6260380d",
+        "typeFullFqn": "system.input_widgets.update_shared_double_attribute"
       },
       "80825308-24cc-3454-9155-89dba54ad83d": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1663,16 +1577,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "80825308-24cc-3454-9155-89dba54ad83d"
+        "id": "80825308-24cc-3454-9155-89dba54ad83d",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "f00582e8-4280-382f-32a9-007cd6292034": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_double_attribute",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1762,16 +1671,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "f00582e8-4280-382f-32a9-007cd6292034"
+        "id": "f00582e8-4280-382f-32a9-007cd6292034",
+        "typeFullFqn": "system.input_widgets.update_shared_double_attribute"
       },
       "46786a84-4192-6a66-1939-094ebfc94896": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1858,16 +1762,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "46786a84-4192-6a66-1939-094ebfc94896"
+        "id": "46786a84-4192-6a66-1939-094ebfc94896",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "2e42ff61-7969-e9c3-5daf-862b48afd5cc": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_integer_attribute",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -1950,16 +1849,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "2e42ff61-7969-e9c3-5daf-862b48afd5cc"
+        "id": "2e42ff61-7969-e9c3-5daf-862b48afd5cc",
+        "typeFullFqn": "system.input_widgets.update_shared_integer_attribute"
       },
       "966dcf51-535c-b4e8-4719-4b83da0bd8d2": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2046,16 +1940,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "966dcf51-535c-b4e8-4719-4b83da0bd8d2"
+        "id": "966dcf51-535c-b4e8-4719-4b83da0bd8d2",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "0d68e299-fc6a-75b0-db04-9843fd00ec82": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_integer_attribute",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2144,16 +2033,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "0d68e299-fc6a-75b0-db04-9843fd00ec82"
+        "id": "0d68e299-fc6a-75b0-db04-9843fd00ec82",
+        "typeFullFqn": "system.input_widgets.update_shared_integer_attribute"
       },
       "edde4589-83fc-6161-d9f4-8e3e936eddae": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2264,16 +2148,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "edde4589-83fc-6161-d9f4-8e3e936eddae"
+        "id": "edde4589-83fc-6161-d9f4-8e3e936eddae",
+        "typeFullFqn": "tenant.avantec_widgets.update_shared_integer_attribute_with_segmented_switch_"
       },
       "b2603ebc-29b3-2ffb-cc91-5665efc6dcee": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_shared_integer_attribute_with_segmented_switch_",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2376,16 +2255,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "b2603ebc-29b3-2ffb-cc91-5665efc6dcee"
+        "id": "b2603ebc-29b3-2ffb-cc91-5665efc6dcee",
+        "typeFullFqn": "tenant.avantec_widgets.update_shared_integer_attribute_with_segmented_switch_"
       },
       "698deb73-e7d4-b6f4-9a4d-5743dbb572ee": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "buttons_navigation_bar",
         "type": "rpc",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 9.5,
         "sizeY": 2,
         "config": {
@@ -2467,16 +2341,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "698deb73-e7d4-b6f4-9a4d-5743dbb572ee"
+        "id": "698deb73-e7d4-b6f4-9a4d-5743dbb572ee",
+        "typeFullFqn": "tenant.avantec_widgets.buttons_navigation_bar"
       },
       "17b652e6-6bce-7475-baa7-dbd992f0a30e": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "buttons_navigation_bar",
         "type": "rpc",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 9.5,
         "sizeY": 2,
         "config": {
@@ -2558,16 +2427,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "17b652e6-6bce-7475-baa7-dbd992f0a30e"
+        "id": "17b652e6-6bce-7475-baa7-dbd992f0a30e",
+        "typeFullFqn": "tenant.avantec_widgets.buttons_navigation_bar"
       },
       "14f5e50b-ccd9-98d4-1612-350e39f7f55b": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "buttons_navigation_bar",
         "type": "rpc",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 9.5,
         "sizeY": 2,
         "config": {
@@ -2649,16 +2513,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "14f5e50b-ccd9-98d4-1612-350e39f7f55b"
+        "id": "14f5e50b-ccd9-98d4-1612-350e39f7f55b",
+        "typeFullFqn": "tenant.avantec_widgets.buttons_navigation_bar"
       },
       "9b7af7d2-6b08-6153-95a8-ca52767df290": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2688,16 +2547,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "9b7af7d2-6b08-6153-95a8-ca52767df290"
+        "id": "9b7af7d2-6b08-6153-95a8-ca52767df290",
+        "typeFullFqn": "system.cards.html_card"
       },
       "22d5648a-1965-aea1-fbb5-dee615b983de": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2727,16 +2581,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "22d5648a-1965-aea1-fbb5-dee615b983de"
+        "id": "22d5648a-1965-aea1-fbb5-dee615b983de",
+        "typeFullFqn": "system.cards.html_card"
       },
       "ffce318e-4520-c284-b5e5-ab0b111b9e93": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2766,16 +2615,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "ffce318e-4520-c284-b5e5-ab0b111b9e93"
+        "id": "ffce318e-4520-c284-b5e5-ab0b111b9e93",
+        "typeFullFqn": "system.cards.html_card"
       },
       "4013b06d-ba4c-f631-6e64-c7d25a7979fe": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2805,16 +2649,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "4013b06d-ba4c-f631-6e64-c7d25a7979fe"
+        "id": "4013b06d-ba4c-f631-6e64-c7d25a7979fe",
+        "typeFullFqn": "system.cards.html_card"
       },
       "b33f68a6-fb43-0f25-9085-9e644fc502d5": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2844,16 +2683,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "b33f68a6-fb43-0f25-9085-9e644fc502d5"
+        "id": "b33f68a6-fb43-0f25-9085-9e644fc502d5",
+        "typeFullFqn": "system.cards.html_card"
       },
       "9e825d05-3583-2bf3-d86e-6def185458de": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2883,16 +2717,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "9e825d05-3583-2bf3-d86e-6def185458de"
+        "id": "9e825d05-3583-2bf3-d86e-6def185458de",
+        "typeFullFqn": "system.cards.html_card"
       },
       "99f07da3-1394-c655-5bb9-0fe7535445e4": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -2922,7 +2751,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "99f07da3-1394-c655-5bb9-0fe7535445e4"
+        "id": "99f07da3-1394-c655-5bb9-0fe7535445e4",
+        "typeFullFqn": "system.cards.html_card"
       }
     },
     "states": {
