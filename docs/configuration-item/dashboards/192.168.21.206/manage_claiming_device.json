@@ -1,0 +1,586 @@
+{
+  "title": "Manage claiming device",
+  "image": null,
+  "mobileHide": true,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "For tenant",
+    "widgets": {
+      "bfabe1a6-ac29-df2a-543c-c40ecf83fe71": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "qr_code",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 4,
+        "sizeY": 3.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "e324e7fb-da00-f9f8-7768-c5d1e69aaf23",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "name",
+                  "type": "entityField",
+                  "label": "Name",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.5771648770831566
+                },
+                {
+                  "name": "claimingData",
+                  "type": "attribute",
+                  "label": "claimingData",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.19741026543594065
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "qrCodeTextPattern": "${entityName}",
+            "useQrCodeTextFunction": true,
+            "qrCodeTextFunction": "var entityData = data[0];\nif (entityData) {\n    return JSON.stringify({\n        deviceName: entityData.entityName,\n        secretKey: JSON.parse(entityData.claimingData).secretKey\n    });\n} else {\n    return '';\n}\n"
+          },
+          "title": "",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {
+            "border-radius": "8px",
+            "box-shadow": "0px 0px 5px rgba(0, 0, 0, 0.05), 0px 0px 20px -10px rgba(16, 16, 16, 0.35)"
+          },
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "actions": {
+            "headerButton": [
+              {
+                "name": "Print",
+                "icon": "print",
+                "type": "custom",
+                "customFunction": "var newWin = window.open('', 'Print-Window');\n\n// select canvas elements\nvar sourceCanvas = widgetContext.$container.find('canvas')[0];\nvar destCanvas = document.createElement('canvas');\n\ndestCanvas.width  = sourceCanvas.width;\ndestCanvas.height = sourceCanvas.height;\n  \n//copy canvas by DataUrl\nvar sourceImageData = sourceCanvas.toDataURL(\"image/png\");\nvar destCanvasContext = destCanvas.getContext('2d');\n\nvar destinationImage = new Image();\ndestinationImage.onload = function(){\n    destCanvasContext.drawImage(destinationImage,0,0);\n    newWin.document.open();\n    newWin.document.write('<html><body></body></html>');\n    newWin.document.body.appendChild(destCanvasContext.canvas);\n    \n    setTimeout(function() {\n        newWin.print();\n\n        newWin.document.close();\n        \n        setTimeout(function() {\n            newWin.close();\n        }, 10);\n    }, 0);\n};\ndestinationImage.src = sourceImageData;",
+                "id": "7c2841cb-aed5-31ce-2b55-b488e92bd664"
+              }
+            ]
+          },
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bfabe1a6-ac29-df2a-543c-c40ecf83fe71"
+      },
+      "3634518d-82ba-13e3-d845-1ac205b57c70": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "entities_table",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 6.5,
+        "config": {
+          "timewindow": {
+            "realtime": {
+              "interval": 1000,
+              "timewindowMs": 86400000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "enableSearch": false,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "defaultSortOrder": "entityName",
+            "displayEntityName": true,
+            "displayEntityType": false,
+            "enableSelectColumnDisplay": false,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "entitiesTitle": "Claiming devices",
+            "entityNameColumnTitle": "Device"
+          },
+          "title": "New Entities table",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "8c4e9c63-4c6f-9b11-88d8-ba7511ab2058",
+              "filterId": "ee256f53-28ee-4db8-30e3-7af05d4c86cb",
+              "dataKeys": [
+                {
+                  "name": "claimingData",
+                  "type": "attribute",
+                  "label": "Claiming expiration",
+                  "color": "#2196f3",
+                  "settings": {
+                    "columnWidth": "0px",
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled",
+                    "cellContentFunction": "return ctx.date.transform(value, \"yyyy-MM-dd HH:mm\");"
+                  },
+                  "_hash": 0.26668757535574894,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "if (typeof value === 'string' && value) {\n    return JSON.parse(value).expirationTime;\n} else {\n    return null;\n}"
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "rowClick": [
+              {
+                "name": "show",
+                "icon": "more_horiz",
+                "type": "updateDashboardState",
+                "targetDashboardStateId": "default",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "id": "1d6bc5cf-bd80-fa0b-8f47-7541dab33aef"
+              }
+            ],
+            "actionCellButton": [
+              {
+                "name": "Delete claiming data",
+                "icon": "delete",
+                "type": "customPretty",
+                "customHtml": "<!--=======================================================================-->\n<!--=====  There are two example templates: for edit and add entity   =====-->\n<!--=======================================================================-->\n<!--========================  Edit entity example  ========================-->\n<!--=======================================================================-->\n<!-- -->\n<!--<form #editEntityForm=\"ngForm\" [formGroup]=\"editEntityFormGroup\"-->\n<!--      (ngSubmit)=\"save()\"  class=\"edit-entity-form\">-->\n<!--    <mat-toolbar fxLayout=\"row\" color=\"primary\">-->\n<!--        <h2>Edit {{entityType.toLowerCase()}} {{entityName}}</h2>-->\n<!--        <span fxFlex></span>-->\n<!--        <button mat-icon-button (click)=\"cancel()\" type=\"button\">-->\n<!--            <mat-icon class=\"material-icons\">close</mat-icon>-->\n<!--        </button>-->\n<!--    </mat-toolbar>-->\n<!--    <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">-->\n<!--    </mat-progress-bar>-->\n<!--    <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>-->\n<!--    <div mat-dialog-content fxLayout=\"column\">-->\n<!--        <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Entity Name</mat-label>-->\n<!--                <input matInput formControlName=\"entityName\" required readonly=\"\">-->\n<!--            </mat-form-field>-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Entity Label</mat-label>-->\n<!--                <input matInput formControlName=\"entityLabel\">-->\n<!--            </mat-form-field>-->\n<!--        </div>-->\n<!--        <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Entity Type</mat-label>-->\n<!--                <input matInput formControlName=\"entityType\" readonly>-->\n<!--            </mat-form-field>-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Type</mat-label>-->\n<!--                <input matInput formControlName=\"type\" readonly>-->\n<!--            </mat-form-field>-->\n<!--        </div>-->\n<!--        <div formGroupName=\"attributes\" fxLayout=\"column\">-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Latitude</mat-label>-->\n<!--                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">-->\n<!--                </mat-form-field>-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Longitude</mat-label>-->\n<!--                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">-->\n<!--                </mat-form-field>-->\n<!--            </div>-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Address</mat-label>-->\n<!--                    <input matInput formControlName=\"address\">-->\n<!--                </mat-form-field>-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Owner</mat-label>-->\n<!--                    <input matInput formControlName=\"owner\">-->\n<!--                </mat-form-field>-->\n<!--            </div>-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Integer Value</mat-label>-->\n<!--                    <input type=\"number\" step=\"1\" matInput formControlName=\"number\">-->\n<!--                    <mat-error *ngIf=\"editEntityFormGroup.get('attributes.number').hasError('pattern')\">-->\n<!--                        Invalid integer value.-->\n<!--                    </mat-error>-->\n<!--                </mat-form-field>-->\n<!--                <div class=\"boolean-value-input\" fxLayout=\"column\" fxLayoutAlign=\"center start\" fxFlex>-->\n<!--                    <label class=\"checkbox-label\">Boolean Value</label>-->\n<!--                    <mat-checkbox formControlName=\"booleanValue\" style=\"margin-bottom: 40px;\">-->\n<!--                        {{ (editEntityFormGroup.get('attributes.booleanValue').value ? \"value.true\" : \"value.false\") | translate }}-->\n<!--                    </mat-checkbox>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n<!--        <div class=\"relations-list old-relations\">-->\n<!--            <div class=\"mat-body-1\" style=\"padding-bottom: 10px; color: rgba(0,0,0,0.57);\">Relations</div>-->\n<!--            <div class=\"body\" [fxShow]=\"oldRelations().length\">-->\n<!--                <div class=\"row\" fxLayout=\"row\" fxLayoutAlign=\"start center\" formArrayName=\"oldRelations\" -->\n<!--                     *ngFor=\"let relation of oldRelations().controls; let i = index;\">-->\n<!--                    <div [formGroupName]=\"i\" class=\"mat-elevation-z2\" fxFlex fxLayout=\"row\" style=\"padding: 5px 0 5px 5px;\">-->\n<!--                        <div fxFlex fxLayout=\"column\">-->\n<!--                            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                                <mat-form-field class=\"mat-block\" style=\"min-width: 100px;\">-->\n<!--                                    <mat-label>Direction</mat-label>-->\n<!--                                    <mat-select formControlName=\"direction\" name=\"direction\">-->\n<!--                                        <mat-option *ngFor=\"let direction of entitySearchDirection | keyvalue\" [value]=\"direction.value\">-->\n<!--                                            {{ (\"relation.search-direction.\" + direction.value) | translate}}-->\n<!--                                        </mat-option>-->\n<!--                                    </mat-select>-->\n<!--                                    <mat-error *ngIf=\"relation.get('direction').hasError('required')\">-->\n<!--                                        Relation direction is required.-->\n<!--                                    </mat-error>-->\n<!--                                </mat-form-field>-->\n<!--                                <tb-relation-type-autocomplete-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        formControlName=\"relationType\"-->\n<!--                                        required=\"true\">-->\n<!--                                </tb-relation-type-autocomplete>-->\n<!--                            </div>-->\n<!--                            <div fxLayout=\"row\" fxLayout.xs=\"column\">-->\n<!--                                <tb-entity-select-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        required=\"true\"-->\n<!--                                        formControlName=\"relatedEntity\">-->\n<!--                                </tb-entity-select>-->\n<!--                            </div>-->\n<!--                        </div>-->\n<!--                        <div fxLayout=\"column\" fxLayoutAlign=\"center center\">-->\n<!--                            <button mat-icon-button color=\"primary\"-->\n<!--                                    aria-label=\"Remove\"-->\n<!--                                    type=\"button\"-->\n<!--                                    (click)=\"removeOldRelation(i)\"-->\n<!--                                    matTooltip=\"Remove relation\"-->\n<!--                                    matTooltipPosition=\"above\">-->\n<!--                                <mat-icon>close</mat-icon>-->\n<!--                            </button>-->\n<!--                        </div>-->\n<!--                    </div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n<!--        <div class=\"relations-list\">-->\n<!--            <div class=\"mat-body-1\" style=\"padding-bottom: 10px; color: rgba(0,0,0,0.57);\">New Relations</div>-->\n<!--            <div class=\"body\" [fxShow]=\"relations().length\">-->\n<!--                <div class=\"row\" fxLayout=\"row\" fxLayoutAlign=\"start center\" formArrayName=\"relations\" *ngFor=\"let relation of relations().controls; let i = index;\">-->\n<!--                    <div [formGroupName]=\"i\" class=\"mat-elevation-z2\" fxFlex fxLayout=\"row\" style=\"padding: 5px 0 5px 5px;\">-->\n<!--                        <div fxFlex fxLayout=\"column\">-->\n<!--                            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                                <mat-form-field class=\"mat-block\" style=\"min-width: 100px;\">-->\n<!--                                    <mat-label>Direction</mat-label>-->\n<!--                                    <mat-select formControlName=\"direction\" name=\"direction\">-->\n<!--                                        <mat-option *ngFor=\"let direction of entitySearchDirection | keyvalue\" [value]=\"direction.value\">-->\n<!--                                            {{ (\"relation.search-direction.\" + direction.value) | translate}}-->\n<!--                                        </mat-option>-->\n<!--                                    </mat-select>-->\n<!--                                    <mat-error *ngIf=\"relation.get('direction').hasError('required')\">-->\n<!--                                        Relation direction is required.-->\n<!--                                    </mat-error>-->\n<!--                                </mat-form-field>-->\n<!--                                <tb-relation-type-autocomplete-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        formControlName=\"relationType\"-->\n<!--                                        [required]=\"true\">-->\n<!--                                </tb-relation-type-autocomplete>-->\n<!--                            </div>-->\n<!--                            <div fxLayout=\"row\" fxLayout.xs=\"column\">-->\n<!--                                <tb-entity-select-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        [required]=\"true\"-->\n<!--                                        formControlName=\"relatedEntity\">-->\n<!--                                </tb-entity-select>-->\n<!--                            </div>-->\n<!--                        </div>-->\n<!--                        <div fxLayout=\"column\" fxLayoutAlign=\"center center\">-->\n<!--                            <button mat-icon-button color=\"primary\"-->\n<!--                                    aria-label=\"Remove\"-->\n<!--                                    type=\"button\"-->\n<!--                                    (click)=\"removeRelation(i)\"-->\n<!--                                    matTooltip=\"Remove relation\"-->\n<!--                                    matTooltipPosition=\"above\">-->\n<!--                                <mat-icon>close</mat-icon>-->\n<!--                            </button>-->\n<!--                        </div>-->\n<!--                    </div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div>-->\n<!--                <button mat-raised-button color=\"primary\"-->\n<!--                        type=\"button\"-->\n<!--                        (click)=\"addRelation()\"-->\n<!--                        matTooltip=\"Add Relation\"-->\n<!--                        matTooltipPosition=\"above\">-->\n<!--                    Add-->\n<!--                </button>-->\n<!--            </div>-->\n<!--        </div>-->\n<!--    </div>-->\n<!--    <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">-->\n<!--        <button mat-button color=\"primary\"-->\n<!--                type=\"button\"-->\n<!--                [disabled]=\"(isLoading$ | async)\"-->\n<!--                (click)=\"cancel()\" cdkFocusInitial>-->\n<!--            Cancel-->\n<!--        </button>-->\n<!--        <button mat-button mat-raised-button color=\"primary\"-->\n<!--                type=\"submit\"-->\n<!--                [disabled]=\"(isLoading$ | async) || editEntityForm.invalid || !editEntityForm.dirty\">-->\n<!--            Save-->\n<!--        </button>-->\n<!--    </div>-->\n<!--</form>-->\n<!---->\n<!--========================================================================-->\n<!--=========================  Add entity example  =========================-->\n<!--========================================================================-->\n<!---->\n<!--<form #addEntityForm=\"ngForm\" [formGroup]=\"addEntityFormGroup\"-->\n<!--      (ngSubmit)=\"save()\" class=\"add-entity-form\">-->\n<!--    <mat-toolbar fxLayout=\"row\" color=\"primary\">-->\n<!--        <h2>Add entity</h2>-->\n<!--        <span fxFlex></span>-->\n<!--        <button mat-icon-button (click)=\"cancel()\" type=\"button\">-->\n<!--            <mat-icon class=\"material-icons\">close</mat-icon>-->\n<!--        </button>-->\n<!--    </mat-toolbar>-->\n<!--    <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">-->\n<!--    </mat-progress-bar>-->\n<!--    <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>-->\n<!--    <div mat-dialog-content fxLayout=\"column\">-->\n<!--        <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Entity Name</mat-label>-->\n<!--                <input matInput formControlName=\"entityName\" required>-->\n<!--                <mat-error *ngIf=\"addEntityFormGroup.get('entityName').hasError('required')\">-->\n<!--                    Entity name is required.-->\n<!--                </mat-error>-->\n<!--            </mat-form-field>-->\n<!--            <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                <mat-label>Entity Label</mat-label>-->\n<!--                <input matInput formControlName=\"entityLabel\" >-->\n<!--            </mat-form-field>-->\n<!--        </div>-->\n<!--        <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--            <tb-entity-type-select-->\n<!--                    class=\"mat-block\"-->\n<!--                    formControlName=\"entityType\"-->\n<!--                    [showLabel]=\"true\"-->\n<!--                    [allowedEntityTypes]=\"allowedEntityTypes\"-->\n<!--            ></tb-entity-type-select>-->\n<!--            <tb-entity-subtype-autocomplete-->\n<!--                    fxFlex *ngIf=\"addEntityFormGroup.get('entityType').value == 'ASSET'\"-->\n<!--                    class=\"mat-block\"-->\n<!--                    formControlName=\"type\"-->\n<!--                    [required]=\"true\"-->\n<!--                    [entityType]=\"'ASSET'\"-->\n<!--            ></tb-entity-subtype-autocomplete>-->\n<!--            <tb-entity-subtype-autocomplete-->\n<!--                    fxFlex *ngIf=\"addEntityFormGroup.get('entityType').value != 'ASSET'\"-->\n<!--                    class=\"mat-block\"-->\n<!--                    formControlName=\"type\"-->\n<!--                    [required]=\"true\"-->\n<!--                    [entityType]=\"'DEVICE'\"-->\n<!--            ></tb-entity-subtype-autocomplete>-->\n<!--        </div>-->\n<!--        <div formGroupName=\"attributes\" fxLayout=\"column\">-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Latitude</mat-label>-->\n<!--                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">-->\n<!--                </mat-form-field>-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Longitude</mat-label>-->\n<!--                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">-->\n<!--                </mat-form-field>-->\n<!--            </div>-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Address</mat-label>-->\n<!--                    <input matInput formControlName=\"address\">-->\n<!--                </mat-form-field>-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Owner</mat-label>-->\n<!--                    <input matInput formControlName=\"owner\">-->\n<!--                </mat-form-field>-->\n<!--            </div>-->\n<!--            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                <mat-form-field fxFlex class=\"mat-block\">-->\n<!--                    <mat-label>Integer Value</mat-label>-->\n<!--                    <input type=\"number\" step=\"1\" matInput formControlName=\"number\">-->\n<!--                    <mat-error *ngIf=\"addEntityFormGroup.get('attributes.number').hasError('pattern')\">-->\n<!--                        Invalid integer value.-->\n<!--                    </mat-error>-->\n<!--                </mat-form-field>-->\n<!--                <div class=\"boolean-value-input\" fxLayout=\"column\" fxLayoutAlign=\"center start\" fxFlex>-->\n<!--                    <label class=\"checkbox-label\">Boolean Value</label>-->\n<!--                    <mat-checkbox formControlName=\"booleanValue\" style=\"margin-bottom: 40px;\">-->\n<!--                        {{ (addEntityFormGroup.get('attributes.booleanValue').value ? \"value.true\" : \"value.false\") | translate }}-->\n<!--                    </mat-checkbox>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n<!--        <div class=\"relations-list\">-->\n<!--            <div class=\"mat-body-1\" style=\"padding-bottom: 10px; color: rgba(0,0,0,0.57);\">Relations</div>-->\n<!--            <div class=\"body\" [fxShow]=\"relations().length\">-->\n<!--                <div class=\"row\" fxLayout=\"row\" fxLayoutAlign=\"start center\" formArrayName=\"relations\" *ngFor=\"let relation of relations().controls; let i = index;\">-->\n<!--                    <div [formGroupName]=\"i\" class=\"mat-elevation-z2\" fxFlex fxLayout=\"row\" style=\"padding: 5px 0 5px 5px;\">-->\n<!--                        <div fxFlex fxLayout=\"column\">-->\n<!--                            <div fxLayout=\"row\" fxLayoutGap=\"8px\" fxLayout.xs=\"column\"  fxLayoutGap.xs=\"0\">-->\n<!--                                <mat-form-field class=\"mat-block\" style=\"min-width: 100px;\">-->\n<!--                                    <mat-label>Direction</mat-label>-->\n<!--                                    <mat-select formControlName=\"direction\" name=\"direction\">-->\n<!--                                        <mat-option *ngFor=\"let direction of entitySearchDirection | keyvalue\" [value]=\"direction.value\">-->\n<!--                                            {{ (\"relation.search-direction.\" + direction.value) | translate}}-->\n<!--                                        </mat-option>-->\n<!--                                    </mat-select>-->\n<!--                                    <mat-error *ngIf=\"relation.get('direction').hasError('required')\">-->\n<!--                                        Relation direction is required.-->\n<!--                                    </mat-error>-->\n<!--                                </mat-form-field>-->\n<!--                                <tb-relation-type-autocomplete-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        formControlName=\"relationType\"-->\n<!--                                        [required]=\"true\">-->\n<!--                                </tb-relation-type-autocomplete>-->\n<!--                            </div>-->\n<!--                            <div fxLayout=\"row\" fxLayout.xs=\"column\">-->\n<!--                                <tb-entity-select-->\n<!--                                        fxFlex class=\"mat-block\"-->\n<!--                                        [required]=\"true\"-->\n<!--                                        formControlName=\"relatedEntity\">-->\n<!--                                </tb-entity-select>-->\n<!--                            </div>-->\n<!--                        </div>-->\n<!--                        <div fxLayout=\"column\" fxLayoutAlign=\"center center\">-->\n<!--                            <button mat-icon-button color=\"primary\"-->\n<!--                                    aria-label=\"Remove\"-->\n<!--                                    type=\"button\"-->\n<!--                                    (click)=\"removeRelation(i)\"-->\n<!--                                    matTooltip=\"Remove relation\"-->\n<!--                                    matTooltipPosition=\"above\">-->\n<!--                                <mat-icon>close</mat-icon>-->\n<!--                            </button>-->\n<!--                        </div>-->\n<!--                    </div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div>-->\n<!--                <button mat-raised-button color=\"primary\"-->\n<!--                        type=\"button\"-->\n<!--                        (click)=\"addRelation()\"-->\n<!--                        matTooltip=\"Add Relation\"-->\n<!--                        matTooltipPosition=\"above\">-->\n<!--                    Add-->\n<!--                </button>-->\n<!--            </div>-->\n<!--        </div>-->\n<!--    </div>-->\n<!--    <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">-->\n<!--        <button mat-button color=\"primary\"-->\n<!--                type=\"button\"-->\n<!--                [disabled]=\"(isLoading$ | async)\"-->\n<!--                (click)=\"cancel()\" cdkFocusInitial>-->\n<!--            Cancel-->\n<!--        </button>-->\n<!--        <button mat-button mat-raised-button color=\"primary\"-->\n<!--                type=\"submit\"-->\n<!--                [disabled]=\"(isLoading$ | async) || addEntityForm.invalid || !addEntityForm.dirty\">-->\n<!--            Create-->\n<!--        </button>-->\n<!--    </div>-->\n<!--</form>-->\n",
+                "customCss": "/*=======================================================================*/\n/*==========  There are two examples: for edit and add entity  ==========*/\n/*=======================================================================*/\n/*========================  Edit entity example  ========================*/\n/*=======================================================================*/\n/*\n.edit-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.edit-entity-form .boolean-value-input .checkbox-label {\n    margin-bottom: 8px;\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n/*========================================================================*/\n/*=========================  Add entity example  =========================*/\n/*========================================================================*/\n/*\n.add-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.add-entity-form .boolean-value-input .checkbox-label {\n    margin-bottom: 8px;\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n",
+                "customFunction": "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenDeleteEntityDialog();\n\nfunction openDeleteEntityDialog() {\n    let title = 'Delete claiming data for ' + entityName;\n    let content = 'Are you sure you want to delete claiming data for ' + entityName + '?';\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function(result) {\n            if (result) {\n                deleteSecretKey();\n            }\n        }\n    );\n}\n\nfunction deleteSecretKey() {\n    const attributesArray = [{key: 'claimingData', value: null}];\n    return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray).subscribe(\n        function success() {\n            widgetContext.updateAliases();\n        },\n        function fail() {\n            showErrorDialog();\n        }\n    );\n}\n\nfunction showErrorDialog() {\n    let title = 'Error';\n    let content = 'An error occurred while deleting the claiming data. Please try again.';\n    dialogs.alert(title, content, 'CLOSE').subscribe(\n        function(result) {}\n    );\n}",
+                "customResources": [],
+                "id": "d070e171-591b-ef5b-714d-ca51457e3f70"
+              }
+            ],
+            "headerButton": [
+              {
+                "name": "Help",
+                "icon": "help",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "openDashboardState",
+                "targetDashboardStateId": "help",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openRightLayout": false,
+                "popoverPreferredPlacement": "bottom",
+                "popoverHideOnClickOutside": true,
+                "popoverHideDashboardToolbar": true,
+                "popoverWidth": "400px",
+                "popoverHeight": "140px",
+                "popoverStyle": {},
+                "openInSeparateDialog": false,
+                "openInPopover": true,
+                "id": "6af0a28f-e50b-5846-2365-b0e05d7da104"
+              }
+            ]
+          },
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "widgetStyle": {
+            "border-radius": "8px",
+            "box-shadow": "0px 0px 5px rgba(0, 0, 0, 0.05), 0px 0px 20px -10px rgba(16, 16, 16, 0.35)"
+          },
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3634518d-82ba-13e3-d845-1ac205b57c70"
+      },
+      "355eb084-8e49-462d-20a6-a3a3428656e8": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "entities_table",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 6.5,
+        "config": {
+          "timewindow": {
+            "realtime": {
+              "interval": 1000,
+              "timewindowMs": 86400000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "entitiesTitle": "Manage claiming device",
+            "enableSearch": true,
+            "enableSelectColumnDisplay": false,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "reserveSpaceForHiddenAction": "true",
+            "displayEntityName": true,
+            "entityNameColumnTitle": "Device",
+            "displayEntityLabel": false,
+            "displayEntityType": false,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "defaultSortOrder": "claimingData",
+            "useRowStyleFunction": false
+          },
+          "title": "New Entities table",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "8c4e9c63-4c6f-9b11-88d8-ba7511ab2058",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "claimingData",
+                  "type": "attribute",
+                  "label": "Claiming data set",
+                  "color": "#2196f3",
+                  "settings": {
+                    "columnWidth": "0px",
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": true,
+                    "defaultColumnVisibility": "visible",
+                    "columnSelectionToDisplay": "enabled",
+                    "cellContentFunction": "var icon = value ? 'done' : '';\nreturn '<span class=\"material-icons\">'+icon+'</span>';"
+                  },
+                  "_hash": 0.26668757535574894,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": true,
+                  "postFuncBody": "if (typeof value === 'string' && value) {\n    return true;\n} else {\n    return false;\n}"
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "rowClick": [],
+            "actionCellButton": [
+              {
+                "name": "Secret key",
+                "icon": "security",
+                "type": "customPretty",
+                "customHtml": "<form #editSecretKey=\"ngForm\" [formGroup]=\"editSecretKeyFormGroup\"\n      (ngSubmit)=\"save()\" class=\"add-entity-form\">\n    <mat-toolbar fxLayout=\"row\" color=\"primary\">\n        <h2>Set secret key for {{entityName}}</h2>\n        <span fxFlex></span>\n        <button mat-icon-button (click)=\"cancel()\" type=\"button\">\n            <mat-icon class=\"material-icons\">close</mat-icon>\n        </button>\n    </mat-toolbar>\n    <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n    </mat-progress-bar>\n    <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n    <div mat-dialog-content fxLayout=\"column\">\n        <mat-form-field fxFlex class=\"mat-block\">\n            <mat-label>Secret key</mat-label>\n            <input matInput formControlName=\"secretKey\">\n            <span matSuffix\n                    matTooltipPosition=\"above\"\n                    matTooltip=\"Generate secret key\">\n                <button mat-icon-button type=\"button\" (click)=\"generateKey()\">\n                    <mat-icon>repeat</mat-icon>\n                 </button>\n            </span>\n            <!--<mat-error *ngIf=\"editSecretKeyFormGroup.get('secretKey').hasError('required')\">-->\n            <!--    Secret key is required.-->\n            <!--</mat-error>-->\n        </mat-form-field>\n    </div>\n    <div mat-dialog-actions fxLayout=\"row\" fxLayoutAlign=\"end center\">\n        <button mat-button color=\"primary\"\n                type=\"button\"\n                [disabled]=\"(isLoading$ | async)\"\n                (click)=\"cancel()\" cdkFocusInitial>\n            Cancel\n        </button>\n        <button mat-button mat-raised-button color=\"primary\"\n                type=\"submit\"\n                [disabled]=\"(isLoading$ | async) || editSecretKey.invalid || !editSecretKey.dirty\">\n            Save\n        </button>\n    </div>\n</form>",
+                "customCss": "",
+                "customFunction": "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet utils = $injector.get(widgetContext.servicesMap.get('utils'));\n\nopenEditEntityDialog();\n\nfunction openEditEntityDialog() {\n    customDialog.customDialog(htmlTemplate, EditEntityDialogController).subscribe();\n}\n\nfunction EditEntityDialogController(instance) {\n    let vm = instance;\n\n    vm.entityName = entityName;\n\n    vm.editSecretKeyFormGroup = vm.fb.group({\n        secretKey: ['']\n    });\n\n    getEntityInfo();\n\n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n\n    vm.save = function() {\n        saveAttributes(entityId).subscribe(\n            function () {\n                widgetContext.updateAliases();\n                vm.dialogRef.close(null);\n            }\n        );\n    };\n    \n    vm.generateKey = function() {\n        const secret = generateSecret(16);\n        vm.editSecretKeyFormGroup.patchValue({\n            secretKey: secret\n        });\n        vm.editSecretKeyFormGroup.markAsDirty();\n    }\n    \n    function generateSecret(length) {\n      if (!length || length < 0) {\n        length = 1;\n      }\n      const l = length > 10 ? 10 : length;\n      const str = Math.random().toString(36).substr(2, l);\n      if (str.length >= length) {\n        return str;\n      }\n      return str.concat(generateSecret(length - str.length));\n    }\n\n    function getEntityInfo() {\n        attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE', ['claimingData']).subscribe(\n            function (data) {\n                if (data.length) {\n                    const secretKey = JSON.parse(data[0].value).secretKey;\n                    vm.editSecretKeyFormGroup.patchValue({\n                        secretKey: secretKey\n                    }, {emitEvent: false});    \n                }\n            }\n        );\n    }\n\n    function saveAttributes(entityId) {\n        const secretKey = vm.editSecretKeyFormGroup.get('secretKey').value;\n        const attributesArray = [{\n            key: 'claimingData',\n            value: JSON.stringify({\n                secretKey: secretKey,\n                expirationTime: 1893448800000\n            }) \n        }];\n        return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n    }\n}",
+                "customResources": [],
+                "id": "d070e171-591b-ef5b-714d-ca51457e3f70"
+              }
+            ]
+          },
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "widgetStyle": {
+            "border-radius": "8px",
+            "box-shadow": "0px 0px 5px rgba(0, 0, 0, 0.05), 0px 0px 20px -10px rgba(16, 16, 16, 0.35)"
+          },
+          "enableDataExport": false,
+          "widgetCss": "",
+          "pageSize": 1024,
+          "noDataDisplayMessage": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "355eb084-8e49-462d-20a6-a3a3428656e8"
+      },
+      "187ffb25-d04d-9673-3812-82819fcbd540": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "markdown_card",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 5,
+        "sizeY": 3.5,
+        "config": {
+          "datasources": [
+            {
+              "type": "function",
+              "name": null,
+              "entityAliasId": "8c4e9c63-4c6f-9b11-88d8-ba7511ab2058",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "f(x)",
+                  "type": "function",
+                  "label": "Random",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.29411321648183564,
+                  "funcBody": "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "markdownTextPattern": "\n - Click table row to update QR code data\n - See <a href=\"https://thingsboard.io/docs/user-guide/claiming-devices/?claimingscenario=serverside\" target=\"_blank\">Device Claiming</a> for details\n \n ",
+            "markdownTextFunction": "return '# Some title\\n - Entity name: ' + data[0]['entityName'];",
+            "markdownCss": ".tb-markdown-view ul {\n    padding-left: 32px;\n    padding-right: 0px;\n}"
+          },
+          "title": "New Markdown Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "187ffb25-d04d-9673-3812-82819fcbd540"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Device claiming",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "bfabe1a6-ac29-df2a-543c-c40ecf83fe71": {
+                "sizeX": 7,
+                "sizeY": 6,
+                "row": 0,
+                "col": 11
+              },
+              "3634518d-82ba-13e3-d845-1ac205b57c70": {
+                "sizeX": 11,
+                "sizeY": 6,
+                "row": 0,
+                "col": 0
+              },
+              "355eb084-8e49-462d-20a6-a3a3428656e8": {
+                "sizeX": 11,
+                "sizeY": 7,
+                "row": 6,
+                "col": 0,
+                "mobileHide": false
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#f7f8fa",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": true,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      },
+      "help": {
+        "name": "help",
+        "root": false,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "187ffb25-d04d-9673-3812-82819fcbd540": {
+                "sizeX": 24,
+                "sizeY": 4,
+                "row": 0,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 0,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": true,
+              "backgroundImageUrl": null,
+              "mobileAutoFillHeight": true,
+              "mobileRowHeight": 70
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "e324e7fb-da00-f9f8-7768-c5d1e69aaf23": {
+        "id": "e324e7fb-da00-f9f8-7768-c5d1e69aaf23",
+        "alias": "Select device",
+        "filter": {
+          "type": "stateEntity",
+          "resolveMultiple": false,
+          "stateEntityParamName": null,
+          "defaultStateEntity": null
+        }
+      },
+      "8c4e9c63-4c6f-9b11-88d8-ba7511ab2058": {
+        "id": "8c4e9c63-4c6f-9b11-88d8-ba7511ab2058",
+        "alias": "Devices",
+        "filter": {
+          "type": "entityType",
+          "resolveMultiple": true,
+          "entityType": "DEVICE"
+        }
+      }
+    },
+    "filters": {
+      "ee256f53-28ee-4db8-30e3-7af05d4c86cb": {
+        "id": "ee256f53-28ee-4db8-30e3-7af05d4c86cb",
+        "filter": "Claiming devices",
+        "keyFilters": [
+          {
+            "key": {
+              "type": "ATTRIBUTE",
+              "key": "claimingData"
+            },
+            "valueType": "STRING",
+            "predicates": [
+              {
+                "keyFilterPredicate": {
+                  "operation": "CONTAINS",
+                  "value": {
+                    "defaultValue": "secretKey",
+                    "dynamicValue": null
+                  },
+                  "ignoreCase": false,
+                  "type": "STRING"
+                },
+                "userInfo": {
+                  "editable": true,
+                  "label": "",
+                  "autogeneratedLabel": true,
+                  "order": 0
+                }
+              }
+            ]
+          }
+        ],
+        "editable": false
+      }
+    },
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1629967971335,
+          "endTimeMs": 1630054371335
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": true,
+      "titleColor": "rgba(0,0,0,0.870588)",
+      "showDashboardLogo": false,
+      "dashboardLogoUrl": null,
+      "hideToolbar": false,
+      "showFilters": false,
+      "showUpdateDashboardImage": false
+    }
+  },
+  "externalId": null,
+  "name": "Manage claiming device"
+}

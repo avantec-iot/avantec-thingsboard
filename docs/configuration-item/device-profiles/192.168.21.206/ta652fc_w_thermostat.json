@@ -8,7 +8,7 @@
   "defaultRuleChainId": null,
   "defaultDashboardId": {
     "entityType": "DASHBOARD",
-    "id": "752954a0-8697-11ed-a9b3-4f7e77852806"
+    "id": "b6ab5830-5b83-11ee-a2b2-9f956d2de0f1"
   },
   "defaultQueueName": null,
   "profileData": {
@@ -27,5 +27,7 @@
   "provisionDeviceKey": "TA652FC-W-TB_PROVISION-KEY",
   "firmwareId": null,
   "softwareId": null,
+  "defaultEdgeRuleChainId": null,
+  "externalId": null,
   "default": false
 }

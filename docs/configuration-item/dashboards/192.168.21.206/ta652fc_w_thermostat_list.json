@@ -213,7 +213,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "752954a0-8697-11ed-a9b3-4f7e77852806",
+                "targetDashboardId": "b6ab5830-5b83-11ee-a2b2-9f956d2de0f1",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "706e2ef4-5085-7b76-9ea2-def68e71a2bd"
@@ -245,7 +245,8 @@
               "backgroundColor": "#eeeeee",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -258,8 +259,10 @@
         "filter": {
           "type": "deviceType",
           "resolveMultiple": true,
-          "deviceType": "TA652FC-W Thermostat",
-          "deviceNameFilter": ""
+          "deviceNameFilter": "",
+          "deviceTypes": [
+            "TA652FC-W Thermostat"
+          ]
         }
       }
     },
@@ -291,5 +294,6 @@
       "toolbarAlwaysOpen": true
     }
   },
+  "externalId": null,
   "name": "TA652FC-W Thermostat List"
 }
