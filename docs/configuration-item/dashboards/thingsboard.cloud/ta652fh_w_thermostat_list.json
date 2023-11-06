@@ -7,13 +7,7 @@
     "description": "TA652FH-W Thermostat List (v1.0.0, 2023-05-25)",
     "widgets": {
       "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "entities_table",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 6.5,
         "config": {
@@ -204,7 +198,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "69b8f8cb-cfe2-4b54-d435-1cd0f550358d"
+        "id": "69b8f8cb-cfe2-4b54-d435-1cd0f550358d",
+        "typeFullFqn": "system.cards.entities_table"
       }
     },
     "states": {

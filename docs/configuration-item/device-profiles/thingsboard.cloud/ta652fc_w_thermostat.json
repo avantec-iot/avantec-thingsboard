@@ -6,7 +6,10 @@
   "transportType": "DEFAULT",
   "provisionType": "CHECK_PRE_PROVISIONED_DEVICES",
   "defaultRuleChainId": null,
-  "defaultDashboardId": null,
+  "defaultDashboardId": {
+    "entityType": "DASHBOARD",
+    "id": "fa21c520-fdf7-11ed-8f1a-691306f4897e"
+  },
   "defaultQueueName": null,
   "profileData": {
     "configuration": {

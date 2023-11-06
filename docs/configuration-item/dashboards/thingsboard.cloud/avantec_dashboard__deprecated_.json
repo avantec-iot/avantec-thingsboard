@@ -7,18 +7,28 @@
     "description": "Avantec Dashboard (Deprecated)",
     "widgets": {
       "b293cf2a-3818-72f2-e0fd-853ef313042c": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "entities_table",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 16,
         "sizeY": 10,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -153,14 +163,11 @@
             ]
           }
         },
-        "id": "b293cf2a-3818-72f2-e0fd-853ef313042c"
+        "id": "b293cf2a-3818-72f2-e0fd-853ef313042c",
+        "typeFullFqn": "system.cards.entities_table"
       },
       "788172b7-196d-fe2c-4947-edc5dcd881ca": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
         "type": "timeseries",
-        "title": "New widget",
         "sizeX": 14,
         "sizeY": 4,
         "config": {
@@ -259,7 +266,16 @@
             },
             "smoothLines": true,
             "hideZeros": false,
-            "comparisonEnabled": false
+            "comparisonEnabled": false,
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "showMin": false,
+              "showMax": false,
+              "showAvg": false,
+              "showTotal": false
+            }
           },
           "title": "Temperature history",
           "dropShadow": true,
@@ -277,25 +293,13 @@
           "widgetStyle": {},
           "useDashboardTimewindow": true,
           "displayTimewindow": true,
-          "showLegend": true,
-          "actions": {},
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "showMin": false,
-            "showMax": false,
-            "showAvg": false,
-            "showTotal": false
-          }
+          "actions": {}
         },
-        "id": "788172b7-196d-fe2c-4947-edc5dcd881ca"
+        "id": "788172b7-196d-fe2c-4947-edc5dcd881ca",
+        "typeFullFqn": "system.charts.basic_timeseries"
       },
       "17c6800f-dab5-5ab5-783d-eef0a2ca324c": {
-        "isSystemType": true,
-        "bundleAlias": "digital_gauges",
-        "typeAlias": "gauge_justgage",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 3,
         "config": {
@@ -316,8 +320,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -390,14 +413,11 @@
           "actions": {},
           "decimals": 1
         },
-        "id": "17c6800f-dab5-5ab5-783d-eef0a2ca324c"
+        "id": "17c6800f-dab5-5ab5-783d-eef0a2ca324c",
+        "typeFullFqn": "system.digital_gauges.gauge_justgage"
       },
       "8d1fc2f6-7857-308a-18cc-3aca98a7cf62": {
-        "isSystemType": true,
-        "bundleAlias": "digital_gauges",
-        "typeAlias": "gauge_justgage",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 3,
         "config": {
@@ -418,8 +438,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -494,14 +533,11 @@
           },
           "decimals": 1
         },
-        "id": "8d1fc2f6-7857-308a-18cc-3aca98a7cf62"
+        "id": "8d1fc2f6-7857-308a-18cc-3aca98a7cf62",
+        "typeFullFqn": "system.digital_gauges.gauge_justgage"
       },
       "612ad58c-41c8-7bd1-9140-c4bb9260d1a6": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "testattributescard",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 3,
         "config": {
@@ -554,8 +590,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -581,14 +636,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "612ad58c-41c8-7bd1-9140-c4bb9260d1a6"
+        "id": "612ad58c-41c8-7bd1-9140-c4bb9260d1a6",
+        "typeFullFqn": "tenant.avantec_widgets.testattributescard"
       },
       "4cd90aee-4965-7e08-d0d3-d708269bd4a9": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 1,
         "config": {
@@ -624,14 +676,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "4cd90aee-4965-7e08-d0d3-d708269bd4a9"
+        "id": "4cd90aee-4965-7e08-d0d3-d708269bd4a9",
+        "typeFullFqn": "system.cards.html_card"
       },
       "76baeee1-86b7-47bb-4d4a-a2e572eed258": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 1,
         "config": {
@@ -667,14 +716,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "76baeee1-86b7-47bb-4d4a-a2e572eed258"
+        "id": "76baeee1-86b7-47bb-4d4a-a2e572eed258",
+        "typeFullFqn": "system.cards.html_card"
       },
       "8d12d04e-cfbb-90c5-eba0-dd41cde33041": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 1,
         "config": {
@@ -710,14 +756,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "8d12d04e-cfbb-90c5-eba0-dd41cde33041"
+        "id": "8d12d04e-cfbb-90c5-eba0-dd41cde33041",
+        "typeFullFqn": "system.cards.html_card"
       },
       "d21d139d-abda-0311-8c69-417bcd597d76": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 1,
         "config": {
@@ -753,14 +796,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "d21d139d-abda-0311-8c69-417bcd597d76"
+        "id": "d21d139d-abda-0311-8c69-417bcd597d76",
+        "typeFullFqn": "system.cards.html_card"
       },
       "ea9ac692-6d01-7007-3d87-542a1cd2a133": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -796,14 +836,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "ea9ac692-6d01-7007-3d87-542a1cd2a133"
+        "id": "ea9ac692-6d01-7007-3d87-542a1cd2a133",
+        "typeFullFqn": "system.cards.html_card"
       },
       "598eb774-0cf2-d96c-969e-df1638eefdbf": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -839,14 +876,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "598eb774-0cf2-d96c-969e-df1638eefdbf"
+        "id": "598eb774-0cf2-d96c-969e-df1638eefdbf",
+        "typeFullFqn": "system.cards.html_card"
       },
       "8fd41d5e-6fbc-3d1f-f4c1-8eb4ea867c27": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -882,14 +916,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "8fd41d5e-6fbc-3d1f-f4c1-8eb4ea867c27"
+        "id": "8fd41d5e-6fbc-3d1f-f4c1-8eb4ea867c27",
+        "typeFullFqn": "system.cards.html_card"
       },
       "5fdcbde0-fd54-a5a2-ad82-1719b770d590": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -925,14 +956,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "5fdcbde0-fd54-a5a2-ad82-1719b770d590"
+        "id": "5fdcbde0-fd54-a5a2-ad82-1719b770d590",
+        "typeFullFqn": "system.cards.html_card"
       },
       "b0cb5616-75da-0b87-f0e3-e42b619aad91": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -968,14 +996,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "b0cb5616-75da-0b87-f0e3-e42b619aad91"
+        "id": "b0cb5616-75da-0b87-f0e3-e42b619aad91",
+        "typeFullFqn": "system.cards.html_card"
       },
       "24de6757-d305-089f-067f-20b6921ba6da": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -1011,14 +1036,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "24de6757-d305-089f-067f-20b6921ba6da"
+        "id": "24de6757-d305-089f-067f-20b6921ba6da",
+        "typeFullFqn": "system.cards.html_card"
       },
       "1a36bccb-8303-d099-1cd0-33d701a2f502": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -1054,14 +1076,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "1a36bccb-8303-d099-1cd0-33d701a2f502"
+        "id": "1a36bccb-8303-d099-1cd0-33d701a2f502",
+        "typeFullFqn": "system.cards.html_card"
       },
       "a7e00d9d-8454-917c-e0d4-d09d925e7eea": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -1097,14 +1116,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "a7e00d9d-8454-917c-e0d4-d09d925e7eea"
+        "id": "a7e00d9d-8454-917c-e0d4-d09d925e7eea",
+        "typeFullFqn": "system.cards.html_card"
       },
       "dedb678c-9527-3a08-547f-01610ea2aa38": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "testattributescard",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 6,
         "sizeY": 3,
         "config": {
@@ -1149,8 +1165,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -1176,14 +1211,11 @@
           "showLegend": false,
           "actions": {}
         },
-        "id": "dedb678c-9527-3a08-547f-01610ea2aa38"
+        "id": "dedb678c-9527-3a08-547f-01610ea2aa38",
+        "typeFullFqn": "tenant.avantec_widgets.testattributescard"
       },
       "245f5783-ed98-0899-acee-1f47a28fa4cc": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_integer_attribute",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 3,
         "config": {
@@ -1204,8 +1236,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -1238,14 +1289,11 @@
           "units": "Seconds",
           "displayTimewindow": true
         },
-        "id": "245f5783-ed98-0899-acee-1f47a28fa4cc"
+        "id": "245f5783-ed98-0899-acee-1f47a28fa4cc",
+        "typeFullFqn": "system.input_widgets.update_shared_integer_attribute"
       },
       "8d223e3a-df3f-f07e-e646-4e21c04adc58": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_integer_attribute",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 3,
         "config": {
@@ -1266,8 +1314,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -1300,14 +1367,11 @@
           "units": "Seconds",
           "displayTimewindow": true
         },
-        "id": "8d223e3a-df3f-f07e-e646-4e21c04adc58"
+        "id": "8d223e3a-df3f-f07e-e646-4e21c04adc58",
+        "typeFullFqn": "system.input_widgets.update_shared_integer_attribute"
       },
       "3ebef046-16cc-f06d-2d8d-8566cb2438d8": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_string_attribute",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 3,
         "config": {
@@ -1328,8 +1392,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -1362,14 +1445,11 @@
           "titleTooltip": "",
           "displayTimewindow": true
         },
-        "id": "3ebef046-16cc-f06d-2d8d-8566cb2438d8"
+        "id": "3ebef046-16cc-f06d-2d8d-8566cb2438d8",
+        "typeFullFqn": "system.input_widgets.update_shared_string_attribute"
       },
       "bce7f367-2f6b-68d4-fa2b-2f91337f66ae": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "rtc_button_with_method_params",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 6,
         "sizeY": 5,
         "config": {
@@ -1408,14 +1488,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "bce7f367-2f6b-68d4-fa2b-2f91337f66ae"
+        "id": "bce7f367-2f6b-68d4-fa2b-2f91337f66ae",
+        "typeFullFqn": "tenant.avantec_widgets.rtc_button_with_method_params"
       },
       "97a7fc15-7b35-938d-ffef-79eb88c42e7e": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "rtc_button_with_method_params",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 8,
         "config": {
@@ -1454,14 +1531,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "97a7fc15-7b35-938d-ffef-79eb88c42e7e"
+        "id": "97a7fc15-7b35-938d-ffef-79eb88c42e7e",
+        "typeFullFqn": "tenant.avantec_widgets.rtc_button_with_method_params"
       },
       "516b769b-b6b9-f898-78df-1e693943a7a3": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "rtc_button_with_method_params",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 8,
         "config": {
@@ -1500,14 +1574,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "516b769b-b6b9-f898-78df-1e693943a7a3"
+        "id": "516b769b-b6b9-f898-78df-1e693943a7a3",
+        "typeFullFqn": "tenant.avantec_widgets.rtc_button_with_method_params"
       },
       "20705ab1-bbe2-0be7-2301-1fd712d2343c": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_shared_string_attribute",
         "type": "latest",
-        "title": "New widget",
         "sizeX": 5,
         "sizeY": 2,
         "config": {
@@ -1528,8 +1599,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166166411,
+                "endTimeMs": 1699252566411
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -1563,14 +1653,11 @@
           "titleTooltip": "",
           "displayTimewindow": true
         },
-        "id": "20705ab1-bbe2-0be7-2301-1fd712d2343c"
+        "id": "20705ab1-bbe2-0be7-2301-1fd712d2343c",
+        "typeFullFqn": "system.input_widgets.update_shared_string_attribute"
       },
       "f7193890-0d66-bc47-5d5a-f2d9c8eb23c7": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
         "type": "timeseries",
-        "title": "New widget",
         "sizeX": 16,
         "sizeY": 4,
         "config": {
@@ -1647,7 +1734,16 @@
               "axisPosition": "top",
               "showLabels": true
             },
-            "smoothLines": true
+            "smoothLines": true,
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "showMin": true,
+              "showMax": true,
+              "showAvg": true,
+              "showTotal": false
+            }
           },
           "title": "Wi-Fi RSSI (Received Signal Strength Indicator)",
           "dropShadow": true,
@@ -1665,25 +1761,13 @@
           "widgetStyle": {},
           "useDashboardTimewindow": true,
           "displayTimewindow": true,
-          "showLegend": true,
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "showMin": true,
-            "showMax": true,
-            "showAvg": true,
-            "showTotal": false
-          },
           "actions": {}
         },
-        "id": "f7193890-0d66-bc47-5d5a-f2d9c8eb23c7"
+        "id": "f7193890-0d66-bc47-5d5a-f2d9c8eb23c7",
+        "typeFullFqn": "system.charts.basic_timeseries"
       },
       "7de12c95-a3a5-740a-9882-ebe8f1a7894c": {
-        "isSystemType": true,
-        "bundleAlias": "charts",
-        "typeAlias": "basic_timeseries",
         "type": "timeseries",
-        "title": "New widget",
         "sizeX": 16,
         "sizeY": 5,
         "config": {
@@ -1790,7 +1874,16 @@
               "axisPosition": "top",
               "showLabels": true
             },
-            "smoothLines": true
+            "smoothLines": true,
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "bottom",
+              "showMin": true,
+              "showMax": true,
+              "showAvg": true,
+              "showTotal": false
+            }
           },
           "title": "Memeory Usage  (Byte)",
           "dropShadow": true,
@@ -1808,25 +1901,13 @@
           "widgetStyle": {},
           "useDashboardTimewindow": true,
           "displayTimewindow": true,
-          "showLegend": true,
-          "legendConfig": {
-            "direction": "column",
-            "position": "bottom",
-            "showMin": true,
-            "showMax": true,
-            "showAvg": true,
-            "showTotal": false
-          },
           "actions": {}
         },
-        "id": "7de12c95-a3a5-740a-9882-ebe8f1a7894c"
+        "id": "7de12c95-a3a5-740a-9882-ebe8f1a7894c",
+        "typeFullFqn": "system.charts.basic_timeseries"
       },
       "9f8d56eb-3328-d954-3f73-dffa8fdbba14": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segmented_switch_from_string_attribute_send_rpc",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 8,
         "sizeY": 2,
         "config": {
@@ -1894,14 +1975,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "9f8d56eb-3328-d954-3f73-dffa8fdbba14"
+        "id": "9f8d56eb-3328-d954-3f73-dffa8fdbba14",
+        "typeFullFqn": "tenant.avantec_widgets.segmented_switch_from_string_attribute_send_rpc"
       },
       "2fc8f69c-23bb-04fa-33cf-a2fa54ca10b0": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segmented_switch_from_string_attribute_send_rpc",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 20,
         "sizeY": 1,
         "config": {
@@ -1970,14 +2048,11 @@
           ],
           "margin": "0"
         },
-        "id": "2fc8f69c-23bb-04fa-33cf-a2fa54ca10b0"
+        "id": "2fc8f69c-23bb-04fa-33cf-a2fa54ca10b0",
+        "typeFullFqn": "tenant.avantec_widgets.segmented_switch_from_string_attribute_send_rpc"
       },
       "58061e74-1c19-d72a-1b0a-a5c2b5ff5e4a": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segmented_switch_from_string_attribute_send_rpc",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2037,14 +2112,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "58061e74-1c19-d72a-1b0a-a5c2b5ff5e4a"
+        "id": "58061e74-1c19-d72a-1b0a-a5c2b5ff5e4a",
+        "typeFullFqn": "tenant.avantec_widgets.segmented_switch_from_string_attribute_send_rpc"
       },
       "2720ab68-7d69-87d4-9b35-c856795b0bd2": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segmented_switch_from_string_attribute_send_rpc",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2104,14 +2176,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "2720ab68-7d69-87d4-9b35-c856795b0bd2"
+        "id": "2720ab68-7d69-87d4-9b35-c856795b0bd2",
+        "typeFullFqn": "tenant.avantec_widgets.segmented_switch_from_string_attribute_send_rpc"
       },
       "8b077da1-e309-17fb-1673-aad9ff543ab4": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segmented_switch_from_string_attribute_send_rpc",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2175,14 +2244,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "8b077da1-e309-17fb-1673-aad9ff543ab4"
+        "id": "8b077da1-e309-17fb-1673-aad9ff543ab4",
+        "typeFullFqn": "tenant.avantec_widgets.segmented_switch_from_string_attribute_send_rpc"
       },
       "61a30e6a-1333-7bed-03cd-71fbe7f6b5a0": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "segment_switch_of_boolean",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2236,14 +2302,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "61a30e6a-1333-7bed-03cd-71fbe7f6b5a0"
+        "id": "61a30e6a-1333-7bed-03cd-71fbe7f6b5a0",
+        "typeFullFqn": "tenant.avantec_widgets.segment_switch_of_boolean"
       },
       "837a5ffe-a221-a363-b924-e913f2a275f8": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_timezone_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 2,
         "config": {
@@ -2283,14 +2346,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "837a5ffe-a221-a363-b924-e913f2a275f8"
+        "id": "837a5ffe-a221-a363-b924-e913f2a275f8",
+        "typeFullFqn": "tenant.avantec_widgets.select_timezone_value"
       },
       "a0141ff4-168a-cead-f77f-2bbaf5dc8e36": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2333,14 +2393,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "a0141ff4-168a-cead-f77f-2bbaf5dc8e36"
+        "id": "a0141ff4-168a-cead-f77f-2bbaf5dc8e36",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "4261e6e9-196e-3ad3-074d-e8506893269f": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2383,14 +2440,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "4261e6e9-196e-3ad3-074d-e8506893269f"
+        "id": "4261e6e9-196e-3ad3-074d-e8506893269f",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "cb52201b-016c-4300-c8bb-38a8e5dd1cff": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2433,14 +2487,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "cb52201b-016c-4300-c8bb-38a8e5dd1cff"
+        "id": "cb52201b-016c-4300-c8bb-38a8e5dd1cff",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "07ff045a-01dd-3f64-3589-06b7a3f5a33d": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2483,14 +2534,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "07ff045a-01dd-3f64-3589-06b7a3f5a33d"
+        "id": "07ff045a-01dd-3f64-3589-06b7a3f5a33d",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "dd2eb183-bdbe-b8ff-30bd-7e354ec1eb3d": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -2533,14 +2581,11 @@
           ],
           "decimals": 1
         },
-        "id": "dd2eb183-bdbe-b8ff-30bd-7e354ec1eb3d"
+        "id": "dd2eb183-bdbe-b8ff-30bd-7e354ec1eb3d",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "67cb1933-76c5-0afd-fba8-95266233341a": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 3,
         "config": {
@@ -2583,14 +2628,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "67cb1933-76c5-0afd-fba8-95266233341a"
+        "id": "67cb1933-76c5-0afd-fba8-95266233341a",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "a71b8765-5815-7790-c01d-3df860452923": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2629,14 +2671,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "a71b8765-5815-7790-c01d-3df860452923"
+        "id": "a71b8765-5815-7790-c01d-3df860452923",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "7883270b-e267-3385-4997-3fb057ddd96e": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2675,14 +2714,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "7883270b-e267-3385-4997-3fb057ddd96e"
+        "id": "7883270b-e267-3385-4997-3fb057ddd96e",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "e6fc4c14-e6f7-f89d-91e1-d09030c0c2a2": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2721,14 +2757,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "e6fc4c14-e6f7-f89d-91e1-d09030c0c2a2"
+        "id": "e6fc4c14-e6f7-f89d-91e1-d09030c0c2a2",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "0c84b28e-0208-9beb-b2ae-ced4938336b5": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2767,14 +2800,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "0c84b28e-0208-9beb-b2ae-ced4938336b5"
+        "id": "0c84b28e-0208-9beb-b2ae-ced4938336b5",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "5b8a396e-2880-ab8d-0eeb-791370dcb848": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2813,14 +2843,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "5b8a396e-2880-ab8d-0eeb-791370dcb848"
+        "id": "5b8a396e-2880-ab8d-0eeb-791370dcb848",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "50164e85-5e10-8eca-146c-13770240c126": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2859,14 +2886,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "50164e85-5e10-8eca-146c-13770240c126"
+        "id": "50164e85-5e10-8eca-146c-13770240c126",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "ff67ccbe-2913-1b2e-4c51-9b5b0a077ed8": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2905,14 +2929,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "ff67ccbe-2913-1b2e-4c51-9b5b0a077ed8"
+        "id": "ff67ccbe-2913-1b2e-4c51-9b5b0a077ed8",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "f9993b8c-064c-890b-ac51-ac16b6cbe2d3": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2951,14 +2972,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "f9993b8c-064c-890b-ac51-ac16b6cbe2d3"
+        "id": "f9993b8c-064c-890b-ac51-ac16b6cbe2d3",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "762b5db9-df87-30a3-59e0-f9f6ad80d5a4": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -2997,14 +3015,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "762b5db9-df87-30a3-59e0-f9f6ad80d5a4"
+        "id": "762b5db9-df87-30a3-59e0-f9f6ad80d5a4",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "29812855-0f2e-66eb-224e-196d2b0002ad": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3043,14 +3058,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "29812855-0f2e-66eb-224e-196d2b0002ad"
+        "id": "29812855-0f2e-66eb-224e-196d2b0002ad",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "7622d9d7-3d7f-81aa-e062-45af30d8ece3": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3089,14 +3101,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "7622d9d7-3d7f-81aa-e062-45af30d8ece3"
+        "id": "7622d9d7-3d7f-81aa-e062-45af30d8ece3",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "714e1c38-2ca6-574e-ab59-9d4e72c325b9": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3135,14 +3144,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "714e1c38-2ca6-574e-ab59-9d4e72c325b9"
+        "id": "714e1c38-2ca6-574e-ab59-9d4e72c325b9",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "acdb7867-f296-5e55-bc05-b6367555d0c9": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3181,14 +3187,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "acdb7867-f296-5e55-bc05-b6367555d0c9"
+        "id": "acdb7867-f296-5e55-bc05-b6367555d0c9",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "949fa02f-4f63-e968-fbaa-610c31b3d43b": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3227,14 +3230,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "949fa02f-4f63-e968-fbaa-610c31b3d43b"
+        "id": "949fa02f-4f63-e968-fbaa-610c31b3d43b",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "6c29e676-23a0-404d-6342-8f3fe9dcb800": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3273,14 +3273,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "6c29e676-23a0-404d-6342-8f3fe9dcb800"
+        "id": "6c29e676-23a0-404d-6342-8f3fe9dcb800",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "2fada405-2f7a-0646-da72-c5291d4961d6": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3319,14 +3316,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "2fada405-2f7a-0646-da72-c5291d4961d6"
+        "id": "2fada405-2f7a-0646-da72-c5291d4961d6",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "1b955422-3654-6f00-beb6-b4e4b6934585": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3365,14 +3359,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1b955422-3654-6f00-beb6-b4e4b6934585"
+        "id": "1b955422-3654-6f00-beb6-b4e4b6934585",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "45f91df2-21f3-e4d6-7a52-cb715c80498c": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3411,14 +3402,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "45f91df2-21f3-e4d6-7a52-cb715c80498c"
+        "id": "45f91df2-21f3-e4d6-7a52-cb715c80498c",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "a517ce51-0856-b266-b80d-ecd68ff6249b": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3457,14 +3445,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "a517ce51-0856-b266-b80d-ecd68ff6249b"
+        "id": "a517ce51-0856-b266-b80d-ecd68ff6249b",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "89a9598f-e7f8-1b3c-33aa-a8111dc44d60": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3503,14 +3488,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "89a9598f-e7f8-1b3c-33aa-a8111dc44d60"
+        "id": "89a9598f-e7f8-1b3c-33aa-a8111dc44d60",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "8fc65a78-7ff8-ab5e-0177-d11e3e6686b6": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3549,14 +3531,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "8fc65a78-7ff8-ab5e-0177-d11e3e6686b6"
+        "id": "8fc65a78-7ff8-ab5e-0177-d11e3e6686b6",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "fd597890-bed8-9b20-0a34-3c2b9c3c8d52": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3595,14 +3574,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "fd597890-bed8-9b20-0a34-3c2b9c3c8d52"
+        "id": "fd597890-bed8-9b20-0a34-3c2b9c3c8d52",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "ee1daaad-72cd-1f36-5d45-78010167a959": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3641,14 +3617,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "ee1daaad-72cd-1f36-5d45-78010167a959"
+        "id": "ee1daaad-72cd-1f36-5d45-78010167a959",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "b290aec9-7d09-4a52-93ed-148d238b53c8": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3687,14 +3660,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "b290aec9-7d09-4a52-93ed-148d238b53c8"
+        "id": "b290aec9-7d09-4a52-93ed-148d238b53c8",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "1c1520e6-0d31-92b7-55a8-aeaf65e64ea0": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3733,14 +3703,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1c1520e6-0d31-92b7-55a8-aeaf65e64ea0"
+        "id": "1c1520e6-0d31-92b7-55a8-aeaf65e64ea0",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "15809918-9bbc-0ec8-7949-7c0932220ae4": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3779,14 +3746,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "15809918-9bbc-0ec8-7949-7c0932220ae4"
+        "id": "15809918-9bbc-0ec8-7949-7c0932220ae4",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "3f11617b-c04b-4485-3dcc-35adbb142f51": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3825,14 +3789,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "3f11617b-c04b-4485-3dcc-35adbb142f51"
+        "id": "3f11617b-c04b-4485-3dcc-35adbb142f51",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "1a9247db-788e-1dde-a384-9287b7fce0f2": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "update_time_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -3871,14 +3832,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1a9247db-788e-1dde-a384-9287b7fce0f2"
+        "id": "1a9247db-788e-1dde-a384-9287b7fce0f2",
+        "typeFullFqn": "tenant.avantec_widgets.update_time_value"
       },
       "ba67d199-b35f-8e08-5ca9-4ca30e943034": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -3921,14 +3879,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "ba67d199-b35f-8e08-5ca9-4ca30e943034"
+        "id": "ba67d199-b35f-8e08-5ca9-4ca30e943034",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "f68b9e67-f31a-cb95-04dc-d3aa8ac76195": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -3971,14 +3926,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "f68b9e67-f31a-cb95-04dc-d3aa8ac76195"
+        "id": "f68b9e67-f31a-cb95-04dc-d3aa8ac76195",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "1d088b50-a4de-ad9a-2cbd-81e3b0613a15": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4021,14 +3973,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1d088b50-a4de-ad9a-2cbd-81e3b0613a15"
+        "id": "1d088b50-a4de-ad9a-2cbd-81e3b0613a15",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "86fde2f2-1d18-70f5-7105-5d90df819873": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4071,14 +4020,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "86fde2f2-1d18-70f5-7105-5d90df819873"
+        "id": "86fde2f2-1d18-70f5-7105-5d90df819873",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "c73b75a8-b9ff-aa7d-7aa4-175c37c4d263": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4121,14 +4067,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "c73b75a8-b9ff-aa7d-7aa4-175c37c4d263"
+        "id": "c73b75a8-b9ff-aa7d-7aa4-175c37c4d263",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "913154dc-8503-fb71-5919-23bfee9620b0": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4171,14 +4114,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "913154dc-8503-fb71-5919-23bfee9620b0"
+        "id": "913154dc-8503-fb71-5919-23bfee9620b0",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "4696b2ed-8b0a-9d27-4e91-bad768ece26f": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4221,14 +4161,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "4696b2ed-8b0a-9d27-4e91-bad768ece26f"
+        "id": "4696b2ed-8b0a-9d27-4e91-bad768ece26f",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "9cfb0e0d-a1f5-3538-2144-fe73f8ed91f5": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4271,14 +4208,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "9cfb0e0d-a1f5-3538-2144-fe73f8ed91f5"
+        "id": "9cfb0e0d-a1f5-3538-2144-fe73f8ed91f5",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "d11da6cc-7809-e973-3a47-9e59d4683100": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4321,14 +4255,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "d11da6cc-7809-e973-3a47-9e59d4683100"
+        "id": "d11da6cc-7809-e973-3a47-9e59d4683100",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "7433b5a4-53ab-9cc5-6f5a-d292f698e2c1": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4371,14 +4302,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "7433b5a4-53ab-9cc5-6f5a-d292f698e2c1"
+        "id": "7433b5a4-53ab-9cc5-6f5a-d292f698e2c1",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "596fb6b3-7a80-a1e9-0b20-332b966a1530": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4421,14 +4349,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "596fb6b3-7a80-a1e9-0b20-332b966a1530"
+        "id": "596fb6b3-7a80-a1e9-0b20-332b966a1530",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "f8484d70-5e1f-14c1-0254-7ed99b4155b7": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4471,14 +4396,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "f8484d70-5e1f-14c1-0254-7ed99b4155b7"
+        "id": "f8484d70-5e1f-14c1-0254-7ed99b4155b7",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "eb4b0e38-0cd4-cacc-7420-4213e34dc3f3": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4521,14 +4443,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "eb4b0e38-0cd4-cacc-7420-4213e34dc3f3"
+        "id": "eb4b0e38-0cd4-cacc-7420-4213e34dc3f3",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "1640866c-960d-c8c6-efeb-210c8fb8e4b8": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4571,14 +4490,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1640866c-960d-c8c6-efeb-210c8fb8e4b8"
+        "id": "1640866c-960d-c8c6-efeb-210c8fb8e4b8",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "722c1dc1-168a-5d50-0ffd-e3edc6da2f26": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4621,14 +4537,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "722c1dc1-168a-5d50-0ffd-e3edc6da2f26"
+        "id": "722c1dc1-168a-5d50-0ffd-e3edc6da2f26",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "1be48ad6-331e-6725-c594-07ee07e20247": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4671,14 +4584,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1be48ad6-331e-6725-c594-07ee07e20247"
+        "id": "1be48ad6-331e-6725-c594-07ee07e20247",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "5188fef1-c0ee-bb1e-e0a7-b8427ad2f02b": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4721,14 +4631,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "5188fef1-c0ee-bb1e-e0a7-b8427ad2f02b"
+        "id": "5188fef1-c0ee-bb1e-e0a7-b8427ad2f02b",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "7735a82e-78eb-3c21-aab7-4e719c1be24a": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4771,14 +4678,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "7735a82e-78eb-3c21-aab7-4e719c1be24a"
+        "id": "7735a82e-78eb-3c21-aab7-4e719c1be24a",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "ddfb1537-9d48-e947-1821-81370c7f7f7d": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4821,14 +4725,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "ddfb1537-9d48-e947-1821-81370c7f7f7d"
+        "id": "ddfb1537-9d48-e947-1821-81370c7f7f7d",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "48bfa4f8-67c2-b9ab-15f3-18939729c6fe": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4871,14 +4772,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "48bfa4f8-67c2-b9ab-15f3-18939729c6fe"
+        "id": "48bfa4f8-67c2-b9ab-15f3-18939729c6fe",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "6ef3f40f-fe36-69ca-801e-8e7c64911435": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4921,14 +4819,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "6ef3f40f-fe36-69ca-801e-8e7c64911435"
+        "id": "6ef3f40f-fe36-69ca-801e-8e7c64911435",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "59f14ed9-1e82-fd83-cef1-fd88a986b959": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -4971,14 +4866,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "59f14ed9-1e82-fd83-cef1-fd88a986b959"
+        "id": "59f14ed9-1e82-fd83-cef1-fd88a986b959",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "56b9bcf9-d6bb-a6c0-b95c-e38cd3343944": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5021,14 +4913,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "56b9bcf9-d6bb-a6c0-b95c-e38cd3343944"
+        "id": "56b9bcf9-d6bb-a6c0-b95c-e38cd3343944",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "7706a5a0-39b2-73dc-64cb-32914a5f6135": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5071,14 +4960,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "7706a5a0-39b2-73dc-64cb-32914a5f6135"
+        "id": "7706a5a0-39b2-73dc-64cb-32914a5f6135",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "f7b7109a-c569-2a14-0b16-1fd5d09a1774": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5121,14 +5007,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "f7b7109a-c569-2a14-0b16-1fd5d09a1774"
+        "id": "f7b7109a-c569-2a14-0b16-1fd5d09a1774",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "e3dd3c4a-fc3e-abfb-3472-e360c1885553": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5171,14 +5054,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "e3dd3c4a-fc3e-abfb-3472-e360c1885553"
+        "id": "e3dd3c4a-fc3e-abfb-3472-e360c1885553",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "4be1488a-54e7-bd93-ab71-a2ecba60d81f": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5221,14 +5101,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "4be1488a-54e7-bd93-ab71-a2ecba60d81f"
+        "id": "4be1488a-54e7-bd93-ab71-a2ecba60d81f",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "e1effdd6-5df4-f707-7b95-37f106e5ea8f": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "select_double_value_from_flexiable_options",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 2,
         "sizeY": 1,
         "config": {
@@ -5271,14 +5148,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "e1effdd6-5df4-f707-7b95-37f106e5ea8f"
+        "id": "e1effdd6-5df4-f707-7b95-37f106e5ea8f",
+        "typeFullFqn": "tenant.avantec_widgets.select_double_value_from_flexiable_options"
       },
       "5fa4eaec-0765-7089-c58d-8a7c817f70a0": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 2,
         "config": {
@@ -5329,14 +5203,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "5fa4eaec-0765-7089-c58d-8a7c817f70a0"
+        "id": "5fa4eaec-0765-7089-c58d-8a7c817f70a0",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "09b7d7bc-13df-9a8c-ea0a-b36aa2237648": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 2,
         "config": {
@@ -5388,14 +5259,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "09b7d7bc-13df-9a8c-ea0a-b36aa2237648"
+        "id": "09b7d7bc-13df-9a8c-ea0a-b36aa2237648",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "0ad39046-3c92-b878-c19b-510b5fa70f1a": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -5446,14 +5314,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "0ad39046-3c92-b878-c19b-510b5fa70f1a"
+        "id": "0ad39046-3c92-b878-c19b-510b5fa70f1a",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "9ff95e2b-8b01-33b7-ba44-d3129dede8c4": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -5508,14 +5373,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "9ff95e2b-8b01-33b7-ba44-d3129dede8c4"
+        "id": "9ff95e2b-8b01-33b7-ba44-d3129dede8c4",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "1b09a55b-04da-a86e-54b4-7a665872467d": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 3,
         "sizeY": 1,
         "config": {
@@ -5570,14 +5432,11 @@
             "f26ad1cb-eec5-166a-dcac-3462cd7a0d83"
           ]
         },
-        "id": "1b09a55b-04da-a86e-54b4-7a665872467d"
+        "id": "1b09a55b-04da-a86e-54b4-7a665872467d",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "d2611f57-0c49-fa28-1ca6-1cba6a516b4b": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "styled_button_of_string_value",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -5631,14 +5490,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "d2611f57-0c49-fa28-1ca6-1cba6a516b4b"
+        "id": "d2611f57-0c49-fa28-1ca6-1cba6a516b4b",
+        "typeFullFqn": "tenant.avantec_widgets.styled_button_of_string_value"
       },
       "fddb2c8a-519a-15e7-45c4-35c6b50d528c": {
-        "isSystemType": true,
-        "bundleAlias": "control_widgets",
-        "typeAlias": "rpcbutton",
         "type": "rpc",
-        "title": "New widget",
         "sizeX": 4,
         "sizeY": 2,
         "config": {
@@ -5676,7 +5532,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "fddb2c8a-519a-15e7-45c4-35c6b50d528c"
+        "id": "fddb2c8a-519a-15e7-45c4-35c6b50d528c",
+        "typeFullFqn": "system.control_widgets.rpcbutton"
       }
     },
     "states": {
@@ -5698,7 +5555,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "backgroundSizeMode": "100%",
-              "margin": 10
+              "margin": 10,
+              "outerMargin": true
             }
           }
         }
@@ -5764,7 +5622,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "backgroundSizeMode": "100%",
-              "margin": 10
+              "margin": 10,
+              "outerMargin": true
             }
           }
         }
@@ -5860,7 +5719,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "backgroundSizeMode": "100%",
-              "margin": 10
+              "margin": 10,
+              "outerMargin": true
             }
           }
         }
@@ -6291,7 +6151,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "backgroundSizeMode": "100%",
-              "margin": 10
+              "margin": 10,
+              "outerMargin": true
             }
           }
         }
@@ -6369,7 +6230,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "backgroundSizeMode": "100%",
-              "margin": 10
+              "margin": 10,
+              "outerMargin": true
             }
           }
         }
@@ -6398,7 +6260,8 @@
               "color": "rgba(0,0,0,0.870588)",
               "columns": 24,
               "margin": 10,
-              "backgroundSizeMode": "100%"
+              "backgroundSizeMode": "100%",
+              "outerMargin": true
             }
           }
         }
@@ -6411,8 +6274,10 @@
         "filter": {
           "type": "deviceType",
           "resolveMultiple": true,
-          "deviceType": "Thermostat TA652FC-W",
-          "deviceNameFilter": ""
+          "deviceNameFilter": "",
+          "deviceTypes": [
+            "Thermostat TA652FC-W"
+          ]
         }
       },
       "f26ad1cb-eec5-166a-dcac-3462cd7a0d83": {

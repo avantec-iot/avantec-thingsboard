@@ -7,13 +7,7 @@
     "description": "TA652FC-W Thermostat List (v.1.0.0, 2023-05-25)",
     "widgets": {
       "232da62c-8c7e-7d1b-bcd6-899e909a43ba": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "entities_table",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 6.5,
         "config": {
@@ -223,7 +217,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "232da62c-8c7e-7d1b-bcd6-899e909a43ba"
+        "id": "232da62c-8c7e-7d1b-bcd6-899e909a43ba",
+        "typeFullFqn": "system.cards.entities_table"
       }
     },
     "states": {

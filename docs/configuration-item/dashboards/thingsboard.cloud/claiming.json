@@ -7,13 +7,7 @@
     "description": "",
     "widgets": {
       "6ba002b6-2a36-175e-454c-ec1f29aa3f85": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -66,23 +60,32 @@
         },
         "row": 0,
         "col": 0,
-        "id": "6ba002b6-2a36-175e-454c-ec1f29aa3f85"
+        "id": "6ba002b6-2a36-175e-454c-ec1f29aa3f85",
+        "typeFullFqn": "system.cards.html_card"
       },
       "99ea19b2-0c78-4b0b-fd46-71b6dce817f5": {
-        "isSystemType": true,
-        "bundleAlias": "entity_admin_widgets",
-        "typeAlias": "device_admin_table",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 6.5,
         "config": {
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
+              "realtimeType": 1,
               "interval": 1000,
-              "timewindowMs": 86400000
+              "timewindowMs": 86400000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166121719,
+                "endTimeMs": 1699252521719
+              },
+              "quickInterval": "CURRENT_DAY"
             },
             "aggregation": {
               "type": "NONE",
@@ -235,16 +238,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "99ea19b2-0c78-4b0b-fd46-71b6dce817f5"
+        "id": "99ea19b2-0c78-4b0b-fd46-71b6dce817f5",
+        "typeFullFqn": "system.entity_admin_widgets.device_admin_table"
       },
       "96ad46f2-e7a6-ee08-fec0-16c6fa203be9": {
-        "isSystemType": true,
-        "bundleAlias": "input_widgets",
-        "typeAlias": "update_multiple_attributes",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -307,8 +305,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166121719,
+                "endTimeMs": 1699252521719
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": true,
@@ -347,16 +364,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "96ad46f2-e7a6-ee08-fec0-16c6fa203be9"
+        "id": "96ad46f2-e7a6-ee08-fec0-16c6fa203be9",
+        "typeFullFqn": "system.input_widgets.update_multiple_attributes"
       },
       "9126dfbd-24f1-dce3-2a05-51be7fafebde": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -409,16 +421,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "9126dfbd-24f1-dce3-2a05-51be7fafebde"
+        "id": "9126dfbd-24f1-dce3-2a05-51be7fafebde",
+        "typeFullFqn": "system.cards.html_card"
       },
       "3678dda0-01b5-fd82-5aa0-7889f220ff94": {
-        "isSystemType": true,
-        "bundleAlias": "maps_v2",
-        "typeAlias": "openstreetmap",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 8.5,
         "sizeY": 6,
         "config": {
@@ -457,8 +464,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166121719,
+                "endTimeMs": 1699252521719
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -518,16 +544,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "3678dda0-01b5-fd82-5aa0-7889f220ff94"
+        "id": "3678dda0-01b5-fd82-5aa0-7889f220ff94",
+        "typeFullFqn": "system.maps_v2.openstreetmap"
       },
       "5b2fa363-14ed-a16d-3fff-606884333786": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -580,16 +601,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "5b2fa363-14ed-a16d-3fff-606884333786"
+        "id": "5b2fa363-14ed-a16d-3fff-606884333786",
+        "typeFullFqn": "system.cards.html_card"
       },
       "73424c3f-231b-824d-8843-50ecbf6ec77f": {
-        "isSystemType": true,
-        "bundleAlias": "maps_v2",
-        "typeAlias": "openstreetmap",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 8.5,
         "sizeY": 6,
         "config": {
@@ -628,8 +644,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166121719,
+                "endTimeMs": 1699252521719
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -692,16 +727,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "73424c3f-231b-824d-8843-50ecbf6ec77f"
+        "id": "73424c3f-231b-824d-8843-50ecbf6ec77f",
+        "typeFullFqn": "system.maps_v2.openstreetmap"
       },
       "70c0a4a4-acf1-8cba-547e-4a764cb615e2": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_value_card",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -724,8 +754,27 @@
             }
           ],
           "timewindow": {
+            "displayValue": "",
+            "selectedTab": 0,
             "realtime": {
-              "timewindowMs": 60000
+              "realtimeType": 1,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "quickInterval": "CURRENT_DAY"
+            },
+            "history": {
+              "historyType": 0,
+              "interval": 1000,
+              "timewindowMs": 60000,
+              "fixedTimewindow": {
+                "startTimeMs": 1699166121719,
+                "endTimeMs": 1699252521719
+              },
+              "quickInterval": "CURRENT_DAY"
+            },
+            "aggregation": {
+              "type": "AVG",
+              "limit": 25000
             }
           },
           "showTitle": false,
@@ -761,16 +810,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "70c0a4a4-acf1-8cba-547e-4a764cb615e2"
+        "id": "70c0a4a4-acf1-8cba-547e-4a764cb615e2",
+        "typeFullFqn": "system.cards.html_value_card"
       },
       "d9dfb3e6-919d-ff83-debc-87188924b41b": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -828,16 +872,11 @@
         },
         "row": 0,
         "col": 0,
-        "id": "d9dfb3e6-919d-ff83-debc-87188924b41b"
+        "id": "d9dfb3e6-919d-ff83-debc-87188924b41b",
+        "typeFullFqn": "system.cards.html_card"
       },
       "8e40356e-ad2d-b1fb-0794-c6861f198405": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "html_card",
         "type": "static",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 3,
         "config": {
@@ -895,7 +934,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "8e40356e-ad2d-b1fb-0794-c6861f198405"
+        "id": "8e40356e-ad2d-b1fb-0794-c6861f198405",
+        "typeFullFqn": "system.cards.html_card"
       }
     },
     "states": {
@@ -929,7 +969,8 @@
               "autoFillHeight": true,
               "backgroundImageUrl": null,
               "mobileAutoFillHeight": true,
-              "mobileRowHeight": 70
+              "mobileRowHeight": 70,
+              "outerMargin": true
             }
           },
           "right": {
@@ -993,7 +1034,8 @@
               "autoFillHeight": false,
               "backgroundImageUrl": null,
               "mobileAutoFillHeight": false,
-              "mobileRowHeight": 50
+              "mobileRowHeight": 50,
+              "outerMargin": true
             }
           }
         }
@@ -1019,7 +1061,8 @@
               "autoFillHeight": true,
               "backgroundImageUrl": null,
               "mobileAutoFillHeight": true,
-              "mobileRowHeight": 70
+              "mobileRowHeight": 70,
+              "outerMargin": true
             }
           }
         }
