@@ -6,7 +6,10 @@
   "transportType": "DEFAULT",
   "provisionType": "CHECK_PRE_PROVISIONED_DEVICES",
   "defaultRuleChainId": null,
-  "defaultDashboardId": null,
+  "defaultDashboardId": {
+    "entityType": "DASHBOARD",
+    "id": "9ac5bb70-5b82-11ee-8147-5d5087fc85dc"
+  },
   "defaultQueueName": null,
   "profileData": {
     "configuration": {
@@ -24,6 +27,7 @@
   "provisionDeviceKey": "TA652FH-W-TB_PROVISION-KEY",
   "firmwareId": null,
   "softwareId": null,
+  "defaultEdgeRuleChainId": null,
   "externalId": null,
   "default": false
 }

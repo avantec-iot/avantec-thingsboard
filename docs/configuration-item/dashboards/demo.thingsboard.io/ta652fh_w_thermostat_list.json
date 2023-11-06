@@ -7,13 +7,7 @@
     "description": "TA652FH-W Thermostat List (v1.0.0, 2023-05-25)",
     "widgets": {
       "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "entities_table",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 6.5,
         "config": {
@@ -194,7 +188,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "43e55270-cedd-11ed-9b15-dd2dac50548f",
+                "targetDashboardId": "9ac5bb70-5b82-11ee-8147-5d5087fc85dc",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "22219139-2477-f35f-1fd2-b047cc0328ea"
@@ -204,7 +198,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "69b8f8cb-cfe2-4b54-d435-1cd0f550358d"
+        "id": "69b8f8cb-cfe2-4b54-d435-1cd0f550358d",
+        "typeFullFqn": "system.cards.entities_table"
       }
     },
     "states": {
@@ -216,7 +211,7 @@
             "widgets": {
               "69b8f8cb-cfe2-4b54-d435-1cd0f550358d": {
                 "sizeX": 23,
-                "sizeY": 11,
+                "sizeY": 8,
                 "mobileHide": true,
                 "row": 0,
                 "col": 0

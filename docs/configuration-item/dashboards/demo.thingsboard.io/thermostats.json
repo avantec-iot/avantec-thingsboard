@@ -7,13 +7,7 @@
     "description": "Avantec Manufacturing Limited. v1.0.0. 20230705.",
     "widgets": {
       "46adde5a-3cba-94f1-b684-a4c22d73a8a5": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "html_attributes_cards",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 8,
         "sizeY": 6.5,
         "config": {
@@ -245,7 +239,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "46adde5a-3cba-94f1-b684-a4c22d73a8a5"
+        "id": "46adde5a-3cba-94f1-b684-a4c22d73a8a5",
+        "typeFullFqn": "tenant.avantec_widgets.html_attributes_cards"
       }
     },
     "states": {
