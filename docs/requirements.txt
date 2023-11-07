@@ -1,1 +1,2 @@
 plantweb
+sphinx_rtd_theme
