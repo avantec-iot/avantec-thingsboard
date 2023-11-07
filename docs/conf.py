@@ -33,9 +33,11 @@ master_doc = 'index'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark']
-extensions = ['sphinx.ext.autodoc']
-extensions = ['plantweb.directive']
+eextensions = [
+    'recommonmark',
+    'sphinx_rtd_theme',
+    'sphinx.ext.autodoc',
+    'plantweb.directive']
 # extensions = ['sphinxcontrib.plantuml']
 
 #plantuml = 'java -jar plantuml.1.2020.15.jar'
