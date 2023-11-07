@@ -311,7 +311,7 @@ In the converter it will be indicated like this:
 Importing uplink Converter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Download :download:`ChirpStack uplink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_downlink_converter_for_ta692fc_l_5.json>`.
+* Download :download:`ChirpStack uplink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_uplink_converter_for_ta692fc_l_5.json>`.
 
 * **Data converters** --> **+** --> **Import converter**.
 
@@ -399,7 +399,7 @@ Where **cs_devEUI** is device EUI, it will be taken from the device uplink messa
 Importing downlink Converter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Download :download:`ChirpStack downlink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_uplink_converter_for_ta692fc_l_5.json>`.
+* Download :download:`ChirpStack downlink converter for TA692FC-L-5 </configuration-item/data-converters/chirpstack_downlink_converter_for_ta692fc_l_5.json>`.
 
 * **Data converters** --> **+** --> **Import converter**.
 
