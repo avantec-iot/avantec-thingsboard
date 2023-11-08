@@ -17,7 +17,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Using Avantec HVAC device with ThingsBoard'
+project = 'Using Avantec HVAC devices with ThingsBoard'
 copyright = '2023, Avantec Manufacturing Limited'
 author = 'Avantec Manufacturing Limited'
 
@@ -64,13 +64,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 ## import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
 ## html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-# html_theme_options = {# Toc options
-    # 'collapse_navigation': False,
-    #'sticky_navigation': True,
-    # 'navigation_depth': 7
-    #'includehidden': True,
-    #'titles_only': False
-# }
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -89,7 +89,7 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🌡 TA652FC-W Wi-Fi Thermostat
+   :caption: 🌡️ TA652FC-W Wi-Fi Thermostat
 
    Specification </device/ta652fc-w/ta652fc-w-specification>
    Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>
@@ -114,7 +114,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🌡 TA652FH-W Wi-Fi Thermostat
+   :caption: 🌡️ TA652FH-W Wi-Fi Thermostat
 
    Specification </device/ta652fh-w/ta652fh-w-specification>
    Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>
@@ -137,7 +137,7 @@ These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, 
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🌡 TA692FC-L-5 LoRaWAN Thermostat
+   :caption: 🌡️ TA692FC-L-5 LoRaWAN Thermostat
 
    Specification </device/ta692fc-l-5/ta692fc-l-5-specification>
    Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>

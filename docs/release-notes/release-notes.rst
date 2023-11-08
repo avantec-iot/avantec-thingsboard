@@ -2,7 +2,7 @@
 Release Notes
 *************************************************
 
-v2.3.4 (Nov 7, 2023)
+v2.3.4 (Nov 8, 2023)
 =====================
 
 * Modify two wrong links in `Add TA692FC-L-5 to ThingsBoard`.
