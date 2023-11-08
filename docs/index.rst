@@ -46,7 +46,7 @@ Here is an overview about ThingsBoard.
 .. toctree::
    :maxdepth: 5
    :hidden:
-   :caption: 🚀 ThingsBoard
+   :caption: ☁ ThingsBoard
 
    Key concepts </thingsboard/thingsboard-key-concepts>
    OTA Updates </thingsboard/thingsboard-ota-updates>
@@ -69,7 +69,7 @@ Here is an overview about Avantec Customization.
 .. toctree::
    :maxdepth: 5
    :hidden:
-   :caption: 🚀 Avantec Extension
+   :caption: ⛅ Avantec Extension
 
    Avantec Widgets </extension/avantec-widgets>
    Demo Dashboards </extension/avantec-dashboards>
@@ -89,7 +89,7 @@ These references will help you learn more about TA652FC-W Wi-Fi Thermostat, oper
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🚀 TA652FC-W Wi-Fi Thermostat
+   :caption: 🌡 TA652FC-W Wi-Fi Thermostat
 
    Specification </device/ta652fc-w/ta652fc-w-specification>
    Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>
@@ -114,7 +114,7 @@ These references will help you learn more about TA652FH-W Wi-Fi Thermostat, oper
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🚀 TA652FH-W Wi-Fi Thermostat
+   :caption: 🌡 TA652FH-W Wi-Fi Thermostat
 
    Specification </device/ta652fh-w/ta652fh-w-specification>
    Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>
@@ -137,7 +137,7 @@ These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, 
 .. toctree::
    :maxdepth: 7
    :hidden:
-   :caption: 🚀 TA692FC-L-5 LoRaWAN Thermostat
+   :caption: 🌡 TA692FC-L-5 LoRaWAN Thermostat
 
    Specification </device/ta692fc-l-5/ta692fc-l-5-specification>
    Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>
@@ -159,7 +159,7 @@ Release notes about documents, MQTT protocol, widgets, dashboard, etc.
 .. toctree::
    :maxdepth: 5
    :hidden:
-   :caption: 🚀 Release Notes
+   :caption: 📙 Release Notes
 
    Release Notes </release-notes/release-notes>
    Upgrade instructions </release-notes/upgrade-instructions>
@@ -176,7 +176,7 @@ Learn about the project and the company.
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: 🚀 About Avantec
+   :caption: 🏭 About Avantec
 
    avantec
    copyright
