@@ -1,4 +1,4 @@
-# Using Avantec HVAC device with ThingsBoard
+# Using Avantec HVAC devices with ThingsBoard
 
 * [Read document](https://avantec-thingsboard.readthedocs.org)
 * [Install tools](#install-tools)

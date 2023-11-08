@@ -1,10 +1,10 @@
-.. Using Avantec HVAC device with ThingsBoard documentation master file, created by
+.. Using Avantec HVAC devices with ThingsBoard documentation master file, created by
    sphinx-quickstart on Tue Dec 20 10:31:29 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 ************************************************
-Using Avantec HVAC device with ThingsBoard
+Using Avantec HVAC devices with ThingsBoard
 ************************************************
 
 `Avantec`_ provides some networking HVAC solutions.  A series of networked HVAC devices in these solutions are connected to `ThingsBoard`_ IoT platform through `MQTT`_ protocol.
