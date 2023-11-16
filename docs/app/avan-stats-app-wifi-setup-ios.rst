@@ -7,6 +7,8 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (iOS)
 
    `Avan-Stats (App Store) <https://apps.apple.com/us/app/avan-stats/id1584621935>`_
 
+.. _avan-stats-app-create-account:
+
 1. Press :guilabel:`Create Account` to Create an account for first-time users. :guilabel:`Sign up` by Email and Login.
    
    Password must be at least **6** characters, including **Uppercase** letter, **Lowercase** letter, **Digit** and **Special** character.
