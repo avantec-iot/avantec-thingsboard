@@ -19,8 +19,9 @@ First steps
 Are you new to Avantec Thermostats or ThingsBoard IoT platform?
 Learn about them to help you create fantastic project.
 
-* :doc:`Why Avantec + ThingsBoard? </intro/why-avantec-thingsboard>`
-* :doc:`Get Started </intro/get-started>`
+🚀 :doc:`Why Avantec + ThingsBoard? </intro/why-avantec-thingsboard>`
+
+🚀 :doc:`Get Started </intro/get-started>`
 
 .. toctree::
    :maxdepth: 3
@@ -36,12 +37,13 @@ ThingsBoard
 
 Here is an overview about ThingsBoard.
 
-* :doc:`Key concepts </thingsboard/thingsboard-key-concepts>`
-* :doc:`Installation options </thingsboard/thingsboard-installation-options>`
-* :doc:`Dashboards </thingsboard/thingsboard-dashboards>` | 
-  :doc:`Rule engine </thingsboard/thingsboard-rule-engine>` |
-  :doc:`White labeling </thingsboard/thingsboard-white-labeling>` 
-* :doc:`MQTT Device API </thingsboard/thingsboard-mqtt-device-api>`
+☁ :doc:`Key concepts </thingsboard/thingsboard-key-concepts>`
+
+☁ :doc:`Installation options </thingsboard/thingsboard-installation-options>`
+
+☁ :doc:`Dashboards </thingsboard/thingsboard-dashboards>` |   :doc:`Rule engine </thingsboard/thingsboard-rule-engine>` |   :doc:`White labeling </thingsboard/thingsboard-white-labeling>` 
+
+☁ :doc:`MQTT Device API </thingsboard/thingsboard-mqtt-device-api>`
 
 .. toctree::
    :maxdepth: 5
@@ -63,8 +65,9 @@ Avantec Extension
 
 Here is an overview about Avantec Customization.
 
-* :doc:`Demo Dashboards </extension/avantec-dashboards>`
-* :doc:`Avantec Widgets </extension/avantec-widgets>`
+⛅ :doc:`Demo Dashboards </extension/avantec-dashboards>`
+
+⛅ :doc:`Avantec Widgets </extension/avantec-widgets>`
 
 .. toctree::
    :maxdepth: 5
@@ -80,11 +83,11 @@ TA652FC-W Wi-Fi Thermostat
 
 These references will help you learn more about TA652FC-W Wi-Fi Thermostat, operate it, and even realize your personalized Dashboard.
 
-* :doc:`Specification </device/ta652fc-w/ta652fc-w-specification>`
-* :doc:`Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>` | 
-  :doc:`Connect to ThingsBoard </device/ta652fc-w/connect-ta652fc-w-to-thingsboard>` |
-  :doc:`Demo Dashboards </device/ta652fc-w/ta652fc-w-demo-dashboards-usage>`
-* :doc:`MQTT Device API </device/ta652fc-w/ta652fc-w-mqtt-api>`
+🌡️ :doc:`Specification </device/ta652fc-w/ta652fc-w-specification>`
+
+🌡️ :doc:`Add to ThingsBoard </device/ta652fc-w/add-ta652fc-w-to-thingsboard>` |   :doc:`Connect to ThingsBoard </device/ta652fc-w/connect-ta652fc-w-to-thingsboard>` |  :doc:`Demo Dashboards </device/ta652fc-w/ta652fc-w-demo-dashboards-usage>`
+
+🌡️ :doc:`MQTT Device API </device/ta652fc-w/ta652fc-w-mqtt-api>`
 
 .. toctree::
    :maxdepth: 7
@@ -105,11 +108,11 @@ TA652FH-W Wi-Fi Thermostat
 
 These references will help you learn more about TA652FH-W Wi-Fi Thermostat, operate it, and even realize your personalized Dashboard.
 
-* :doc:`Specification </device/ta652fh-w/ta652fh-w-specification>`
-* :doc:`Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>` | 
-  :doc:`Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>` |
-  :doc:`Demo Dashboards</device/ta652fh-w/ta652fh-w-demo-dashboards-usage>`
-* :doc:`MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>`
+🌡️ :doc:`Specification </device/ta652fh-w/ta652fh-w-specification>`
+
+🌡️ :doc:`Add to ThingsBoard </device/ta652fh-w/add-ta652fh-w-to-thingsboard>` |   :doc:`Connect to ThingsBoard </device/ta652fh-w/connect-ta652fh-w-to-thingsboard>` |  :doc:`Demo Dashboards</device/ta652fh-w/ta652fh-w-demo-dashboards-usage>`
+
+🌡️ :doc:`MQTT Device API </device/ta652fh-w/ta652fh-w-mqtt-api>`
 
 .. toctree::
    :maxdepth: 7
@@ -129,10 +132,11 @@ TA692FC-L-5 LoRaWAN Thermostat
 
 These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, operate it, and even realize your personalized Dashboard.
 
-* :doc:`Specification </device/ta692fc-l-5/ta692fc-l-5-specification>`
-* :doc:`Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>` |
-  :doc:`Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>`
-* :doc:`LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>`
+🌡️ :doc:`Specification </device/ta692fc-l-5/ta692fc-l-5-specification>`
+
+🌡️ :doc:`Add to ThingsBoard </device/ta692fc-l-5/add-ta692fc-l-5-to-thingsboard>` | :doc:`Demo Dashboards </device/ta692fc-l-5/ta692fc-l-5-demo-dashboards-usage>`
+
+🌡️ :doc:`LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>`
 
 .. toctree::
    :maxdepth: 7
@@ -148,13 +152,37 @@ These references will help you learn more about TA692FC-L-5 LoRaWAN Thermostat, 
    LoRaWAN Device API </device/ta692fc-l-5/ta692fc-l-5-lorawan-api>
 
 
+Avan-Stats app
+==================
+
+Release notes about documents, MQTT protocol, widgets, dashboard, etc.
+
+📱 Thermostat / Humidistat Wi-Fi Setup Guide -- :doc:`iOS </app/avan-stats-app-wifi-setup-ios>` | :doc:`Android </app/avan-stats-app-wifi-setup-android>`
+
+📱 :doc:`User Guide </app/avan-stats-app-user-guide>`
+
+📱 :doc:`FAQ </app/avan-stats-app-faq>`
+
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: 📱 Avan-Stats app
+
+   Thermostat / Humidistat Wi-Fi Setup Guide (iOS) </app/avan-stats-app-wifi-setup-ios>
+   Thermostat / Humidistat Wi-Fi Setup Guide (Android) </app/avan-stats-app-wifi-setup-android>
+   User Guide </app/avan-stats-app-user-guide>
+   FAQ </app/avan-stats-app-faq>
+
+
+
 Release Notes
 ==================
 
 Release notes about documents, MQTT protocol, widgets, dashboard, etc.
 
-* :doc:`Release Notes </release-notes/release-notes>`
-* :doc:`Upgrade instructions </release-notes/upgrade-instructions>`
+📙 :doc:`Release Notes </release-notes/release-notes>`
+
+📙 :doc:`Upgrade instructions </release-notes/upgrade-instructions>`
 
 .. toctree::
    :maxdepth: 5
@@ -170,8 +198,7 @@ Avantec and the project
 
 Learn about the project and the company.
 
-* :doc:`avantec` | 
-  :doc:`copyright`
+🏭 :doc:`avantec` | :doc:`copyright`
 
 .. toctree::
    :maxdepth: 3
