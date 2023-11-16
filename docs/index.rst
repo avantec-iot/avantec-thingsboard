@@ -168,8 +168,8 @@ Release notes about documents, MQTT protocol, widgets, dashboard, etc.
    :hidden:
    :caption: 📱 Avan-Stats app
 
-   Thermostat / Humidistat Wi-Fi Setup Guide (iOS) </app/avan-stats-app-wifi-setup-ios>
-   Thermostat / Humidistat Wi-Fi Setup Guide (Android) </app/avan-stats-app-wifi-setup-android>
+   Wi-Fi Setup Guide (iOS) </app/avan-stats-app-wifi-setup-ios>
+   Wi-Fi Setup Guide (Android) </app/avan-stats-app-wifi-setup-android>
    User Guide </app/avan-stats-app-user-guide>
    FAQ </app/avan-stats-app-faq>
 

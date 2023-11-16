@@ -93,4 +93,5 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup (iOS)
 
 .. |Claim icon| image:: /_static/app/avan-stats-app-wifi-setup-ios/icon_claim.png
 
-    
+
+-End-
