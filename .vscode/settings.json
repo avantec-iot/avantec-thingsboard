@@ -1,4 +1,7 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}\\docs",
+    //"restructuredtext.confPath": "${workspaceFolder}\\docs",
+    "esbonio.sphinx.buildDir" : "${workspaceFolder}/docs/_build/html",
+    //"esbonio.sphinx.srcDir"   : "${workspaceFolder}",
+    //"esbonio.sphinx.confDir": "${workspaceFolder}",
     "esbonio.sphinx.confDir": "${workspaceFolder}\\docs"
 }
