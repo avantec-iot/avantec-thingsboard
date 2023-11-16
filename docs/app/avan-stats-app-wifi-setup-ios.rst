@@ -1,11 +1,11 @@
-*******************************************************
-Avan-Stats Thermostat / Humidistat Wi-Fi Setup (iOS)
-*******************************************************
+************************************************************
+Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (iOS)
+************************************************************
 
-.. image:: /_static/app/avan-stats-app-wifi-setup-ios/avan-stats-app-store.png  
-    :width: 40% 
+   .. image:: /_static/app/avan-stats-app-wifi-setup-ios/avan-stats-app-store.png  
+    :width: 25% 
 
-`Avan-Stats (App Store) <https://apps.apple.com/us/app/avan-stats/id1584621935>`_
+   `Avan-Stats (App Store) <https://apps.apple.com/us/app/avan-stats/id1584621935>`_
 
 1. Press :guilabel:`Create Account` to Create an account for first-time users. :guilabel:`Sign up` by Email and Login.
    
