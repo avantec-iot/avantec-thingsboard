@@ -7,13 +7,7 @@
     "description": "Avantec Manufacturing Limited. v1.0.0. 20230705.",
     "widgets": {
       "46adde5a-3cba-94f1-b684-a4c22d73a8a5": {
-        "isSystemType": false,
-        "bundleAlias": "avantec_widgets",
-        "typeAlias": "html_attributes_cards",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 8,
         "sizeY": 6.5,
         "config": {
@@ -247,7 +241,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "92954fb0-ced8-11ed-ae5a-d705b52c9493",
+                "targetDashboardId": "6d3e06b0-425c-11ee-b240-6f550152ea2c",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "b7335984-0af0-190b-03fe-cdc383316ddb"
@@ -262,7 +256,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "fa21c520-fdf7-11ed-8f1a-691306f4897e",
+                "targetDashboardId": "7d2c8c40-425c-11ee-b240-6f550152ea2c",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "433a33ad-8305-bee8-2d8f-7ecad58e03fc"
@@ -277,7 +271,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "0d85ec50-0441-11ee-be75-959bde3b0638",
+                "targetDashboardId": "60c546f0-425c-11ee-b240-6f550152ea2c",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "c3095157-88e2-3e9a-bd55-976b812501a9"
@@ -305,7 +299,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "46adde5a-3cba-94f1-b684-a4c22d73a8a5"
+        "id": "46adde5a-3cba-94f1-b684-a4c22d73a8a5",
+        "typeFullFqn": "tenant.avantec_widgets.html_attributes_cards"
       }
     },
     "states": {

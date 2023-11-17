@@ -7,13 +7,7 @@
     "description": "TA692FC-L-5 Thermostat List (v.1.0.0, 2023-06-06)",
     "widgets": {
       "a1b148ad-3014-0a9a-ee40-798feb9762ca": {
-        "isSystemType": true,
-        "bundleAlias": "cards",
-        "typeAlias": "entities_table",
         "type": "latest",
-        "title": "New widget",
-        "image": null,
-        "description": null,
         "sizeX": 7.5,
         "sizeY": 6.5,
         "config": {
@@ -199,7 +193,7 @@
                 "setEntityId": true,
                 "stateEntityParamName": null,
                 "openNewBrowserTab": false,
-                "targetDashboardId": "0d85ec50-0441-11ee-be75-959bde3b0638",
+                "targetDashboardId": "60c546f0-425c-11ee-b240-6f550152ea2c",
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "823637a0-f49a-f87a-c5c1-f951b9917123"
@@ -209,7 +203,8 @@
         },
         "row": 0,
         "col": 0,
-        "id": "a1b148ad-3014-0a9a-ee40-798feb9762ca"
+        "id": "a1b148ad-3014-0a9a-ee40-798feb9762ca",
+        "typeFullFqn": "system.cards.entities_table"
       }
     },
     "states": {

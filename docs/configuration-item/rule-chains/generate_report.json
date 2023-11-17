@@ -1,0 +1,149 @@
+{
+  "ruleChain": {
+    "additionalInfo": null,
+    "name": "Generate Report",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": false,
+    "configuration": null,
+    "externalId": null
+  },
+  "metadata": {
+    "firstNodeIndex": 0,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "layoutX": 242,
+          "layoutY": 314
+        },
+        "type": "org.thingsboard.rule.engine.report.TbGenerateReportNode",
+        "name": "Generate Report",
+        "debugMode": false,
+        "singletonMode": false,
+        "configurationVersion": 0,
+        "configuration": {
+          "useSystemReportsServer": true,
+          "reportsServerEndpointUrl": null,
+          "useReportConfigFromMessage": true,
+          "reportConfig": {
+            "baseUrl": "http://localhost:3000",
+            "useDashboardTimewindow": true,
+            "timewindow": {
+              "history": {
+                "interval": 1000,
+                "timewindowMs": 86400000
+              }
+            },
+            "namePattern": "report-%d{yyyy-MM-dd_HH:mm:ss}",
+            "type": "pdf",
+            "timezone": "Europe/Kiev",
+            "useCurrentUserCredentials": true,
+            "userId": "7c82bf30-4d61-11e8-ad73-455e6191039d",
+            "dashboardId": "62097e80-6fa0-11e8-9b36-a959bde06125"
+          }
+        },
+        "externalId": null
+      },
+      {
+        "additionalInfo": {
+          "layoutX": 454,
+          "layoutY": 174
+        },
+        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "name": "If send email",
+        "debugMode": false,
+        "singletonMode": false,
+        "configurationVersion": 0,
+        "configuration": {
+          "scriptLang": "TBEL",
+          "jsScript": "return msg.sendEmail === true;",
+          "tbelScript": "return msg.sendEmail === true;"
+        },
+        "externalId": null
+      },
+      {
+        "additionalInfo": {
+          "layoutX": 691,
+          "layoutY": 311
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Prepare email metadata",
+        "debugMode": false,
+        "singletonMode": false,
+        "configurationVersion": 0,
+        "configuration": {
+          "scriptLang": "TBEL",
+          "jsScript": "metadata['emailFrom'] = msg.emailConfig.from;\nmetadata['emailTo'] = msg.emailConfig.to;\nmetadata['emailCc'] = msg.emailConfig.cc || \"\";\nmetadata['emailBcc'] = msg.emailConfig.bcc || \"\";\nmetadata['emailSubject'] = msg.emailConfig.subject;\nmetadata['emailBody'] = msg.emailConfig.body;\nmetadata['emailTimezone'] = msg.reportConfig.timezone;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+          "tbelScript": "metadata['emailFrom'] = msg.emailConfig.from;\nmetadata['emailTo'] = msg.emailConfig.to;\nmetadata['emailCc'] = msg.emailConfig.cc != null ? msg.emailConfig.cc : \"\";\nmetadata['emailBcc'] = msg.emailConfig.bcc != null ? msg.emailConfig.bcc : \"\";\nmetadata['emailSubject'] = msg.emailConfig.subject;\nmetadata['emailBody'] = msg.emailConfig.body;\nmetadata['emailTimezone'] = msg.reportConfig.timezone;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        },
+        "externalId": null
+      },
+      {
+        "additionalInfo": {
+          "layoutX": 924,
+          "layoutY": 166
+        },
+        "type": "org.thingsboard.rule.engine.mail.TbMsgToEmailNode",
+        "name": "To report email",
+        "debugMode": false,
+        "singletonMode": false,
+        "configurationVersion": 0,
+        "configuration": {
+          "fromTemplate": "${emailFrom}",
+          "toTemplate": "${emailTo}",
+          "ccTemplate": "${emailCc}",
+          "bccTemplate": "${emailBcc}",
+          "subjectTemplate": "${emailSubject}",
+          "bodyTemplate": "${emailBody}"
+        },
+        "externalId": null
+      },
+      {
+        "additionalInfo": {
+          "layoutX": 1135,
+          "layoutY": 313
+        },
+        "type": "org.thingsboard.rule.engine.mail.TbSendEmailNode",
+        "name": "Send report",
+        "debugMode": false,
+        "singletonMode": false,
+        "configurationVersion": 0,
+        "configuration": {
+          "useSystemSmtpSettings": true,
+          "smtpHost": "localhost",
+          "smtpPort": 25,
+          "username": null,
+          "password": null,
+          "smtpProtocol": "smtp",
+          "timeout": 10000,
+          "enableTls": false
+        },
+        "externalId": null
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "type": "True"
+      },
+      {
+        "fromIndex": 2,
+        "toIndex": 3,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 3,
+        "toIndex": 4,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}

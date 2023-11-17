@@ -2,6 +2,13 @@
 Release Notes
 *************************************************
 
+v2.4 (Nov 17, 2023)
+=====================
+
+* Updated all widgets, dashboards, device profiles and rule-chains for TB PE v3.6.x.
+* Added documentation for Avan-Stats app.
+
+
 v2.3.4 (Nov 8, 2023)
 =====================
 

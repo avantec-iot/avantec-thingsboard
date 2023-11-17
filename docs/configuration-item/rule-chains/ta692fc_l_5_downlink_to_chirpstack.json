@@ -24,9 +24,9 @@
         "name": "get required fields",
         "debugMode": false,
         "singletonMode": false,
+        "configurationVersion": 1,
         "configuration": {
           "tellFailureIfAbsent": true,
-          "fetchToData": false,
           "clientAttributeNames": [
             "integrationName",
             "devEUI"
@@ -34,7 +34,8 @@
           "sharedAttributeNames": [],
           "serverAttributeNames": [],
           "latestTsKeyNames": [],
-          "getLatestValueWithTs": false
+          "getLatestValueWithTs": false,
+          "fetchTo": "METADATA"
         },
         "externalId": null
       },
@@ -48,8 +49,9 @@
         "name": "Send downlink",
         "debugMode": false,
         "singletonMode": false,
+        "configurationVersion": 0,
         "configuration": {
-          "integrationId": "535b41c0-0384-11ee-af14-175a6432e834"
+          "integrationId": "8eddf530-4164-11ee-a35d-79eb7d4a846b"
         },
         "externalId": null
       }
