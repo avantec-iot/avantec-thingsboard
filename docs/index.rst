@@ -164,7 +164,7 @@ Release notes about documents, MQTT protocol, widgets, dashboard, etc.
 📱 :doc:`FAQ </app/avan-stats-app-faq>`
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 7
    :hidden:
    :caption: 📱 Avan-Stats app
 

@@ -16,7 +16,7 @@ Download app
 `Avan-Stats (Google Play) <https://play.google.com/store/apps/details?id=com.avantec.avanstats>`_
 
 
-Create account
+Create Account
 ================
 
 .. tip::
@@ -61,7 +61,7 @@ Home
 ===========
 
 Thermostats
-^^^^^^^^^^^^^
+-------------
 
 .. image:: /_static/app/avan-stats-app-user-guide/avan-stats-app-user-guide-home-thermostats-1.png
     :width: 40% 
@@ -73,13 +73,13 @@ Thermostats
 Devices
 ===========
 
-Claim & add device
+Claim & Add Device
 ------------------
 
 See *Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide* :doc:`(iOS) </app/avan-stats-app-wifi-setup-ios>` or :doc:`(Android) </app/avan-stats-app-wifi-setup-android>`.
 
 
-Reclaim device
+Reclaim Device
 ------------------
 
 .. image:: /_static/app/avan-stats-app-user-guide/avan-stats-app-user-guide-reclaim-device-1.png
@@ -117,7 +117,7 @@ Change Password
 .. image:: /_static/app/avan-stats-app-user-guide/avan-stats-app-user-guide-change-password-2.png
     :width: 40%
 
-Delete account
+Delete Account
 ------------------
 
 .. image:: /_static/app/avan-stats-app-user-guide/avan-stats-app-user-guide-delete-account-1.png
