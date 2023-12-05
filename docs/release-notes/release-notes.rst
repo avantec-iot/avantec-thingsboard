@@ -2,6 +2,12 @@
 Release Notes
 *************************************************
 
+v2.4.1 (Dec 5, 2023)
+=====================
+
+* Add address for TA652FC-W specification and TA652FH-W specification.
+
+
 v2.4 (Nov 17, 2023)
 =====================
 

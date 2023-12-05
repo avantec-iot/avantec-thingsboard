@@ -1952,7 +1952,7 @@ changeOverTempCooling
      - `internalOffsetMin`_
      - `internalOffsetMax`_
      - `internalOffsetStep`_
-     - "Internal", |br| "External", |br| "Combined"
+     - 
      - ●
      - ●
      - Internal Sensor |br| Temperture Offset, see |br| `remoteSetInternalOffset`_

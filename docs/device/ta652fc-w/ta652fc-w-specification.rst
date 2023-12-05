@@ -285,8 +285,9 @@ Internal parameter setting 2
 ===== ============================================= =========== ====================
 ID    Items	                                        Value	    Default Value
 ===== ============================================= =========== ====================
-P19   Clear Wi-Fi Configuration                      Yes or No   No
+P19   Clear Wi-Fi Configuration                     Yes or No   No
 P20   Clear Parameter setting (restore default)     Yes or No   No
+Adr   Address                                       ...         Read only, eg: 75C68
 ===== ============================================= =========== ====================
 
 * Clear Wi-Fi Configuration: 
@@ -295,6 +296,8 @@ P20   Clear Parameter setting (restore default)     Yes or No   No
 * Clear Parameter setting: 
     When set to yes, all internal parameter setting will be restored to default value in next power on (reset)
 
+* Address: 
+    The last 5 characters of the MAC address
 
 Technical Data
 ----------------
