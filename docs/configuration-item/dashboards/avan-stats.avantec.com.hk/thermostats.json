@@ -178,6 +178,74 @@
                   "ACTIVE"
                 ]
               }
+            },
+            {
+              "type": "entity",
+              "entityAliasId": "e363750a-fb16-4fbb-e9e5-5573613ff7dd",
+              "dataKeys": [
+                {
+                  "name": "roomTemp",
+                  "type": "timeseries",
+                  "label": "roomTemp",
+                  "color": "#e91e63",
+                  "settings": {
+                    "useCellContentFunction": false,
+                    "cellContentFunction": "",
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": ""
+                  },
+                  "_hash": 0.6973152211564058,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "roomHumi",
+                  "type": "timeseries",
+                  "label": "roomHumi",
+                  "color": "#ffeb3b",
+                  "settings": {
+                    "useCellContentFunction": false,
+                    "cellContentFunction": "",
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": ""
+                  },
+                  "_hash": 0.28710446238554743,
+                  "aggregationType": "NONE",
+                  "units": null,
+                  "decimals": 1,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                },
+                {
+                  "name": "currentTempUnit",
+                  "type": "attribute",
+                  "label": "currentTempUnit",
+                  "color": "#03a9f4",
+                  "settings": {
+                    "useCellContentFunction": false,
+                    "cellContentFunction": "",
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": ""
+                  },
+                  "_hash": 0.6707619802539198,
+                  "aggregationType": null,
+                  "units": null,
+                  "decimals": null,
+                  "funcBody": null,
+                  "usePostProcessing": null,
+                  "postFuncBody": null
+                }
+              ],
+              "alarmFilterConfig": {
+                "statusList": [
+                  "ACTIVE"
+                ]
+              }
             }
           ],
           "timewindow": {
@@ -224,6 +292,11 @@
                 "cardHtmlPattern": "<div class='card-title'> \n    ${entityLabel}\n</div>\n\n<div class='card-data-label'>\n    Room temperature\n</div>\n<div>\n    ${roomTemperature}\n    <span class=\"card-data-unit\"> °C </span>\n</div>\n\n<div class='card-data-label'>\n    Set temperature\n</div>\n<div>\n    ${setTemperature}\n    <span class=\"card-data-unit\"> °C </span>\n</div>",
                 "cardStyleFunction": "//return { \n//  fontWeight: 'bold', \n//  background: '#2db36a',\n//  color: '#ffffff'// 'green' \n//};\n//return {background: '#2db36a', color: 'white'};\nreturn {background: 'white'};",
                 "aliasName": "TA692FC-L-5-868 Thermostat"
+              },
+              {
+                "aliasName": "TA682-W-PLM Thermostat",
+                "cardHtmlPattern": "<div class='card-title'> \n    ${entityLabel}\n</div>\n\n<div class='card-data-label'>\n    Room temperature\n</div>\n<div>\n    ${roomTemp}\n    <span class=\"card-data-unit\"> ${currentTempUnit} </span>\n</div>\n\n<div class='card-data-label'>\n    Room humidity\n</div>\n<div>\n    ${roomHumi}\n</div>",
+                "cardStyleFunction": "//return { \n//  fontWeight: 'bold', \n//  background: '#2db36a',\n//  color: '#ffffff'// 'green' \n//};\n//return {background: '#2db36a', color: 'white'};\nreturn {background: 'white'};"
               }
             ]
           },
@@ -275,6 +348,21 @@
                 "openInSeparateDialog": false,
                 "openInPopover": false,
                 "id": "c3095157-88e2-3e9a-bd55-976b812501a9"
+              },
+              {
+                "name": "TA682-W-PLM Thermostat",
+                "icon": "more_horiz",
+                "useShowWidgetActionFunction": null,
+                "showWidgetActionFunction": "return true;",
+                "type": "openDashboard",
+                "targetDashboardStateId": "monitor",
+                "setEntityId": true,
+                "stateEntityParamName": null,
+                "openNewBrowserTab": false,
+                "targetDashboardId": "da7ec140-9af1-11ee-bea6-a31d7c70cbb9",
+                "openInSeparateDialog": false,
+                "openInPopover": false,
+                "id": "154dc8d0-0300-77ea-d0d2-9e83fbe7d66c"
               }
             ],
             "cardClick": [],
@@ -295,7 +383,8 @@
           "pageSize": 1024,
           "noDataDisplayMessage": "",
           "showLegend": false,
-          "enableDataExport": false
+          "enableDataExport": false,
+          "displayTimewindow": true
         },
         "row": 0,
         "col": 0,
@@ -366,6 +455,18 @@
           "resolveMultiple": true,
           "deviceTypes": [
             "TA692FC-L-5-868 Thermostat"
+          ],
+          "deviceNameFilter": ""
+        }
+      },
+      "e363750a-fb16-4fbb-e9e5-5573613ff7dd": {
+        "id": "e363750a-fb16-4fbb-e9e5-5573613ff7dd",
+        "alias": "TA682-W-PLM Thermostat",
+        "filter": {
+          "type": "deviceType",
+          "resolveMultiple": true,
+          "deviceTypes": [
+            "TA682-W-PLM Thermostat"
           ],
           "deviceNameFilter": ""
         }
