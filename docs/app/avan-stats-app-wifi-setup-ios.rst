@@ -32,6 +32,8 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (iOS)
   .. image:: /_static/app/avan-stats-app-wifi-setup-ios/avan-stats-app-wifi-setup-ios-3-2.png 
      :width: 40% 
 
+.. _enter-wifi-network-ios-app:
+
 4. Enter Wi-Fi network and Press :guilabel:`Continue`.
 
   .. image:: /_static/app/avan-stats-app-wifi-setup-ios/avan-stats-app-wifi-setup-ios-4.png
@@ -41,6 +43,8 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (iOS)
 
   .. image:: /_static/app/avan-stats-app-wifi-setup-ios/avan-stats-app-wifi-setup-ios-5.png 
      :width: 40% 
+
+.. _connect-to-device-ios-app:
 
 6. Press :guilabel:`Go to Wi-Fi Settings`, Switch to Wi-Fi settings and Find your Device, e.g. **Avan-Status-CEBD4**
 

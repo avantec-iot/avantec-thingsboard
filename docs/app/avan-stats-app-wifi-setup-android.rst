@@ -27,6 +27,8 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (Android)
   .. image:: /_static/app/avan-stats-app-wifi-setup-android/avan-stats-app-wifi-setup-android-3.*
      :width: 40%
 
+.. _enter-wifi-network-android-app:
+
 4. Enter Wi-Fi network and Press :guilabel:`Continue`.
 
   .. image:: /_static/app/avan-stats-app-wifi-setup-android/avan-stats-app-wifi-setup-android-4.*
@@ -36,6 +38,8 @@ Avan-Stats Thermostat / Humidistat Wi-Fi Setup Guide (Android)
 
   .. image:: /_static/app/avan-stats-app-wifi-setup-android/avan-stats-app-wifi-setup-android-5.*
      :width: 40%
+
+.. _connect-to-device-android-app:
 
 6. Press :guilabel:`Go to Wi-Fi Settings`, Switch to Wi-Fi settings and Choose your Device, e.g. **Avan-Status-CEBD4**, Select :guilabel:`Connect only this time` or :guilabel:`Always connect`.
 
