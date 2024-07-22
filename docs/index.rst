@@ -173,6 +173,19 @@ Release notes about documents, MQTT protocol, widgets, dashboard, etc.
    User Guide </app/avan-stats-app-user-guide>
    FAQ </app/avan-stats-app-faq>
 
+Featured Products
+==================
+
+Thermostat, Humidistat, Sendor for Smart City, Energy Function Meter, Switch, etc.
+
+📙 :doc:`A6 Series </featured-products/A6-Series>`
+
+.. toctree::
+   :maxdepth: 5
+   :hidden:
+   :caption: 📙 Featured Products
+
+   A6 Series </featured-products/A6-Series>
 
 
 Release Notes
