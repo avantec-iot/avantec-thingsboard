@@ -176,16 +176,16 @@ Release notes about documents, MQTT protocol, widgets, dashboard, etc.
 Featured Products
 ==================
 
-Thermostat, Humidistat, Sendor for Smart City, Energy Function Meter, Switch, etc.
+Thermostat, Humidistat, Sendor for Smart City, Energy Function Meter, Switch, Wi-Fi, BACnet, Modbus & LoRa etc.
 
-📙 :doc:`A6 Series </featured-products/A6-Series>`
+📙 :doc:`Featured Products </featured-products/featured-products>`
 
 .. toctree::
    :maxdepth: 5
    :hidden:
    :caption: 📙 Featured Products
 
-   A6 Series </featured-products/A6-Series>
+   Featured Products </featured-products/featured-products>
 
 
 Release Notes

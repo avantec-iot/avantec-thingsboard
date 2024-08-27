@@ -22,7 +22,7 @@ copyright = '2023, Avantec Manufacturing Limited'
 author = 'Avantec Manufacturing Limited'
 
 # The full version, including alpha/beta/rc tags
-release = '2.4.3'
+release = '2.4.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
