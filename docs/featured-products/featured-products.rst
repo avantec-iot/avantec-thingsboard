@@ -11,8 +11,8 @@ A6 Series
     * :download:`A67Q-W / A67Q-L Series Wireless Sensors </featured-products/A67Q-2024.8.19.pdf>`
     * :download:`A69 Series Temperature & Humidity Controllers </featured-products/A69-2022.8.10.pdf>` 
 * :download:`TA670T Wireless Thermostat & RT48R Controller Pair </featured-products/TA670T-RT48R-2024.7.26.pdf>`
-* :download:`TA682-W Chronostat with Indoor Humidity Control </featured-products/TA682-W-2024.8.20.pdf>` 
-* :download:`TA692C-FC FCU Thermostat </featured-products/TA692C-FC-2024JUL22.pdf>` 
+* :download:`TA682-W Chronostat with Indoor Humidity Control </featured-products/TA682-W-2024.11.17.pdf>` 
+* :download:`TA692C4-FC FCU Thermostat </featured-products/TA692C4-FC-2024.11.17.pdf>` 
 
  
 MS/TP or RTU
